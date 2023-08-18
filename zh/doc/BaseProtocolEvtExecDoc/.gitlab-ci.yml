@@ -1,0 +1,14 @@
+pages:
+  stage: deploy
+  script:
+    - apt-get update -qy
+    - apt-get install -y nodejs
+    - npm install gitbook-cli -g
+    - cd docs
+    - gitbook install
+    - gitbook build
+  artifacts:
+    paths:
+      - public
+  only:
+    - master
