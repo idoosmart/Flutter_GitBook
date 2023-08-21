@@ -1,16 +1,16 @@
-# {IDO设备通知/控制事件说明}
+# {IDO Device Notification/Control Event Description}
 
-## 1.功能概述
+## 1. Overview
 
-提供监听手环/手表设备发送通知事件、控制事件、快捷短信和固件错误码到APP的能力。
+Provides the capability to listen for notification events, control events, quick messages, and firmware error codes sent from the wristband/watch device to the app.
 
-## 2.接口能力
+## 2. Interface Capabilities
 
-### 1.数据类型通知事件：
+### 1. Data Type Notification Event:
 
-#### 1.1 功能概括:
+#### 1.1 Summary:
 
-数据类型通知事件说明。
+Description of data type notification events.
 
 #### 1.2 API ID:
 
@@ -18,73 +18,73 @@
 final int? dataType;
 ````
 
-#### 1.3 API参数说明:
+#### 1.3 API Parameter Description:
 
-| 十进制值 | 说明                                                         |      |
-| -------- | ------------------------------------------------------------ | ---- |
-| 0        | 无效                                                         |      |
-| 1        | 手环已经解绑                                                 |      |
-| 2        | 心率模式改变                                                 |      |
-| 3        | 血氧产生数据，发生改变                                       |      |
-| 4        | 压力产生数据，发生改变                                       |      |
-| 5        | Alexa识别过程中退出                                          |      |
-| 6        | 固件发起恢复出厂设置，通知app弹框提醒                        |      |
-| 7        | app需要进入相机界面（TIT01定制）                             |      |
-| 8        | sos事件通知（205土耳其定制）                                 |      |
-| 9        | alexa设置的闹钟，固件修改，需要发送对应的通知位给app，app收到后发送获取V3的闹钟命令 |      |
-| 10       | 固件有删除日程提醒，app这边需要更新对应的列表数据            |      |
-| 11       | 固件端有修改对应的表盘子样式，通知app获取（command\_id为0x33， key为 0x5000） |      |
-| 12       | 固件通知ios更新通知图标和名字                                |      |
-| 13       | 固件通知app图标已经更新，通知app获取已经更新的图标状态       |      |
-| 14       | 固件请求重新设置天气，app收到收，下发天气数据                |      |
-| 15       | 步数每次增加2000步，设备请求app同步数据，app调用同步接口     |      |
-| 16       | 探测到睡眠结束，请求app同步睡眠数据，app调用同步接口同步     |      |
-| 17       | 固件三环数据修改，通知app更新三环数据                        |      |
-| 18       | 固件充满电完成发送提醒，app收到后通知栏显示设备充电完成      |      |
-| 19       | 结束运动后，手动测量心率后，手动测量血氧后，手动测量压力后，设备自动请求同步，先检查链接状态，未连接本次同步不执行，满足下个自动同步条件后再次判断发起同步请求 |      |
-| 20       | 固件修改 心率通知状态类型、压力通知状态类型、血氧通知状态类型、生理周期通知状态类型、健康指导通知状态类型、提醒事项通知状态类型通知app更新心率、压力、血氧、生理周期、健康指导、提醒事项通知状态类型 |      |
-| 21       | 固件压力值计算完成，通知app获取压力值                        |      |
-| 22       | 固件通知app，固件压力校准失败(固件退出测量界面/检测失败/检测超时/未佩戴) |      |
-| 23       | 保留                                                         |      |
-| 24       | 固件通知app bt蓝牙已连接                                     |      |
-| 25       | 固件通知app bt蓝牙断开连接                                   |      |
-| 26       | 固件蓝牙通话开始                                             |      |
-| 27       | 固件蓝牙通话结束                                             |      |
-| 28       | 新版本固件每隔4分30秒发送一个通知命令用于修复ios 会显示离线的问题 |      |
-| 29       | 通知app运动开始（作用于拦截表盘传输同26）                    |      |
-| 30       | 通知app运动结束（作用于拦截表盘传输同27）                    |      |
-| 31       | 固件重启发送通知给app  （app收到通知需要获取固件版本信息）   |      |
-| 32       | 设备空闲时（没有使用aleax），需要上报通知给app（时间间隔为1小时） |      |
-| 33       | 固件整理空间完成通知app继续下传表盘文件                      |      |
-| 34       | 固件通知app结束寻找手环指令 （对应6.3寻找手环）              |      |
-| 35       | 固件进入省电模式通知app                                      |      |
-| 36       | 固件退出省电模式通知app                                      |      |
-| ~~37~~   | ~~固件通知请求app下发设置gps热启动参数(废弃)~~               |      |
-| 38       | 固件传输原始数据完成，通知app获取特性向量信息                |      |
-| 39       | 固件通知app，固件血压校准失败(固件退出测量界面/检测失败/检测超时/未佩戴) |      |
-| 40       | 固件传输原始数据完成，没有特性向量信息，通知app数据采集结束  |      |
-| 41       | v3健康数据同步单项数据完成通知 (android 内部使用）           |      |
-| 42       | 固件整理gps数据空间完成通知app下发gps文件                    |      |
-| 43       | 固件升级EPO.dat文件失败，通知app再次下发一次该文件           |      |
-| 44       | 固件升级EPO.dat文件成功                                      |      |
-| 45       | 固件升级GPS失败，通知app重新传输                             |      |
-| 46       | 固件升级GPS成功                                              |      |
-| 47       | 发起运动时, 固件GPS异常，通知app                             |      |
-| 48       | 固件润丰外设信息更新，通知app获取                            |      |
-| 49       | 固件通知用户取消ble和手表配对,app弹窗处理                    |      |
-| 50       | 固件通知app bt配对完成                                       |      |
-| 51       | 固件设置运动排序,通知app获取运动排序信息                     |      |
-| 52       | 固件全天步数目标参数有更改,通知app获取全天步数目标(0208)     |      |
-| 53       | 固件通知app固件进入血压校准界面                              |      |
-| 54       | 固件自动识别开关状态更新,通知app获取运动自动识别开关状态(02EA) |      |
+| Decimal Value | Description                                                |      |
+| ------------- | ---------------------------------------------------------- | ---- |
+| 0             | Invalid                                                    |      |
+| 1             | Wristband has been unbound                                 |      |
+| 2             | Heart rate mode changed                                    |      |
+| 3             | Blood oxygen data generated and changed                    |      |
+| 4             | Stress data generated and changed                          |      |
+| 5             | Alexa recognition process exited                           |      |
+| 6             | Firmware initiated factory reset, notifying app with a popup |      |
+| 7             | App needs to enter the camera interface (TIT01 customized)  |      |
+| 8             | SOS event notification (205 Turkey customized)              |      |
+| 9             | Firmware has modified the alarm set by Alexa, need to send the corresponding notification bit to the app, and app sends the command to get V3 alarm      |      |
+| 10             | Firmware has deleted the schedule reminder, app needs to update the corresponding list data              |      |
+| 11             | Firmware has modified the sub-dial style, notifying the app to get it (command_id is 0x33, key is 0x5000)               |      |
+| 12             | Firmware notifies iOS to update notification icon and name               |      |
+| 13             | Firmware notifies app that the icon has been updated, app needs to get the updated icon status               |      |
+| 14             | Firmware requests to reset the weather, app receives it and sends weather data              |      |
+| 15             | Steps increase by 2000 steps each time, the device requests app to sync data, and app calls sync interface               |      |
+| 16             | Detected sleep ends, requests app to sync sleep data, and app calls sync interface               |      |
+| 17             | Firmware modifies Tri-ring data, notifies app to update Tri-ring data               |      |
+| 18             | Firmware sends a reminder when fully charged, and the app shows "Device fully charged" on the notification bar               |      |
+| 19             | After finishing exercise, manually measuring heart rate, manually measuring blood oxygen, manually measuring stress, the device automatically requests sync, first checks the link state, if not connected, this sync is not executed, then checks if it meets the next automatic sync condition, and requests sync again              |      |
+| 20             | Firmware modifies heart rate notification status type, stress notification status type, blood oxygen notification status type, physiological cycle notification status type, health guidance notification status type, reminder notification status type, notifies app to update heart rate, stress, blood oxygen, physiological cycle, health guidance, reminder notification status type              |      |
+| 21             | Firmware calculates stress value and notifies app to get the stress value              |      |
+| 22             | Firmware notifies app of stress calibration failure (firmware exits measurement interface/detection fails/times out/not worn)              |      |
+| 23             | Reserved                                                         |      |
+| 24             | Firmware notifies app that BT Bluetooth is connected              |      |
+| 25             | Firmware notifies app that BT Bluetooth is disconnected              |      |
+| 26             | Firmware notifies that Bluetooth call has started              |      |
+| 27             | Firmware notifies that Bluetooth call has ended              |      |
+| 28             | New firmware sends a notification command every 4 minutes and 30 seconds to fix the issue of iOS showing offline              |      |
+| 29             | Notifies app that exercise has started (applies to intercepting dial transmission like 26)              |      |
+| 30             | Notifies app that exercise has ended (applies to intercepting dial transmission like 27)              |      |
+| 31             | Firmware restarts and sends a notification to the app (app needs to get firmware version information)              |      |
+| 32             | When the device is idle (not using Alexa), it needs to report a notification to the app (time interval is 1 hour)              |      |
+| 33             | Firmware finishes organizing space and notifies app to continue downloading dial files              |      |
+| 34             | Firmware notifies app to end finding wristband command (corresponding to 6.3 find wristband)              |      |
+| 35             | Firmware enters power-saving mode and notifies app              |      |
+| 36             | Firmware exits power-saving mode and notifies app              |      |
+| ~~37~~             | ~~Firmware notifies app to send GPS hot start parameter settings (deprecated)~~              |      |
+| 38             | Firmware completes transferring raw data and notifies app to get feature vector information              |      |
+| 39             | Firmware notifies app of blood pressure calibration failure (firmware exits measurement interface/detection fails/times out/not worn)              |      |
+| 40             | Firmware completes transferring raw data without feature vector information, notifies app that data collection is finished              |      |
+| 41             | Notification of completion of synchronization of V3 health data (for internal use of Android)              |      |
+| 42             | Firmware finishes organizing GPS data space and notifies app to send GPS file              |      |
+| 43             | Firmware upgrade EPO.dat file failed, notifies app to send the file again              |      |
+| 44             | Firmware upgrade EPO.dat file successfully              |      |
+| 45             | Firmware upgrade GPS failed, notifies app to transmit again              |      |
+| 46             | Firmware upgrade GPS succeeded              |      |
+| 47             | When starting exercise, firmware detects GPS abnormality and notifies app              |      |
+| 48             | Firmware updates Lembest peripheral information, notifies app to get it              |      |
+| 49             | Firmware notifies user to cancel BLE and watch pairing, app handles the pop-up              |      |
+| 50             | Firmware notifies app that BT pairing is completed              |      |
+| 51             | Firmware sets exercise order, notifies app to get exercise order information              |      |
+| 52             | Firmware changes all-day step target parameter, notifies app to get all-day step target (0208)              |      |
+| 53             | Firmware notifies app that firmware enters blood pressure calibration interface              |      |
+| 54             | Firmware updates automatic recognition switch status, notifies app to get automatic recognition switch status (02EA)              |      |
 
 
 
-### 2.消息类型通知事件：
+### 2. Message Type Notification Event:
 
-#### 2.1 功能概括:
+#### 2.1 Summary:
 
-消息类型通知事件说明。
+Description of message type notification events.
 
 #### 2.2 API ID:
 
@@ -92,24 +92,24 @@ final int? dataType;
 final int? notifyType;
 ````
 
-#### 2.3 API参数说明:
+#### 2.3 API Parameter Description:
 
-| 十进制值 | 说明             |
-| -------- | ---------------- |
-| 1        | 闹钟已经修改     |
-| 2        | 固件过热异常告警 |
-| 4        | 亮屏参数有修改   |
-| 8        | 抬腕参数有修改   |
-| 16       | 勿擾模式获取     |
-| 32       | 手机音量的下发   |
+| Decimal Value | Description         |
+| ------------- | ------------------- |
+| 1             | Alarm has been modified |
+| 2             | Firmware overheating exception warning |
+| 4             | Display parameter has been modified |
+| 8             | Wrist lift parameter has been modified |
+| 16            | Do not disturb mode retrieval |
+| 32            | Mobile phone volume sent |
 
 
 
-### 3.消息ID：
+### 3. Message ID:
 
-#### 3.1 功能概括:
+#### 3.1 Summary:
 
-无。
+None.
 
 #### 3.2 API ID:
 
@@ -117,17 +117,17 @@ final int? notifyType;
 final int? msgId;
 ````
 
-#### 3.3 API参数说明:
+#### 3.3 API Parameter Description:
 
-@param:每个消息对应一个ID
+@param: Each message corresponds to an ID
 
 
 
-### 4.快捷短信通知：
+### 4. Quick Message Notification:
 
-#### 4.1 功能概括:
+#### 4.1 Summary:
 
-无。////TODO快捷短信如何设置
+None. //// TODO: How to set quick messages
 
 #### 4.2 API ID:
 
@@ -135,26 +135,26 @@ final int? msgId;
 final int? msgNotice;
 ````
 
-#### 4.3 API参数说明: 
+#### 4.3 API Parameter Description:
 
-| 值   | 说明                            |
-| ---- | ------------------------------- |
-| 0    | 无                              |
-| 1    | 自定义短信1(正在开会，稍后联系) |
-| 2    | 自定义短信2                     |
-| 3    | 自定义短信3                     |
-| 4    | 自定义短信4                     |
-| 5    | 自定义短信5                     |
-| ..   | ..(依次类推到10)                |
-| 10   | 自定义短信10                    |
+| Value | Description                                         |
+| ----- | --------------------------------------------------- |
+| 0     | None                                                |
+| 1     | Custom Message 1 (In a meeting, contact later)      |
+| 2     | Custom Message 2                                    |
+| 3     | Custom Message 3                                    |
+| 4     | Custom Message 4                                    |
+| 5     | Custom Message 5                                    |
+| ..    | .. (continue up to 10)                              |
+| 10    | Custom Message 10                                   |
 
 
 
-### 5.固件错误码通知：
+### 5. Firmware Error Code Notification:
 
-#### 5.1 功能概括:
+#### 5.1 Summary:
 
-监听到固件的错误码通知，APP获取固件Flash日志。
+Listens for firmware error code notifications, app retrieves firmware Flash logs.
 
 #### 5.2 API ID:
 
@@ -162,89 +162,86 @@ final int? msgNotice;
 final int? errorIndex;
 ````
 
-#### 5.3 API参数说明:
+#### 5.3 API Parameter Description:
 
-| 值   | 错误类型     |
-| ---- | ------------ |
-| 0    | 没有错误     |
-| 1    | ACC          |
-| 2    | PPG          |
-| 3    | TP           |
-| 4    | FLASH        |
-| 5    | 过热（PPG）  |
-| 6    | 气压         |
-| 7    | GPS          |
-| 8    | 地磁         |
-| 100  | 开门狗复位   |
-| 101  | 上电复位     |
-| 102  | 软件错位复位 |
-| 103  | OTA复位      |
-| 104  | 用户主动复位 |
-| 105  | 低电关机复位 |
+| Value | Error Type                        |
+| ----- | --------------------------------- |
+| 0     | No error                           |
+| 1     | ACC                               |
+| 2     | PPG                               |
+| 3     | TP                                |
+| 4     | FLASH                             |
+| 5     | Overheating (PPG)                  |
+| 6     | Barometric pressure               |
+| 7     | GPS                                |
+| 8     | Magnetometer                      |
+| 100   | Watchdog reset                      |
+| 101   | Power-on reset                      |
+| 102   | Software reset                      |
+| 103   | OTA reset                           |
+| 104   | User-initiated reset                 |
+| 105   | Low battery shutdown                 |
 
-备注:1~100是固件错误码，100~200复位日志码。
+Note: 1-100 are firmware error codes, 100-200 are reset log codes.
 
 
 
-### 6.控制事件通知：
+### 6. Control Event Notification:
 
-#### 6.1 功能概括:
+#### 6.1 Function Overview:
 
-无。
+N/A.
 
 #### 6.2 API ID:
 
-````dart
+```dart
 final int? controlEvt;
-````
+```
 
-#### 6.3 API参数说明:
+#### 6.3 API Parameter Description:
 
-| 控制事件                               | 事件号 |
-| -------------------------------------- | ------ |
-| 设备控制app音乐开始                    | 551    |
-| 设备控制app音乐暂停                    | 552    |
-| 设备控制app音乐停止                    | 553    |
-| 设备控制app音乐上一首                  | 554    |
-| 设备控制app音乐下一首                  | 555    |
-| 设备控制app拍照单拍                    | 556    |
-| 设备控制app拍照连拍                    | 557    |
-| 设备控制app音量加                      | 558    |
-| 设备控制app音量减                      | 559    |
-| 设备控制app打开相机                    | 560    |
-| 设备控制app关闭相机                    | 561    |
-| 设备控制app接听电话                    | 562    |
-| 设备控制app拒接电话                    | 563    |
-| 设备控制app音乐音量百分比              | 565    |
-| 设备控制app寻找手机开始                | 570    |
-| 设备控制app寻找手机结束                | 572    |
-| 设备通知app防丢启动                    | 574    |
-| 设备通知app一键呼叫开始                | 575    |
-| 设备通知传感器数据 设备通知app操作类型 | 576    |
-| 设备通知app数据更新                    | 577    |
-| 设备请求版本检查                       | 578    |
-| 设备请求ota                            | 579    |
-| 设备通知app短信信息                    | 580    |
-| 设备控制app相机                        | 581    |
-| 设备通知固件喇叭音量修改               | 591    |
+| Control Event                            | Event Number |
+| ---------------------------------------- | ------------ |
+| Control app music play                    | 551          |
+| Control app music pause                   | 552          |
+| Control app music stop                    | 553          |
+| Control app music previous track          | 554          |
+| Control app music next track              | 555          |
+| Control app take photo (single shot)      | 556          |
+| Control app take photo (continuous shot)  | 557          |
+| Control app volume up                     | 558          |
+| Control app volume down                   | 559          |
+| Control app open camera                   | 560          |
+| Control app close camera                  | 561          |
+| Control app answer phone call             | 562          |
+| Control app reject phone call             | 563          |
+| Control app music volume (percentage)     | 565          |
+| Control app start find my phone           | 570          |
+| Control app stop find my phone            | 572          |
+| Notify app of anti-lost activation        | 574          |
+| Start one-key call in app                 | 575          |
+| Notify app of sensor data                 | 576          |
+| Notify app of data update                 | 577          |
+| Request version check                     | 578          |
+| Request OTA update                        | 579          |
+| Notify app of SMS information             | 580          |
+| Control app camera                        | 581          |
+| Notify app of firmware speaker volume     | 591          |
 
 
 
-### 7.控制事件返回参数：
+### 7. Control Event Response Parameters:
 
-#### 7.1 功能概括:
+#### 7.1 Function Overview:
 
-无。
+N/A.
 
 #### 7.2 API ID:
 
-````dart
+```dart
 final String? controlJson;
-````
+```
 
-#### 7.3 API参数说明:
+#### 7.3 API Parameter Description:
 
-事件号说明和对应事件项内容说明跳转到 => [设备主动通知/控制事件](../../../BaseProtocolEvtExecDoc/zh/doc/IDODeviceControlEvt/IDODeviceControlEvtIntroduction.md) ////TODO有控制事件没有参数 优化
-
-
-
+For details of event numbers and corresponding event item content, please refer to [Device Active Notification / Control Events](../../../BaseProtocolEvtExecDoc/en/doc/IDODeviceControlEvt/IDODeviceControlEvtIntroduction.md) //// TODO Optimize the control events that have no parameters

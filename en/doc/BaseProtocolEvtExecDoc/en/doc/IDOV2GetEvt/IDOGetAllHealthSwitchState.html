@@ -12,44 +12,44 @@
         
         
     
-    <link rel="stylesheet" href="../../../../../gitbook/style.css">
+    <link rel="stylesheet" href="../../../../../../gitbook/style.css">
 
     
             
                 
-                <link rel="stylesheet" href="../../../../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                <link rel="stylesheet" href="../../../../../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
                 
             
                 
-                <link rel="stylesheet" href="../../../../../gitbook/gitbook-plugin-back-to-top-button/plugin.css">
+                <link rel="stylesheet" href="../../../../../../gitbook/gitbook-plugin-back-to-top-button/plugin.css">
                 
             
                 
-                <link rel="stylesheet" href="../../../../../gitbook/gitbook-plugin-code/plugin.css">
+                <link rel="stylesheet" href="../../../../../../gitbook/gitbook-plugin-code/plugin.css">
                 
             
                 
-                <link rel="stylesheet" href="../../../../../gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
+                <link rel="stylesheet" href="../../../../../../gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
                 
             
                 
-                <link rel="stylesheet" href="../../../../../gitbook/gitbook-plugin-pageview-count/plugin.css">
+                <link rel="stylesheet" href="../../../../../../gitbook/gitbook-plugin-pageview-count/plugin.css">
                 
             
                 
-                <link rel="stylesheet" href="../../../../../gitbook/gitbook-plugin-search-pro/search.css">
+                <link rel="stylesheet" href="../../../../../../gitbook/gitbook-plugin-search-pro/search.css">
                 
             
                 
-                <link rel="stylesheet" href="../../../../../gitbook/gitbook-plugin-language-picker/plugin.css">
+                <link rel="stylesheet" href="../../../../../../gitbook/gitbook-plugin-language-picker/plugin.css">
                 
             
                 
-                <link rel="stylesheet" href="../../../../../gitbook/gitbook-plugin-highlight/website.css">
+                <link rel="stylesheet" href="../../../../../../gitbook/gitbook-plugin-highlight/website.css">
                 
             
                 
-                <link rel="stylesheet" href="../../../../../gitbook/gitbook-plugin-fontsettings/website.css">
+                <link rel="stylesheet" href="../../../../../../gitbook/gitbook-plugin-fontsettings/website.css">
                 
             
         
@@ -77,8 +77,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../../../../gitbook/images/apple-touch-icon-precomposed-152.png">
-    <link rel="shortcut icon" href="../../../../../gitbook/images/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../../../../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../../../../../gitbook/images/favicon.ico" type="image/x-icon">
 
     
     <link rel="next" href="IDOGetActivitySwitch.html" />
@@ -2896,9 +2896,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.6.7" data-path="../../../zh/doc/IDOV3Evt/IDOV3SetSportSort.html">
+        <li class="chapter " data-level="1.2.6.7" data-path="../../../zh/doc/IDOV3Evt/IDOV3SetSportSort.md">
             
-                <a href="../../../zh/doc/IDOV3Evt/IDOV3SetSportSort.html">
+                <span>
             
                     
                     V3设置运动类型排序
@@ -3458,9 +3458,143 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="get-all-health-monitoring-switches">Get All Health Monitoring Switches</h1>
+                                <h3 id="get-all-health-monitoring-switches">Get All Health Monitoring Switches</h3>
+<p>Menu: getHealthSwitchStateSupportV3</p>
+<p><strong>Flutter Example:</strong></p>
+<pre><code class="lang-dart"><span class="hljs-comment"><span class="markdown">/// Get event number for all health monitoring switches</span></span>
+getAllHealthSwitchState(
+  evtBase: _VBusEvtBase.base_app_get,
+  evtType: _VBusEvtType.app_get_all_health_switch_state),
+
+<span class="hljs-comment"><span class="markdown">/// Get all health monitoring switches</span></span>
+libManager.send(evt: CmdEvtType.getAllHealthSwitchState, json: jsonEncode(json));
+</code></pre>
+<p><strong>JSON fields received by the app</strong>:</p>
+<table>
+<thead>
+<tr>
+<th>Field Name</th>
+<th>Field Type</th>
+<th>Field Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>heart_mode</td>
+<td>int</td>
+<td>Continuous heart rate measurement switch: 170 for on, 85 for off</td>
+</tr>
+<tr>
+<td>pressure_mode</td>
+<td>int</td>
+<td>Automatic blood pressure measurement switch: 170 for on, 85 for off</td>
+</tr>
+<tr>
+<td>spo2_mode</td>
+<td>int</td>
+<td>Automatic blood oxygen measurement switch: 170 for on, 85 for off</td>
+</tr>
+<tr>
+<td>science_mode</td>
+<td>int</td>
+<td>Scientific sleep switch: 170 for scientific sleep mode, 85 for normal sleep mode</td>
+</tr>
+<tr>
+<td>temperature_mode</td>
+<td>int</td>
+<td>Nighttime temperature switch: 170 for on, 85 for off</td>
+</tr>
+<tr>
+<td>noise_mode</td>
+<td>int</td>
+<td>Noise switch: 170 for on, 85 for off</td>
+</tr>
+<tr>
+<td>menstrual_mode</td>
+<td>int</td>
+<td>Menstrual cycle switch: 170 for on, 85 for off</td>
+</tr>
+<tr>
+<td>walk_mode</td>
+<td>int</td>
+<td>Walking reminder switch: 170 for on, 85 for off</td>
+</tr>
+<tr>
+<td>handwashing_mode</td>
+<td>int</td>
+<td>Handwashing reminder switch: 170 for on, 85 for off</td>
+</tr>
+<tr>
+<td>drinkwater_mode</td>
+<td>int</td>
+<td>Drink water reminder switch: 170 for on, 85 for off</td>
+</tr>
+<tr>
+<td>heartmode_notify_flag</td>
+<td>int</td>
+<td>Heart rate notification status: <br>0 for invalid <br>1 for allow notification <br>2 for silent notification <br>3 for disable notification</td>
+</tr>
+<tr>
+<td>pressure_notify_flag</td>
+<td>int</td>
+<td>Blood pressure notification status: <br>0 for invalid <br>1 for allow notification <br>2 for silent notification <br>3 for disable notification</td>
+</tr>
+<tr>
+<td>spo2_notify_flag</td>
+<td>int</td>
+<td>Blood oxygen notification status: <br>0 for invalid <br>1 for allow notification <br>2 for silent notification <br>3 for disable notification</td>
+</tr>
+<tr>
+<td>menstrual_notify_flag</td>
+<td>int</td>
+<td>Menstrual cycle notification status: <br>0 for invalid <br>1 for allow notification <br>2 for silent notification <br>3 for disable notification</td>
+</tr>
+<tr>
+<td>guidance_notify_flag</td>
+<td>int</td>
+<td>Fitness guidance notification status: <br>0 for invalid <br>1 for allow notification <br>2 for silent notification <br>3 for disable notification</td>
+</tr>
+<tr>
+<td>reminder_notify_flag</td>
+<td>int</td>
+<td>Reminder notification status: <br>0 for invalid <br>1 for allow notification <br>2 for silent notification <br>3 for disable notification</td>
+</tr>
+<tr>
+<td>respir_rate_state</td>
+<td>int</td>
+<td>Respiration rate switch: 85 for off, 170 for on</td>
+</tr>
+<tr>
+<td>body_power_state</td>
+<td>int</td>
+<td>Body battery switch: 85 for off, 170 for on</td>
+</tr>
+</tbody>
+</table>
+<p><code>Example:</code></p>
+<pre><code class="lang-json">{
+  <span class="hljs-string">&quot;heart_mode&quot;</span>: <span class="hljs-number">85</span>,
+  <span class="hljs-string">&quot;pressure_mode&quot;</span>: <span class="hljs-number">85</span>,
+  <span class="hljs-string">&quot;spo2_mode&quot;</span>: <span class="hljs-number">85</span>,
+  <span class="hljs-string">&quot;science_mode&quot;</span>: <span class="hljs-number">85</span>,
+  <span class="hljs-string">&quot;temperature_mode&quot;</span>: <span class="hljs-number">85</span>,
+  <span class="hljs-string">&quot;noise_mode&quot;</span>: <span class="hljs-number">85</span>,
+  <span class="hljs-string">&quot;menstrual_mode&quot;</span>: <span class="hljs-number">85</span>,
+  <span class="hljs-string">&quot;walk_mode&quot;</span>: <span class="hljs-number">85</span>,
+  <span class="hljs-string">&quot;handwashing_mode&quot;</span>: <span class="hljs-number">85</span>,
+  <span class="hljs-string">&quot;drinkwater_mode&quot;</span>: <span class="hljs-number">85</span>,
+  <span class="hljs-string">&quot;heartmode_notify_flag&quot;</span>: <span class="hljs-number">0</span>,
+  <span class="hljs-string">&quot;pressure_notify_flag&quot;</span>: <span class="hljs-number">0</span>,
+  <span class="hljs-string">&quot;spo2_notify_flag&quot;</span>: <span class="hljs-number">0</span>,
+  <span class="hljs-string">&quot;menstrual_notify_flag&quot;</span>: <span class="hljs-number">0</span>,
+  <span class="hljs-string">&quot;guidance_notify_flag&quot;</span>: <span class="hljs-number">0</span>,
+  <span class="hljs-string">&quot;reminder_notify_flag&quot;</span>: <span class="hljs-number">0</span>,
+  <span class="hljs-string">&quot;respir_rate_state&quot;</span>: <span class="hljs-number">0</span>,
+  <span class="hljs-string">&quot;body_power_state&quot;</span>: <span class="hljs-number">0</span>
+}
+</code></pre>
 <footer class="page-footer"><span class="copyright">Copyright &#xA9; 2023-2024 IDO. All rights reserved. all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">Modify Date:
-2023-08-19 10:46:29
+2023-08-21 11:41:27
 </span></footer>
 <script>console.log("plugin-popup....");document.onclick = function(e){ e.target.tagName === "IMG" && window.open(e.target.src,e.target.src)}</script><style>img{cursor:pointer}</style>
                                 
@@ -3505,57 +3639,61 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Get All Health Monitoring Switches","level":"1.2.2.26","depth":3,"next":{"title":"Get Activity Recognition Switch","level":"1.2.2.27","depth":3,"path":"doc/BaseProtocolEvtExecDoc/en/doc/IDOV2GetEvt/IDOGetActivitySwitch.md","ref":"doc/BaseProtocolEvtExecDoc/en/doc/IDOV2GetEvt/IDOGetActivitySwitch.md","articles":[]},"previous":{"title":"Get Walking Reminder","level":"1.2.2.25","depth":3,"path":"doc/BaseProtocolEvtExecDoc/en/doc/IDOV2GetEvt/IDOGetWalkReminder.md","ref":"doc/BaseProtocolEvtExecDoc/en/doc/IDOV2GetEvt/IDOGetWalkReminder.md","articles":[]},"dir":"ltr"},"config":{"plugins":["chapter-fold","back-to-top-button","code","github","tbfed-pagefooter","copy-code-button","pageview-count","-lunr","-search","search-pro","language-picker","popup"],"root":".","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright © 2023-2024 IDO. All rights reserved.","modify_label":"Modify Date:","modify_format":"YYYY-MM-DD HH:mm:ss"},"chapter-fold":{},"language-picker":{"grid-columns":3},"github":{"url":"https://github.com/idoosmart/"},"search-pro":{},"popup":{},"code":{"copyButtons":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"back-to-top-button":{},"pageview-count":{},"copy-code-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"luoft","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"IDO FLUTTER API DOCUMENT","language":"zh-hans","gitbook":"*","description":"IDO FLUTTER API DOCUMENT"},"file":{"path":"doc/BaseProtocolEvtExecDoc/en/doc/IDOV2GetEvt/IDOGetAllHealthSwitchState.md","mtime":"2023-08-19T02:46:29.243Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2023-08-19T03:00:05.810Z"},"basePath":"../../../../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Get All Health Monitoring Switches","level":"1.2.2.26","depth":3,"next":{"title":"Get Activity Recognition Switch","level":"1.2.2.27","depth":3,"path":"doc/BaseProtocolEvtExecDoc/en/doc/IDOV2GetEvt/IDOGetActivitySwitch.md","ref":"doc/BaseProtocolEvtExecDoc/en/doc/IDOV2GetEvt/IDOGetActivitySwitch.md","articles":[]},"previous":{"title":"Get Walking Reminder","level":"1.2.2.25","depth":3,"path":"doc/BaseProtocolEvtExecDoc/en/doc/IDOV2GetEvt/IDOGetWalkReminder.md","ref":"doc/BaseProtocolEvtExecDoc/en/doc/IDOV2GetEvt/IDOGetWalkReminder.md","articles":[]},"dir":"ltr"},"config":{"plugins":["chapter-fold","back-to-top-button","code","github","tbfed-pagefooter","copy-code-button","pageview-count","-lunr","-search","search-pro","language-picker","popup","i18n"],"root":".","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright © 2023-2024 IDO. All rights reserved.","modify_label":"Modify Date:","modify_format":"YYYY-MM-DD HH:mm:ss"},"chapter-fold":{},"language-picker":{"grid-columns":3},"github":{"url":"https://github.com/idoosmart/"},"search-pro":{},"popup":{},"code":{"copyButtons":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"back-to-top-button":{},"pageview-count":{},"copy-code-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"i18n":{"ChineseUrl":"../zh","EnglishUrl":"../en","all":["chinese","english"]}},"theme":"default","author":"luoft","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"IDO FLUTTER API DOCUMENT","language":"zh-hans","gitbook":"*","description":"IDO FLUTTER API DOCUMENT"},"file":{"path":"doc/BaseProtocolEvtExecDoc/en/doc/IDOV2GetEvt/IDOGetAllHealthSwitchState.md","mtime":"2023-08-21T03:41:27.481Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2023-08-21T09:04:38.834Z"},"basePath":"../../../../..","book":{"language":"en"}});
         });
     </script>
 </div>
 
         
-    <script src="../../../../../gitbook/gitbook.js"></script>
-    <script src="../../../../../gitbook/theme.js"></script>
+    <script src="../../../../../../gitbook/gitbook.js"></script>
+    <script src="../../../../../../gitbook/theme.js"></script>
     
         
-        <script src="../../../../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
-        
-    
-        
-        <script src="../../../../../gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
+        <script src="../../../../../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
         
     
         
-        <script src="../../../../../gitbook/gitbook-plugin-code/plugin.js"></script>
+        <script src="../../../../../../gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
         
     
         
-        <script src="../../../../../gitbook/gitbook-plugin-github/plugin.js"></script>
+        <script src="../../../../../../gitbook/gitbook-plugin-code/plugin.js"></script>
         
     
         
-        <script src="../../../../../gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
+        <script src="../../../../../../gitbook/gitbook-plugin-github/plugin.js"></script>
         
     
         
-        <script src="../../../../../gitbook/gitbook-plugin-pageview-count/plugin.js"></script>
+        <script src="../../../../../../gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
         
     
         
-        <script src="../../../../../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        <script src="../../../../../../gitbook/gitbook-plugin-pageview-count/plugin.js"></script>
         
     
         
-        <script src="../../../../../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        <script src="../../../../../../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
         
     
         
-        <script src="../../../../../gitbook/gitbook-plugin-language-picker/plugin.js"></script>
+        <script src="../../../../../../gitbook/gitbook-plugin-search-pro/search.js"></script>
         
     
         
-        <script src="../../../../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        <script src="../../../../../../gitbook/gitbook-plugin-language-picker/plugin.js"></script>
         
     
         
-        <script src="../../../../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        <script src="../../../../../../gitbook/gitbook-plugin-i18n/buttons.js"></script>
+        
+    
+        
+        <script src="../../../../../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../../../../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
         
     
 
