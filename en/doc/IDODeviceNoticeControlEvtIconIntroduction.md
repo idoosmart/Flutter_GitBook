@@ -244,4 +244,4 @@ final String? controlJson;
 
 #### 7.3 API Parameter Description:
 
-For details of event numbers and corresponding event item content, please refer to [Device Active Notification / Control Events](../../../BaseProtocolEvtExecDoc/en/doc/IDODeviceControlEvt/IDODeviceControlEvtIntroduction.md) //// TODO Optimize the control events that have no parameters
+For details of event numbers and corresponding event item content, please refer to [Device Active Notification / Control Events](BaseProtocolEvtExecDoc/IDODeviceControlEvt/IDODeviceControlEvtIntroduction.md) //// TODO Optimize the control events that have no parameters

@@ -135,7 +135,7 @@ final int? msgId;
 final int? msgNotice;
 ````
 
-#### 4.3 API参数说明: 
+#### 4.3 API参数说明:
 
 | 值   | 说明                            |
 | ---- | ------------------------------- |
@@ -244,7 +244,7 @@ final String? controlJson;
 
 #### 7.3 API参数说明:
 
-事件号说明和对应事件项内容说明跳转到 => [设备主动通知/控制事件](../../../BaseProtocolEvtExecDoc/zh/doc/IDODeviceControlEvt/IDODeviceControlEvtIntroduction.md) ////TODO有控制事件没有参数 优化
+事件号说明和对应事件项内容说明跳转到 => [设备主动通知/控制事件](BaseProtocolEvtExecDoc/IDODeviceControlEvt/IDODeviceControlEvtIntroduction.md) ////TODO有控制事件没有参数 优化
 
 
 
