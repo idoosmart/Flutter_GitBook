@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>V3 Multi-Sport Data Exchange · IDO FLUTTER API DOCUMENT</title>
+        <title>同步V2运动 · IDO FLUTTER 接口说明</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -81,10 +81,10 @@
     <link rel="shortcut icon" href="../../../../../../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="IDOV3ActivityDataFinal.html" />
+    <link rel="next" href="IDOV2HealthSyncSleep.html" />
     
     
-    <link rel="prev" href="IDOV3GetAlarm.html" />
+    <link rel="prev" href="../IDOV3HealthSyncEvt/IDOV3HealthSyncHRV.html" />
     
 
     </head>
@@ -118,7 +118,7 @@
                 <a href="../../../../../">
             
                     
-                    IDO Standardization Specification document
+                    IDO标准化说明文档
             
                 </a>
             
@@ -131,7 +131,7 @@
                 <a href="../../../../../IDOSDK.html">
             
                     
-                    IDO SDK bridge description
+                    IDO SDK 桥接说明
             
                 </a>
             
@@ -144,7 +144,7 @@
                 <a href="../../../../../IDOFlutter.html">
             
                     
-                    IDO Standardized Flutter Interface Documentation
+                    IDO标准化Flutter接口说明
             
                 </a>
             
@@ -158,7 +158,7 @@
                 <a href="../../../../../IDOFlutter.html#send">
             
                     
-                    Send Basic Events
+                    下发基础事件
             
                 </a>
             
@@ -172,7 +172,7 @@
                 <a href="../../../../IDOProtocolIntroduction.html">
             
                     
-                    IDO Basic Event Field Description
+                    IDO基础事件字段说明
             
                 </a>
             
@@ -190,7 +190,7 @@
                 <a href="../../../../../IDOFlutter.html#receiveDataFromBle">
             
                     
-                    Bluetooth Response Data Entry
+                    蓝牙响应数据总入口
             
                 </a>
             
@@ -203,7 +203,7 @@
                 <a href="../../../../../IDOFlutter.html#initClib">
             
                     
-                    Initialize C Library
+                    初始化C库
             
                 </a>
             
@@ -216,7 +216,7 @@
                 <a href="../../../../../IDOFlutter.html#setClibRunMode">
             
                     
-                    Set C Library Log Mode
+                    设置C库日志模式
             
                 </a>
             
@@ -229,7 +229,7 @@
                 <a href="../../../../../IDOFlutter.html#registerWriteDataToBle">
             
                     
-                    Register Bluetooth Data Sending Function
+                    注册蓝牙数据发送函数
             
                 </a>
             
@@ -242,7 +242,7 @@
                 <a href="../../../../../IDOFlutter.html#writeDataComplete">
             
                     
-                    Bluetooth Data Sending Complete
+                    蓝牙数据发送完成
             
                 </a>
             
@@ -255,7 +255,7 @@
                 <a href="../../../../../IDOFlutter.html#markConnectedDeviceSafe">
             
                     
-                    Mark Device as Connected (Call when Bluetooth is connected)
+                    标记设备已连接(蓝牙连接时调用)
             
                 </a>
             
@@ -268,7 +268,7 @@
                 <a href="../../../../../IDOFlutter.html#markDisconnectedDevice">
             
                     
-                    Mark Device as Disconnected (Call when Bluetooth is disconnected)
+                    标记设备已断开(蓝牙断开时调用)
             
                 </a>
             
@@ -281,7 +281,7 @@
                 <a href="../../../../../IDOFlutter.html#dispose">
             
                     
-                    Clear All Pending Tasks
+                    清除所有待执行任务
             
                 </a>
             
@@ -294,7 +294,7 @@
                 <a href="../../../../../IDOFlutter.html#transFile">
             
                     
-                    File Transfer Tool Entry
+                    文件传输工具入口
             
                 </a>
             
@@ -308,7 +308,7 @@
                 <a href="../../../../IDOTranFileIntroduction.html">
             
                     
-                    IDO File Transfer Interface Description
+                    IDO文件传输接口说明
             
                 </a>
             
@@ -326,7 +326,7 @@
                 <a href="../../../../../IDOFlutter.html#isConnected">
             
                     
-                    Query Connection Status
+                    查询是否处于已连接状态
             
                 </a>
             
@@ -339,7 +339,7 @@
                 <a href="../../../../../IDOFlutter.html#isConnecting">
             
                     
-                    Query Connection In Progress Status
+                    查询是否处于连接中状态
             
                 </a>
             
@@ -352,7 +352,7 @@
                 <a href="../../../../../IDOFlutter.html#isBinding">
             
                     
-                    Query Binding In Progress Status
+                    查询是否处于绑定中状态
             
                 </a>
             
@@ -365,7 +365,7 @@
                 <a href="../../../../../IDOFlutter.html#isFastSynchronizing">
             
                     
-                    Query Fast Synchronization In Progress Status
+                    查询是否处于执行快速配置中状态
             
                 </a>
             
@@ -378,7 +378,7 @@
                 <a href="../../../../../IDOFlutter.html#otaType">
             
                     
-                    Query OTA Type
+                    查询OTA类型
             
                 </a>
             
@@ -391,7 +391,7 @@
                 <a href="../../../../../IDOFlutter.html#macAddress">
             
                     
-                    Query MAC Address of Currently Connected Device
+                    查询当前连接的设备MAC地址
             
                 </a>
             
@@ -404,7 +404,7 @@
                 <a href="../../../../../IDOFlutter.html#funTable">
             
                     
-                    Function Table Entry
+                    功能表入口
             
                 </a>
             
@@ -418,7 +418,7 @@
                 <a href="../../../../IDOFunctionTableIntroduction.html">
             
                     
-                    IDO Function Table Interface Description
+                    IDO功能表接口说明
             
                 </a>
             
@@ -436,7 +436,7 @@
                 <a href="../../../../../IDOFlutter.html#syncData">
             
                     
-                    Data Synchronization Entry
+                    数据同步入口
             
                 </a>
             
@@ -450,7 +450,7 @@
                 <a href="../../../../IDOSyncHealthDataIntroduction.html">
             
                     
-                    IDO Data Synchronization Interface Description
+                    IDO数据同步接口说明
             
                 </a>
             
@@ -464,7 +464,7 @@
                 <a href="../../../../IDOV3HealthSyncEvtIntroduction.html">
             
                     
-                    IDO Synchronization health data content Description
+                    IDO同步健康数据内容说明
             
                 </a>
             
@@ -478,7 +478,7 @@
                 <a href="../IDOV3HealthSyncEvt/IDOV3HealthSyncSpo2.html">
             
                     
-                    Sync SpO2
+                    同步血氧
             
                 </a>
             
@@ -491,7 +491,7 @@
                 <a href="../IDOV3HealthSyncEvt/IDOV3HealthSyncPressure.html">
             
                     
-                    Sync Pressure
+                    同步压力
             
                 </a>
             
@@ -504,7 +504,7 @@
                 <a href="../IDOV3HealthSyncEvt/IDOV3HealthSyncActivity.html">
             
                     
-                    Sync Multiple Sports and Exercise Courses
+                    同步多运动及运动课程
             
                 </a>
             
@@ -517,7 +517,7 @@
                 <a href="../IDOV3HealthSyncEvt/IDOV3HealthSyncGPS.html">
             
                     
-                    Sync GPS
+                    同步GPS
             
                 </a>
             
@@ -530,7 +530,7 @@
                 <a href="../IDOV3HealthSyncEvt/IDOV3HealthSyncSwim.html">
             
                     
-                    Sync Swimming
+                    同步游泳
             
                 </a>
             
@@ -543,7 +543,7 @@
                 <a href="../IDOV3HealthSyncEvt/IDOV3HealthSyncSleep.html">
             
                     
-                    Sync Sleep
+                    同步睡眠
             
                 </a>
             
@@ -556,7 +556,7 @@
                 <a href="../IDOV3HealthSyncEvt/IDOV3HealthSyncSport.html">
             
                     
-                    Sync Exercise
+                    同步运动
             
                 </a>
             
@@ -569,7 +569,7 @@
                 <a href="../IDOV3HealthSyncEvt/IDOV3HealthSyncNoise.html">
             
                     
-                    Sync Environmental Volume (Noise)
+                    同步环境音量(噪声)
             
                 </a>
             
@@ -582,7 +582,7 @@
                 <a href="../IDOV3HealthSyncEvt/IDOV3HealthSyncTemperature.html">
             
                     
-                    Sync Temperature
+                    同步体温
             
                 </a>
             
@@ -595,7 +595,7 @@
                 <a href="../IDOV3HealthSyncEvt/IDOV3HealthSyncBP.html">
             
                     
-                    Sync Blood Pressure
+                    同步血压
             
                 </a>
             
@@ -608,7 +608,7 @@
                 <a href="../IDOV3HealthSyncEvt/IDOV3HealthSyncRespirRate.html">
             
                     
-                    Sync Respiratory Rate Data
+                    同步呼吸率数据
             
                 </a>
             
@@ -621,7 +621,7 @@
                 <a href="../IDOV3HealthSyncEvt/IDOV3HealthSyncBodyPower.html">
             
                     
-                    Sync Body Power Data
+                    同步身体电量数据
             
                 </a>
             
@@ -634,7 +634,85 @@
                 <a href="../IDOV3HealthSyncEvt/IDOV3HealthSyncHRV.html">
             
                     
-                    Sync HRV Data
+                    同步HRV数据
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.3.18.1.1.14" data-path="IDOV2HealthSyncSport.html">
+            
+                <a href="IDOV2HealthSyncSport.html">
+            
+                    
+                    同步V2运动
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.18.1.1.15" data-path="IDOV2HealthSyncSleep.html">
+            
+                <a href="IDOV2HealthSyncSleep.html">
+            
+                    
+                    同步V2睡眠
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.18.1.1.16" data-path="IDOV2HealthSyncHR.html">
+            
+                <a href="IDOV2HealthSyncHR.html">
+            
+                    
+                    同步V2心率
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.18.1.1.17" data-path="IDOV2HealthSyncBP.html">
+            
+                <a href="IDOV2HealthSyncBP.html">
+            
+                    
+                    同步V2血压
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.18.1.1.18" data-path="IDOV2HealthSyncGPS.html">
+            
+                <a href="IDOV2HealthSyncGPS.html">
+            
+                    
+                    同步V2GPS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.18.1.1.19" data-path="IDOV2HealthSyncActivity.html">
+            
+                <a href="IDOV2HealthSyncActivity.html">
+            
+                    
+                    同步V2多运动
             
                 </a>
             
@@ -662,7 +740,7 @@
                 <a href="../../../../../IDOFlutter.html#deviceInfo">
             
                     
-                    Device Information Entry
+                    设备信息入口
             
                 </a>
             
@@ -676,7 +754,7 @@
                 <a href="../../../../IDODeviceInfoIntroduction.html">
             
                     
-                    IDO Device Information Interface Description
+                    IDO设备信息接口说明
             
                 </a>
             
@@ -694,7 +772,7 @@
                 <a href="../../../../../IDOFlutter.html#deviceBind">
             
                     
-                    Device Binding Entry
+                    绑定设备入口
             
                 </a>
             
@@ -708,7 +786,7 @@
                 <a href="../../../../IDODeviceBindIntroduction.html">
             
                     
-                    IDO Device Binding Interface Description
+                    IDO设备绑定接口说明
             
                 </a>
             
@@ -726,7 +804,7 @@
                 <a href="../../../../../IDOFlutter.html#messageIcon">
             
                     
-                    Message Icon Entry
+                    消息图标入口
             
                 </a>
             
@@ -740,7 +818,7 @@
                 <a href="../../../../IDOMessageIconIntroduction.html">
             
                     
-                    IDO Message Icon Interface Description
+                    IDO消息图标接口说明
             
                 </a>
             
@@ -754,7 +832,7 @@
                 <a href="../../../../IDOLanguageUnit.html">
             
                     
-                    IDO language unit content description
+                    IDO语言单位内容说明
             
                 </a>
             
@@ -777,7 +855,7 @@
                 <a href="../../../../../IDOFlutter.html#exchangeData">
             
                     
-                    Data Exchange Entry
+                    数据交换入口
             
                 </a>
             
@@ -791,7 +869,7 @@
                 <a href="../../../../IDOExchangeDataIconIntroduction.html">
             
                     
-                    IDO Data Exchange Interface Description
+                    IDO数据交换接口说明
             
                 </a>
             
@@ -805,7 +883,7 @@
                 <a href="../../../../IDOExchangeDataModal/IDOExchangeDataBleNoticeModel.html">
             
                     
-                    The APP initiates the data exchange model description
+                    APP发起数据交换模型说明
             
                 </a>
             
@@ -818,7 +896,7 @@
                 <a href="../../../../IDOExchangeDataModal/IDOExchangeDataBleNoticeAppReplyModel.html">
             
                     
-                    App replies model description of BLE device initiating exchange movement
+                    App回复BLE设备发起交换运动的模型说明
             
                 </a>
             
@@ -831,7 +909,7 @@
                 <a href="../../../../IDOExchangeDataModal/IDOExchangeDataBleNoticeModel.html">
             
                     
-                    BLE initiates the data exchange model description
+                    BLE发起数据交换模型说明
             
                 </a>
             
@@ -844,7 +922,7 @@
                 <a href="../../../../IDOExchangeDataModal/IDOExchangeDataAppSendReplyModel.html">
             
                     
-                    BLE responds to the model description of the APP initiating data exchange
+                    BLE响应APP发起数据交换的模型说明
             
                 </a>
             
@@ -867,7 +945,7 @@
                 <a href="../../../../../IDOFlutter.html#deviceLog">
             
                     
-                    Device Log Entry
+                    设备日志入口
             
                 </a>
             
@@ -881,7 +959,7 @@
                 <a href="../../../../IDODeviceLogIconIntroduction.html">
             
                     
-                    IDO Device Log Interface Description
+                    IDO设备日志接口说明
             
                 </a>
             
@@ -899,7 +977,7 @@
                 <a href="../../../../../IDOFlutter.html#tools">
             
                     
-                    Other Tools Entry
+                    其他工具接口
             
                 </a>
             
@@ -913,7 +991,7 @@
                 <a href="../../../../IDOCLibToolFunctionIconIntroduction.html">
             
                     
-                    IDO Tools Interface Description
+                    IDO工具接口说明
             
                 </a>
             
@@ -931,7 +1009,7 @@
                 <a href="../../../../../IDOFlutter.html#callNotice">
             
                     
-                    Call Notice & Message Entry
+                    来电提醒&消息入口
             
                 </a>
             
@@ -945,7 +1023,7 @@
                 <a href="../../../../IDOV2NoticeIntroduction.html">
             
                     
-                    IDO Call Notice and Message Notice Interface Description
+                    IDO来电提醒和消息提醒接口说明
             
                 </a>
             
@@ -963,7 +1041,7 @@
                 <a href="../../../../../IDOFlutter.html#cache">
             
                     
-                    Protocol Library Cache Entry
+                    协议库缓存入口
             
                 </a>
             
@@ -977,7 +1055,7 @@
                 <a href="../../../../IDOCacheIconIntroduction.html">
             
                     
-                    IDO Protocol Library Cache Interface Description
+                    IDO协议库缓存接口说明
             
                 </a>
             
@@ -995,7 +1073,7 @@
                 <a href="../../../../../IDOFlutter.html#initLog">
             
                     
-                    Log Initialization
+                    log初始化
             
                 </a>
             
@@ -1008,7 +1086,7 @@
                 <a href="../../../../../IDOFlutter.html#listenStatusNotification">
             
                     
-                    Listen for Protocol Library Status Notification
+                    监听协议库状态通知
             
                 </a>
             
@@ -1021,7 +1099,7 @@
                 <a href="../../../../../IDOFlutter.html#listenDeviceNotification">
             
                     
-                    Listen for Device Notification/Control Events
+                    监听设备通知/控制事件
             
                 </a>
             
@@ -1035,7 +1113,7 @@
                 <a href="../../../../IDODeviceLogIconIntroduction.html">
             
                     
-                    IDO Device Notification/Control Event Description
+                    IDO设备通知/控制事件说明
             
                 </a>
             
@@ -1053,7 +1131,7 @@
                 <a href="../../../../../IDOFlutter.html#isLogin">
             
                     
-                    Check if Alexa is Logged In
+                    查询Alexa是否登陆
             
                 </a>
             
@@ -1066,7 +1144,7 @@
                 <a href="../../../../../IDOFlutter.html#currentLanguage">
             
                     
-                    Get Current Language of Alexa
+                    查询Alexa当前语言
             
                 </a>
             
@@ -1079,7 +1157,7 @@
                 <a href="../../../../../IDOFlutter.html#delegate">
             
                     
-                    Specify Alexa Delegate
+                    指定Alexa代理
             
                 </a>
             
@@ -1092,7 +1170,7 @@
                 <a href="../../../../../IDOFlutter.html#registerAlexa">
             
                     
-                    Register Alexa
+                    注册Alexa
             
                 </a>
             
@@ -1105,7 +1183,7 @@
                 <a href="../../../../../IDOFlutter.html#changeLanguage">
             
                     
-                    Change Alexa Language
+                    Alexa切换语言
             
                 </a>
             
@@ -1118,7 +1196,7 @@
                 <a href="../../../../../IDOFlutter.html#authorizeRequest">
             
                     
-                    Alexa CBL Authorization
+                    Alexa CBL授权
             
                 </a>
             
@@ -1131,7 +1209,7 @@
                 <a href="../../../../../IDOFlutter.html#stopLogin">
             
                     
-                    Stop Alexa Login
+                    Alexa停止登录
             
                 </a>
             
@@ -1144,7 +1222,7 @@
                 <a href="../../../../../IDOFlutter.html#logout">
             
                     
-                    Logout Alexa
+                    Alexa退出登录
             
                 </a>
             
@@ -1157,7 +1235,7 @@
                 <a href="../../../../../IDOFlutter.html#listenLoginStateChanged">
             
                     
-                    Register Listener for Alexa Login State
+                    注册监听Alexa登录状态
             
                 </a>
             
@@ -1170,7 +1248,7 @@
                 <a href="../../../../../IDOFlutter.html#listenVoiceStateChanged">
             
                     
-                    Register Listener for Alexa Voice State
+                    注册监听Alexa语音状态
             
                 </a>
             
@@ -1188,7 +1266,7 @@
                 <a href="../../../../IDOProtocolIntroduction.html">
             
                     
-                    IDO Basic Event Field Description
+                    IDO基础事件字段说明
             
                 </a>
             
@@ -1202,7 +1280,7 @@
                 <a href="../../../../IDOSetEvtIntroduction.html">
             
                     
-                    V2 Setting Instruction Event
+                    V2设置指令事件
             
                 </a>
             
@@ -1216,7 +1294,7 @@
                 <a href="../IDOV2SetEvt/IDOSetLongSitReminder.html">
             
                     
-                    Set Sedentary Reminder
+                    设置久坐提醒
             
                 </a>
             
@@ -1229,7 +1307,7 @@
                 <a href="../IDOV2SetEvt/IDOSetDisplayMode.html">
             
                     
-                    Set Display Mode
+                    设置显示模式
             
                 </a>
             
@@ -1242,7 +1320,7 @@
                 <a href="../IDOV2SetEvt/IDOSetDoNotDisturb.html">
             
                     
-                    Set Do Not Disturb Mode
+                    设置勿扰模式
             
                 </a>
             
@@ -1255,7 +1333,7 @@
                 <a href="../IDOV2SetEvt/IDOSetFindPhone.html">
             
                     
-                    Set Find Phone
+                    设置寻找手机
             
                 </a>
             
@@ -1268,7 +1346,7 @@
                 <a href="../IDOV2SetEvt/IDOSetSportGoal.html">
             
                     
-                    Set Sport Goal
+                    设置运动目标(设置全天步数目标)
             
                 </a>
             
@@ -1281,7 +1359,7 @@
                 <a href="../IDOV2SetEvt/IDOSetHand.html">
             
                     
-                    Set Hand Orientation
+                    设置左右手
             
                 </a>
             
@@ -1294,7 +1372,7 @@
                 <a href="../IDOV2SetEvt/IDOSetTime.html">
             
                     
-                    Set Time
+                    设置时间
             
                 </a>
             
@@ -1307,7 +1385,7 @@
                 <a href="../IDOV2SetEvt/IDOSetUserInfo.html">
             
                     
-                    Set User Information
+                    设置用户信息
             
                 </a>
             
@@ -1320,7 +1398,7 @@
                 <a href="../IDOV2SetEvt/IDOOneKeySOS.html">
             
                     
-                    Set One-Key SOS
+                    设置一键呼叫
             
                 </a>
             
@@ -1333,7 +1411,7 @@
                 <a href="../IDOV2SetEvt/IDOSetMusicONOFF.html">
             
                     
-                    Set Music Switch
+                    设置音乐开关
             
                 </a>
             
@@ -1346,7 +1424,7 @@
                 <a href="../IDOV2SetEvt/IDOSetLostFind.html">
             
                     
-                    Set Lost Find
+                    设置防丢模式
             
                 </a>
             
@@ -1359,7 +1437,7 @@
                 <a href="../IDOV2SetEvt/IDOSetAlarm.html">
             
                     
-                    Add Alarm
+                    添加闹钟
             
                 </a>
             
@@ -1372,7 +1450,7 @@
                 <a href="../IDOV2SetEvt/IDOSetSportMode.html">
             
                     
-                    Set Sport Mode
+                    设置运动模式
             
                 </a>
             
@@ -1385,7 +1463,7 @@
                 <a href="../IDOV2SetEvt/IDOSetWatchDial.html">
             
                     
-                    Set Watch Dial
+                    设置表盘
             
                 </a>
             
@@ -1398,7 +1476,7 @@
                 <a href="../IDOV2SetEvt/IDOSetShortcut.html">
             
                     
-                    Set Shortcut
+                    设置快捷方式
             
                 </a>
             
@@ -1411,7 +1489,7 @@
                 <a href="../IDOV2SetEvt/IDOSetBpCal.html">
             
                     
-                    Set Blood Pressure Calibration
+                    设置血压校准
             
                 </a>
             
@@ -1424,7 +1502,7 @@
                 <a href="../IDOV2SetEvt/IDOSetStressCal.html">
             
                     
-                    Set Stress Calibration
+                    设置压力校准
             
                 </a>
             
@@ -1437,7 +1515,7 @@
                 <a href="../IDOV2SetEvt/IDOSetHRInterval.html">
             
                     
-                    Set Heart Rate Interval
+                    设置心率区间
             
                 </a>
             
@@ -1450,7 +1528,7 @@
                 <a href="../IDOV2SetEvt/IDOSetHRMode.html">
             
                     
-                    Set Heart Rate Mode
+                    设置心率模式
             
                 </a>
             
@@ -1463,7 +1541,7 @@
                 <a href="../IDOV2SetEvt/IDOSetUint.html">
             
                     
-                    Set Unit
+                    设置单位
             
                 </a>
             
@@ -1476,7 +1554,7 @@
                 <a href="../IDOV2SetEvt/IDOSetSleepPeriod.html">
             
                     
-                    Set Sleep Period
+                    设置睡眠时间段
             
                 </a>
             
@@ -1489,7 +1567,7 @@
                 <a href="../IDOV2SetEvt/IDOSetUpHandGesture.html">
             
                     
-                    Set Up Hand Gesture
+                    设置抬腕亮屏
             
                 </a>
             
@@ -1502,7 +1580,7 @@
                 <a href="../IDOV2SetEvt/IDOSetBpMeasure.html">
             
                     
-                    Set Blood Pressure Measurement
+                    设置血压测量
             
                 </a>
             
@@ -1515,7 +1593,7 @@
                 <a href="../IDOV2SetEvt/IDOSetScreenBrightness.html">
             
                     
-                    Set Screen Brightness
+                    设置屏幕亮度
             
                 </a>
             
@@ -1528,7 +1606,7 @@
                 <a href="../IDOV2SetEvt/IDOSetConfigGPS.html">
             
                     
-                    Set GPS Information
+                    设置GPS信息
             
                 </a>
             
@@ -1541,7 +1619,7 @@
                 <a href="../IDOV2SetEvt/IDOSetControlGPS.html">
             
                     
-                    Set Control GPS
+                    设置控制GPS
             
                 </a>
             
@@ -1554,7 +1632,7 @@
                 <a href="../IDOV2SetEvt/IDOSetConnectParam.html">
             
                     
-                    Set Control Connection Parameters
+                    设置控制连接参数
             
                 </a>
             
@@ -1567,7 +1645,7 @@
                 <a href="../IDOV2SetEvt/IDOSetHotStartParam.html">
             
                     
-                    Set Hot Start Parameters
+                    设置热启动参数
             
                 </a>
             
@@ -1580,7 +1658,7 @@
                 <a href="../IDOV2SetEvt/IDOSetMenstruation.html">
             
                     
-                    Set Menstruation
+                    设置经期
             
                 </a>
             
@@ -1593,7 +1671,7 @@
                 <a href="../IDOV2SetEvt/IDOSetMenstruationRemind.html">
             
                     
-                    Set Menstruation Reminder
+                    设置经期提醒
             
                 </a>
             
@@ -1606,7 +1684,7 @@
                 <a href="../IDOV2SetEvt/IDOSetCalorieDistanceGoal.html">
             
                     
-                    Set Calorie and Distance Goal
+                    设置卡路里和距离目标(日常三环目标)
             
                 </a>
             
@@ -1619,7 +1697,7 @@
                 <a href="../IDOV2SetEvt/IDOSetSp02Data.html">
             
                     
-                    Set Blood Oxygen Switch
+                    设置血氧开关
             
                 </a>
             
@@ -1632,7 +1710,7 @@
                 <a href="../IDOV2SetEvt/IDOSetPressure.html">
             
                     
-                    Set Pressure Switch
+                    设置压力开关
             
                 </a>
             
@@ -1645,7 +1723,7 @@
                 <a href="../IDOV2SetEvt/IDOSetSportModeSort.html">
             
                     
-                    Set Sport Mode Sorting
+                    设置运动模式排序
             
                 </a>
             
@@ -1658,7 +1736,7 @@
                 <a href="../IDOV2SetEvt/IDOSetWalkReminder.html">
             
                     
-                    Set Walk Reminder
+                    设置走动提醒
             
                 </a>
             
@@ -1671,7 +1749,7 @@
                 <a href="../IDOV2SetEvt/IDOSetBreatheTrain.html">
             
                     
-                    Set Breathe Training
+                    设置呼吸训练
             
                 </a>
             
@@ -1684,7 +1762,7 @@
                 <a href="../IDOV2SetEvt/IDOSetActivitySwitch.html">
             
                     
-                    Set Activity Recognition Switch
+                    设置运动模式识别开关
             
                 </a>
             
@@ -1697,7 +1775,7 @@
                 <a href="../IDOV2SetEvt/IDOSetDrinkWaterReminder.html">
             
                     
-                    Set Drink Water Reminder
+                    设置喝水提醒
             
                 </a>
             
@@ -1710,7 +1788,7 @@
                 <a href="../IDOV2SetEvt/IDOSetSimpleFileOperations.html">
             
                     
-                    Simple File Operation
+                    简单文件操作
             
                 </a>
             
@@ -1723,7 +1801,7 @@
                 <a href="../IDOV2SetEvt/IDOSetMenuList.html">
             
                     
-                    Set Menu List
+                    设置菜单列表
             
                 </a>
             
@@ -1736,7 +1814,7 @@
                 <a href="../IDOV2SetEvt/IDOSetTakePicture.html">
             
                     
-                    Set Control Camera
+                    设置控制拍照
             
                 </a>
             
@@ -1749,7 +1827,7 @@
                 <a href="../IDOV2SetEvt/IDOSetNotice.html">
             
                     
-                    Set Notification Center Switch
+                    设置通知中心开关
             
                 </a>
             
@@ -1762,7 +1840,7 @@
                 <a href="../IDOV2SetEvt/IDOSetClearOperations.html">
             
                     
-                    Set Delete File
+                    设置删除文件
             
                 </a>
             
@@ -1775,7 +1853,7 @@
                 <a href="../IDOV2SetEvt/IDOSetBleVoice.html">
             
                     
-                    Set Bluetooth Voice
+                    设置手机音量下发给固件
             
                 </a>
             
@@ -1788,7 +1866,7 @@
                 <a href="../IDOV2SetEvt/IDOSetHandWashingReminder.html">
             
                     
-                    Set Hand Washing Reminder
+                    设置洗手提醒
             
                 </a>
             
@@ -1801,7 +1879,7 @@
                 <a href="../IDOV2SetEvt/IDOSetTakingMedicineReminder.html">
             
                     
-                    Set Taking Medicine Reminder
+                    设置吃药提醒
             
                 </a>
             
@@ -1814,7 +1892,7 @@
                 <a href="../IDOV2SetEvt/IDOSetHRModeSmart.html">
             
                     
-                    Set Smart Heart Rate Mode
+                    设置智能心率模式
             
                 </a>
             
@@ -1827,7 +1905,7 @@
                 <a href="../IDOV2SetEvt/IDOSetNoise.html">
             
                     
-                    Set Noise Volume Switch and Threshold
+                    设置环境音量的开关和阀值
             
                 </a>
             
@@ -1840,7 +1918,7 @@
                 <a href="../IDOV2SetEvt/IDOSetScientificSleepSwitch.html">
             
                     
-                    Set Scientific Sleep Switch
+                    设置科学睡眠开关
             
                 </a>
             
@@ -1853,7 +1931,7 @@
                 <a href="../IDOV2SetEvt/IDOSetTemperatureSwitch.html">
             
                     
-                    Set Night Temperature Switch
+                    设置夜间体温开关
             
                 </a>
             
@@ -1866,7 +1944,7 @@
                 <a href="../IDOV2SetEvt/IDOSetFitnessGuidance.html">
             
                     
-                    Set Fitness Guidance
+                    设置健身指导开关
             
                 </a>
             
@@ -1879,7 +1957,7 @@
                 <a href="../IDOV2SetEvt/IDOSetUnreadAppReminder.html">
             
                     
-                    Set Unread App Reminder Switch
+                    设置未读信息红点提示开关
             
                 </a>
             
@@ -1892,7 +1970,7 @@
                 <a href="../IDOV2SetEvt/IDOSetNotificationStatus.html">
             
                     
-                    Set Notification App Status
+                    设置通知应用状态
             
                 </a>
             
@@ -1905,7 +1983,7 @@
                 <a href="../IDOV2SetEvt/IDOSetRespiRateONOFF.html">
             
                     
-                    Set Respiration Rate Switch
+                    设置呼吸率开关
             
                 </a>
             
@@ -1918,7 +1996,7 @@
                 <a href="../IDOV2SetEvt/IDOSetBodyPowerONOFF.html">
             
                     
-                    Set Body Battery Switch
+                    设置身体电量开关
             
                 </a>
             
@@ -1931,7 +2009,7 @@
                 <a href="../IDOV2SetEvt/IDOSetWeatherSwitch.html">
             
                     
-                    Set Weather Switch
+                    设置天气开关
             
                 </a>
             
@@ -1944,7 +2022,7 @@
                 <a href="../IDOV2SetEvt/IDOSetWeatcherData.html">
             
                     
-                    Set Weather Data
+                    设置天气数据
             
                 </a>
             
@@ -1957,7 +2035,7 @@
                 <a href="../IDOV2SetEvt/IDOSetWeatcherCityName.html">
             
                     
-                    Set Weather City Name
+                    设置天气城市名称
             
                 </a>
             
@@ -1970,7 +2048,7 @@
                 <a href="../IDOV2SetEvt/IDOSetWeatcherSunTime.html">
             
                     
-                    Set Sunrise and Sunset Time
+                    设置日出日落时间
             
                 </a>
             
@@ -1988,7 +2066,7 @@
                 <a href="../../../../IDOGetEvtIntroduction.html">
             
                     
-                    V2 Get Instruction Event
+                    V2获取指令事件
             
                 </a>
             
@@ -2002,7 +2080,7 @@
                 <a href="../IDOV2GetEvt/IDOGetMac.html">
             
                     
-                    Get Device MAC Address
+                    获取设备MAC地址
             
                 </a>
             
@@ -2015,7 +2093,7 @@
                 <a href="../IDOV2GetEvt/IDOGetDeviceInfoOnly.html">
             
                     
-                    Get Device Information (excluding BT name, used for initial binding)
+                    获取设备信息(不包含bt名称,初次绑定时获取设备信息调用该接口)
             
                 </a>
             
@@ -2028,7 +2106,7 @@
                 <a href="../IDOV2GetEvt/IDOGetDeviceInfoWithBTName.html">
             
                     
-                    Get Device Information (combined interface with BT name)
+                    获取设备信息(组合接口 组合上报bt名称)
             
                 </a>
             
@@ -2041,7 +2119,7 @@
                 <a href="../IDOV2GetEvt/IDOGetFuncTableUser.html">
             
                     
-                    Get Function Table
+                    获取功能表
             
                 </a>
             
@@ -2054,7 +2132,7 @@
                 <a href="../IDOV2GetEvt/IDOGetNoticeStatus.html">
             
                     
-                    Get Notification Center Switch
+                    获取通知中心开关
             
                 </a>
             
@@ -2067,7 +2145,7 @@
                 <a href="../IDOV2GetEvt/IDOGetLiveData.html">
             
                     
-                    Get Real-time Data
+                    获得实时数据
             
                 </a>
             
@@ -2080,7 +2158,7 @@
                 <a href="../IDOV2GetEvt/IDOGetErrorRecord.html">
             
                     
-                    Get Error Records
+                    获取错误记录
             
                 </a>
             
@@ -2093,7 +2171,7 @@
                 <a href="../IDOV2GetEvt/IDOGetDataTranConfig.html">
             
                     
-                    Get Data Transfer Configuration
+                    获取文件传输配置
             
                 </a>
             
@@ -2106,7 +2184,7 @@
                 <a href="../IDOV2GetEvt/IDOGetHIDInfo.html">
             
                     
-                    Get HID Information
+                    获取HID信息
             
                 </a>
             
@@ -2119,7 +2197,7 @@
                 <a href="../IDOV2GetEvt/IDOGetGPSInfo.html">
             
                     
-                    Get GPS Information
+                    获取GPS信息
             
                 </a>
             
@@ -2132,7 +2210,7 @@
                 <a href="../IDOV2GetEvt/IDOGetGPSStatus.html">
             
                     
-                    Get GPS Status
+                    获取GPS状态
             
                 </a>
             
@@ -2145,7 +2223,7 @@
                 <a href="../IDOV2GetEvt/IDOGetVersionInfo.html">
             
                     
-                    Get Version Information
+                    获取版本信息
             
                 </a>
             
@@ -2158,7 +2236,7 @@
                 <a href="../IDOV2GetEvt/IDOGetDoNotDisturb.html">
             
                     
-                    Get Do Not Disturb Mode Status
+                    获取勿扰模式状态
             
                 </a>
             
@@ -2171,7 +2249,7 @@
                 <a href="../IDOV2GetEvt/IDOGetMtuInfo.html">
             
                     
-                    Get MTU Information
+                    获取MTU信息
             
                 </a>
             
@@ -2184,7 +2262,7 @@
                 <a href="../IDOV2GetEvt/IDOGetDefaultSportType.html">
             
                     
-                    Get Default Sport Type
+                    获取默认的运动类型
             
                 </a>
             
@@ -2197,7 +2275,7 @@
                 <a href="../IDOV2GetEvt/IDOGetDownloadLanguage.html">
             
                     
-                    Get Download Language Support
+                    获取下载语言支持
             
                 </a>
             
@@ -2210,7 +2288,7 @@
                 <a href="../IDOV2GetEvt/IDOGetBattInfo.html">
             
                     
-                    Get Battery Information
+                    获取电池信息
             
                 </a>
             
@@ -2223,7 +2301,7 @@
                 <a href="../IDOV2GetEvt/IDOGetFlashBinInfo.html">
             
                     
-                    Get Font Library Information
+                    获取字库信息
             
                 </a>
             
@@ -2236,7 +2314,7 @@
                 <a href="../IDOV2GetEvt/IDOGetMenuList.html">
             
                     
-                    Get Device Supported Menu List
+                    获取设备支持的菜单列表
             
                 </a>
             
@@ -2249,7 +2327,7 @@
                 <a href="../IDOV2GetEvt/IDOGetScreenBrightness.html">
             
                     
-                    Get Screen Brightness
+                    获取屏幕亮度
             
                 </a>
             
@@ -2262,7 +2340,7 @@
                 <a href="../IDOV2GetEvt/IDOGetUpHandGesture.html">
             
                     
-                    Get Up Hand Gesture
+                    获取抬腕数据
             
                 </a>
             
@@ -2275,7 +2353,7 @@
                 <a href="../IDOV2GetEvt/IDOGetUpdateStatus.html">
             
                     
-                    Get Device Upgrade Status
+                    获取设备升级状态
             
                 </a>
             
@@ -2288,7 +2366,7 @@
                 <a href="../IDOV2GetEvt/IDOGetDevicesLogStatus.html">
             
                     
-                    Get Device Log Status
+                    获取设备的日志状态
             
                 </a>
             
@@ -2301,7 +2379,7 @@
                 <a href="../IDOV2GetEvt/IDOGetMainSportGoal.html">
             
                     
-                    Get Calorie/Distance/Duration of Medium-high Intensity Exercise (Daily Three Rings)
+                    获取设置的卡路里/距离/中高运动时长(日常三环)
             
                 </a>
             
@@ -2314,7 +2392,7 @@
                 <a href="../IDOV2GetEvt/IDOGetWalkReminder.html">
             
                     
-                    Get Walking Reminder
+                    获取走动提醒
             
                 </a>
             
@@ -2327,7 +2405,7 @@
                 <a href="../IDOV2GetEvt/IDOGetAllHealthSwitchState.html">
             
                     
-                    Get All Health Monitoring Switches
+                    获取所有的健康监测开关
             
                 </a>
             
@@ -2340,7 +2418,7 @@
                 <a href="../IDOV2GetEvt/IDOGetActivitySwitch.html">
             
                     
-                    Get Activity Recognition Switch
+                    获取运动模式自动识别开关
             
                 </a>
             
@@ -2353,7 +2431,7 @@
                 <a href="../IDOV2GetEvt/IDOGetFirmwareBtVersion.html">
             
                     
-                    Get Firmware Version and BT Version
+                    获得固件三级版本和BT的3级版本
             
                 </a>
             
@@ -2366,7 +2444,7 @@
                 <a href="../IDOV2GetEvt/IDOGetBpAlgVersion.html">
             
                     
-                    Get Blood Pressure Algorithm Version
+                    获取血压算法三级版本号信息
             
                 </a>
             
@@ -2379,7 +2457,7 @@
                 <a href="../IDOV2GetEvt/IDOGetSupportMaxSetItemNum.html">
             
                     
-                    Get Maximum Number of Details Supported by Firmware
+                    获取固件支持的详情最大设置数量
             
                 </a>
             
@@ -2392,7 +2470,7 @@
                 <a href="../IDOV2GetEvt/IDOGetUndeletableMenuList.html">
             
                     
-                    Get Undeletable Menu List in Firmware
+                    获取固件不可删除的快捷应用列表
             
                 </a>
             
@@ -2405,7 +2483,7 @@
                 <a href="../IDOV2GetEvt/IDOGetUnreadAppONOFF.html">
             
                     
-                    Get Firmware Red Dot Prompt Switch Status
+                    获取固件红点提示开关状态
             
                 </a>
             
@@ -2418,7 +2496,7 @@
                 <a href="../IDOV2GetEvt/IDOGetBtStatus.html">
             
                     
-                    Query BT Pairing Switch, Connection, A2DP Connection, HFP Connection Status
+                    查询获取bt配对开关、连接、a2dp连接、hfp连接状态
             
                 </a>
             
@@ -2431,7 +2509,7 @@
                 <a href="../IDOV2GetEvt/IDOGetContactReviceTime.html">
             
                     
-                    Get Modification Time of Locally Stored Contact File
+                    获取固件本地保存联系人文件修改时间
             
                 </a>
             
@@ -2444,7 +2522,7 @@
                 <a href="../IDOV2GetEvt/IDOGetHRMode.html">
             
                     
-                    Get Heart Rate Monitoring Mode
+                    获取心率监测模式
             
                 </a>
             
@@ -2457,7 +2535,7 @@
                 <a href="../IDOV2GetEvt/IDOGetStepGoal.html">
             
                     
-                    Get All-day Step Goal
+                    获取全天步数目标
             
                 </a>
             
@@ -2475,7 +2553,7 @@
                 <a href="../../../../IDOOtaEvtIntroduction.html">
             
                     
-                    OTA Instruction Event
+                    OTA指令事件
             
                 </a>
             
@@ -2489,7 +2567,7 @@
                 <a href="../IDOOtaEvt/IDOOtaStart.html">
             
                     
-                    Enter Upgrade Mode
+                    进入升级模式
             
                 </a>
             
@@ -2502,7 +2580,7 @@
                 <a href="../IDOOtaEvt/IDOOtaDirectStart.html">
             
                     
-                    Directly Enter Upgrade Mode (Ignore Battery Level)
+                    直接进入升级模式(忽略电量)
             
                 </a>
             
@@ -2515,7 +2593,7 @@
                 <a href="../IDOOtaEvt/IDOOtaAuth.html">
             
                     
-                    Set OTA Authorization
+                    设置OTA授权
             
                 </a>
             
@@ -2533,7 +2611,7 @@
                 <a href="../../../../IDOControlEvtIntroduction.html">
             
                     
-                    APP Initiated Notification/Control Event
+                    APP发起通知/控制事件
             
                 </a>
             
@@ -2547,7 +2625,7 @@
                 <a href="../IDOControlEvt/IDOControlReboot.html">
             
                     
-                    Control Device Reboot
+                    控制设备重启
             
                 </a>
             
@@ -2560,7 +2638,7 @@
                 <a href="../IDOControlEvt/IDOControlDisconnect.html">
             
                     
-                    Control Device Disconnection
+                    控制设备断线
             
                 </a>
             
@@ -2573,7 +2651,7 @@
                 <a href="../IDOControlEvt/IDOControlCleanBindInfo.html">
             
                     
-                    Clear Binding Information
+                    清除绑定信息
             
                 </a>
             
@@ -2586,7 +2664,7 @@
                 <a href="../IDOControlEvt/IDOControlShutdown.html">
             
                     
-                    Control Device Shutdown
+                    控制关闭设备
             
                 </a>
             
@@ -2599,7 +2677,7 @@
                 <a href="../IDOControlEvt/IDOControlRestoreFazctory.html">
             
                     
-                    Control Device Factory Reset
+                    控制设备恢复出厂
             
                 </a>
             
@@ -2612,7 +2690,7 @@
                 <a href="../IDOControlEvt/IDOControlClearCache.html">
             
                     
-                    Control Clear Band Cache
+                    控制清除手环缓存
             
                 </a>
             
@@ -2625,7 +2703,7 @@
                 <a href="../IDOControlEvt/IDOControlNoticeCallTime.html">
             
                     
-                    Transfer Call Time to Firmware
+                    下发通话时间给固件
             
                 </a>
             
@@ -2638,7 +2716,7 @@
                 <a href="../IDOControlEvt/IDOControlMusicStart.html">
             
                     
-                    Control Music Start
+                    控制音乐开始
             
                 </a>
             
@@ -2651,7 +2729,7 @@
                 <a href="../IDOControlEvt/IDOControlMusicStop.html">
             
                     
-                    Control Music Stop
+                    控制音乐停止
             
                 </a>
             
@@ -2664,7 +2742,7 @@
                 <a href="../IDOControlEvt/IDOControlPhotoStart.html">
             
                     
-                    Control Photo Start
+                    控制拍照开始
             
                 </a>
             
@@ -2677,7 +2755,7 @@
                 <a href="../IDOControlEvt/IDOControlPhotoStop.html">
             
                     
-                    Control Photo Stop
+                    控制拍照停止
             
                 </a>
             
@@ -2690,7 +2768,7 @@
                 <a href="../IDOControlEvt/IDOControlFindDeviceStart.html">
             
                     
-                    Control Find Device Start
+                    控制寻找设备开始
             
                 </a>
             
@@ -2703,7 +2781,7 @@
                 <a href="../IDOControlEvt/IDOControlFindDeviceStop.html">
             
                     
-                    Control Find Device Stop
+                    控制寻找设备停止
             
                 </a>
             
@@ -2716,7 +2794,7 @@
                 <a href="../IDOControlEvt/IDOControlOpenANCS.html">
             
                     
-                    Control Open ANCS
+                    控制打开ANCS开始
             
                 </a>
             
@@ -2729,7 +2807,7 @@
                 <a href="../IDOControlEvt/IDOControlCloseANCS.html">
             
                     
-                    Control Close ANCS
+                    控制打开ANCS停止
             
                 </a>
             
@@ -2742,7 +2820,7 @@
                 <a href="../IDOControlEvt/IDOControlNoticeIconInfo.html">
             
                     
-                    APP Transfers Sport Icon Information and State to Firmware
+                    APP传输运动图标信息及状态通知固件
             
                 </a>
             
@@ -2755,7 +2833,7 @@
                 <a href="../IDOControlEvt/IDOControlNoticeOpenBroadcast.html">
             
                     
-                    APP Notifies Firmware to Enable BT Broadcast
+                    APP通知固件开启BT广播
             
                 </a>
             
@@ -2768,7 +2846,7 @@
                 <a href="../IDOControlEvt/IDOControlNoticeDisableFunction.html">
             
                     
-                    APP Notifies Firmware of Permission State for Certain Functions
+                    APP通知固件某些功能的权限状态
             
                 </a>
             
@@ -2786,7 +2864,7 @@
                 <a href="../../../../IDODeviceControlEvtIntroduction.html">
             
                     
-                    Device-initiated Notification/Control Event
+                    设备主动通知/控制事件
             
                 </a>
             
@@ -2800,7 +2878,7 @@
                 <a href="../IDODeviceControlEvt/IDODeviceControlMusicStart.html">
             
                     
-                    Device Control APP Music Start
+                    设备控制APP音乐开始
             
                 </a>
             
@@ -2813,7 +2891,7 @@
                 <a href="../IDODeviceControlEvt/IDODeviceControlMusicPause.html">
             
                     
-                    Device Control APP Music Pause
+                    设备控制APP音乐暂停
             
                 </a>
             
@@ -2826,7 +2904,7 @@
                 <a href="../IDODeviceControlEvt/IDODeviceControlMusicStop.html">
             
                     
-                    Device Control APP Music Stop
+                    设备控制APP音乐停止
             
                 </a>
             
@@ -2839,7 +2917,7 @@
                 <a href="../IDODeviceControlEvt/IDODeviceControlMusicLast.html">
             
                     
-                    Device Control APP Music Last
+                    设备控制APP音乐上一首
             
                 </a>
             
@@ -2852,7 +2930,7 @@
                 <a href="../IDODeviceControlEvt/IDODeviceControlMusicNext.html">
             
                     
-                    Device Control APP Music Next
+                    设备控制APP音乐下一首
             
                 </a>
             
@@ -2865,7 +2943,7 @@
                 <a href="../IDODeviceControlEvt/IDODeviceControlPhotoSingleShot.html">
             
                     
-                    Device Control APP Photo Single Shot
+                    设备控制APP拍照单拍
             
                 </a>
             
@@ -2878,7 +2956,7 @@
                 <a href="../IDODeviceControlEvt/IDODeviceControlPhotoBurst.html">
             
                     
-                    Device Control APP Photo Burst
+                    设备控制APP拍照连拍
             
                 </a>
             
@@ -2891,7 +2969,7 @@
                 <a href="../IDODeviceControlEvt/IDODeviceControlVolumeUp.html">
             
                     
-                    Device Control APP Volume Up
+                    设备控制APP音量加
             
                 </a>
             
@@ -2904,7 +2982,7 @@
                 <a href="../IDODeviceControlEvt/IDODeviceControlVolumeDown.html">
             
                     
-                    Device Control APP Volume Down
+                    设备控制APP音量减
             
                 </a>
             
@@ -2917,7 +2995,7 @@
                 <a href="../IDODeviceControlEvt/IDODeviceControlOpenCamera.html">
             
                     
-                    Device Control APP Open Camera
+                    设备控制APP打开相机
             
                 </a>
             
@@ -2930,7 +3008,7 @@
                 <a href="../IDODeviceControlEvt/IDODeviceControlCloseCamera.html">
             
                     
-                    Device Control APP Close Camera
+                    设备控制APP关闭相机
             
                 </a>
             
@@ -2943,7 +3021,7 @@
                 <a href="../IDODeviceControlEvt/IDODeviceControlPhoneAnswer.html">
             
                     
-                    Device Control APP Phone Answer
+                    设备控制APP接听电话
             
                 </a>
             
@@ -2956,7 +3034,7 @@
                 <a href="../IDODeviceControlEvt/IDODeviceControlPhoneReject.html">
             
                     
-                    Device Control APP Phone Reject
+                    设备控制APP拒接电话
             
                 </a>
             
@@ -2969,7 +3047,7 @@
                 <a href="../IDODeviceControlEvt/IDODeviceControlVolumePercentage.html">
             
                     
-                    Device Control APP Music Volume Percentage
+                    设备控制APP音乐音量百分比
             
                 </a>
             
@@ -2982,7 +3060,7 @@
                 <a href="../IDODeviceControlEvt/IDODeviceControlFindPhoneStart.html">
             
                     
-                    Device Control APP Find Phone Start
+                    设备控制APP寻找手机开始
             
                 </a>
             
@@ -2995,7 +3073,7 @@
                 <a href="../IDODeviceControlEvt/IDODeviceControlFindPhoneStop.html">
             
                     
-                    Device Control APP Find Phone Stop
+                    设备控制APP寻找手机结束
             
                 </a>
             
@@ -3008,7 +3086,7 @@
                 <a href="../IDODeviceControlEvt/IDODeviceControlAntiLostStart.html">
             
                     
-                    Device Notification APP Anti Lost Start
+                    设备通知APP防丢启动
             
                 </a>
             
@@ -3021,7 +3099,7 @@
                 <a href="../IDODeviceControlEvt/IDODeviceControlOnekeySOSStart.html">
             
                     
-                    Device Notification APP Onekey SOS Start
+                    设备通知APP一键呼叫开始
             
                 </a>
             
@@ -3034,7 +3112,7 @@
                 <a href="../IDODeviceControlEvt/IDODeviceControlDataUpdate.html">
             
                     
-                    Device Notification APP Data Update
+                    设备通知APP数据更新
             
                 </a>
             
@@ -3047,7 +3125,7 @@
                 <a href="../IDODeviceControlEvt/IDODeviceControlFastMsgUpdate.html">
             
                     
-                    Initiative Notification APP SMS
+                    主动通知APP短信
             
                 </a>
             
@@ -3060,7 +3138,7 @@
                 <a href="../IDODeviceControlEvt/IDODeviceControlPhotograph.html">
             
                     
-                    Device Control APP Camera
+                    设备控制APP相机
             
                 </a>
             
@@ -3073,7 +3151,7 @@
                 <a href="../IDODeviceControlEvt/IDODeviceControlSpeakerValue.html">
             
                     
-                    Device Notification Firmware Speaker Volume Modification (Alexa)
+                    设备通知固件喇叭音量修改(alexa)
             
                 </a>
             
@@ -3091,7 +3169,7 @@
                 <a href="../../../../IDOV3EvtIntroduction.html">
             
                     
-                    V3 Long Package Instruction Event
+                    V3长包指令事件
             
                 </a>
             
@@ -3100,12 +3178,12 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.4.6.1" data-path="IDOV3GetDialList.html">
+        <li class="chapter " data-level="1.4.6.1" data-path="../IDOV3Evt/IDOV3GetDialList.html">
             
-                <a href="IDOV3GetDialList.html">
+                <a href="../IDOV3Evt/IDOV3GetDialList.html">
             
                     
-                    V3 Get Dial List
+                    V3获取表盘列表
             
                 </a>
             
@@ -3113,12 +3191,12 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.6.2" data-path="IDOV3GetScreenInfo.html">
+        <li class="chapter " data-level="1.4.6.2" data-path="../IDOV3Evt/IDOV3GetScreenInfo.html">
             
-                <a href="IDOV3GetScreenInfo.html">
+                <a href="../IDOV3Evt/IDOV3GetScreenInfo.html">
             
                     
-                    V3 Get Screen Information
+                    V3获取屏幕信息
             
                 </a>
             
@@ -3126,12 +3204,12 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.6.3" data-path="IDOV3SetDial.html">
+        <li class="chapter " data-level="1.4.6.3" data-path="../IDOV3Evt/IDOV3SetDial.html">
             
-                <a href="IDOV3SetDial.html">
+                <a href="../IDOV3Evt/IDOV3SetDial.html">
             
                     
-                    V3 Set Dial
+                    V3设置表盘
             
                 </a>
             
@@ -3139,12 +3217,12 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.6.4" data-path="IDOV3SetHRMode.html">
+        <li class="chapter " data-level="1.4.6.4" data-path="../IDOV3Evt/IDOV3SetHRMode.html">
             
-                <a href="IDOV3SetHRMode.html">
+                <a href="../IDOV3Evt/IDOV3SetHRMode.html">
             
                     
-                    V3 Set Heart Rate Mode
+                    V3设置心率模式
             
                 </a>
             
@@ -3152,12 +3230,12 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.6.5" data-path="IDOV3MusicControl.html">
+        <li class="chapter " data-level="1.4.6.5" data-path="../IDOV3Evt/IDOV3MusicControl.html">
             
-                <a href="IDOV3MusicControl.html">
+                <a href="../IDOV3Evt/IDOV3MusicControl.html">
             
                     
-                    V3 Music Control
+                    V3控制音乐
             
                 </a>
             
@@ -3165,12 +3243,12 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.6.6" data-path="IDOV3NoticeMsg.html">
+        <li class="chapter " data-level="1.4.6.6" data-path="../IDOV3Evt/IDOV3NoticeMsg.html">
             
-                <a href="IDOV3NoticeMsg.html">
+                <a href="../IDOV3Evt/IDOV3NoticeMsg.html">
             
                     
-                    V3 Notify Message Reminder
+                    V3通知消息提醒
             
                 </a>
             
@@ -3178,9 +3256,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.6.7" data-path="../../../zh/doc/IDOV3Evt/IDOV3SetSportSort.md">
+        <li class="chapter " data-level="1.4.6.7" data-path="../IDOV3Evt/IDOV3SetSportSort.html">
             
-                <span>
+                <a href="../IDOV3Evt/IDOV3SetSportSort.html">
             
                     
                     V3设置运动类型排序
@@ -3191,12 +3269,12 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.6.8" data-path="IDOV3SetSportSort.html">
+        <li class="chapter " data-level="1.4.6.8" data-path="../IDOV3Evt/IDOV3SetAlarm.html">
             
-                <a href="IDOV3SetSportSort.html">
+                <a href="../IDOV3Evt/IDOV3SetAlarm.html">
             
                     
-                    V3 Set Sport Type Sorting
+                    V3APP设置ble的闹钟
             
                 </a>
             
@@ -3204,12 +3282,12 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.6.9" data-path="IDOV3SetAlarm.html">
+        <li class="chapter " data-level="1.4.6.9" data-path="../IDOV3Evt/IDOV3GetAlarm.html">
             
-                <a href="IDOV3SetAlarm.html">
+                <a href="../IDOV3Evt/IDOV3GetAlarm.html">
             
                     
-                    V3 APP Set BLE Alarm
+                    V3APP获取设备的闹钟
             
                 </a>
             
@@ -3217,12 +3295,12 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.6.10" data-path="IDOV3GetAlarm.html">
+        <li class="chapter " data-level="1.4.6.10" data-path="../IDOV3Evt/IDOV3GetLanguageLibList.html">
             
-                <a href="IDOV3GetAlarm.html">
+                <a href="../IDOV3Evt/IDOV3GetLanguageLibList.html">
             
                     
-                    V3 APP Get Device Alarm
+                    V3获取设备字库列表
             
                 </a>
             
@@ -3230,12 +3308,12 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.4.6.11" data-path="IDOV3ActivityDataExchange.html">
+        <li class="chapter " data-level="1.4.6.11" data-path="../IDOV3Evt/IDOV3SetVoiceReplyTxt.html">
             
-                <a href="IDOV3ActivityDataExchange.html">
+                <a href="../IDOV3Evt/IDOV3SetVoiceReplyTxt.html">
             
                     
-                    V3 Multi-Sport Data Exchange
+                    V3语音回复文本
             
                 </a>
             
@@ -3243,12 +3321,12 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.6.12" data-path="IDOV3ActivityDataFinal.html">
+        <li class="chapter " data-level="1.4.6.12" data-path="../IDOV3Evt/IDOV3SetHotStartParam.html">
             
-                <a href="IDOV3ActivityDataFinal.html">
+                <a href="../IDOV3Evt/IDOV3SetHotStartParam.html">
             
                     
-                    V3 Get Last Activity Data
+                    V3设置GPS热启动参数
             
                 </a>
             
@@ -3256,12 +3334,12 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.6.13" data-path="IDOV3GetActivityExchangeHRData.html">
+        <li class="chapter " data-level="1.4.6.13" data-path="../IDOV3Evt/IDOV3GetBleBeep.html">
             
-                <a href="IDOV3GetActivityExchangeHRData.html">
+                <a href="../IDOV3Evt/IDOV3GetBleBeep.html">
             
                     
-                    V3 Get 1-Minute Heart Rate Data in Activity Data Exchange
+                    V3获取固件本地提示音文件信息
             
                 </a>
             
@@ -3269,12 +3347,12 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.6.14" data-path="IDOV3GetLanguageLibList.html">
+        <li class="chapter " data-level="1.4.6.14" data-path="../IDOV3Evt/IDOV3ControlBpCal.html">
             
-                <a href="IDOV3GetLanguageLibList.html">
+                <a href="../IDOV3Evt/IDOV3ControlBpCal.html">
             
                     
-                    V3 Get Device Font Library List
+                    V3操作血压校准控制
             
                 </a>
             
@@ -3282,12 +3360,12 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.6.15" data-path="IDOV3SetVoiceReplyTxt.html">
+        <li class="chapter " data-level="1.4.6.15" data-path="../IDOV3Evt/IDOV3GetDailLIstNew.html">
             
-                <a href="IDOV3SetVoiceReplyTxt.html">
+                <a href="../IDOV3Evt/IDOV3GetDailLIstNew.html">
             
                     
-                    V3 Set Voice Reply Text
+                    V3获取表盘列表(新接口)
             
                 </a>
             
@@ -3295,12 +3373,12 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.6.16" data-path="IDOV3GetActivityExchangeGPSData.html">
+        <li class="chapter " data-level="1.4.6.16" data-path="../IDOV3Evt/IDOV3SetWallpaperDialStyle.html">
             
-                <a href="IDOV3GetActivityExchangeGPSData.html">
+                <a href="../IDOV3Evt/IDOV3SetWallpaperDialStyle.html">
             
                     
-                    V3 Get GPS Data for a Period of Time in Activity Data Exchange
+                    V3设置壁纸表盘颜色和位置
             
                 </a>
             
@@ -3308,12 +3386,12 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.6.17" data-path="IDOV3SetHotStartParam.html">
+        <li class="chapter " data-level="1.4.6.17" data-path="../IDOV3Evt/IDOV3SetGet100SportSort.html">
             
-                <a href="IDOV3SetHotStartParam.html">
+                <a href="../IDOV3Evt/IDOV3SetGet100SportSort.html">
             
                     
-                    V3 Set GPS Hot Start Parameters
+                    V3设置查询100种运动排序
             
                 </a>
             
@@ -3321,12 +3399,12 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.6.18" data-path="IDOV3GetBleBeep.html">
+        <li class="chapter " data-level="1.4.6.18" data-path="../IDOV3Evt/IDOV3ScheduleReminder.html">
             
-                <a href="IDOV3GetBleBeep.html">
+                <a href="../IDOV3Evt/IDOV3ScheduleReminder.html">
             
                     
-                    V3 Get Firmware Local Beep Sound File Information
+                    V3日程提醒
             
                 </a>
             
@@ -3334,12 +3412,12 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.6.19" data-path="IDOV3ControlBpCal.html">
+        <li class="chapter " data-level="1.4.6.19" data-path="../IDOV3Evt/IDOV3SetGetMainUiSort.html">
             
-                <a href="IDOV3ControlBpCal.html">
+                <a href="../IDOV3Evt/IDOV3SetGetMainUiSort.html">
             
                     
-                    V3 Control Blood Pressure Calibration
+                    V3设置查询主界面控件排序
             
                 </a>
             
@@ -3347,12 +3425,12 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.6.20" data-path="IDOV3GetDailLIstNew.html">
+        <li class="chapter " data-level="1.4.6.20" data-path="../IDOV3Evt/IDOV3SetGetBaseSportParamSort.html">
             
-                <a href="IDOV3GetDailLIstNew.html">
+                <a href="../IDOV3Evt/IDOV3SetGetBaseSportParamSort.html">
             
                     
-                    V3 Get Dial List (New Interface)
+                    V3设置查询运动子项数据排列
             
                 </a>
             
@@ -3360,12 +3438,12 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.6.21" data-path="IDOV3SetWallpaperDialStyle.html">
+        <li class="chapter " data-level="1.4.6.21" data-path="../IDOV3Evt/IDOV3SetLongCityName.html">
             
-                <a href="IDOV3SetWallpaperDialStyle.html">
+                <a href="../IDOV3Evt/IDOV3SetLongCityName.html">
             
                     
-                    V3 Set Wallpaper Dial Style
+                    V3设置运动城市名称
             
                 </a>
             
@@ -3373,12 +3451,12 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.6.22" data-path="IDOV3SetGet100SportSort.html">
+        <li class="chapter " data-level="1.4.6.22" data-path="../IDOV3Evt/IDOV3SetNoticeMegState.html">
             
-                <a href="IDOV3SetGet100SportSort.html">
+                <a href="../IDOV3Evt/IDOV3SetNoticeMegState.html">
             
                     
-                    V3 Set/Get 100 Sport Type Sorting
+                    V3设置单个应用的通知状态
             
                 </a>
             
@@ -3386,12 +3464,12 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.6.23" data-path="IDOV3ScheduleReminder.html">
+        <li class="chapter " data-level="1.4.6.23" data-path="../IDOV3Evt/IDOV3GetPackName.html">
             
-                <a href="IDOV3ScheduleReminder.html">
+                <a href="../IDOV3Evt/IDOV3GetPackName.html">
             
                     
-                    V3 Schedule Reminder
+                    V3获取包名
             
                 </a>
             
@@ -3399,12 +3477,12 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.6.24" data-path="IDOV3SetGetMainUiSort.html">
+        <li class="chapter " data-level="1.4.6.24" data-path="../IDOV3Evt/IDOV3SyncContact.html">
             
-                <a href="IDOV3SetGetMainUiSort.html">
+                <a href="../IDOV3Evt/IDOV3SyncContact.html">
             
                     
-                    V3 Set/Get Main UI Control Sorting
+                    V3同步协议蓝牙通话常用联系人
             
                 </a>
             
@@ -3412,12 +3490,12 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.6.25" data-path="IDOV3SetGetBaseSportParamSort.html">
+        <li class="chapter " data-level="1.4.6.25" data-path="../IDOV3Evt/IDOV3SetWeather.html">
             
-                <a href="IDOV3SetGetBaseSportParamSort.html">
+                <a href="../IDOV3Evt/IDOV3SetWeather.html">
             
                     
-                    V3 Set/Get Base Sport Parameter Sorting
+                    V3设置天气数据
             
                 </a>
             
@@ -3425,12 +3503,12 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.6.26" data-path="IDOV3SetLongCityName.html">
+        <li class="chapter " data-level="1.4.6.26" data-path="../IDOV3Evt/IDOV3SetWorldTime.html">
             
-                <a href="IDOV3SetLongCityName.html">
+                <a href="../IDOV3Evt/IDOV3SetWorldTime.html">
             
                     
-                    V3 Set Sport City Name
+                    V3下发世界时间
             
                 </a>
             
@@ -3438,12 +3516,12 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.6.27" data-path="IDOV3SetNoticeMegState.html">
+        <li class="chapter " data-level="1.4.6.27" data-path="../IDOV3Evt/IDOV3SetWalkRemindTimes.html">
             
-                <a href="IDOV3SetNoticeMegState.html">
+                <a href="../IDOV3Evt/IDOV3SetWalkRemindTimes.html">
             
                     
-                    V3 Set Notification Status for Individual Applications
+                    V3设置多个走动提醒的时间点
             
                 </a>
             
@@ -3451,12 +3529,12 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.6.28" data-path="IDOV3GetPackName.html">
+        <li class="chapter " data-level="1.4.6.28" data-path="../IDOV3Evt/IDOV3GetMusicInfo.html">
             
-                <a href="IDOV3GetPackName.html">
+                <a href="../IDOV3Evt/IDOV3GetMusicInfo.html">
             
                     
-                    V3 Get Package Name
+                    V3获取固件的歌曲名和文件夹
             
                 </a>
             
@@ -3464,12 +3542,12 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.6.29" data-path="IDOV3SyncContact.html">
+        <li class="chapter " data-level="1.4.6.29" data-path="../IDOV3Evt/IDOV3OperateMusic.html">
             
-                <a href="IDOV3SyncContact.html">
+                <a href="../IDOV3Evt/IDOV3OperateMusic.html">
             
                     
-                    V3 Sync Bluetooth Call Common Contacts
+                    V3操作歌曲或者文件夹
             
                 </a>
             
@@ -3477,12 +3555,12 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.6.30" data-path="IDOV3SetWeather.html">
+        <li class="chapter " data-level="1.4.6.30" data-path="../IDOV3Evt/IDOV3NoticeMsgDynamic.html">
             
-                <a href="IDOV3SetWeather.html">
+                <a href="../IDOV3Evt/IDOV3NoticeMsgDynamic.html">
             
                     
-                    V3 Set Weather Data
+                    V3通知消息提醒(动态)
             
                 </a>
             
@@ -3490,12 +3568,12 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.6.31" data-path="IDOV3SetWorldTime.html">
+        <li class="chapter " data-level="1.4.6.31" data-path="../IDOV3Evt/IDOV3SetHistoricalMenstruation.html">
             
-                <a href="IDOV3SetWorldTime.html">
+                <a href="../IDOV3Evt/IDOV3SetHistoricalMenstruation.html">
             
                     
-                    V3 Send World Time
+                    V3经期的历史数据下发
             
                 </a>
             
@@ -3503,12 +3581,12 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.6.32" data-path="IDOV3SetWalkRemindTimes.html">
+        <li class="chapter " data-level="1.4.6.32" data-path="../IDOV3Evt/IDOV3SetDialSort.html">
             
-                <a href="IDOV3SetWalkRemindTimes.html">
+                <a href="../IDOV3Evt/IDOV3SetDialSort.html">
             
                     
-                    V3 Set Walking Reminder Time Points
+                    V3设置表盘顺序
             
                 </a>
             
@@ -3516,12 +3594,12 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.6.33" data-path="IDOV3GetMusicInfo.html">
+        <li class="chapter " data-level="1.4.6.33" data-path="../IDOV3Evt/IDOV3SetRunPlan.html">
             
-                <a href="IDOV3GetMusicInfo.html">
+                <a href="../IDOV3Evt/IDOV3SetRunPlan.html">
             
                     
-                    V3 Get Firmware Music Name and Folder
+                    V3APP下发跑步计划(运动计划)
             
                 </a>
             
@@ -3529,12 +3607,12 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.6.34" data-path="IDOV3OperateMusic.html">
+        <li class="chapter " data-level="1.4.6.34" data-path="../IDOV3Evt/IDOV3SetCutoverSport.html">
             
-                <a href="IDOV3OperateMusic.html">
+                <a href="../IDOV3Evt/IDOV3SetCutoverSport.html">
             
                     
-                    V3 Operate Music or Folder
+                    V3APP通知设备运动过程切换
             
                 </a>
             
@@ -3542,12 +3620,12 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.6.35" data-path="IDOV3NoticeMsgDynamic.html">
+        <li class="chapter " data-level="1.4.6.35" data-path="../IDOV3Evt/IDOV3GetHabitInfo.html">
             
-                <a href="IDOV3NoticeMsgDynamic.html">
+                <a href="../IDOV3Evt/IDOV3GetHabitInfo.html">
             
                     
-                    V3 Notification Message Reminder (Dynamic)
+                    V3获取用户习惯信息
             
                 </a>
             
@@ -3555,12 +3633,12 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.6.36" data-path="IDOV3SetHistoricalMenstruation.html">
+        <li class="chapter " data-level="1.4.6.36" data-path="../IDOV3Evt/IDOV3MiniProgramControl.html">
             
-                <a href="IDOV3SetHistoricalMenstruation.html">
+                <a href="../IDOV3Evt/IDOV3MiniProgramControl.html">
             
                     
-                    V3 Send Historical Menstruation Data
+                    V3操作小程序信息(预留)
             
                 </a>
             
@@ -3568,12 +3646,12 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.6.37" data-path="IDOV3SetDialSort.html">
+        <li class="chapter " data-level="1.4.6.37" data-path="../IDOV3Evt/IDOV3SetSmartCompetitorConfigInfo.html">
             
-                <a href="IDOV3SetDialSort.html">
+                <a href="../IDOV3Evt/IDOV3SetSmartCompetitorConfigInfo.html">
             
                     
-                    V3 Set Dial Order
+                    V3智能陪跑信息配置(预留)
             
                 </a>
             
@@ -3581,12 +3659,12 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.6.38" data-path="IDOV3SetRunPlan.html">
+        <li class="chapter " data-level="1.4.6.38" data-path="../IDOV3Evt/IDOV3CutoverSportFromDevice.html">
             
-                <a href="IDOV3SetRunPlan.html">
+                <a href="../IDOV3Evt/IDOV3CutoverSportFromDevice.html">
             
                     
-                    V3 APP Send Running Plan (Sport Plan)
+                    V3设备通知app运动过程切换
             
                 </a>
             
@@ -3594,77 +3672,12 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.6.39" data-path="IDOV3SetCutoverSport.html">
+        <li class="chapter " data-level="1.4.6.39" data-path="../IDOV3Evt/IDOV3NoticeDialChange.html">
             
-                <a href="IDOV3SetCutoverSport.html">
-            
-                    
-                    V3 APP Toggle Device Sport During Exercise
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.4.6.40" data-path="IDOV3GetHabitInfo.html">
-            
-                <a href="IDOV3GetHabitInfo.html">
+                <a href="../IDOV3Evt/IDOV3NoticeDialChange.html">
             
                     
-                    V3 Get User Habit Information
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.4.6.41" data-path="IDOV3MiniProgramControl.html">
-            
-                <a href="IDOV3MiniProgramControl.html">
-            
-                    
-                    V3 Operate Mini Program Information (Reserved)
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.4.6.42" data-path="IDOV3SetSmartCompetitorConfigInfo.html">
-            
-                <a href="IDOV3SetSmartCompetitorConfigInfo.html">
-            
-                    
-                    V3 Configure Smart Companion Running Information (Reserved)
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.4.6.43" data-path="IDOV3CutoverSportFromDevice.html">
-            
-                <a href="IDOV3CutoverSportFromDevice.html">
-            
-                    
-                    V3 Device Notifies App to Switch Sport During Exercise
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.4.6.44" data-path="IDOV3NoticeDialChange.html">
-            
-                <a href="IDOV3NoticeDialChange.html">
-            
-                    
-                    V3 APP Get Dial Color Style Modification
+                    V3APP获取表盘颜色样式修改
             
                 </a>
             
@@ -3687,7 +3700,7 @@
                 <a href="../../../../IDOAppendix/IDODeviceErrorCode.html">
             
                     
-                    Firmware Standardization General Error Codes
+                    固件标准化通用错误码
             
                 </a>
             
@@ -3725,7 +3738,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="../../../../.." >V3 Multi-Sport Data Exchange</a>
+        <a href="../../../../.." >同步V2运动</a>
     </h1>
 </div>
 
@@ -3740,225 +3753,141 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h3 id="v3-sports-data-exchange">V3 Sports Data Exchange</h3>
-<p>Function: exchangeAppV3Ing</p>
-<p><strong>Flutter Example:</strong></p>
-<pre><code class="lang-dart"><span class="hljs-comment"><span class="markdown">/// app initiates </span>the<span class="markdown"> V3 data exchange process event number</span></span>
-exchangeAppV3Ing(
-  evtBase: _VBusEvtBase.base_app_set,
-  evtType: _VBusEvtType.func_v3_activity_data_exchange),
-
-<span class="hljs-comment"><span class="markdown">/// app initiates </span>the<span class="markdown"> V3 data exchange process</span></span>
-libManager.send(evt: CmdEvtType.exchangeAppV3Ing, json: jsonEncode(json));
-</code></pre>
-<p><strong>JSON Fields Sent by the App</strong>:</p>
+                                <h4 id="&#x540C;&#x6B65;&#x8FD0;&#x52A8;&#x6570;&#x636E;">&#x540C;&#x6B65;&#x8FD0;&#x52A8;&#x6570;&#x636E;</h4>
+<p><strong>App&#x6536;&#x5230;&#x7684;json&#x5B57;&#x6BB5;</strong>&#xFF1A;</p>
 <table>
 <thead>
 <tr>
-<th>Field Name</th>
-<th>Field Type</th>
-<th>Field Description</th>
+<th>&#x5B57;&#x6BB5;&#x540D;</th>
+<th>&#x5B57;&#x6BB5;&#x7C7B;&#x578B;</th>
+<th>&#x5B57;&#x6BB5;&#x8BF4;&#x660E;</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>version</td>
+<td>year</td>
 <td>int</td>
-<td>Protocol version number. Default: 0<br>16: biggerfive custom project (requires firmware to enable V3_support_v3_exchange_data_reply_add_real_time_speed_pace)<br>32: Added running plan data (requires firmware to enable v3_support_sports_plan)</td>
+<td>&#x6570;&#x636E;&#x65E5;&#x671F; &#x5E74;</td>
 </tr>
 <tr>
-<td>type</td>
+<td>month</td>
 <td>int</td>
-<td>Sports type</td>
-</tr>
-<tr>
-<td>signal_flag</td>
-<td>int</td>
-<td>0: Weak signal<br>1: Strong signal</td>
-</tr>
-<tr>
-<td>distance</td>
-<td>int</td>
-<td>Distance recorded by the app. When the app signal strength is strong, BLE calculates the distance using the app&apos;s data. When the app signal is weak, BLE does not use the app&apos;s data, and the app displays the data from the bracelet.</td>
-</tr>
-<tr>
-<td>real_time_speed</td>
-<td>int</td>
-<td>Real-time speed calculated and displayed by the app, in km/h, multiplied by 100</td>
-</tr>
-<tr>
-<td>duration</td>
-<td>int</td>
-<td>Duration</td>
-</tr>
-<tr>
-<td>calories</td>
-<td>int</td>
-<td>Calories burned</td>
-</tr>
-</tbody>
-</table>
-<p><strong>Example:</strong></p>
-<pre><code class="lang-json">{
-  <span class="hljs-string">&quot;version&quot;</span>: <span class="hljs-number">0</span>,
-  <span class="hljs-string">&quot;type&quot;</span>: <span class="hljs-number">0</span>,
-  <span class="hljs-string">&quot;signal_flag&quot;</span>: <span class="hljs-number">0</span>,
-  <span class="hljs-string">&quot;distance&quot;</span>: <span class="hljs-number">0</span>,
-  <span class="hljs-string">&quot;real_time_speed&quot;</span>: <span class="hljs-number">0</span>,
-  <span class="hljs-string">&quot;duration&quot;</span>: <span class="hljs-number">0</span>,
-  <span class="hljs-string">&quot;calories&quot;</span>: <span class="hljs-number">0</span>
-}
-</code></pre>
-<p><strong>JSON Fields Received by the App</strong>:</p>
-<table>
-<thead>
-<tr>
-<th>Field Name</th>
-<th>Field Type</th>
-<th>Field Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>version</td>
-<td>int</td>
-<td>Protocol version number<br>0: Basic version<br>16: biggerfive custom project (requires firmware to enable V3_support_v3_exchange_data_reply_add_real_time_speed_pace)<br>32: Added running plan data (requires firmware to enable v3_support_sports_plan)</td>
-</tr>
-<tr>
-<td>type</td>
-<td>int</td>
-<td>Sports type. Valid when act_type is 0</td>
+<td>&#x6570;&#x636E;&#x65E5;&#x671F; &#x6708;</td>
 </tr>
 <tr>
 <td>day</td>
 <td>int</td>
-<td>Data date (day)</td>
+<td>&#x6570;&#x636E;&#x65E5;&#x671F; &#x65E5;</td>
 </tr>
 <tr>
-<td>hour</td>
+<td>total_step</td>
 <td>int</td>
-<td>Data time (hour)</td>
+<td>&#x5F53;&#x5929;&#x603B;&#x6B65;&#x6570;</td>
 </tr>
 <tr>
-<td>minute</td>
+<td>total_cal</td>
 <td>int</td>
-<td>Data time (minute)</td>
+<td>&#x5F53;&#x5929;&#x603B;&#x5361;&#x8DEF;&#x91CC;</td>
 </tr>
 <tr>
-<td>second</td>
+<td>total_distances</td>
 <td>int</td>
-<td>Data time (second)</td>
+<td>&#x5F53;&#x5929;&#x603B;&#x8DDD;&#x79BB;</td>
 </tr>
 <tr>
-<td>heart_rate</td>
+<td>total_active_time</td>
 <td>int</td>
-<td>Heart rate data</td>
+<td>&#x5F53;&#x5929;&#x603B;&#x6D3B;&#x8DC3;&#x65F6;&#x957F;</td>
+</tr>
+<tr>
+<td>minute_offset</td>
+<td>int</td>
+<td>&#x6570;&#x636E;&#x7684;&#x8DDD;&#x79BB;0&#x70B9;&#x7684;&#x5F00;&#x59CB;&#x65F6;&#x95F4;&#xFF0C;&#x5355;&#x4F4D;&#x5206;&#x949F;</td>
+</tr>
+<tr>
+<td>per_minute</td>
+<td>int</td>
+<td>&#x6570;&#x636E;&#x7684;&#x95F4;&#x9694;&#x65F6;&#x95F4; &#x5355;&#x4F4D;&#x5206;&#x949F;&#xFF0C; &#x4E00;&#x822C;&#x662F;15&#x5206;&#x949F;</td>
+</tr>
+<tr>
+<td>keyword</td>
+<td>int</td>
+<td>&#x9884;&#x7559;</td>
+</tr>
+<tr>
+<td>items</td>
+<td>&#x96C6;&#x5408;</td>
+<td>&#x8FD0;&#x52A8;&#x8BE6;&#x60C5;<br>sport_count &amp; active_time &amp; calories &amp; distance&#x7684;&#x96C6;&#x5408;</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>&#x5B57;&#x6BB5;&#x540D;</th>
+<th>&#x5B57;&#x6BB5;&#x7C7B;&#x578B;</th>
+<th>&#x5B57;&#x6BB5;&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>sport_count</td>
+<td>int</td>
+<td>&#x6B65;&#x6570;</td>
+</tr>
+<tr>
+<td>active_time</td>
+<td>int</td>
+<td>&#x8FD0;&#x52A8;&#x6570;&#x636E; &#x5355;&#x4F4D;&#x5206;&#x949F;</td>
+</tr>
+<tr>
+<td>calories</td>
+<td>int</td>
+<td>&#x5361;&#x8DEF;&#x91CC;</td>
 </tr>
 <tr>
 <td>distance</td>
 <td>int</td>
-<td>Distance. The unit is determined by the unit settings</td>
-</tr>
-<tr>
-<td>real_time_speed</td>
-<td>int</td>
-<td>Real-time speed in km/h, multiplied by 100</td>
-</tr>
-<tr>
-<td>km_speed</td>
-<td>int</td>
-<td>Real-time kilometer pace, in seconds per kilometer</td>
-</tr>
-<tr>
-<td>real_time_calories</td>
-<td>int</td>
-<td>Dynamic calorie count</td>
-</tr>
-<tr>
-<td>steps</td>
-<td>int</td>
-<td>Number of steps</td>
-</tr>
-<tr>
-<td>swim_posture</td>
-<td>int</td>
-<td>Main swimming posture</td>
-</tr>
-<tr>
-<td>status</td>
-<td>int</td>
-<td>Status<br>0: Invalid<br>1: Start<br>2: Manually paused<br>3: End<br>4: Auto paused</td>
-</tr>
-<tr>
-<td>duration</td>
-<td>int</td>
-<td>Duration in seconds</td>
-</tr>
-<tr>
-<td>real_time_speed_pace</td>
-<td>int</td>
-<td>Real-time pace in seconds<br>5-second moving average. The 5th second uses the data from 1st to 5th second, and the 6th second uses the data from 2nd to 6th second. No pace or speed is displayed for the 1st to 4th seconds.<br>Requires the firmware to enable V3_support_v3_exchange_data_reply_add_real_time_speed_pace. Returns 0 if the feature is not enabled</td>
-</tr>
-<tr>
-<td>te</td>
-<td>int</td>
-<td>Aerobic training effect level. No unit. Range: 0-50. Transmitted by scaling up by 10<br>Requires the firmware to enable V3_support_v3_exchange_data_reply_add_real_time_speed_pace. Returns 0 if the feature is not enabled</td>
-</tr>
-<tr>
-<td>tean</td>
-<td>int</td>
-<td>Anaerobic training effect level. No unit. Range: 0-50. Transmitted by scaling up by 10<br>Requires the firmware to enable V3_support_v3_exchange_data_reply_add_real_time_speed_pace. Returns 0 if the feature is not enabled</td>
-</tr>
-<tr>
-<td>action_type</td>
-<td>int</td>
-<td>Action type<br>1: Fast walking<br>2: Jogging<br>3: Medium-speed running<br>4: Sprinting<br>5: End of exercise (also waiting for user to start free exercise)<br>6: Free exercise after the end of the workout (this field is effective when operate is 5)<br>Cumulative exercise time = training time within the session + time after the session ends<br>Requires the firmware to enable v3_support_sports_plan. Returns 0 if the feature is not enabled</td>
-</tr>
-<tr>
-<td>count_hour</td>
-<td>int</td>
-<td>When action_type is 1-5, this field is the countdown time (note: time decreases)<br>When action_type is 6, this field is the time after the session ends (note: time increases)<br>Requires the firmware to enable v3_support_sports_plan. Returns 0 if the feature is not enabled</td>
-</tr>
-<tr>
-<td>count_minute</td>
-<td>int</td>
-<td>When action_type is 1-5, this field is the countdown time (note: time decreases)<br>When action_type is 6, this field is the time after the session ends (note: time increases)<br>Requires the firmware to enable v3_support_sports_plan. Returns 0 if the feature is not enabled</td>
-</tr>
-<tr>
-<td>count_second</td>
-<td>int</td>
-<td>When action_type is 1-5, this field is the countdown time (note: time decreases)<br>When action_type is 6, this field is the time after the session ends (note: time increases)<br>Requires the firmware to enable v3_support_sports_plan. Returns 0 if the feature is not enabled</td>
+<td>&#x8DDD;&#x79BB; &#x5355;&#x4F4D;&#x7C73;</td>
 </tr>
 </tbody>
 </table>
-<p><strong>Example:</strong></p>
-<pre><code class="lang-json">{
-  <span class="hljs-string">&quot;version&quot;</span>: <span class="hljs-number">0</span>,
-  <span class="hljs-string">&quot;type&quot;</span>: <span class="hljs-number">0</span>,
-  <span class="hljs-string">&quot;day&quot;</span>: <span class="hljs-number">0</span>,
-  <span class="hljs-string">&quot;hour&quot;</span>: <span class="hljs-number">0</span>,
-  <span class="hljs-string">&quot;minute&quot;</span>: <span class="hljs-number">0</span>,
-  <span class="hljs-string">&quot;second&quot;</span>: <span class="hljs-number">0</span>,
-  <span class="hljs-string">&quot;heart_rate&quot;</span>: <span class="hljs-number">0</span>,
-  <span class="hljs-string">&quot;distance&quot;</span>: <span class="hljs-number">0</span>,
-  <span class="hljs-string">&quot;real_time_speed&quot;</span>: <span class="hljs-number">0</span>,
-  <span class="hljs-string">&quot;km_speed&quot;</span>: <span class="hljs-number">0</span>,
-  <span class="hljs-string">&quot;real_time_calories&quot;</span>: <span class="hljs-number">0</span>,
-  <span class="hljs-string">&quot;steps&quot;</span>: <span class="hljs-number">0</span>,
-  <span class="hljs-string">&quot;swim_posture&quot;</span>: <span class="hljs-number">0</span>,
-  <span class="hljs-string">&quot;status&quot;</span>: <span class="hljs-number">0</span>,
-  <span class="hljs-string">&quot;duration&quot;</span>: <span class="hljs-number">0</span>,
-  <span class="hljs-string">&quot;real_time_speed_pace&quot;</span>: <span class="hljs-number">0</span>,
-  <span class="hljs-string">&quot;te&quot;</span>: <span class="hljs-number">0</span>,
-  <span class="hljs-string">&quot;tean&quot;</span>: <span class="hljs-number">0</span>,
-  <span class="hljs-string">&quot;action_type&quot;</span>: <span class="hljs-number">0</span>,
-  <span class="hljs-string">&quot;count_hour&quot;</span>: <span class="hljs-number">0</span>,
-  <span class="hljs-string">&quot;count_minute&quot;</span>: <span class="hljs-number">0</span>,
-  <span class="hljs-string">&quot;count_second&quot;</span>: <span class="hljs-number">0</span>
+<p><code>&#x793A;&#x4F8B;&#xFF1A;</code></p>
+<pre><code class="lang-c">{
+    <span class="hljs-string">&quot;year&quot;</span>:<span class="hljs-number">2022</span>,
+    <span class="hljs-string">&quot;month&quot;</span>:<span class="hljs-number">12</span>,
+    <span class="hljs-string">&quot;day&quot;</span>:<span class="hljs-number">23</span>,
+    <span class="hljs-string">&quot;total_step&quot;</span>:<span class="hljs-number">20</span>,
+    <span class="hljs-string">&quot;total_cal&quot;</span>:<span class="hljs-number">200</span>,
+    <span class="hljs-string">&quot;total_distances&quot;</span>:<span class="hljs-number">500</span>,
+    <span class="hljs-string">&quot;total_active_time&quot;</span>:<span class="hljs-number">6</span>,
+    <span class="hljs-string">&quot;minute_offset&quot;</span>:<span class="hljs-number">0</span>,
+    <span class="hljs-string">&quot;per_minute&quot;</span>:<span class="hljs-number">15</span>,
+    <span class="hljs-string">&quot;keyword&quot;</span>:<span class="hljs-number">0</span>,
+    <span class="hljs-string">&quot;items&quot;</span>:[
+        {
+            <span class="hljs-string">&quot;sport_count&quot;</span>:<span class="hljs-number">2</span>,
+            <span class="hljs-string">&quot;active_time&quot;</span>:<span class="hljs-number">2</span>,
+            <span class="hljs-string">&quot;calories&quot;</span>:<span class="hljs-number">50</span>,
+            <span class="hljs-string">&quot;distance&quot;</span>:<span class="hljs-number">100</span>,
+        },
+        {
+            <span class="hljs-string">&quot;sport_count&quot;</span>:<span class="hljs-number">8</span>,
+            <span class="hljs-string">&quot;active_time&quot;</span>:<span class="hljs-number">2</span>,
+            <span class="hljs-string">&quot;calories&quot;</span>:<span class="hljs-number">50</span>,
+            <span class="hljs-string">&quot;distance&quot;</span>:<span class="hljs-number">200</span>,
+        },
+        {
+            <span class="hljs-string">&quot;sport_count&quot;</span>:<span class="hljs-number">10</span>,
+            <span class="hljs-string">&quot;active_time&quot;</span>:<span class="hljs-number">2</span>,
+            <span class="hljs-string">&quot;calories&quot;</span>:<span class="hljs-number">100</span>,
+            <span class="hljs-string">&quot;distance&quot;</span>:<span class="hljs-number">200</span>,
+        }
+    ]
 }
 </code></pre>
-<footer class="page-footer"><span class="copyright">Copyright &#xA9; 2023-2024 IDO. All rights reserved. all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">Modify Date:
-2023-08-21 14:24:59
+<footer class="page-footer"><span class="copyright">Copyright &#xA9; 2023-2024 IDO. All rights reserved. all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;:
+2023-08-18 19:50:58
 </span></footer>
 <script>console.log("plugin-popup....");document.onclick = function(e){ e.target.tagName === "IMG" && window.open(e.target.src,e.target.src)}</script><style>img{cursor:pointer}</style>
                                 
@@ -3987,12 +3916,12 @@ libManager.send(evt: CmdEvtType.exchangeAppV3Ing, json: jsonEncode(json));
 
             
                 
-                <a href="IDOV3GetAlarm.html" class="navigation navigation-prev " aria-label="Previous page: V3 APP Get Device Alarm">
+                <a href="../IDOV3HealthSyncEvt/IDOV3HealthSyncHRV.html" class="navigation navigation-prev " aria-label="Previous page: 同步HRV数据">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="IDOV3ActivityDataFinal.html" class="navigation navigation-next " aria-label="Next page: V3 Get Last Activity Data">
+                <a href="IDOV2HealthSyncSleep.html" class="navigation navigation-next " aria-label="Next page: 同步V2睡眠">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -4003,7 +3932,7 @@ libManager.send(evt: CmdEvtType.exchangeAppV3Ing, json: jsonEncode(json));
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"V3 Multi-Sport Data Exchange","level":"1.4.6.11","depth":3,"next":{"title":"V3 Get Last Activity Data","level":"1.4.6.12","depth":3,"path":"doc/BaseProtocolEvtExecDoc/en/doc/IDOV3Evt/IDOV3ActivityDataFinal.md","ref":"doc/BaseProtocolEvtExecDoc/en/doc/IDOV3Evt/IDOV3ActivityDataFinal.md","articles":[]},"previous":{"title":"V3 APP Get Device Alarm","level":"1.4.6.10","depth":3,"path":"doc/BaseProtocolEvtExecDoc/en/doc/IDOV3Evt/IDOV3GetAlarm.md","ref":"doc/BaseProtocolEvtExecDoc/en/doc/IDOV3Evt/IDOV3GetAlarm.md","articles":[]},"dir":"ltr"},"config":{"plugins":["chapter-fold","back-to-top-button","code","github","tbfed-pagefooter","copy-code-button","pageview-count","-lunr","-search","search-pro","language-picker","popup","i18n"],"root":".","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright © 2023-2024 IDO. All rights reserved.","modify_label":"Modify Date:","modify_format":"YYYY-MM-DD HH:mm:ss"},"chapter-fold":{},"language-picker":{"grid-columns":3},"github":{"url":"https://github.com/idoosmart/"},"search-pro":{},"popup":{},"code":{"copyButtons":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"back-to-top-button":{},"pageview-count":{},"copy-code-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"i18n":{"ChineseUrl":"/Flutter_GitBook/zh","EnglishUrl":"/Flutter_GitBook/en","all":["chinese","english"]}},"theme":"default","author":"luoft","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"IDO FLUTTER API DOCUMENT","language":"zh-hans","gitbook":"*","description":"IDO FLUTTER API DOCUMENT"},"file":{"path":"doc/BaseProtocolEvtExecDoc/en/doc/IDOV3Evt/IDOV3ActivityDataExchange.md","mtime":"2023-08-21T06:24:59.321Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2023-08-23T06:54:02.653Z"},"basePath":"../../../../..","book":{"language":"en"}});
+            gitbook.page.hasChanged({"page":{"title":"同步V2运动","level":"1.3.18.1.1.14","depth":5,"next":{"title":"同步V2睡眠","level":"1.3.18.1.1.15","depth":5,"path":"doc/BaseProtocolEvtExecDoc/zh/doc/IDOV2HealthSyncEvt/IDOV2HealthSyncSleep.md","ref":"doc/BaseProtocolEvtExecDoc/zh/doc/IDOV2HealthSyncEvt/IDOV2HealthSyncSleep.md","articles":[]},"previous":{"title":"同步HRV数据","level":"1.3.18.1.1.13","depth":5,"path":"doc/BaseProtocolEvtExecDoc/zh/doc/IDOV3HealthSyncEvt/IDOV3HealthSyncHRV.md","ref":"doc/BaseProtocolEvtExecDoc/zh/doc/IDOV3HealthSyncEvt/IDOV3HealthSyncHRV.md","articles":[]},"dir":"ltr"},"config":{"plugins":["chapter-fold","back-to-top-button","code","github","tbfed-pagefooter","copy-code-button","pageview-count","-lunr","-search","search-pro","language-picker","popup","i18n"],"root":".","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright © 2023-2024 IDO. All rights reserved.","modify_label":"修订时间:","modify_format":"YYYY-MM-DD HH:mm:ss"},"chapter-fold":{},"language-picker":{"grid-columns":3},"github":{"url":"https://github.com/idoosmart/"},"search-pro":{},"popup":{},"code":{"copyButtons":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"back-to-top-button":{},"pageview-count":{},"copy-code-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"i18n":{"ChineseUrl":"/Flutter_GitBook/zh","EnglishUrl":"/Flutter_GitBook/en","all":["chinese","english"]}},"theme":"default","author":"luoft","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"IDO FLUTTER 接口说明","language":"zh-hans","gitbook":"*","description":"IDO FLUTTER 接口说明"},"file":{"path":"doc/BaseProtocolEvtExecDoc/zh/doc/IDOV2HealthSyncEvt/IDOV2HealthSyncSport.md","mtime":"2023-08-18T11:50:58.147Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2023-08-23T07:53:47.031Z"},"basePath":"../../../../..","book":{"language":"zh"}});
         });
     </script>
 </div>
