@@ -3879,60 +3879,66 @@ libManager.send(evt: CmdEvtType.getActivitySwitch, json: jsonEncode(json));
 <tr>
 <td>auto_identify_sport_walk</td>
 <td>int</td>
-<td>&#x81EA;&#x52A8;&#x8BC6;&#x522B;&#x8D70;&#x8DEF;&#x5F00;&#x5173; 0 &#x5173;&#x95ED;,1 &#x5F00;</td>
+<td>&#x81EA;&#x52A8;&#x8BC6;&#x522B;&#x8D70;&#x8DEF;&#x5F00;&#x5173; 0 &#x5173;&#x95ED;,1 &#x5F00;,-1 &#x65E0;&#x6548;(&#x4E0D;&#x652F;&#x6301;)</td>
 </tr>
 <tr>
 <td>auto_identify_sport_run</td>
 <td>int</td>
-<td>&#x81EA;&#x52A8;&#x8BC6;&#x522B;&#x8DD1;&#x6B65;&#x5F00;&#x5173; 0 &#x5173;&#x95ED;,1 &#x5F00;</td>
+<td>&#x81EA;&#x52A8;&#x8BC6;&#x522B;&#x8DD1;&#x6B65;&#x5F00;&#x5173; 0 &#x5173;&#x95ED;,1 &#x5F00;,-1 &#x65E0;&#x6548;(&#x4E0D;&#x652F;&#x6301;)</td>
 </tr>
 <tr>
 <td>auto_identify_sport_bicycle</td>
 <td>int</td>
-<td>&#x81EA;&#x52A8;&#x8BC6;&#x522B;&#x81EA;&#x884C;&#x8F66;&#x5F00;&#x5173; 0 &#x5173;&#x95ED;,1 &#x5F00;</td>
+<td>&#x81EA;&#x52A8;&#x8BC6;&#x522B;&#x81EA;&#x884C;&#x8F66;&#x5F00;&#x5173; 0 &#x5173;&#x95ED;,1 &#x5F00;,-1 &#x65E0;&#x6548;(&#x4E0D;&#x652F;&#x6301;)</td>
 </tr>
 <tr>
 <td>auto_pause_on_off</td>
 <td>int</td>
-<td>&#x8FD0;&#x52A8;&#x81EA;&#x52A8;&#x6682;&#x505C; 0 &#x5173;&#x95ED;,1 &#x5F00;</td>
+<td>&#x8FD0;&#x52A8;&#x81EA;&#x52A8;&#x6682;&#x505C; 0 &#x5173;&#x95ED;,1 &#x5F00;,-1 &#x65E0;&#x6548;(&#x4E0D;&#x652F;&#x6301;)</td>
 </tr>
 <tr>
 <td>auto_end_remind_on_off_on_off</td>
 <td>int</td>
-<td>&#x7ED3;&#x675F;&#x63D0;&#x9192; 0 &#x5173;&#x95ED;,1 &#x5F00;</td>
+<td>&#x7ED3;&#x675F;&#x63D0;&#x9192; 0 &#x5173;&#x95ED;,1 &#x5F00;,-1 &#x65E0;&#x6548;(&#x4E0D;&#x652F;&#x6301;)</td>
 </tr>
 <tr>
 <td>auto_identify_sport_elliptical</td>
 <td>int</td>
-<td>&#x81EA;&#x52A8;&#x8BC6;&#x522B;&#x692D;&#x5706;&#x673A;&#x5F00;&#x5173; 0 &#x5173;&#x95ED;,1 &#x5F00;</td>
+<td>&#x81EA;&#x52A8;&#x8BC6;&#x522B;&#x692D;&#x5706;&#x673A;&#x5F00;&#x5173; 0 &#x5173;&#x95ED;,1 &#x5F00;,-1 &#x65E0;&#x6548;(&#x4E0D;&#x652F;&#x6301;)</td>
 </tr>
 <tr>
 <td>auto_identify_sport_rowing</td>
 <td>int</td>
-<td>&#x81EA;&#x52A8;&#x8BC6;&#x522B;&#x5212;&#x8239;&#x673A;&#x5F00;&#x5173; 0 &#x5173;&#x95ED;,1 &#x5F00;</td>
+<td>&#x81EA;&#x52A8;&#x8BC6;&#x522B;&#x5212;&#x8239;&#x673A;&#x5F00;&#x5173; 0 &#x5173;&#x95ED;,1 &#x5F00;,-1 &#x65E0;&#x6548;(&#x4E0D;&#x652F;&#x6301;)</td>
 </tr>
 <tr>
 <td>auto_identify_sport_swim</td>
-<td>Int</td>
-<td>&#x81EA;&#x52A8;&#x8BC6;&#x522B;&#x6E38;&#x6CF3;&#x5F00;&#x5173; 0 &#x5173;&#x95ED;,1 &#x5F00;</td>
+<td>int</td>
+<td>&#x81EA;&#x52A8;&#x8BC6;&#x522B;&#x6E38;&#x6CF3;&#x5F00;&#x5173; 0 &#x5173;&#x95ED;,1 &#x5F00;,-1 &#x65E0;&#x6548;(&#x4E0D;&#x652F;&#x6301;)</td>
+</tr>
+<tr>
+<td>auto_identify_sport_smart_rope</td>
+<td>int</td>
+<td>&#x81EA;&#x52A8;&#x8BC6;&#x522B;&#x667A;&#x80FD;&#x8DF3;&#x7EF3;&#x5F00;&#x5173; 0 &#x5173;&#x95ED;,1 &#x5F00;,-1 &#x65E0;&#x6548;(&#x4E0D;&#x652F;&#x6301;)</td>
 </tr>
 </tbody>
 </table>
 <p><code>&#x793A;&#x4F8B;&#xFF1A;</code></p>
-<pre><code class="lang-c">{
+<pre><code class="lang-json">{
     <span class="hljs-string">&quot;err_code&quot;</span>:<span class="hljs-number">0</span>,
-    <span class="hljs-string">&quot;auto_identify_sport_walk&quot;</span>:<span class="hljs-number">0</span>,
-    <span class="hljs-string">&quot;auto_identify_sport_run&quot;</span>:<span class="hljs-number">0</span>,
-    <span class="hljs-string">&quot;auto_identify_sport_bicycle&quot;</span>:<span class="hljs-number">0</span>,
+    <span class="hljs-string">&quot;auto_identify_sport_walk&quot;</span>:<span class="hljs-number">1</span>,
+    <span class="hljs-string">&quot;auto_identify_sport_run&quot;</span>:<span class="hljs-number">1</span>,
+    <span class="hljs-string">&quot;auto_identify_sport_bicycle&quot;</span>:<span class="hljs-number">-1</span>,
     <span class="hljs-string">&quot;auto_pause_on_off&quot;</span>:<span class="hljs-number">0</span>,
     <span class="hljs-string">&quot;auto_end_remind_on_off_on_off&quot;</span>:<span class="hljs-number">0</span>,
     <span class="hljs-string">&quot;auto_identify_sport_elliptical&quot;</span>:<span class="hljs-number">0</span>,
     <span class="hljs-string">&quot;auto_identify_sport_rowing&quot;</span>:<span class="hljs-number">0</span>,
-    <span class="hljs-string">&quot;auto_identify_sport_swim&quot;</span>:<span class="hljs-number">0</span>
+    <span class="hljs-string">&quot;auto_identify_sport_swim&quot;</span>:<span class="hljs-number">-1</span>,
+      <span class="hljs-string">&quot;auto_identify_sport_smart_rope&quot;</span>:<span class="hljs-number">-1</span>
 }
 </code></pre>
 <footer class="page-footer"><span class="copyright">Copyright &#xA9; 2023-2024 IDO. All rights reserved. all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;:
-2023-08-18 19:50:58
+2023-08-30 17:05:31
 </span></footer>
 <script>console.log("plugin-popup....");document.onclick = function(e){ e.target.tagName === "IMG" && window.open(e.target.src,e.target.src)}</script><style>img{cursor:pointer}</style>
                                 
@@ -3977,7 +3983,7 @@ libManager.send(evt: CmdEvtType.getActivitySwitch, json: jsonEncode(json));
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"获取运动模式自动识别开关","level":"1.4.2.27","depth":3,"next":{"title":"获得固件三级版本和BT的3级版本","level":"1.4.2.28","depth":3,"path":"doc/BaseProtocolEvtExecDoc/IDOV2GetEvt/IDOGetFirmwareBtVersion.md","ref":"doc/BaseProtocolEvtExecDoc/IDOV2GetEvt/IDOGetFirmwareBtVersion.md","articles":[]},"previous":{"title":"获取所有的健康监测开关","level":"1.4.2.26","depth":3,"path":"doc/BaseProtocolEvtExecDoc/IDOV2GetEvt/IDOGetAllHealthSwitchState.md","ref":"doc/BaseProtocolEvtExecDoc/IDOV2GetEvt/IDOGetAllHealthSwitchState.md","articles":[]},"dir":"ltr"},"config":{"plugins":["chapter-fold","back-to-top-button","code","github","tbfed-pagefooter","copy-code-button","pageview-count","-lunr","-search","search-pro","language-picker","popup"],"root":".","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright © 2023-2024 IDO. All rights reserved.","modify_label":"修订时间:","modify_format":"YYYY-MM-DD HH:mm:ss"},"chapter-fold":{},"language-picker":{"grid-columns":3},"github":{"url":"https://github.com/idoosmart/"},"livereload":{},"search-pro":{},"popup":{},"code":{"copyButtons":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"back-to-top-button":{},"pageview-count":{},"copy-code-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"luoft","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"IDO FLUTTER 接口说明","language":"zh-hans","gitbook":"*","description":"IDO FLUTTER 接口说明"},"file":{"path":"doc/BaseProtocolEvtExecDoc/IDOV2GetEvt/IDOGetActivitySwitch.md","mtime":"2023-08-18T11:50:58.133Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2023-08-23T11:55:26.354Z"},"basePath":"../../..","book":{"language":"zh"}});
+            gitbook.page.hasChanged({"page":{"title":"获取运动模式自动识别开关","level":"1.4.2.27","depth":3,"next":{"title":"获得固件三级版本和BT的3级版本","level":"1.4.2.28","depth":3,"path":"doc/BaseProtocolEvtExecDoc/IDOV2GetEvt/IDOGetFirmwareBtVersion.md","ref":"doc/BaseProtocolEvtExecDoc/IDOV2GetEvt/IDOGetFirmwareBtVersion.md","articles":[]},"previous":{"title":"获取所有的健康监测开关","level":"1.4.2.26","depth":3,"path":"doc/BaseProtocolEvtExecDoc/IDOV2GetEvt/IDOGetAllHealthSwitchState.md","ref":"doc/BaseProtocolEvtExecDoc/IDOV2GetEvt/IDOGetAllHealthSwitchState.md","articles":[]},"dir":"ltr"},"config":{"plugins":["chapter-fold","back-to-top-button","code","github","tbfed-pagefooter","copy-code-button","pageview-count","-lunr","-search","search-pro","language-picker","popup"],"root":".","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright © 2023-2024 IDO. All rights reserved.","modify_label":"修订时间:","modify_format":"YYYY-MM-DD HH:mm:ss"},"chapter-fold":{},"language-picker":{"grid-columns":3},"github":{"url":"https://github.com/idoosmart/"},"livereload":{},"search-pro":{},"popup":{},"code":{"copyButtons":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"back-to-top-button":{},"pageview-count":{},"copy-code-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"luoft","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"IDO FLUTTER 接口说明","language":"zh-hans","gitbook":"*","description":"IDO FLUTTER 接口说明"},"file":{"path":"doc/BaseProtocolEvtExecDoc/IDOV2GetEvt/IDOGetActivitySwitch.md","mtime":"2023-08-30T09:05:31.473Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2023-08-30T09:27:38.125Z"},"basePath":"../../..","book":{"language":"zh"}});
         });
     </script>
 </div>

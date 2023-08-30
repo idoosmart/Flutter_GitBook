@@ -3851,7 +3851,7 @@
                                 <section class="normal markdown-section">
                                 
                                 <h3 id="&#x8BBE;&#x7F6E;&#x7ECF;&#x671F;">&#x8BBE;&#x7F6E;&#x7ECF;&#x671F;</h3>
-<p>&#x529F;&#x80FD;&#x8868;&#xFF1A;setMenstruation &#x3010;getMenstrualAddNotifyFlagV3&#xFF0C;support_set_menstrual_on_off(SDK&#x5F85;&#x8865;&#x5145;)&#x3011;</p>
+<p>&#x529F;&#x80FD;&#x8868;&#xFF1A;setMenstruation &#x3010;getMenstrualAddNotifyFlagV3&#xFF0C;support_set_menstrual_reminder_on_off(SDK&#x5F85;&#x8865;&#x5145;)&#x3011;</p>
 <p><strong>Flutter&#x793A;&#x4F8B;&#xFF1A;</strong></p>
 <pre><code class="lang-dart"><span class="hljs-comment"><span class="markdown">/// &#x8BBE;&#x7F6E;&#x7ECF;&#x671F;&#x4E8B;&#x4EF6;&#x53F7;</span></span>
 setMenstruation(
@@ -3874,7 +3874,7 @@ libManager.send(evt: CmdEvtType.setMenstruation, json: jsonEncode(json));
 <tr>
 <td>on_off</td>
 <td>int</td>
-<td>&#x7ECF;&#x671F;&#x63D0;&#x9192;&#x5F00;&#x5173; <br>170&#x5F00;,85&#x5173;&#x95ED;</td>
+<td>&#x7ECF;&#x671F;&#x5F00;&#x5173; <br>170&#x5F00;,85&#x5173;&#x95ED;</td>
 </tr>
 <tr>
 <td>menstrual_length</td>
@@ -3922,9 +3922,9 @@ libManager.send(evt: CmdEvtType.setMenstruation, json: jsonEncode(json));
 <td>&#x901A;&#x77E5;&#x7C7B;&#x578B; <br>0&#xFF1A;&#x65E0;&#x6548; <br>1&#xFF1A;&#x5141;&#x8BB8;&#x901A;&#x77E5;<br>2&#xFF1A;&#x9759;&#x9ED8;&#x901A;&#x77E5;<br>3&#xFF1A;&#x5173;&#x95ED;&#x901A;&#x77E5;<br>&#x9700;&#x8981;&#x56FA;&#x4EF6;&#x5F00;&#x542F;&#x529F;&#x80FD;&#x8868;&#x652F;&#x6301; V3_menstrual_add_notify_flag</td>
 </tr>
 <tr>
-<td>menstrual_on_off</td>
+<td>menstrual_reminder_on_off</td>
 <td>int</td>
-<td>&#x7ECF;&#x671F;&#x5F00;&#x5173;<br>170&#x5F00;,85&#x5173;&#x95ED;<br>&#x9700;&#x8981;&#x56FA;&#x4EF6;&#x5F00;&#x542F;&#x529F;&#x80FD;&#x8868;&#x652F;&#x6301; support_set_menstrual_on_off</td>
+<td>&#x7ECF;&#x671F;&#x63D0;&#x9192;&#x5F00;&#x5173;&#x5F00;&#x5173;<br>170&#x5F00;,85&#x5173;&#x95ED;<br>&#x9700;&#x8981;&#x56FA;&#x4EF6;&#x5F00;&#x542F;&#x529F;&#x80FD;&#x8868;&#x652F;&#x6301; support_set_menstrual_reminder_on_off<br>&#x8BE5;&#x5F00;&#x5173;&#x65E0;&#x6548;&#x65F6;&#xFF0C;&#x529F;&#x80FD;&#x5F00;&#x542F;&#x5C31;&#x9ED8;&#x8BA4;&#x63D0;&#x9192;&#x3002;</td>
 </tr>
 </tbody>
 </table>
@@ -3939,11 +3939,12 @@ libManager.send(evt: CmdEvtType.setMenstruation, json: jsonEncode(json));
    <span class="hljs-string">&quot;ovulation_interval_day&quot;</span>:<span class="hljs-number">15</span>,
    <span class="hljs-string">&quot;ovulation_before_day&quot;</span>:<span class="hljs-number">5</span>,
    <span class="hljs-string">&quot;ovulation_after_day&quot;</span>:<span class="hljs-number">5</span>,
-   <span class="hljs-string">&quot;notify_flag&quot;</span>:<span class="hljs-number">1</span>
+   <span class="hljs-string">&quot;notify_flag&quot;</span>:<span class="hljs-number">1</span>,
+   <span class="hljs-string">&quot;menstrual_reminder_on_off&quot;</span>:<span class="hljs-number">170</span>
 }
 </code></pre>
 <footer class="page-footer"><span class="copyright">Copyright &#xA9; 2023-2024 IDO. All rights reserved. all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;:
-2023-08-18 19:50:58
+2023-08-30 17:09:14
 </span></footer>
 <script>console.log("plugin-popup....");document.onclick = function(e){ e.target.tagName === "IMG" && window.open(e.target.src,e.target.src)}</script><style>img{cursor:pointer}</style>
                                 
@@ -3988,7 +3989,7 @@ libManager.send(evt: CmdEvtType.setMenstruation, json: jsonEncode(json));
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"设置经期","level":"1.4.1.29","depth":3,"next":{"title":"设置经期提醒","level":"1.4.1.30","depth":3,"path":"doc/BaseProtocolEvtExecDoc/IDOV2SetEvt/IDOSetMenstruationRemind.md","ref":"doc/BaseProtocolEvtExecDoc/IDOV2SetEvt/IDOSetMenstruationRemind.md","articles":[]},"previous":{"title":"设置热启动参数","level":"1.4.1.28","depth":3,"path":"doc/BaseProtocolEvtExecDoc/IDOV2SetEvt/IDOSetHotStartParam.md","ref":"doc/BaseProtocolEvtExecDoc/IDOV2SetEvt/IDOSetHotStartParam.md","articles":[]},"dir":"ltr"},"config":{"plugins":["chapter-fold","back-to-top-button","code","github","tbfed-pagefooter","copy-code-button","pageview-count","-lunr","-search","search-pro","language-picker","popup"],"root":".","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright © 2023-2024 IDO. All rights reserved.","modify_label":"修订时间:","modify_format":"YYYY-MM-DD HH:mm:ss"},"chapter-fold":{},"language-picker":{"grid-columns":3},"github":{"url":"https://github.com/idoosmart/"},"livereload":{},"search-pro":{},"popup":{},"code":{"copyButtons":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"back-to-top-button":{},"pageview-count":{},"copy-code-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"luoft","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"IDO FLUTTER 接口说明","language":"zh-hans","gitbook":"*","description":"IDO FLUTTER 接口说明"},"file":{"path":"doc/BaseProtocolEvtExecDoc/IDOV2SetEvt/IDOSetMenstruation.md","mtime":"2023-08-18T11:50:58.179Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2023-08-23T11:55:26.354Z"},"basePath":"../../..","book":{"language":"zh"}});
+            gitbook.page.hasChanged({"page":{"title":"设置经期","level":"1.4.1.29","depth":3,"next":{"title":"设置经期提醒","level":"1.4.1.30","depth":3,"path":"doc/BaseProtocolEvtExecDoc/IDOV2SetEvt/IDOSetMenstruationRemind.md","ref":"doc/BaseProtocolEvtExecDoc/IDOV2SetEvt/IDOSetMenstruationRemind.md","articles":[]},"previous":{"title":"设置热启动参数","level":"1.4.1.28","depth":3,"path":"doc/BaseProtocolEvtExecDoc/IDOV2SetEvt/IDOSetHotStartParam.md","ref":"doc/BaseProtocolEvtExecDoc/IDOV2SetEvt/IDOSetHotStartParam.md","articles":[]},"dir":"ltr"},"config":{"plugins":["chapter-fold","back-to-top-button","code","github","tbfed-pagefooter","copy-code-button","pageview-count","-lunr","-search","search-pro","language-picker","popup"],"root":".","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright © 2023-2024 IDO. All rights reserved.","modify_label":"修订时间:","modify_format":"YYYY-MM-DD HH:mm:ss"},"chapter-fold":{},"language-picker":{"grid-columns":3},"github":{"url":"https://github.com/idoosmart/"},"livereload":{},"search-pro":{},"popup":{},"code":{"copyButtons":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"back-to-top-button":{},"pageview-count":{},"copy-code-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"luoft","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"IDO FLUTTER 接口说明","language":"zh-hans","gitbook":"*","description":"IDO FLUTTER 接口说明"},"file":{"path":"doc/BaseProtocolEvtExecDoc/IDOV2SetEvt/IDOSetMenstruation.md","mtime":"2023-08-30T09:09:14.915Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2023-08-30T09:27:38.125Z"},"basePath":"../../..","book":{"language":"zh"}});
         });
     </script>
 </div>
