@@ -17,7 +17,7 @@
     
             
                 
-                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.css">
                 
             
                 
@@ -42,6 +42,14 @@
             
                 
                 <link rel="stylesheet" href="../../gitbook/gitbook-plugin-language-picker/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-sidebar-style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-splitter/splitter.css">
                 
             
                 
@@ -2067,7 +2075,7 @@
                 <a href="BaseProtocolEvtExecDoc/IDOV2SetEvt/IDOSetNotificationStatus.html">
             
                     
-                    设置通知应用状态
+                    设置通知应用状态(事项提醒通知类型)
             
                 </a>
             
@@ -3877,8 +3885,8 @@
   })
 </code></pre>
 <h4 id="13-api&#x53C2;&#x6570;&#x8BF4;&#x660E;">1.3 API&#x53C2;&#x6570;&#x8BF4;&#x660E;:</h4>
-<p>@param:contactText &#x8054;&#x7CFB;&#x4EBA;&#xFF0C;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x6700;&#x5927;&#x8BBE;&#x7F6E;128&#x4E2A;&#x5B57;&#x8282;&#x3002;</p>
-<p>@param:phoneNumber &#x53F7;&#x7801;&#xFF0C;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x6700;&#x5927;&#x8BBE;&#x7F6E;128&#x4E2A;&#x5B57;&#x8282;&#x3002;</p>
+<p>@param:contactText &#x8054;&#x7CFB;&#x4EBA;&#xFF0C;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x6700;&#x5927;&#x8BBE;&#x7F6E;63&#x4E2A;&#x5B57;&#x8282;&#x3002;</p>
+<p>@param:phoneNumber &#x53F7;&#x7801;&#xFF0C;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x6700;&#x5927;&#x8BBE;&#x7F6E;31&#x4E2A;&#x5B57;&#x8282;&#x3002;</p>
 <p>@return:0 &#x6210;&#x529F;&#x3002;</p>
 <h3 id="2v2&#x6D88;&#x606F;&#x63D0;&#x9192;&#xFF1A;">2.V2&#x6D88;&#x606F;&#x63D0;&#x9192;&#xFF1A;</h3>
 <h4 id="21-&#x529F;&#x80FD;&#x6982;&#x62EC;">2.1 &#x529F;&#x80FD;&#x6982;&#x62EC;:</h4>
@@ -3893,9 +3901,9 @@
 </code></pre>
 <h4 id="23-api&#x53C2;&#x6570;&#x8BF4;&#x660E;">2.3 API&#x53C2;&#x6570;&#x8BF4;&#x660E;:</h4>
 <p>@param:type &#x6D88;&#x606F;&#x7C7B;&#x578B;&#xFF0C;&#x8DF3;&#x8F6C;&#x5230;<a href="IDOMessageTye.md">IDO&#x6D88;&#x606F;&#x5E94;&#x7528;&#x7C7B;&#x578B;</a></p>
-<p>@param:contactText &#x8054;&#x7CFB;&#x4EBA;&#x540D;&#x79F0;&#xFF0C;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x6700;&#x5927;&#x8BBE;&#x7F6E;128&#x4E2A;&#x5B57;&#x8282;&#x3002;</p>
-<p>@param:phoneNumber &#x53F7;&#x7801;&#xFF0C;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x6700;&#x5927;&#x8BBE;&#x7F6E;128&#x4E2A;&#x5B57;&#x8282;&#x3002;</p>
-<p>@param:dataText &#x6D88;&#x606F;&#x5185;&#x5BB9;&#xFF0C;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x6700;&#x5927;&#x8BBE;&#x7F6E;512&#x4E2A;&#x5B57;&#x8282;&#x3002;</p>
+<p>@param:contactText &#x8054;&#x7CFB;&#x4EBA;&#x540D;&#x79F0;&#xFF0C;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x6700;&#x5927;&#x8BBE;&#x7F6E;63&#x4E2A;&#x5B57;&#x8282;&#x3002;</p>
+<p>@param:phoneNumber &#x53F7;&#x7801;&#xFF0C;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x6700;&#x5927;&#x8BBE;&#x7F6E;31&#x4E2A;&#x5B57;&#x8282;&#x3002;</p>
+<p>@param:dataText &#x6D88;&#x606F;&#x5185;&#x5BB9;&#xFF0C;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x6700;&#x5927;&#x8BBE;&#x7F6E;249&#x4E2A;&#x5B57;&#x8282;&#x3002;</p>
 <p>@return:0 &#x6210;&#x529F;&#x3002;</p>
 <h3 id="3v2&#x6765;&#x7535;&#x5DF2;&#x63A5;&#xFF1A;">3.V2&#x6765;&#x7535;&#x5DF2;&#x63A5;&#xFF1A;</h3>
 <h4 id="31-&#x529F;&#x80FD;&#x6982;&#x62EC;">3.1 &#x529F;&#x80FD;&#x6982;&#x62EC;:</h4>
@@ -3914,7 +3922,7 @@
 <h4 id="43-api&#x53C2;&#x6570;&#x8BF4;&#x660E;">4.3 API&#x53C2;&#x6570;&#x8BF4;&#x660E;:</h4>
 <p>@return:0 &#x6210;&#x529F;&#x3002;</p>
 <footer class="page-footer"><span class="copyright">Copyright &#xA9; 2023-2024 IDO. All rights reserved. all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;:
-2023-08-28 10:28:46
+2023-09-06 18:13:53
 </span></footer>
 <script>console.log("plugin-popup....");document.onclick = function(e){ e.target.tagName === "IMG" && window.open(e.target.src,e.target.src)}</script><style>img{cursor:pointer}</style>
                                 
@@ -3959,7 +3967,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"IDO来电提醒和消息提醒接口说明","level":"1.3.25.1","depth":3,"next":{"title":"协议库缓存入口","level":"1.3.26","depth":2,"anchor":"#cache","path":"IDOFlutter.md","ref":"IDOFlutter.md#cache","articles":[{"title":"IDO协议库缓存接口说明","level":"1.3.26.1","depth":3,"path":"doc/IDOCacheIconIntroduction.md","ref":"doc/IDOCacheIconIntroduction.md","articles":[]}]},"previous":{"title":"来电提醒&消息入口","level":"1.3.25","depth":2,"anchor":"#callNotice","path":"IDOFlutter.md","ref":"IDOFlutter.md#callNotice","articles":[{"title":"IDO来电提醒和消息提醒接口说明","level":"1.3.25.1","depth":3,"path":"doc/IDOV2NoticeIntroduction.md","ref":"doc/IDOV2NoticeIntroduction.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["chapter-fold","back-to-top-button","code","github","tbfed-pagefooter","copy-code-button","pageview-count","-lunr","-search","search-pro","language-picker","popup"],"root":".","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright © 2023-2024 IDO. All rights reserved.","modify_label":"修订时间:","modify_format":"YYYY-MM-DD HH:mm:ss"},"chapter-fold":{},"language-picker":{"grid-columns":3},"github":{"url":"https://github.com/idoosmart/"},"livereload":{},"search-pro":{},"popup":{},"code":{"copyButtons":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"back-to-top-button":{},"pageview-count":{},"copy-code-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"luoft","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"IDO FLUTTER 接口说明","language":"zh-hans","gitbook":"*","description":"IDO FLUTTER 接口说明"},"file":{"path":"doc/IDOV2NoticeIntroduction.md","mtime":"2023-08-28T02:28:46.620Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2023-09-04T01:42:27.732Z"},"basePath":"..","book":{"language":"zh"}});
+            gitbook.page.hasChanged({"page":{"title":"IDO来电提醒和消息提醒接口说明","level":"1.3.25.1","depth":3,"next":{"title":"协议库缓存入口","level":"1.3.26","depth":2,"anchor":"#cache","path":"IDOFlutter.md","ref":"IDOFlutter.md#cache","articles":[{"title":"IDO协议库缓存接口说明","level":"1.3.26.1","depth":3,"path":"doc/IDOCacheIconIntroduction.md","ref":"doc/IDOCacheIconIntroduction.md","articles":[]}]},"previous":{"title":"来电提醒&消息入口","level":"1.3.25","depth":2,"anchor":"#callNotice","path":"IDOFlutter.md","ref":"IDOFlutter.md#callNotice","articles":[{"title":"IDO来电提醒和消息提醒接口说明","level":"1.3.25.1","depth":3,"path":"doc/IDOV2NoticeIntroduction.md","ref":"doc/IDOV2NoticeIntroduction.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["chapter-fold","back-to-top-button","code","github","tbfed-pagefooter","copy-code-button","pageview-count","-lunr","-search","search-pro","language-picker","popup","sidebar-style","splitter"],"root":".","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"sidebar-style":{"author":"付铭","title":"IDO接口说明文档"},"tbfed-pagefooter":{"copyright":"Copyright © 2023-2024 IDO. All rights reserved.","modify_label":"修订时间:","modify_format":"YYYY-MM-DD HH:mm:ss"},"language-picker":{"grid-columns":3},"github":{"url":"https://github.com/idoosmart/"},"livereload":{},"splitter":{},"search-pro":{},"popup":{},"code":{"copyButtons":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"back-to-top-button":{},"pageview-count":{},"expandable-chapters-small":{},"copy-code-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"luoft","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"IDO FLUTTER 接口说明","language":"zh-hans","gitbook":"*","description":"IDO FLUTTER 接口说明"},"file":{"path":"doc/IDOV2NoticeIntroduction.md","mtime":"2023-09-06T10:13:53.387Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2023-09-08T11:34:45.118Z"},"basePath":"..","book":{"language":"zh"}});
         });
     </script>
 </div>
@@ -3969,7 +3977,7 @@
     <script src="../../gitbook/theme.js"></script>
     
         
-        <script src="../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
+        <script src="../../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.js"></script>
         
     
         
@@ -4002,6 +4010,14 @@
     
         
         <script src="../../gitbook/gitbook-plugin-language-picker/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sidebar-style/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-splitter/splitter.js"></script>
         
     
         

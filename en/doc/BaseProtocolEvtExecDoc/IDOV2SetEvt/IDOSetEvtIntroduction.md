@@ -56,7 +56,7 @@
 | 185          | [Set Night Temperature Switch](./IDOSetTemperatureSwitch.md) |
 | 186          | [Set Fitness Guidance Switch](./IDOSetFitnessGuidance.md)    |
 | 188          | [Set Unread App Reminder](./IDOSetUnreadAppReminder.md)      |
-| 190          | [Set Notification App Status](./IDOSetNotificationStatus.md) |
+| 190          | [Set notification application status<br /> (Event alert notification type)](./IDOSetNotificationStatus.md) |
 | 191          | [Set Respiration Rate Switch](./IDOSetRespiRateONOFF.md)     |
 | 192          | [Set Body Battery Switch](./IDOSetBodyPowerONOFF.md)         |
 | 150          | [Set Weather Switch](./IDOSetWeatherSwitch.md)               |
