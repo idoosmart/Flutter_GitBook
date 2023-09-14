@@ -3,22 +3,22 @@
 
 **JSON fields received by the app**:
 
-| Field Name         | Data Type | Description                                                                                                |
-| ------------------ | --------- | ---------------------------------------------------------------------------------------------------------- |
-| year               | int       | Data date: year                                                                                            |
-| month              | int       | Data date: month                                                                                           |
-| day                | int       | Data date: day                                                                                             |
-| start_time         | int       | Start time in seconds, offset from 0:00                                                                     |
-| data_type          | int       | 0 for invalid, 1 for single value, 2 for maximum and minimum values                                        |
-| silent_hr          | int       | Resting heart rate                                                                                         |
-| five_min_max_data  | int       | Maximum heart rate in a five-minute interval                                                               |
-| five_min_min_data  | int       | Minimum heart rate in a five-minute interval                                                               |
-| five_min_avg_data  | int       | Average heart rate in a five-minute interval                                                               |
-| five_min_data      | int []    | All heart rate values in a five-minute interval                                                            |
-| hr_data_count      | int       | Number of heart rate data points for high and low heart rates <br />Returns 0 if V3_support_sync_over_high_low_heart_data is not enabled. |
-| hr_interval        | array     | Five heart rate intervals: warm-up zone, maximum heart rate zone, fat burning zone, aerobic endurance zone, anaerobic endurance zone<br />Array of `threshold` and `minute` |
-| items              | array     | Heart rate data points: offset and heart_rateVal                                                           |
-| hr_data            | array     | High and low heart rate data: hour, minute, type, and heart_rate<br />Returns 0 if V3_support_sync_over_high_low_heart_data is not enabled. |
+| Field Name        | Data Type | Description                                                  |
+| ----------------- | --------- | ------------------------------------------------------------ |
+| year              | int       | Data date: year                                              |
+| month             | int       | Data date: month                                             |
+| day               | int       | Data date: day                                               |
+| start_time        | int       | Start time in seconds, offset from 0:00                      |
+| data_type         | int       | (reserve) ~~0 for invalid, 1 for single value, 2 for maximum and minimum values~~ |
+| silent_hr         | int       | Resting heart rate                                           |
+| five_min_max_data | int       | Maximum heart rate in a five-minute interval                 |
+| five_min_min_data | int       | Minimum heart rate in a five-minute interval                 |
+| five_min_avg_data | int       | Average heart rate in a five-minute interval                 |
+| five_min_data     | int []    | All heart rate values in a five-minute interval              |
+| hr_data_count     | int       | Number of heart rate data points for high and low heart rates <br />Returns 0 if `v3SupportSyncOverHighLowHeartData` is not enabled. |
+| hr_interval       | array     | Five heart rate intervals: warm-up zone, maximum heart rate zone, fat burning zone, aerobic endurance zone, anaerobic endurance zone<br />Array of `threshold` and `minute` |
+| items             | array     | Heart rate data points:` offset` and `heart_rateVal`         |
+| hr_data           | array     | High and low heart rate data: `hour`, `minute`, `type`, and `heart_rate`<br />Returns 0 if `v3SupportSyncOverHighLowHeartData` is not enabled. |
 
 | Field Name      | Data Type | Description              |
 | --------------- | --------- | ------------------------ |
@@ -30,12 +30,12 @@
 | threshold    | int       | Threshold   |
 | minute       | int       | Minute      |
 
-| Field Name   | Data Type | Description                                                                                                |
-| ------------ | --------- | ---------------------------------------------------------------------------------------------------------- |
-| hour         | int       | Hour of the high and low heart rate data<br />Returns 0 if V3_support_sync_over_high_low_heart_data is not enabled. |
-| minute       | int       | Minute of the high and low heart rate data<br />Returns 0 if V3_support_sync_over_high_low_heart_data is not enabled. |
-| type         | int       | Type of heart rate value<br />0: Heart rate value for low heart rate<br />1: Heart rate value for high heart rate<br />Returns 0 if V3_support_sync_over_high_low_heart_data is not enabled. |
-| heart_rate   | int       | Heart rate value in beats per minute<br />Returns 0 if V3_support_sync_over_high_low_heart_data is not enabled. |
+| Field Name | Data Type | Description                                                  |
+| ---------- | --------- | ------------------------------------------------------------ |
+| hour       | int       | Hour of the high and low heart rate data<br />Returns 0 if `v3SupportSyncOverHighLowHeartData` is not enabled. |
+| minute     | int       | Minute of the high and low heart rate data<br />Returns 0 if `v3SupportSyncOverHighLowHeartData` is not enabled. |
+| type       | int       | Type of heart rate value<br />0: Heart rate value for low heart rate<br />1: Heart rate value for high heart rate<br />Returns 0 if `v3SupportSyncOverHighLowHeartData` is not enabled. |
+| heart_rate | int       | Heart rate value in beats per minute<br />Returns 0 if `v3SupportSyncOverHighLowHeartData` is not enabled. |
 
 `Example:`
 

@@ -1,5 +1,6 @@
 ### V3多运动数据最后一次数据获取
 
+功能表：syncV3ActivityExchangeData 【syncExchangeDataReplyAddRealTimeSpeedPaceV3，setSupportSportPlan，supportSmartCompetitor】
 
 **Flutter示例：**
 
@@ -19,7 +20,7 @@ libManager.send(evt: CmdEvtType.exchangeAppGetActivityData, json: jsonEncode(jso
 
 | 字段名                  | 字段类型 | 字段说明                                                     |
 | ----------------------- | -------- | ------------------------------------------------------------ |
-| version                 | int      | 协议库版本号默认16<br />功能表v3_support_sports_plan开启后version=32 <br />功能表V3_support_v3_exchange_data_reply_add_real_time_speed_pace开启后version=48 |
+| version                 | int      | 协议库版本号默认16<br />功能表`setSupportSportPlan`开启后version=32 <br />功能表`syncExchangeDataReplyAddRealTimeSpeedPaceV3`开启后version=48 |
 | type                    | int      | 运动类型                                                     |
 | year                    | int      | 年                                                           |
 | month                   | int      | 月                                                           |
@@ -29,9 +30,9 @@ libManager.send(evt: CmdEvtType.exchangeAppGetActivityData, json: jsonEncode(jso
 | second                  | int      | 秒                                                           |
 | hr_data_interval_minute | int      | 心率间隔 <br />单位分钟                                      |
 | step                    | int      | 步数                                                         |
-| durations               | int      | 持续时间                                                     |
-| calories                | int      | 卡路里                                                       |
-| distance                | int      | 距离                                                         |
+| durations               | int      | 持续时间<br />单位秒                                     |
+| calories                | int      | 卡路里<br />单位kcal                                         |
+| distance                | int      | 距离<br />单位米                                                |
 | burn_fat_mins           | int      | 脂肪燃烧的心率持续时间<br />单位分钟                         |
 | aerobic_mins            | int      | 有氧运动的持续时间                                           |
 | limit_mins              | int      | 极限锻炼的持续时间                                           |
@@ -47,14 +48,14 @@ libManager.send(evt: CmdEvtType.exchangeAppGetActivityData, json: jsonEncode(jso
 | extreme_exercise_time   | int      | 极限锻炼的累计时长 <br />单位秒                              |
 | avg_speed               | int      | 平均速度 <br />单位km/h                                      |
 | max_speed               | int      | 最快速度 <br />单位km/h                                      |
-| avg_step_stride         | int      | 平均步幅                                                     |
-| max_step_stride         | int      | 最大步幅                                                     |
-| km_speed                | int      | 平均公里配速                                                 |
-| fast_km_speed           | int      | 最快公里配速                                                 |
-| avg_step_frequency      | int      | 平均步频                                                     |
-| max_step_frequency      | int      | 最大步频                                                     |
-| avg_hr_value            | int      | 平均心率                                                     |
-| max_hr_value            | int      | 最大心率                                                     |
+| avg_step_stride         | int      | 平均步幅<br />单位:厘米                                     |
+| max_step_stride         | int      | 最大步幅<br />单位:厘米                                          |
+| km_speed                | int      | 平均公里配速<br />每公里耗时秒数                                    |
+| fast_km_speed           | int      | 最快公里配速<br />每公里耗时秒数                                    |
+| avg_step_frequency      | int      | 平均步频<br />单位:步/分钟                                       |
+| max_step_frequency      | int      | 最大步频<br />单位:步/分钟                            |
+| avg_hr_value            | int      | 平均心率<br />单位:BPM                                  |
+| max_hr_value            | int      | 最大心率<br />单位:BPM                                         |
 | km_speed_count          | int      | 公里配速详情个数 <br />最大100                               |
 | steps_frequency_count   | int      | 步频详情个数                                                 |
 | mi_speed_count          | int      | 英里配速个数<br />最大100                                    |
@@ -68,11 +69,11 @@ libManager.send(evt: CmdEvtType.exchangeAppGetActivityData, json: jsonEncode(jso
 | in_class_calories | int | 课程内运动热量 单位千卡<br />version=32 字段有效 否则无效上报0 |
 | completion_rate | int | 动作完成率 0—100<br />version=32 字段有效 否则无效上报0 |
 | hr_completion_rate | int | 心率控制率 0—100<br />version=32 字段有效 否则无效上报0 |
-| smart_competitor | int | 0:无效 1:非智能陪跑运动 2:智能陪跑运动<br />功能表support_smart_competitor开启有效 否则无效上报0 |
-| ai_image_id      | int | ai形象ID<br />功能表support_smart_competitor开启有效 否则无效上报0 |
-| user_image_id | int | 用户形象ID<br />功能表support_smart_competitor开启有效 否则无效上报0 |
-| bg_image_id | int | 背景形象ID<br />功能表support_smart_competitor开启有效 否则无效上报0 |
-| smart_competitor_pace | int | 智能陪跑对手配速<br />功能表support_smart_competitor开启有效 否则无效上报0 |
+| smart_competitor | int | 0:无效 1:非智能陪跑运动 2:智能陪跑运动<br />功能表`supportSmartCompetitor`开启有效 否则无效上报0 |
+| ai_image_id      | int | ai形象ID<br />功能表`supportSmartCompetitor`开启有效 否则无效上报0 |
+| user_image_id | int | 用户形象ID<br />功能表`supportSmartCompetitor`开启有效 否则无效上报0 |
+| bg_image_id | int | 背景形象ID<br />功能表`supportSmartCompetitor`开启有效 否则无效上报0 |
+| smart_competitor_pace | int | 智能陪跑对手配速<br />功能表`supportSmartCompetitor`开启有效 否则无效上报0 |
 | real_speed_count        | int      | 实时速度个数<br /> version=48 字段有效 否则无效上报0 |
 | pace_speed_count        | int      | 实时配速数组<br />version=48 字段有效 否则无效上报0                  |
 | km_speed_s              | int []    | 每公里耗时秒数 配速                                          |
@@ -91,7 +92,7 @@ libManager.send(evt: CmdEvtType.exchangeAppGetActivityData, json: jsonEncode(jso
 
 `示例：`
 
-```c
+```json
 {
     "version":0,
     "type":0,
