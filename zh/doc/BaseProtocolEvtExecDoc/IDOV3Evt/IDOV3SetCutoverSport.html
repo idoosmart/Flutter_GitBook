@@ -2627,6 +2627,19 @@
             
         </li>
     
+        <li class="chapter " data-level="1.4.1.61" data-path="../IDOV2SetEvt/IDOSetVoiceAssistant.html">
+            
+                <a href="../IDOV2SetEvt/IDOSetVoiceAssistant.html">
+            
+                    
+                    设置语音助手开关
+            
+                </a>
+            
+
+            
+        </li>
+    
 
             </ul>
             
@@ -4088,16 +4101,9 @@ libManager.send(evt: CmdEvtType.exchangeAppPlan, json: jsonEncode(json));
 <pre><code class="lang-c">{
     <span class="hljs-string">&quot;operate&quot;</span>:<span class="hljs-number">1</span>,
     <span class="hljs-string">&quot;type&quot;</span>:<span class="hljs-number">1</span>,
-    <span class="hljs-string">&quot;action_type&quot;</span>:<span class="hljs-number">1</span>,
-    <span class="hljs-string">&quot;year&quot;</span>:<span class="hljs-number">2022</span>,
-    <span class="hljs-string">&quot;month&quot;</span>:<span class="hljs-number">12</span>,
-    <span class="hljs-string">&quot;day&quot;</span>:<span class="hljs-number">26</span>,
-    <span class="hljs-string">&quot;time&quot;</span>:<span class="hljs-number">200</span>,
-    <span class="hljs-string">&quot;low_heart&quot;</span>:<span class="hljs-number">80</span>,
-    <span class="hljs-string">&quot;height_heart&quot;</span>:<span class="hljs-number">110</span>,
-    <span class="hljs-string">&quot;cur_day&quot;</span>:<span class="hljs-number">1</span>,
-    <span class="hljs-string">&quot;hour&quot;</span>:<span class="hljs-number">0</span>,
-    <span class="hljs-string">&quot;minute&quot;</span>:<span class="hljs-number">0</span>,
+      <span class="hljs-string">&quot;training_offset&quot;</span>:<span class="hljs-number">0</span>,
+    <span class="hljs-string">&quot;hour&quot;</span>:<span class="hljs-number">15</span>,
+    <span class="hljs-string">&quot;minute&quot;</span>:<span class="hljs-number">22</span>,
     <span class="hljs-string">&quot;second&quot;</span>: <span class="hljs-number">0</span>
 }
 </code></pre>
@@ -4129,7 +4135,7 @@ libManager.send(evt: CmdEvtType.exchangeAppPlan, json: jsonEncode(json));
 <tr>
 <td>action_type</td>
 <td>int</td>
-<td>&#x52A8;&#x4F5C;&#x7C7B;&#x578B; <br>1&#xFF1A;&#x5FEB;&#x8D70;<br>2&#xFF1A;&#x6162;&#x8DD1;<br>3&#xFF1A;&#x4E2D;&#x901F;&#x8DD1;<br>4&#xFF1A;&#x5FEB;&#x8DD1;<br>5&#xFF1A;&#x7ED3;&#x675F;&#x8BFE;&#x7A0B;&#x8FD0;&#x52A8;&#xFF08;&#x8FD8;&#x8981;&#x7B49;&#x5F85;&#x7528;&#x6237;&#x662F;&#x5426;&#x6709;&#x81EA;&#x7531;&#x8FD0;&#x52A8;&#xFF09;&#xFF08;&#x6B64;&#x5B57;&#x6BB5;&#x5F53;operate&#x4E3A;5&#x8D77;&#x4F5C;&#x7528;&#xFF09;</td>
+<td>&#x6B64;&#x5B57;&#x6BB5;&#x5F53;operate&#x4E3A;5&#x8D77;&#x4F5C;&#x7528;<br>&#x52A8;&#x4F5C;&#x7C7B;&#x578B; <br>1&#xFF1A;&#x5FEB;&#x8D70;<br>2&#xFF1A;&#x6162;&#x8DD1;<br>3&#xFF1A;&#x4E2D;&#x901F;&#x8DD1;<br>4&#xFF1A;&#x5FEB;&#x8DD1;<br>5&#xFF1A;&#x7ED3;&#x675F;&#x8BFE;&#x7A0B;&#x8FD0;&#x52A8;&#xFF08;&#x8FD8;&#x8981;&#x7B49;&#x5F85;&#x7528;&#x6237;&#x662F;&#x5426;&#x6709;&#x81EA;&#x7531;&#x8FD0;&#x52A8;&#xFF09;</td>
 </tr>
 </tbody>
 </table>
@@ -4138,11 +4144,11 @@ libManager.send(evt: CmdEvtType.exchangeAppPlan, json: jsonEncode(json));
     <span class="hljs-string">&quot;err_code&quot;</span>:<span class="hljs-number">0</span>
     <span class="hljs-string">&quot;operate&quot;</span>:<span class="hljs-number">1</span>,
     <span class="hljs-string">&quot;type&quot;</span>:<span class="hljs-number">1</span>,
-    <span class="hljs-string">&quot;action_type&quot;</span>:<span class="hljs-number">1</span>
+    <span class="hljs-string">&quot;action_type&quot;</span>:<span class="hljs-number">0</span>
 }
 </code></pre>
 <footer class="page-footer"><span class="copyright">Copyright &#xA9; 2023-2024 IDO. All rights reserved. all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;:
-2023-08-28 10:28:46
+2023-10-09 17:46:04
 </span></footer>
 <script>console.log("plugin-popup....");document.onclick = function(e){ e.target.tagName === "IMG" && window.open(e.target.src,e.target.src)}</script><style>img{cursor:pointer}</style>
                                 
@@ -4187,7 +4193,7 @@ libManager.send(evt: CmdEvtType.exchangeAppPlan, json: jsonEncode(json));
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"V3APP通知设备运动过程切换","level":"1.4.5.34","depth":3,"next":{"title":"V3获取用户习惯信息","level":"1.4.5.35","depth":3,"path":"doc/BaseProtocolEvtExecDoc/IDOV3Evt/IDOV3GetHabitInfo.md","ref":"doc/BaseProtocolEvtExecDoc/IDOV3Evt/IDOV3GetHabitInfo.md","articles":[]},"previous":{"title":"V3APP下发跑步计划(运动计划)","level":"1.4.5.33","depth":3,"path":"doc/BaseProtocolEvtExecDoc/IDOV3Evt/IDOV3SetRunPlan.md","ref":"doc/BaseProtocolEvtExecDoc/IDOV3Evt/IDOV3SetRunPlan.md","articles":[]},"dir":"ltr"},"config":{"plugins":["chapter-fold","back-to-top-button","code","github","tbfed-pagefooter","copy-code-button","pageview-count","-lunr","-search","search-pro","language-picker","popup","sidebar-style","splitter"],"root":".","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"sidebar-style":{"author":"idoosmart.com","title":"IDO接口说明文档"},"tbfed-pagefooter":{"copyright":"Copyright © 2023-2024 IDO. All rights reserved.","modify_label":"修订时间:","modify_format":"YYYY-MM-DD HH:mm:ss"},"language-picker":{"grid-columns":3},"github":{"url":"https://github.com/idoosmart/"},"livereload":{},"splitter":{},"search-pro":{},"popup":{},"code":{"copyButtons":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"back-to-top-button":{},"pageview-count":{},"expandable-chapters-small":{},"copy-code-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"luoft","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"IDO FLUTTER 接口说明","language":"zh-hans","gitbook":"*","description":"IDO FLUTTER 接口说明"},"file":{"path":"doc/BaseProtocolEvtExecDoc/IDOV3Evt/IDOV3SetCutoverSport.md","mtime":"2023-08-28T02:28:46.612Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2023-10-06T09:17:23.685Z"},"basePath":"../../..","book":{"language":"zh"}});
+            gitbook.page.hasChanged({"page":{"title":"V3APP通知设备运动过程切换","level":"1.4.5.34","depth":3,"next":{"title":"V3获取用户习惯信息","level":"1.4.5.35","depth":3,"path":"doc/BaseProtocolEvtExecDoc/IDOV3Evt/IDOV3GetHabitInfo.md","ref":"doc/BaseProtocolEvtExecDoc/IDOV3Evt/IDOV3GetHabitInfo.md","articles":[]},"previous":{"title":"V3APP下发跑步计划(运动计划)","level":"1.4.5.33","depth":3,"path":"doc/BaseProtocolEvtExecDoc/IDOV3Evt/IDOV3SetRunPlan.md","ref":"doc/BaseProtocolEvtExecDoc/IDOV3Evt/IDOV3SetRunPlan.md","articles":[]},"dir":"ltr"},"config":{"plugins":["chapter-fold","back-to-top-button","code","github","tbfed-pagefooter","copy-code-button","pageview-count","-lunr","-search","search-pro","language-picker","popup","sidebar-style","splitter"],"root":".","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"sidebar-style":{"author":"idoosmart.com","title":"IDO接口说明文档"},"tbfed-pagefooter":{"copyright":"Copyright © 2023-2024 IDO. All rights reserved.","modify_label":"修订时间:","modify_format":"YYYY-MM-DD HH:mm:ss"},"language-picker":{"grid-columns":3},"github":{"url":"https://github.com/idoosmart/"},"livereload":{},"splitter":{},"search-pro":{},"popup":{},"code":{"copyButtons":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"back-to-top-button":{},"pageview-count":{},"expandable-chapters-small":{},"copy-code-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"luoft","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"IDO FLUTTER 接口说明","language":"zh-hans","gitbook":"*","description":"IDO FLUTTER 接口说明"},"file":{"path":"doc/BaseProtocolEvtExecDoc/IDOV3Evt/IDOV3SetCutoverSport.md","mtime":"2023-10-09T09:46:04.937Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2023-10-10T02:07:17.621Z"},"basePath":"../../..","book":{"language":"zh"}});
         });
     </script>
 </div>
