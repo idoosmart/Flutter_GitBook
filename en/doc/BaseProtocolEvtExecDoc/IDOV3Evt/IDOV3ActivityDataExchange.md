@@ -1,6 +1,6 @@
 ### V3 Sports Data Exchange
 
-Function: syncV3ActivityExchangeData 【syncExchangeDataReplyAddRealTimeSpeedPaceV3，setSupportSportPlan】
+Function: syncV3ActivityExchangeData 【syncExchangeDataReplyAddRealTimeSpeedPaceV3，setSupportSportPlan，setSupportExchangeSetGpsCoordinates】
 
 **Flutter Example:**
 
@@ -25,18 +25,31 @@ libManager.send(evt: CmdEvtType.exchangeAppV3Ing, json: jsonEncode(json));
 | real_time_speed | int        | Real-time speed calculated and displayed by the app, in km/h, multiplied by 100<br />Uint:Km/h<br />reserve |
 | duration        | int        | Duration<br />Uint:second<br />reserve                       |
 | calories        | int        | Calories burned<br />Uint:Kcal<br />reserve                  |
+| gps_info_count  | int        | Number of gps coordinates<br/>Max 30<br />When opening the function table ` setSupportExchangeSetGpsCoordinates ` support |
+| gps             | char []    | Gps coordinates<br/>Max 30 set<br />When opening the function table ` setSupportExchangeSetGpsCoordinates ` support |
 
 **Example:**
 
 ```json
 {
-  "version": 0,
-  "type": 0,
-  "signal_flag": 0,
-  "distance": 0,
-  "real_time_speed": 0,
-  "duration": 0,
-  "calories": 0
+  "version":0,
+  "type":31,
+  "signal_flag":0,
+  "distance":0,
+  "real_time_speed":0,
+  "duration":0,
+  "calories":0,
+  "gps_info_count" : 2,
+  "gps" : [
+    {
+      "latitude" :22543100,
+      "longitude" :114057800
+    },
+    {
+      "latitude" :23129100,
+      "longitude" :113264400
+    }
+  ]
 }
 ```
 

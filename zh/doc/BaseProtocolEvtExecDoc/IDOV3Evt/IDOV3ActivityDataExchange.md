@@ -1,6 +1,6 @@
 ### V3多运动数据交互
 
-功能表：syncV3ActivityExchangeData 【syncExchangeDataReplyAddRealTimeSpeedPaceV3，setSupportSportPlan】
+功能表：syncV3ActivityExchangeData 【syncExchangeDataReplyAddRealTimeSpeedPaceV3，setSupportSportPlan，setSupportExchangeSetGpsCoordinates】
 
 
 **Flutter示例：**
@@ -27,19 +27,32 @@ libManager.send(evt: CmdEvtType.exchangeAppV3Ing, json: jsonEncode(json));
 | distance        | int      | app距离<br />单位米<br />app信号强的时候ble使用app的距离数据计算 <br />app信号弱的时候ble不使用app的数据，app显示使用手环的数据 |
 | real_time_speed | int      | app计算显示实时配速，预留<br />单位km/h，100倍               |
 | duration        | int      | 持续时间 预留<br />单位米                                    |
-| calories        | Int      | 卡路里  预留<br />单位Kcal                                   |
+| calories        | int      | 卡路里  预留<br />单位Kcal                                   |
+| gps_info_count  | int      | gps坐标个数，最大支持下发30<br />功能表`setSupportExchangeSetGpsCoordinates`开启时支持 |
+| gps             | char []  | gps坐标，最大支持下发30组<br />功能表`setSupportExchangeSetGpsCoordinates`开启时支持 |
 
 `示例：`
 
-```c
+```json
 {
   "version":0,
-    "type":0,
-    "signal_flag":0,
-    "distance":0,
-    "real_time_speed":0,
-    "duration":0,
-    "calories":0
+  "type":31,
+  "signal_flag":0,
+  "distance":0,
+  "real_time_speed":0,
+  "duration":0,
+  "calories":0,
+  "gps_info_count" : 2,
+  "gps" : [
+    {
+      "latitude" :22543100,
+      "longitude" :114057800
+    },
+    {
+      "latitude" :23129100,
+      "longitude" :113264400
+    }
+  ]
 }
 ```
 
@@ -72,7 +85,7 @@ libManager.send(evt: CmdEvtType.exchangeAppV3Ing, json: jsonEncode(json));
 
 `示例：`
 
-```c
+```json
 {
     "version":0,
     "type":0,
