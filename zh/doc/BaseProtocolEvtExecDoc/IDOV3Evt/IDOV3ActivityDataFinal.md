@@ -81,7 +81,7 @@ libManager.send(evt: CmdEvtType.exchangeAppGetActivityData, json: jsonEncode(jso
 | items_mi_speed          | int []    | 英里配速数组 <br />s钟数据传输 一英里用了多少s               |
 | item_real_speed         | int []    | 实时速度 <br />5s一个最大保存6小时 单位km/h<br />version=48 字段有效 否则无效上报0 |
 | pace_speed_items        | int []    | 实时配速数组  <br />传过来的是 s 钟  每5S算一次<br />version=48 字段有效 否则无效上报0 |
-| items | 集合 | 动作完成内容详情 type&heart_con_value&time&goal_timegoal_time的集合<br />version=32 字段有效 否则无效上报0 |
+| items | 集合 | 动作完成内容详情 `type`&`heart_con_value`&`time`&`goal_timegoal_time`的集合<br />version=32 字段有效 否则无效上报0 |
 
 | 字段名             | 字段类型 | 字段说明                                                     |
 | ------------------ | -------- | ------------------------------------------------------------ |

@@ -26,7 +26,16 @@ libManager.send(evt: CmdEvtType.exchangeAppV3Ing, json: jsonEncode(json));
 | duration        | int        | Duration<br />Uint:second<br />reserve                       |
 | calories        | int        | Calories burned<br />Uint:Kcal<br />reserve                  |
 | gps_info_count  | int        | Number of gps coordinates<br/>Max 30<br />When opening the function table ` setSupportExchangeSetGpsCoordinates ` support |
-| gps             | char []    | Gps coordinates<br/>Max 30 set<br />When opening the function table ` setSupportExchangeSetGpsCoordinates ` support |
+| gps             | map        | Gps coordinates，collection of `latitude` & `longitude`<br/>Max 30 set<br />When opening the function table ` setSupportExchangeSetGpsCoordinates ` support |
+
+| 字段名    | 字段类型 | 字段说明                                                     |
+| --------- | -------- | ------------------------------------------------------------ |
+| latitude  | int      | Latitude <br />The number need x10^6 <br />Positive numbers are north latitude and negative numbers are south latitude |
+| longitude | int      | Longitude <br />The number need x10^6 <br />Positive number is east longitude, negative number is west longitude |
+
+`示例：`
+
+
 
 **Example:**
 

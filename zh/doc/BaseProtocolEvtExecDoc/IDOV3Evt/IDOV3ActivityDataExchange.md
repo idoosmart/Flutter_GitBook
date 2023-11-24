@@ -29,7 +29,12 @@ libManager.send(evt: CmdEvtType.exchangeAppV3Ing, json: jsonEncode(json));
 | duration        | int      | 持续时间 预留<br />单位米                                    |
 | calories        | int      | 卡路里  预留<br />单位Kcal                                   |
 | gps_info_count  | int      | gps坐标个数，最大支持下发30<br />功能表`setSupportExchangeSetGpsCoordinates`开启时支持 |
-| gps             | char []  | gps坐标，最大支持下发30组<br />功能表`setSupportExchangeSetGpsCoordinates`开启时支持 |
+| gps             | 集合     | gps坐标详情，`latitude`&`longitude`的集合<br />最大支持下发30组<br />功能表`setSupportExchangeSetGpsCoordinates`开启时支持 |
+
+| 字段名    | 字段类型 | 字段说明                                           |
+| --------- | -------- | -------------------------------------------------- |
+| latitude  | int      | 纬度<br />下发的数值 x10^6 <br />正数北纬 负数南纬 |
+| longitude | int      | 经度 <br />下发的数值 x10^6<br />正数东经 负数西经 |
 
 `示例：`
 
