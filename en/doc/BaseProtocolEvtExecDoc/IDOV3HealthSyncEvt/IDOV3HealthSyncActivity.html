@@ -4155,7 +4155,7 @@
 <tr>
 <td>durations</td>
 <td>int</td>
-<td>Duration of exercise in seconds</td>
+<td>Duration of exercise in seconds<br>End Time Description: <br>  function table <code>syncHealthSyncV3ActivityEndTimeUseUtcMode</code>  without open, Movement over time = start time + movement time <br> function table  <code>syncHealthSyncV3ActivityEndTimeUseUtcMode</code>  after opening, Movement over time through the field  <code>end_month</code> &amp; <code>end_day</code> &amp; <code>end_hour</code> &amp; <code>end_minute</code> &amp; <code>end_year</code> &amp; <code>end_sec</code></td>
 </tr>
 <tr>
 <td>calories</td>
@@ -4385,22 +4385,32 @@
 <tr>
 <td>end_month</td>
 <td>int</td>
-<td>Month of the end time of the activity<br>If the activity is paused after the sport is finished, resulting in a difference between the end time of the activity and the end time of the app, the end time of the activity is returned by the firmware. Return 0 if the protocol is not supported. The app determines whether the month is 0 to determine whether to use the following fields as the end time of the activity<br>Returns 0 when <code>setSyncV3ActivityAddParam</code> or <code>syncRealTimeV3</code> is not enabled in the functionality table</td>
+<td>Month of the end time of the activity<br>If the activity is paused after the sport is finished, resulting in a difference between the end time of the activity and the end time of the app, the end time of the activity is returned by the firmware. Return 0 if the protocol is not supported. The app determines whether the month is 0 to determine whether to use the following fields as the end time of the activity<br>Returns 0 when <code>setSyncV3ActivityAddParam</code> or <code>syncRealTimeV3</code> is not enabled in the functionality table<br><code>syncHealthSyncV3ActivityEndTimeUseUtcMode</code> open effective function table</td>
 </tr>
 <tr>
 <td>end_day</td>
 <td>int</td>
-<td>Day of the end time of the activity<br>Returns 0 when <code>setSyncV3ActivityAddParam</code> or <code>syncRealTimeV3</code> is not enabled in the functionality table</td>
+<td>Day of the end time of the activity<br>Returns 0 when <code>setSyncV3ActivityAddParam</code> or <code>syncRealTimeV3</code> is not enabled in the functionality table<br><code>syncHealthSyncV3ActivityEndTimeUseUtcMode</code> open effective function table</td>
 </tr>
 <tr>
 <td>end_hour</td>
 <td>int</td>
-<td>Hour of the end time of the activity<br>Returns 0 when <code>setSyncV3ActivityAddParam</code> or <code>syncRealTimeV3</code> is not enabled in the functionality table</td>
+<td>Hour of the end time of the activity<br>Returns 0 when <code>setSyncV3ActivityAddParam</code> or <code>syncRealTimeV3</code> is not enabled in the functionality table<br><code>syncHealthSyncV3ActivityEndTimeUseUtcMode</code> open effective function table</td>
 </tr>
 <tr>
 <td>end_minute</td>
 <td>int</td>
-<td>Minute of the end time of the activity<br>Returns 0 when <code>setSyncV3ActivityAddParam</code> or <code>syncRealTimeV3</code> is not enabled in the functionality table</td>
+<td>Minute of the end time of the activity<br>Returns 0 when <code>setSyncV3ActivityAddParam</code> or <code>syncRealTimeV3</code> is not enabled in the functionality table<br><code>syncHealthSyncV3ActivityEndTimeUseUtcMode</code> open effective function table</td>
+</tr>
+<tr>
+<td>end_year</td>
+<td>int</td>
+<td>Year of the end time of the activity<br><code>syncHealthSyncV3ActivityEndTimeUseUtcMode</code> open effective function table</td>
+</tr>
+<tr>
+<td>end_sec</td>
+<td>int</td>
+<td>Second of the end time of the activity<br><code>syncHealthSyncV3ActivityEndTimeUseUtcMode</code> open effective function table</td>
 </tr>
 <tr>
 <td>training_offset</td>
@@ -4705,7 +4715,7 @@
 }
 </code></pre>
 <footer class="page-footer"><span class="copyright">Copyright &#xA9; 2023-2024 IDO. All rights reserved. all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">Modify Date:
-2023-10-10 16:13:52
+2023-12-21 12:18:24
 </span></footer>
 <script>console.log("plugin-popup....");document.onclick = function(e){ e.target.tagName === "IMG" && window.open(e.target.src,e.target.src)}</script><style>img{cursor:pointer}</style>
                                 
@@ -4750,7 +4760,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Sync Multiple Sports and Sports Courses","level":"1.3.17.1.1.4","depth":5,"next":{"title":"Sync GPS","level":"1.3.17.1.1.5","depth":5,"path":"doc/BaseProtocolEvtExecDoc/IDOV3HealthSyncEvt/IDOV3HealthSyncGPS.md","ref":"doc/BaseProtocolEvtExecDoc/IDOV3HealthSyncEvt/IDOV3HealthSyncGPS.md","articles":[]},"previous":{"title":"Sync Heart Rate","level":"1.3.17.1.1.3","depth":5,"path":"doc/BaseProtocolEvtExecDoc/IDOV3HealthSyncEvt/IDOV3HealthSyncHR.md","ref":"doc/BaseProtocolEvtExecDoc/IDOV3HealthSyncEvt/IDOV3HealthSyncHR.md","articles":[]},"dir":"ltr"},"config":{"plugins":["chapter-fold","back-to-top-button","code","github","tbfed-pagefooter","copy-code-button","pageview-count","-lunr","-search","search-pro","language-picker","popup","sidebar-style","splitter"],"root":".","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"sidebar-style":{"author":"idoosmart.com","title":"IDO API DOCUMENT"},"tbfed-pagefooter":{"copyright":"Copyright © 2023-2024 IDO. All rights reserved.","modify_label":"Modify Date:","modify_format":"YYYY-MM-DD HH:mm:ss"},"language-picker":{"grid-columns":3},"github":{"url":"https://github.com/idoosmart/"},"splitter":{},"search-pro":{},"popup":{},"code":{"copyButtons":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"back-to-top-button":{},"pageview-count":{},"expandable-chapters-small":{},"copy-code-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"luoft","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"IDO FLUTTER API DOCUMENT","language":"zh-hans","gitbook":"*","description":"IDO FLUTTER API DOCUMENT"},"file":{"path":"doc/BaseProtocolEvtExecDoc/IDOV3HealthSyncEvt/IDOV3HealthSyncActivity.md","mtime":"2023-10-10T08:13:52.542Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2023-11-28T04:28:16.726Z"},"basePath":"../../..","book":{"language":"en"}});
+            gitbook.page.hasChanged({"page":{"title":"Sync Multiple Sports and Sports Courses","level":"1.3.17.1.1.4","depth":5,"next":{"title":"Sync GPS","level":"1.3.17.1.1.5","depth":5,"path":"doc/BaseProtocolEvtExecDoc/IDOV3HealthSyncEvt/IDOV3HealthSyncGPS.md","ref":"doc/BaseProtocolEvtExecDoc/IDOV3HealthSyncEvt/IDOV3HealthSyncGPS.md","articles":[]},"previous":{"title":"Sync Heart Rate","level":"1.3.17.1.1.3","depth":5,"path":"doc/BaseProtocolEvtExecDoc/IDOV3HealthSyncEvt/IDOV3HealthSyncHR.md","ref":"doc/BaseProtocolEvtExecDoc/IDOV3HealthSyncEvt/IDOV3HealthSyncHR.md","articles":[]},"dir":"ltr"},"config":{"plugins":["chapter-fold","back-to-top-button","code","github","tbfed-pagefooter","copy-code-button","pageview-count","-lunr","-search","search-pro","language-picker","popup","sidebar-style","splitter"],"root":".","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"sidebar-style":{"author":"idoosmart.com","title":"IDO API DOCUMENT"},"tbfed-pagefooter":{"copyright":"Copyright © 2023-2024 IDO. All rights reserved.","modify_label":"Modify Date:","modify_format":"YYYY-MM-DD HH:mm:ss"},"language-picker":{"grid-columns":3},"github":{"url":"https://github.com/idoosmart/"},"livereload":{},"splitter":{},"search-pro":{},"popup":{},"code":{"copyButtons":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"back-to-top-button":{},"pageview-count":{},"expandable-chapters-small":{},"copy-code-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"luoft","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"IDO FLUTTER API DOCUMENT","language":"zh-hans","gitbook":"*","description":"IDO FLUTTER API DOCUMENT"},"file":{"path":"doc/BaseProtocolEvtExecDoc/IDOV3HealthSyncEvt/IDOV3HealthSyncActivity.md","mtime":"2023-12-21T04:18:24.712Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2023-12-28T02:27:50.393Z"},"basePath":"../../..","book":{"language":"en"}});
         });
     </script>
 </div>
@@ -4801,6 +4811,10 @@
     
         
         <script src="../../../../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../../../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
         
     
         
