@@ -1,7 +1,5 @@
 ### Lastest Getting V3 Sports Data
 
-function table：syncV3ActivityExchangeData 【syncExchangeDataReplyAddRealTimeSpeedPaceV3，setSupportSportPlan，supportSmartCompetitor】
-
 
 **Flutter Example:**
 
@@ -21,7 +19,7 @@ libManager.send(evt: CmdEvtType.exchangeAppGetActivityData, json: jsonEncode(jso
 
 | Field Name                 | Field Type | Field Description                                            |
 | -------------------------- | ---------- | ------------------------------------------------------------ |
-| version                    | int        | Protocol library version, default 16<br />If `setSupportSportPlan` is enabled, version=32.<br />If `syncExchangeDataReplyAddRealTimeSpeedPaceV3` is enabled, version=48. |
+| version                    | int        | Protocol library version, default 16<br />If v3_support_sports_plan is enabled, version=32.<br />If V3_support_v3_exchange_data_reply_add_real_time_speed_pace is enabled, version=48. |
 | type                       | int        | Sports type                                                  |
 | year                       | int        | Year                                                         |
 | month                      | int        | Month                                                        |
@@ -29,12 +27,12 @@ libManager.send(evt: CmdEvtType.exchangeAppGetActivityData, json: jsonEncode(jso
 | hour                       | int        | Hour                                                         |
 | minute                     | int        | Minute                                                       |
 | second                     | int        | Second                                                       |
-| hr_data_interval_minute    | int        | Heart rate interval<br />Uint:minutes                    |
+| hr_data_interval_minute    | int        | Heart rate interval, in minutes                              |
 | step                       | int        | Number of steps                                              |
-| durations                  | int        | Duration<br />Uint:second                             |
-| calories                   | int        | Calories<br />Uint:Kcal                                  |
-| distance                   | int        | Distance<br />Uint:meter                                     |
-| burn_fat_mins              | int        | Duration of fat-burning heart rate<br />Uint:minutes   |
+| durations                  | int        | Duration                                                     |
+| calories                   | int        | Calories                                                     |
+| distance                   | int        | Distance                                                     |
+| burn_fat_mins              | int        | Duration of fat-burning heart rate, in minutes               |
 | aerobic_mins               | int        | Duration of aerobic exercise                                  |
 | limit_mins                 | int        | Duration of limit exercise                                    |
 | warm_up                    | int        | Warm-up exercise (field repeated)                            |
@@ -42,21 +40,21 @@ libManager.send(evt: CmdEvtType.exchangeAppGetActivityData, json: jsonEncode(jso
 | aerobic_exercise           | Int        | Aerobic exercise (field repeated)                             |
 | anaerobic_exercise         | int        | Anaerobic exercise (field repeated)                           |
 | extreme_exercise           | int        | Extreme exercise (field repeated)                             |
-| warm_up_time               | int        | Accumulated time of warm-up exercise<br />Uint:seconds   |
-| fat_burning_time           | int        | Accumulated time of fat-burning exercise<br />Uint:seconds |
-| aerobic_exercise_time      | int        | Accumulated time of aerobic exercise<br />Uint:seconds |
-| anaerobic_exercise_time    | int        | Accumulated time of anaerobic exercise<br />Uint:seconds |
-| extreme_exercise_time      | int        | Accumulated time of extreme exercise<br />Uint:seconds |
-| avg_speed                  | int        | Average speed<br />Uint:km/h                            |
-| max_speed                  | int        | Maximum speed<br />Uint:km/h                            |
-| avg_step_stride            | int        | Average step stride<br />Uint:centimetre                  |
-| max_step_stride            | int        | Maximum step stride<br />Uint:centimetre                     |
-| km_speed                   | int        | Average pace per kilometer<br />Seconds per kilometer        |
-| fast_km_speed              | int        | Fastest pace per kilometer<br />Seconds per kilometer        |
-| avg_step_frequency         | int        | Average step frequency<br />Steps per minute                 |
-| max_step_frequency         | int        | Maximum step frequency<br />Steps per minute                 |
-| avg_hr_value               | int        | Average heart rate<br />Uint:BPM                           |
-| max_hr_value               | int        | Maximum heart rate<br />Uint:BPM                            |
+| warm_up_time               | int        | Accumulated time of warm-up exercise, in seconds              |
+| fat_burning_time           | int        | Accumulated time of fat-burning exercise, in seconds          |
+| aerobic_exercise_time      | int        | Accumulated time of aerobic exercise, in seconds              |
+| anaerobic_exercise_time    | int        | Accumulated time of anaerobic exercise, in seconds            |
+| extreme_exercise_time      | int        | Accumulated time of extreme exercise, in seconds              |
+| avg_speed                  | int        | Average speed, in km/h                                       |
+| max_speed                  | int        | Maximum speed, in km/h                                       |
+| avg_step_stride            | int        | Average step stride                                          |
+| max_step_stride            | int        | Maximum step stride                                          |
+| km_speed                   | int        | Average pace per kilometer                                   |
+| fast_km_speed              | int        | Fastest pace per kilometer                                   |
+| avg_step_frequency         | int        | Average step frequency                                       |
+| max_step_frequency         | int        | Maximum step frequency                                       |
+| avg_hr_value               | int        | Average heart rate                                           |
+| max_hr_value               | int        | Maximum heart rate                                           |
 | km_speed_count             | int        | Count of pace per kilometer details, maximum 100              |
 | steps_frequency_count      | int        | Count of step frequency details                              |
 | mi_speed_count             | int        | Count of pace per mile details, maximum 100                   |
@@ -70,11 +68,11 @@ libManager.send(evt: CmdEvtType.exchangeAppGetActivityData, json: jsonEncode(jso
 | in_class_calories | int | Calories burned in class, in kcal<br />Effective when version=32, otherwise reported as 0 |
 | completion_rate | int | Action completion rate 0–100<br />Effective when version=32, otherwise reported as 0 |
 | hr_completion_rate | int | Heart rate control rate 0–100<br />Effective when version=32, otherwise reported as 0 |
-| smart_competitor | int | 0: Invalid 1: Non-intelligent companion running 2: Intelligent companion running<br />Effective when `supportSmartCompetitor` is enabled, otherwise reported as 0 |
+| smart_competitor | int | 0: Invalid 1: Non-intelligent companion running 2: Intelligent companion running<br />Effective when support_smart_competitor is enabled, otherwise reported as 0 |
 | ai_image_id      | int | AI image ID<br />Effective when support_smart_competitor is enabled, otherwise reported as 0 |
-| user_image_id | int | User image ID<br />Effective when `supportSmartCompetitor` is enabled, otherwise reported as 0 |
-| bg_image_id | int | Background image ID<br />Effective when `supportSmartCompetitor` is enabled, otherwise reported as 0 |
-| smart_competitor_pace | int | Intelligent companion running opponent's pace<br />Effective when `supportSmartCompetitor` is enabled, otherwise reported as 0 |
+| user_image_id | int | User image ID<br />Effective when support_smart_competitor is enabled, otherwise reported as 0 |
+| bg_image_id | int | Background image ID<br />Effective when support_smart_competitor is enabled, otherwise reported as 0 |
+| smart_competitor_pace | int | Intelligent companion running opponent's pace<br />Effective when support_smart_competitor is enabled, otherwise reported as 0 |
 | real_speed_count        | int      | Count of real-time speed<br />Effective when version=48, otherwise reported as 0 |
 | pace_speed_count        | int      | Array of real-time pace<br />Effective when version=48, otherwise reported as 0 |
 | km_speed_s              | int []    | Seconds per kilometer, pace speed                                          |
@@ -93,7 +91,7 @@ libManager.send(evt: CmdEvtType.exchangeAppGetActivityData, json: jsonEncode(jso
 
 `Example:`
 
-```json
+```c
 {
     "version":0,
     "type":0,

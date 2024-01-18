@@ -1,6 +1,4 @@
-### V3 Set Quick Reply Messages(reserve)
-
-/// TODO
+### V3 Set Quick Reply Messages
 
 **JSON Fields Sent by App**:
 
