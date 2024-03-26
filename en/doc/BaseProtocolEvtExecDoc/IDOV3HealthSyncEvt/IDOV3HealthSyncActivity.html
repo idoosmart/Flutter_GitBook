@@ -4567,6 +4567,61 @@
 <td>Number of action details</td>
 </tr>
 <tr>
+<td>segdata_item_num</td>
+<td>int</td>
+<td>Number of seg_items of the segment data <br>version! =0x50 is invalid</td>
+</tr>
+<tr>
+<td>segdata_total_time</td>
+<td>int</td>
+<td>Total time used for segmenting data <br> seconds <br>version! =0x50 is invalid</td>
+</tr>
+<tr>
+<td>segdata_total_distance</td>
+<td>int</td>
+<td>Total distance of segmented data <br> Unit meter <br>version! =0x50 is invalid</td>
+</tr>
+<tr>
+<td>segdata_total_pace</td>
+<td>int</td>
+<td>Total speed of the segmented data <br> Unit: 100 m <br>version! =0x50 is invalid</td>
+</tr>
+<tr>
+<td>segdata_total_avg_hr</td>
+<td>int</td>
+<td>Total average heart rate of segmented data <br> Unit time/minute <br>version! =0x50 is invalid</td>
+</tr>
+<tr>
+<td>segdata_total_avg_step_frequency</td>
+<td>int</td>
+<td>Total step frequency of segmented data <br> step/minute <br>version! =0x50 is invalid</td>
+</tr>
+<tr>
+<td>pace_hiit</td>
+<td>int</td>
+<td>interval speed <br> High intensity interval speed <br> Unit of second / 100 meters</td>
+</tr>
+<tr>
+<td>pace_anaerobic</td>
+<td>int</td>
+<td>good speed <br> Anaerobic speed <br> Unit of second/hundred meters</td>
+</tr>
+<tr>
+<td>pace_lactic_acid_threshold</td>
+<td>int</td>
+<td>interval speed <br> Lactic acid threshold speed <br> Unit of seconds / 100 meters</td>
+</tr>
+<tr>
+<td>pace_marathon</td>
+<td>int</td>
+<td>interval pace <br> Marathon pace <br> Unit of seconds per hundred meters</td>
+</tr>
+<tr>
+<td>pace_easy_run</td>
+<td>int</td>
+<td>interval pace <br> Easy run pace <br> Unit of second / 100 meters</td>
+</tr>
+<tr>
 <td>hr_data_vlaue</td>
 <td>int []</td>
 <td>Heart rate data details</td>
@@ -4626,6 +4681,11 @@
 <td>List</td>
 <td>Kilometer pace data details, including <code>seconds</code></td>
 </tr>
+<tr>
+<td>seg_items</td>
+<td>List</td>
+<td>segmentation data details, <code>index</code> &amp; <code>time</code> &amp; <code>distance</code> &amp; <code>pace</code> &amp; <code>avg_hr</code> &amp; <code>avg_step_frequency</code> collection</td>
+</tr>
 </tbody>
 </table>
 <table>
@@ -4667,6 +4727,47 @@
 <td>second</td>
 <td>int</td>
 <td>Kilometer pace<br>Uint:second</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Field Name</th>
+<th>Field Type</th>
+<th>Field Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>index</td>
+<td>int</td>
+<td>The number of the section starts from 1</td>
+</tr>
+<tr>
+<td>time</td>
+<td>int</td>
+<td>in seconds</td>
+</tr>
+<tr>
+<td>distance</td>
+<td>int</td>
+<td>The unit of distance in meters</td>
+</tr>
+<tr>
+<td>pace</td>
+<td>int</td>
+<td>The unit of pace in seconds per hundred meters</td>
+</tr>
+<tr>
+<td>avg_hr</td>
+<td>int</td>
+<td>The average heart rate in units per minute</td>
+</tr>
+<tr>
+<td>avg_step_frequency</td>
+<td>int</td>
+<td>The average step per minute</td>
 </tr>
 </tbody>
 </table>
@@ -4754,7 +4855,7 @@
 }
 </code></pre>
 <footer class="page-footer"><span class="copyright">Copyright &#xA9; 2023-2024 IDO. All rights reserved. all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">Modify Date:
-2024-01-18 14:51:41
+2024-03-26 11:17:17
 </span></footer>
 <script>console.log("plugin-popup....");document.onclick = function(e){ e.target.tagName === "IMG" && window.open(e.target.src,e.target.src)}</script><style>img{cursor:pointer}</style>
                                 
@@ -4799,7 +4900,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Sync Multiple Sports and Sports Courses","level":"1.3.17.1.1.4","depth":5,"next":{"title":"Sync GPS","level":"1.3.17.1.1.5","depth":5,"path":"doc/BaseProtocolEvtExecDoc/IDOV3HealthSyncEvt/IDOV3HealthSyncGPS.md","ref":"doc/BaseProtocolEvtExecDoc/IDOV3HealthSyncEvt/IDOV3HealthSyncGPS.md","articles":[]},"previous":{"title":"Sync Heart Rate","level":"1.3.17.1.1.3","depth":5,"path":"doc/BaseProtocolEvtExecDoc/IDOV3HealthSyncEvt/IDOV3HealthSyncHR.md","ref":"doc/BaseProtocolEvtExecDoc/IDOV3HealthSyncEvt/IDOV3HealthSyncHR.md","articles":[]},"dir":"ltr"},"config":{"plugins":["chapter-fold","back-to-top-button","code","github","tbfed-pagefooter","copy-code-button","pageview-count","-lunr","-search","search-pro","language-picker","popup","sidebar-style","splitter"],"root":".","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"sidebar-style":{"author":"idoosmart.com","title":"IDO API DOCUMENT"},"tbfed-pagefooter":{"copyright":"Copyright © 2023-2024 IDO. All rights reserved.","modify_label":"Modify Date:","modify_format":"YYYY-MM-DD HH:mm:ss"},"language-picker":{"grid-columns":3},"github":{"url":"https://github.com/idoosmart/"},"splitter":{},"search-pro":{},"popup":{},"code":{"copyButtons":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"back-to-top-button":{},"pageview-count":{},"expandable-chapters-small":{},"copy-code-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"luoft","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"IDO FLUTTER API DOCUMENT","language":"zh-hans","gitbook":"*","description":"IDO FLUTTER API DOCUMENT"},"file":{"path":"doc/BaseProtocolEvtExecDoc/IDOV3HealthSyncEvt/IDOV3HealthSyncActivity.md","mtime":"2024-01-18T06:51:41.811Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2024-03-05T03:35:43.891Z"},"basePath":"../../..","book":{"language":"en"}});
+            gitbook.page.hasChanged({"page":{"title":"Sync Multiple Sports and Sports Courses","level":"1.3.17.1.1.4","depth":5,"next":{"title":"Sync GPS","level":"1.3.17.1.1.5","depth":5,"path":"doc/BaseProtocolEvtExecDoc/IDOV3HealthSyncEvt/IDOV3HealthSyncGPS.md","ref":"doc/BaseProtocolEvtExecDoc/IDOV3HealthSyncEvt/IDOV3HealthSyncGPS.md","articles":[]},"previous":{"title":"Sync Heart Rate","level":"1.3.17.1.1.3","depth":5,"path":"doc/BaseProtocolEvtExecDoc/IDOV3HealthSyncEvt/IDOV3HealthSyncHR.md","ref":"doc/BaseProtocolEvtExecDoc/IDOV3HealthSyncEvt/IDOV3HealthSyncHR.md","articles":[]},"dir":"ltr"},"config":{"plugins":["chapter-fold","back-to-top-button","code","github","tbfed-pagefooter","copy-code-button","pageview-count","-lunr","-search","search-pro","language-picker","popup","sidebar-style","splitter"],"root":".","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"sidebar-style":{"author":"idoosmart.com","title":"IDO API DOCUMENT"},"tbfed-pagefooter":{"copyright":"Copyright © 2023-2024 IDO. All rights reserved.","modify_label":"Modify Date:","modify_format":"YYYY-MM-DD HH:mm:ss"},"language-picker":{"grid-columns":3},"github":{"url":"https://github.com/idoosmart/"},"splitter":{},"search-pro":{},"popup":{},"code":{"copyButtons":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"back-to-top-button":{},"pageview-count":{},"expandable-chapters-small":{},"copy-code-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"luoft","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"IDO FLUTTER API DOCUMENT","language":"zh-hans","gitbook":"*","description":"IDO FLUTTER API DOCUMENT"},"file":{"path":"doc/BaseProtocolEvtExecDoc/IDOV3HealthSyncEvt/IDOV3HealthSyncActivity.md","mtime":"2024-03-26T03:17:17.522Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2024-03-26T03:17:48.505Z"},"basePath":"../../..","book":{"language":"en"}});
         });
     </script>
 </div>

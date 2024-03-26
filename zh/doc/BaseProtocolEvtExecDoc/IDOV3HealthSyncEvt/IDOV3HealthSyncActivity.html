@@ -4574,6 +4574,61 @@
 <td>&#x52A8;&#x4F5C;&#x8BE6;&#x60C5;&#x4E2A;&#x6570;</td>
 </tr>
 <tr>
+<td>segdata_item_num</td>
+<td>int</td>
+<td>&#x5206;&#x6BB5;&#x6570;&#x636E;<code>seg_items</code>&#x4E2A;&#x6570;<br>version!=0x50&#x65E0;&#x6548;</td>
+</tr>
+<tr>
+<td>segdata_total_time</td>
+<td>int</td>
+<td>&#x5206;&#x6BB5;&#x6570;&#x636E;&#x603B;&#x7528;&#x65F6;<br>&#x5355;&#x4F4D;&#x79D2;<br>version!=0x50&#x65E0;&#x6548;</td>
+</tr>
+<tr>
+<td>segdata_total_distance</td>
+<td>int</td>
+<td>&#x5206;&#x6BB5;&#x6570;&#x636E;&#x603B;&#x8DDD;&#x79BB;<br>&#x5355;&#x4F4D;&#x7C73;<br>version!=0x50&#x65E0;&#x6548;</td>
+</tr>
+<tr>
+<td>segdata_total_pace</td>
+<td>int</td>
+<td>&#x5206;&#x6BB5;&#x6570;&#x636E;&#x603B;&#x914D;&#x901F;<br>&#x5355;&#x4F4D;&#x79D2;/&#x767E;&#x7C73;<br>version!=0x50&#x65E0;&#x6548;</td>
+</tr>
+<tr>
+<td>segdata_total_avg_hr</td>
+<td>int</td>
+<td>&#x5206;&#x6BB5;&#x6570;&#x636E;&#x603B;&#x5E73;&#x5747;&#x5FC3;&#x7387;<br>&#x5355;&#x4F4D;&#x6B21;/&#x5206;<br>version!=0x50&#x65E0;&#x6548;</td>
+</tr>
+<tr>
+<td>segdata_total_avg_step_frequency</td>
+<td>int</td>
+<td>&#x5206;&#x6BB5;&#x6570;&#x636E;&#x603B;&#x6B65;&#x9891;<br>&#x5355;&#x4F4D;&#x6B65;/&#x5206;<br>version!=0x50&#x65E0;&#x6548;</td>
+</tr>
+<tr>
+<td>pace_hiit</td>
+<td>int</td>
+<td>&#x533A;&#x95F4;&#x914D;&#x901F;<br>&#x9AD8;&#x5F3A;&#x5EA6;&#x95F4;&#x6B47;&#x914D;&#x901F;<br>&#x5355;&#x4F4D;&#x79D2;/&#x767E;&#x7C73;</td>
+</tr>
+<tr>
+<td>pace_anaerobic</td>
+<td>int</td>
+<td>&#x533A;&#x95F4;&#x914D;&#x901F;<br>&#x65E0;&#x6C27;&#x914D;&#x901F;<br>&#x5355;&#x4F4D;&#x79D2;/&#x767E;&#x7C73;</td>
+</tr>
+<tr>
+<td>pace_lactic_acid_threshold</td>
+<td>int</td>
+<td>&#x533A;&#x95F4;&#x914D;&#x901F;<br>&#x4E73;&#x9178;&#x9608;&#x914D;&#x901F;<br>&#x5355;&#x4F4D;&#x79D2;/&#x767E;&#x7C73;</td>
+</tr>
+<tr>
+<td>pace_marathon</td>
+<td>int</td>
+<td>&#x533A;&#x95F4;&#x914D;&#x901F;<br>&#x9A6C;&#x62C9;&#x677E;&#x914D;&#x901F;<br>&#x5355;&#x4F4D;&#x79D2;/&#x767E;&#x7C73;</td>
+</tr>
+<tr>
+<td>pace_easy_run</td>
+<td>int</td>
+<td>&#x533A;&#x95F4;&#x914D;&#x901F;<br>&#x8F7B;&#x677E;&#x8DD1;&#x914D;&#x901F;<br>&#x5355;&#x4F4D;&#x79D2;/&#x767E;&#x7C73;</td>
+</tr>
+<tr>
 <td>hr_data_vlaue</td>
 <td>int []</td>
 <td>&#x5FC3;&#x7387;&#x6570;&#x636E;&#x8BE6;&#x60C5;</td>
@@ -4633,6 +4688,11 @@
 <td>&#x96C6;&#x5408;</td>
 <td>&#x516C;&#x91CC;&#x914D;&#x901F;&#x6570;&#x636E;&#x8BE6;&#x60C5;&#xFF0C;<code>second</code>&#x7684;&#x96C6;&#x5408;</td>
 </tr>
+<tr>
+<td>seg_items</td>
+<td>&#x96C6;&#x5408;</td>
+<td>&#x5206;&#x6BB5;&#x6570;&#x636E;&#x8BE6;&#x60C5;&#xFF0C;<code>index</code>&amp;<code>time</code>&amp;<code>distance</code>&amp;<code>pace</code>&amp;<code>avg_hr</code>&amp;<code>avg_step_frequency</code>&#x7684;&#x96C6;&#x5408;</td>
+</tr>
 </tbody>
 </table>
 <table>
@@ -4674,6 +4734,47 @@
 <td>second</td>
 <td>int</td>
 <td>&#x516C;&#x91CC;&#x914D;&#x901F;<br>&#x5355;&#x4F4D;:&#x79D2;</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>&#x5B57;&#x6BB5;&#x540D;</th>
+<th>&#x5B57;&#x6BB5;&#x7C7B;&#x578B;</th>
+<th>&#x5B57;&#x6BB5;&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>index</td>
+<td>int</td>
+<td>&#x5206;&#x6BB5;&#x5E8F;&#x53F7; &#x4ECE;1&#x5F00;&#x59CB;</td>
+</tr>
+<tr>
+<td>time</td>
+<td>int</td>
+<td>&#x7528;&#x65F6; &#x5355;&#x4F4D;&#x79D2;</td>
+</tr>
+<tr>
+<td>distance</td>
+<td>int</td>
+<td>&#x8DDD;&#x79BB; &#x5355;&#x4F4D;&#x7C73;</td>
+</tr>
+<tr>
+<td>pace</td>
+<td>int</td>
+<td>&#x914D;&#x901F; &#x5355;&#x4F4D;&#x79D2;/&#x767E;&#x7C73;</td>
+</tr>
+<tr>
+<td>avg_hr</td>
+<td>int</td>
+<td>&#x5E73;&#x5747;&#x5FC3;&#x7387; &#x5355;&#x4F4D;&#x6B21;/&#x5206;</td>
+</tr>
+<tr>
+<td>avg_step_frequency</td>
+<td>int</td>
+<td>&#x5E73;&#x5747;&#x6B65;&#x9891; &#x5355;&#x4F4D;&#x6B65;/&#x5206;</td>
 </tr>
 </tbody>
 </table>
@@ -4761,7 +4862,7 @@
 }
 </code></pre>
 <footer class="page-footer"><span class="copyright">Copyright &#xA9; 2023-2024 IDO. All rights reserved. all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;:
-2024-01-18 14:51:51
+2024-03-26 10:42:25
 </span></footer>
 <script>console.log("plugin-popup....");document.onclick = function(e){ e.target.tagName === "IMG" && window.open(e.target.src,e.target.src)}</script><style>img{cursor:pointer}</style>
                                 
@@ -4806,7 +4907,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"同步多运动及运动课程","level":"1.3.17.1.1.4","depth":5,"next":{"title":"同步GPS","level":"1.3.17.1.1.5","depth":5,"path":"doc/BaseProtocolEvtExecDoc/IDOV3HealthSyncEvt/IDOV3HealthSyncGPS.md","ref":"doc/BaseProtocolEvtExecDoc/IDOV3HealthSyncEvt/IDOV3HealthSyncGPS.md","articles":[]},"previous":{"title":"同步压力","level":"1.3.17.1.1.3","depth":5,"path":"doc/BaseProtocolEvtExecDoc/IDOV3HealthSyncEvt/IDOV3HealthSyncPressure.md","ref":"doc/BaseProtocolEvtExecDoc/IDOV3HealthSyncEvt/IDOV3HealthSyncPressure.md","articles":[]},"dir":"ltr"},"config":{"plugins":["chapter-fold","back-to-top-button","code","github","tbfed-pagefooter","copy-code-button","pageview-count","-lunr","-search","search-pro","language-picker","popup","sidebar-style","splitter"],"root":".","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"sidebar-style":{"author":"idoosmart.com","title":"IDO接口说明文档"},"tbfed-pagefooter":{"copyright":"Copyright © 2023-2024 IDO. All rights reserved.","modify_label":"修订时间:","modify_format":"YYYY-MM-DD HH:mm:ss"},"language-picker":{"grid-columns":3},"github":{"url":"https://github.com/idoosmart/"},"splitter":{},"search-pro":{},"popup":{},"code":{"copyButtons":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"back-to-top-button":{},"pageview-count":{},"expandable-chapters-small":{},"copy-code-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"luoft","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"IDO FLUTTER 接口说明","language":"zh-hans","gitbook":"*","description":"IDO FLUTTER 接口说明"},"file":{"path":"doc/BaseProtocolEvtExecDoc/IDOV3HealthSyncEvt/IDOV3HealthSyncActivity.md","mtime":"2024-01-18T06:51:51.044Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2024-03-05T03:35:43.891Z"},"basePath":"../../..","book":{"language":"zh"}});
+            gitbook.page.hasChanged({"page":{"title":"同步多运动及运动课程","level":"1.3.17.1.1.4","depth":5,"next":{"title":"同步GPS","level":"1.3.17.1.1.5","depth":5,"path":"doc/BaseProtocolEvtExecDoc/IDOV3HealthSyncEvt/IDOV3HealthSyncGPS.md","ref":"doc/BaseProtocolEvtExecDoc/IDOV3HealthSyncEvt/IDOV3HealthSyncGPS.md","articles":[]},"previous":{"title":"同步压力","level":"1.3.17.1.1.3","depth":5,"path":"doc/BaseProtocolEvtExecDoc/IDOV3HealthSyncEvt/IDOV3HealthSyncPressure.md","ref":"doc/BaseProtocolEvtExecDoc/IDOV3HealthSyncEvt/IDOV3HealthSyncPressure.md","articles":[]},"dir":"ltr"},"config":{"plugins":["chapter-fold","back-to-top-button","code","github","tbfed-pagefooter","copy-code-button","pageview-count","-lunr","-search","search-pro","language-picker","popup","sidebar-style","splitter"],"root":".","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"sidebar-style":{"author":"idoosmart.com","title":"IDO接口说明文档"},"tbfed-pagefooter":{"copyright":"Copyright © 2023-2024 IDO. All rights reserved.","modify_label":"修订时间:","modify_format":"YYYY-MM-DD HH:mm:ss"},"language-picker":{"grid-columns":3},"github":{"url":"https://github.com/idoosmart/"},"splitter":{},"search-pro":{},"popup":{},"code":{"copyButtons":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"back-to-top-button":{},"pageview-count":{},"expandable-chapters-small":{},"copy-code-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"luoft","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"IDO FLUTTER 接口说明","language":"zh-hans","gitbook":"*","description":"IDO FLUTTER 接口说明"},"file":{"path":"doc/BaseProtocolEvtExecDoc/IDOV3HealthSyncEvt/IDOV3HealthSyncActivity.md","mtime":"2024-03-26T02:42:25.203Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2024-03-26T03:17:48.505Z"},"basePath":"../../..","book":{"language":"zh"}});
         });
     </script>
 </div>
