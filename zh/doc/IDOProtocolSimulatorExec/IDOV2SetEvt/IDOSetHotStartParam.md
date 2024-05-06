@@ -19,10 +19,10 @@ libManager.send(evt: CmdEvtType.setHotStartParam, json: jsonEncode(json));
 
 | 字段名      | 字段类型 | 字段说明                    |
 | ----------- | -------- | --------------------------- |
-| longitude   | int      | 晶振偏移                    |
-| latitude    | int      | 经度 <br />乘以1000,000传输 |
-| altitude    | int      | 纬度 <br />乘以1000,000传输 |
-| tcxo_offset | int      | 高度 <br />乘以10传输       |
+| longitude   | int      | 经度 <br />乘以1000,000传输 |
+| latitude    | int      | 纬度 <br />乘以1000,000传输 |
+| altitude    | int      | 高度 <br />乘以10传输       |
+| tcxo_offset | int      | 晶振偏移                    |
 
 `示例：`
 
