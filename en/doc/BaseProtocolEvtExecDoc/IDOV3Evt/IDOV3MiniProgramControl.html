@@ -4188,12 +4188,18 @@
 <td>char []</td>
 <td>Mini program name <br>Not applicable for operate=0 or operate=3. No need to send the name<br>Maximum 29 bytes</td>
 </tr>
+<tr>
+<td>name_len</td>
+<td>int</td>
+<td>The name of the applet contains a maximum of 30 bytes by default and contains one             terminator operate=0 &amp; operate=3. The operation is invalid</td>
+</tr>
 </tbody>
 </table>
 <p><strong>Example:</strong></p>
 <pre><code class="lang-json">{
   <span class="hljs-string">&quot;version&quot;</span>: <span class="hljs-number">0</span>,
   <span class="hljs-string">&quot;operate&quot;</span>: <span class="hljs-number">1</span>,
+  &#x201C;name_len&#x201D;: <span class="hljs-number">5</span>,
   <span class="hljs-string">&quot;mini_program_name&quot;</span>: <span class="hljs-string">&quot;&#x7CA4;&#x5EB7;&#x7801;&quot;</span>
 }
 </code></pre>
@@ -4242,6 +4248,16 @@
 <td>array</td>
 <td>List of mini programs</td>
 </tr>
+<tr>
+<td>support_get_mini_program_max_num</td>
+<td>int</td>
+<td>The maximum number of small programs supported. The default is 20</td>
+</tr>
+<tr>
+<td>support_mini_program_name_max_len</td>
+<td>int</td>
+<td>The maximum length of the supported applet name is 30 bytes by default and contains a terminator</td>
+</tr>
 </tbody>
 </table>
 <p><strong>In info_item:</strong></p>
@@ -4269,6 +4285,11 @@
 <td>int</td>
 <td>Mini program version number</td>
 </tr>
+<tr>
+<td>name_len</td>
+<td>int</td>
+<td>The maximum default length of a small program name is 30 bytes and contains a terminator</td>
+</tr>
 </tbody>
 </table>
 <p><strong>Example:</strong></p>
@@ -4279,11 +4300,14 @@
   <span class="hljs-string">&quot;mini_program_num&quot;</span>: <span class="hljs-number">0</span>,
   <span class="hljs-string">&quot;residual_space&quot;</span>: <span class="hljs-number">0</span>,
   <span class="hljs-string">&quot;total_space&quot;</span>: <span class="hljs-number">0</span>,
-  <span class="hljs-string">&quot;info_item&quot;</span>: <span class="hljs-literal">null</span>
+  <span class="hljs-string">&quot;info_item&quot;</span>: <span class="hljs-literal">null</span>,
+  <span class="hljs-string">&quot;name_len&quot;</span>:<span class="hljs-number">5</span>,
+  <span class="hljs-string">&quot;support_get_mini_program_max_num&quot;</span>:<span class="hljs-number">7</span>,
+  <span class="hljs-string">&quot;support_mini_program_name_max_len&quot;</span>:<span class="hljs-number">8</span>
 }
 </code></pre>
 <footer class="page-footer"><span class="copyright">Copyright &#xA9; 2023-2024 IDO. All rights reserved. all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">Modify Date:
-2024-07-03 16:10:56
+2024-07-04 17:14:23
 </span></footer>
 <script>console.log("plugin-popup....");document.onclick = function(e){ e.target.tagName === "IMG" && window.open(e.target.src,e.target.src)}</script><style>img{cursor:pointer}</style>
                                 
@@ -4328,7 +4352,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"V3 Operate Mini Program Information (Reserved)","level":"1.4.5.36","depth":3,"next":{"title":"V3 Configure Smart Companion Running Information (Reserved)","level":"1.4.5.37","depth":3,"path":"doc/BaseProtocolEvtExecDoc/IDOV3Evt/IDOV3SetSmartCompetitorConfigInfo.md","ref":"doc/BaseProtocolEvtExecDoc/IDOV3Evt/IDOV3SetSmartCompetitorConfigInfo.md","articles":[]},"previous":{"title":"V3 Get User Habit Information","level":"1.4.5.35","depth":3,"path":"doc/BaseProtocolEvtExecDoc/IDOV3Evt/IDOV3GetHabitInfo.md","ref":"doc/BaseProtocolEvtExecDoc/IDOV3Evt/IDOV3GetHabitInfo.md","articles":[]},"dir":"ltr"},"config":{"plugins":["chapter-fold","back-to-top-button","code","github","tbfed-pagefooter","copy-code-button","pageview-count","-lunr","-search","search-pro","language-picker","popup","sidebar-style","splitter"],"root":".","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"sidebar-style":{"author":"idoosmart.com","title":"IDO API DOCUMENT"},"tbfed-pagefooter":{"copyright":"Copyright © 2023-2024 IDO. All rights reserved.","modify_label":"Modify Date:","modify_format":"YYYY-MM-DD HH:mm:ss"},"language-picker":{"grid-columns":3},"github":{"url":"https://github.com/idoosmart/"},"splitter":{},"search-pro":{},"popup":{},"code":{"copyButtons":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"back-to-top-button":{},"pageview-count":{},"expandable-chapters-small":{},"copy-code-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"luoft","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"IDO FLUTTER API DOCUMENT","language":"zh-hans","gitbook":"*","description":"IDO FLUTTER API DOCUMENT"},"file":{"path":"doc/BaseProtocolEvtExecDoc/IDOV3Evt/IDOV3MiniProgramControl.md","mtime":"2024-07-03T08:10:56.061Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2024-07-04T08:14:44.243Z"},"basePath":"../../..","book":{"language":"en"}});
+            gitbook.page.hasChanged({"page":{"title":"V3 Operate Mini Program Information (Reserved)","level":"1.4.5.36","depth":3,"next":{"title":"V3 Configure Smart Companion Running Information (Reserved)","level":"1.4.5.37","depth":3,"path":"doc/BaseProtocolEvtExecDoc/IDOV3Evt/IDOV3SetSmartCompetitorConfigInfo.md","ref":"doc/BaseProtocolEvtExecDoc/IDOV3Evt/IDOV3SetSmartCompetitorConfigInfo.md","articles":[]},"previous":{"title":"V3 Get User Habit Information","level":"1.4.5.35","depth":3,"path":"doc/BaseProtocolEvtExecDoc/IDOV3Evt/IDOV3GetHabitInfo.md","ref":"doc/BaseProtocolEvtExecDoc/IDOV3Evt/IDOV3GetHabitInfo.md","articles":[]},"dir":"ltr"},"config":{"plugins":["chapter-fold","back-to-top-button","code","github","tbfed-pagefooter","copy-code-button","pageview-count","-lunr","-search","search-pro","language-picker","popup","sidebar-style","splitter"],"root":".","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"sidebar-style":{"author":"idoosmart.com","title":"IDO API DOCUMENT"},"tbfed-pagefooter":{"copyright":"Copyright © 2023-2024 IDO. All rights reserved.","modify_label":"Modify Date:","modify_format":"YYYY-MM-DD HH:mm:ss"},"language-picker":{"grid-columns":3},"github":{"url":"https://github.com/idoosmart/"},"splitter":{},"search-pro":{},"popup":{},"code":{"copyButtons":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"back-to-top-button":{},"pageview-count":{},"expandable-chapters-small":{},"copy-code-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"luoft","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"IDO FLUTTER API DOCUMENT","language":"zh-hans","gitbook":"*","description":"IDO FLUTTER API DOCUMENT"},"file":{"path":"doc/BaseProtocolEvtExecDoc/IDOV3Evt/IDOV3MiniProgramControl.md","mtime":"2024-07-04T09:14:23.785Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2024-07-04T09:15:58.986Z"},"basePath":"../../..","book":{"language":"en"}});
         });
     </script>
 </div>

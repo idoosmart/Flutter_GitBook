@@ -4269,6 +4269,11 @@
 <td>0:&#x65E0;&#x6548; 1:&#x542F;&#x52A8;&#x5C0F;&#x7A0B;&#x5E8F; 2:&#x5220;&#x9664;&#x5C0F;&#x7A0B;&#x5E8F; 3:&#x83B7;&#x53D6;&#x5DF2;&#x5B89;&#x88C5;&#x7684;&#x5C0F;&#x7A0B;&#x5E8F;&#x5217;&#x8868;</td>
 </tr>
 <tr>
+<td>name_len</td>
+<td>int</td>
+<td>&#x5C0F;&#x7A0B;&#x5E8F;&#x540D;&#x79F0;&#x957F;&#x5EA6; &#x6700;&#x5927;&#x9ED8;&#x8BA4;30&#x4E2A;&#x5B57;&#x8282;&#xFF0C;&#x5305;&#x542B;&#x4E00;&#x4E2A;&#x7ED3;&#x675F;&#x7B26; operate=0 &amp; operate=3&#x65E0;&#x6548;,&#x83B7;&#x53D6;&#x64CD;&#x4F5C;&#x4E0D;&#x9700;&#x8981;&#x4E0B;&#x53D1;&#x540D;&#x79F0;</td>
+</tr>
+<tr>
 <td>mini_program_name</td>
 <td>char []</td>
 <td>&#x5C0F;&#x7A0B;&#x5E8F;&#x540D;&#x79F0; <br>operate=0/operate=3&#x65E0;&#x6548;,&#x83B7;&#x53D6;&#x64CD;&#x4F5C;&#x4E0D;&#x9700;&#x8981;&#x4E0B;&#x53D1;&#x540D;&#x79F0;<br>&#x6700;&#x5927;29&#x4E2A;&#x5B57;&#x8282;</td>
@@ -4279,6 +4284,7 @@
 <pre><code class="lang-json">{
   <span class="hljs-string">&quot;verison&quot;</span>:<span class="hljs-number">0</span>,
   <span class="hljs-string">&quot;operate&quot;</span>:<span class="hljs-number">1</span>,
+  &#x201C;name_len&#x201D;:<span class="hljs-number">5</span>
   <span class="hljs-string">&quot;mini_program_name&quot;</span>:<span class="hljs-string">&quot;&#x7CA4;&#x5EB7;&#x7801;&quot;</span>
 }
 </code></pre>
@@ -4327,6 +4333,21 @@
 <td>&#x96C6;&#x5408;</td>
 <td>&#x5C0F;&#x7A0B;&#x5E8F;&#x5217;&#x8868;<br>mini_program_name &amp; mini_program_size &amp;mini_program_version&#x7684;&#x96C6;&#x5408;<br>operate=3&#x6709;&#x6548;</td>
 </tr>
+<tr>
+<td>total_space</td>
+<td>int</td>
+<td>&#x603B;&#x7A7A;&#x95F4; &#x5355;&#x4F4D;BYTE</td>
+</tr>
+<tr>
+<td>support_get_mini_program_max_num</td>
+<td>int</td>
+<td>&#x652F;&#x6301;&#x83B7;&#x53D6;&#x5C0F;&#x7A0B;&#x5E8F;&#x7684;&#x6700;&#x5927;&#x4E2A;&#x6570;&#xFF0C;&#x9ED8;&#x8BA4;&#x662F;20&#x4E2A;</td>
+</tr>
+<tr>
+<td>support_mini_program_name_max_len</td>
+<td>int</td>
+<td>&#x652F;&#x6301;&#x7684;&#x5C0F;&#x7A0B;&#x5E8F;&#x540D;&#x79F0;&#x6700;&#x5927;&#x957F;&#x5EA6;&#xFF0C;&#x9ED8;&#x8BA4;&#x662F;30&#x4E2A;&#x5B57;&#x8282;&#xFF0C;&#x5305;&#x542B;&#x4E00;&#x4E2A;&#x7ED3;&#x675F;&#x7B26;</td>
+</tr>
 </tbody>
 </table>
 <table>
@@ -4353,6 +4374,11 @@
 <td>int</td>
 <td>&#x5C0F;&#x7A0B;&#x5E8F;&#x7248;&#x672C;&#x53F7;</td>
 </tr>
+<tr>
+<td>name_len</td>
+<td>int</td>
+<td>&#x5C0F;&#x7A0B;&#x5E8F;&#x540D;&#x79F0;&#x957F;&#x5EA6; &#x6700;&#x5927;&#x9ED8;&#x8BA4;30&#x4E2A;&#x5B57;&#x8282;&#xFF0C;&#x5305;&#x542B;&#x4E00;&#x4E2A;&#x7ED3;&#x675F;&#x7B26;</td>
+</tr>
 </tbody>
 </table>
 <p><code>&#x793A;&#x4F8B;&#xFF1A;</code></p>
@@ -4363,11 +4389,14 @@
   <span class="hljs-string">&quot;mini_program_num&quot;</span>:<span class="hljs-number">0</span>,
   <span class="hljs-string">&quot;residual_space&quot;</span>: <span class="hljs-number">0</span>,
   <span class="hljs-string">&quot;total_space&quot;</span>:<span class="hljs-number">0</span>,
-  <span class="hljs-string">&quot;info_item&quot;</span>:<span class="hljs-literal">null</span>
+  <span class="hljs-string">&quot;info_item&quot;</span>:<span class="hljs-literal">null</span>,
+  <span class="hljs-string">&quot;name_len&quot;</span>:<span class="hljs-number">5</span>,
+  <span class="hljs-string">&quot;support_get_mini_program_max_num&quot;</span>:<span class="hljs-number">7</span>,
+  <span class="hljs-string">&quot;support_mini_program_name_max_len&quot;</span>:<span class="hljs-number">8</span>
 }
 </code></pre>
 <footer class="page-footer"><span class="copyright">Copyright &#xA9; 2023-2024 IDO. All rights reserved. all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;:
-2024-07-03 16:10:58
+2024-07-04 17:15:13
 </span></footer>
 <script>console.log("plugin-popup....");document.onclick = function(e){ e.target.tagName === "IMG" && window.open(e.target.src,e.target.src)}</script><style>img{cursor:pointer}</style>
                                 
@@ -4412,7 +4441,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"V3操作小程序信息(预留)","level":"1.4.5.36","depth":3,"next":{"title":"V3智能陪跑信息配置(预留)","level":"1.4.5.37","depth":3,"path":"doc/BaseProtocolEvtExecDoc/IDOV3Evt/IDOV3SetSmartCompetitorConfigInfo.md","ref":"doc/BaseProtocolEvtExecDoc/IDOV3Evt/IDOV3SetSmartCompetitorConfigInfo.md","articles":[]},"previous":{"title":"V3获取用户习惯信息","level":"1.4.5.35","depth":3,"path":"doc/BaseProtocolEvtExecDoc/IDOV3Evt/IDOV3GetHabitInfo.md","ref":"doc/BaseProtocolEvtExecDoc/IDOV3Evt/IDOV3GetHabitInfo.md","articles":[]},"dir":"ltr"},"config":{"plugins":["chapter-fold","back-to-top-button","code","github","tbfed-pagefooter","copy-code-button","pageview-count","-lunr","-search","search-pro","language-picker","popup","sidebar-style","splitter"],"root":".","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"sidebar-style":{"author":"idoosmart.com","title":"IDO接口说明文档"},"tbfed-pagefooter":{"copyright":"Copyright © 2023-2024 IDO. All rights reserved.","modify_label":"修订时间:","modify_format":"YYYY-MM-DD HH:mm:ss"},"language-picker":{"grid-columns":3},"github":{"url":"https://github.com/idoosmart/"},"splitter":{},"search-pro":{},"popup":{},"code":{"copyButtons":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"back-to-top-button":{},"pageview-count":{},"expandable-chapters-small":{},"copy-code-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"luoft","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"IDO FLUTTER 接口说明","language":"zh-hans","gitbook":"*","description":"IDO FLUTTER 接口说明"},"file":{"path":"doc/BaseProtocolEvtExecDoc/IDOV3Evt/IDOV3MiniProgramControl.md","mtime":"2024-07-03T08:10:58.098Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2024-07-04T08:14:44.243Z"},"basePath":"../../..","book":{"language":"zh"}});
+            gitbook.page.hasChanged({"page":{"title":"V3操作小程序信息(预留)","level":"1.4.5.36","depth":3,"next":{"title":"V3智能陪跑信息配置(预留)","level":"1.4.5.37","depth":3,"path":"doc/BaseProtocolEvtExecDoc/IDOV3Evt/IDOV3SetSmartCompetitorConfigInfo.md","ref":"doc/BaseProtocolEvtExecDoc/IDOV3Evt/IDOV3SetSmartCompetitorConfigInfo.md","articles":[]},"previous":{"title":"V3获取用户习惯信息","level":"1.4.5.35","depth":3,"path":"doc/BaseProtocolEvtExecDoc/IDOV3Evt/IDOV3GetHabitInfo.md","ref":"doc/BaseProtocolEvtExecDoc/IDOV3Evt/IDOV3GetHabitInfo.md","articles":[]},"dir":"ltr"},"config":{"plugins":["chapter-fold","back-to-top-button","code","github","tbfed-pagefooter","copy-code-button","pageview-count","-lunr","-search","search-pro","language-picker","popup","sidebar-style","splitter"],"root":".","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"sidebar-style":{"author":"idoosmart.com","title":"IDO接口说明文档"},"tbfed-pagefooter":{"copyright":"Copyright © 2023-2024 IDO. All rights reserved.","modify_label":"修订时间:","modify_format":"YYYY-MM-DD HH:mm:ss"},"language-picker":{"grid-columns":3},"github":{"url":"https://github.com/idoosmart/"},"splitter":{},"search-pro":{},"popup":{},"code":{"copyButtons":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"back-to-top-button":{},"pageview-count":{},"expandable-chapters-small":{},"copy-code-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"luoft","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"IDO FLUTTER 接口说明","language":"zh-hans","gitbook":"*","description":"IDO FLUTTER 接口说明"},"file":{"path":"doc/BaseProtocolEvtExecDoc/IDOV3Evt/IDOV3MiniProgramControl.md","mtime":"2024-07-04T09:15:13.612Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2024-07-04T09:15:58.986Z"},"basePath":"../../..","book":{"language":"zh"}});
         });
     </script>
 </div>

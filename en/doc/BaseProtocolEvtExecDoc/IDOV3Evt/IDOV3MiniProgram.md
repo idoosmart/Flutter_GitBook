@@ -63,7 +63,7 @@ struct protocol_v3_set_get_mini_program_info_reply
 		5: In motion
 		6: The application is being started
    */
-   struct protocol_v3_get_mini_program_info_head head; //operate=3effective
-   struct protocol_v3_get_mini_program_info *info_item;//operate=3effective
+   struct protocol_v3_get_mini_program_info_head head; //operate=3
+   struct protocol_v3_get_mini_program_info *info_item;//operate=3有效
 }
 ```
