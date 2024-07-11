@@ -57,12 +57,12 @@ struct protocol_v3_set_get_mini_program_info_reply
 	 uint8_t error_code;
    /* 错误码：
 		0:成功
-    1:低电
-	  2:省电模式中
-	  3:充电中
-	  4:通话中
-	  5:运动中
-	  6:当前应用开启中
+    17:当前应用开启中
+    22:低电
+    26:省电模式中
+    27:运动中
+    28:通话中
+    29:充电中
    */
    struct protocol_v3_get_mini_program_info_head head; //operate=3有效
    struct protocol_v3_get_mini_program_info *info_item;//operate=3有效
