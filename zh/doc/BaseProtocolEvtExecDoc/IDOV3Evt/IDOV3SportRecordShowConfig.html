@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>V3设备通知app运动过程切换 · IDO FLUTTER 接口说明</title>
+        <title>V3获取运动记录的APP显示项配置 · IDO FLUTTER 接口说明</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -89,10 +89,10 @@
     <link rel="shortcut icon" href="../../../../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="IDOV3NoticeDialChange.html" />
+    <link rel="next" href="../../IDOAppendix/IDODeviceErrorCode.html" />
     
     
-    <link rel="prev" href="IDOV3SetSmartCompetitorConfigInfo.html" />
+    <link rel="prev" href="IDOV3SetdefaultMegApplicationList.html" />
     
 
     </head>
@@ -4042,7 +4042,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.4.5.38" data-path="IDOV3CutoverSportFromDevice.html">
+        <li class="chapter " data-level="1.4.5.38" data-path="IDOV3CutoverSportFromDevice.html">
             
                 <a href="IDOV3CutoverSportFromDevice.html">
             
@@ -4172,7 +4172,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.5.48" data-path="IDOV3SportRecordShowConfig.html">
+        <li class="chapter active" data-level="1.4.5.48" data-path="IDOV3SportRecordShowConfig.html">
             
                 <a href="IDOV3SportRecordShowConfig.html">
             
@@ -4245,7 +4245,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="../../.." >V3设备通知app运动过程切换</a>
+        <a href="../../.." >V3获取运动记录的APP显示项配置</a>
     </h1>
 </div>
 
@@ -4260,8 +4260,12 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h3 id="v3&#x8BBE;&#x5907;&#x901A;&#x77E5;app&#x8FD0;&#x52A8;&#x8FC7;&#x7A0B;&#x5207;&#x6362;">V3&#x8BBE;&#x5907;&#x901A;&#x77E5;APP&#x8FD0;&#x52A8;&#x8FC7;&#x7A0B;&#x5207;&#x6362;</h3>
-<p>&#x529F;&#x80FD;&#x8868;&#xFF1A;setSupportSportPlan</p>
+                                <h3 id="v3&#x83B7;&#x53D6;&#x8FD0;&#x52A8;&#x8BB0;&#x5F55;&#x7684;app&#x663E;&#x793A;&#x9879;&#x914D;&#x7F6E;">V3&#x83B7;&#x53D6;&#x8FD0;&#x52A8;&#x8BB0;&#x5F55;&#x7684;APP&#x663E;&#x793A;&#x9879;&#x914D;&#x7F6E;</h3>
+<p>&#x529F;&#x80FD;&#x8868;:bool protocol_v3_sport_record_show_config_33_68</p>
+<p><strong>Flutter&#x793A;&#x4F8B;&#xFF1A;</strong></p>
+<pre><code class="lang-dart">
+
+</code></pre>
 <p><strong>App&#x4E0B;&#x53D1;&#x7684;json&#x5B57;&#x6BB5;</strong>:</p>
 <table>
 <thead>
@@ -4275,33 +4279,10 @@
 <tr>
 <td>operate</td>
 <td>int</td>
-<td>&#x64CD;&#x4F5C;<br>1&#xFF1A;&#x5F00;&#x59CB;&#x8FD0;&#x52A8; <br>2&#xFF1A;&#x6682;&#x505C;&#x8FD0;&#x52A8; <br>3&#xFF1A;&#x6062;&#x590D;&#x8FD0;&#x52A8; <br>4&#xFF1A;&#x7ED3;&#x675F;&#x8FD0;&#x52A8; <br>5&#xFF1A;&#x5207;&#x6362;&#x52A8;&#x4F5C;</td>
-</tr>
-<tr>
-<td>type</td>
-<td>int</td>
-<td>&#x8BA1;&#x5212;&#x7C7B;&#x578B;<br>1&#xFF1A;&#x8DD1;&#x6B65;&#x8BA1;&#x5212;3km <br>2&#xFF1A;&#x8DD1;&#x6B65;&#x8BA1;&#x5212;5km <br>3&#xFF1A;&#x8DD1;&#x6B65;&#x8BA1;&#x5212;10km <br>4&#xFF1A;&#x534A;&#x7A0B;&#x9A6C;&#x62C9;&#x677E;&#x8BAD;&#x7EC3;&#xFF08;&#x4E8C;&#x671F;&#xFF09; <br>5&#xFF1A;&#x9A6C;&#x62C9;&#x677E;&#x8BAD;&#x7EC3;&#xFF08;&#x4E8C;&#x671F;&#xFF09;</td>
-</tr>
-<tr>
-<td>action_type</td>
-<td>int</td>
-<td>&#x52A8;&#x4F5C;&#x7C7B;&#x578B;  <br>1&#xFF1A;&#x5FEB;&#x8D70;<br>2&#xFF1A;&#x6162;&#x8DD1;<br>3&#xFF1A;&#x4E2D;&#x901F;&#x8DD1;<br>4&#xFF1A;&#x5FEB;&#x8DD1; <br>5&#xFF1A;&#x7ED3;&#x675F;&#x8BFE;&#x7A0B;&#x8FD0;&#x52A8;&#xFF08;&#x8FD8;&#x8981;&#x7B49;&#x5F85;&#x7528;&#x6237;&#x662F;&#x5426;&#x6709;&#x81EA;&#x7531;&#x8FD0;&#x52A8;&#xFF09;&#xFF08;&#x6B64;&#x5B57;&#x6BB5;&#x5F53;operate&#x4E3A;5&#x8D77;&#x4F5C;&#x7528;&#xFF09;</td>
-</tr>
-<tr>
-<td>err_code</td>
-<td>int</td>
-<td>0:&#x6210;&#x529F;   &#x5176;&#x4ED6;&#x5931;&#x8D25;</td>
+<td>&#x64CD;&#x4F5C;&#x7C7B;&#x578B;<br>1:&#x589E; 2:&#x5220; 3:&#x67E5; 4:&#x6539;&#xFF08;&#x76EE;&#x524D;&#x53EA;&#x652F;&#x6301;&#x67E5;&#xFF09;</td>
 </tr>
 </tbody>
 </table>
-<p><code>&#x793A;&#x4F8B;&#xFF1A;</code></p>
-<pre><code class="lang-c">{
-    <span class="hljs-string">&quot;operate&quot;</span>:<span class="hljs-number">1</span>,
-    <span class="hljs-string">&quot;type&quot;</span>:<span class="hljs-number">1</span>,
-    <span class="hljs-string">&quot;action_type&quot;</span>:<span class="hljs-number">1</span>,
-    <span class="hljs-string">&quot;err_code&quot;</span>:<span class="hljs-number">0</span>
-}
-</code></pre>
 <p><strong>App&#x6536;&#x5230;&#x7684;json&#x5B57;&#x6BB5;</strong>&#xFF1A;</p>
 <table>
 <thead>
@@ -4315,89 +4296,93 @@
 <tr>
 <td>operate</td>
 <td>int</td>
-<td>1&#xFF1A;&#x5F00;&#x59CB;&#x8FD0;&#x52A8; <br>2&#xFF1A;&#x6682;&#x505C;&#x8FD0;&#x52A8; <br>3&#xFF1A;&#x6062;&#x590D;&#x8FD0;&#x52A8; <br>4&#xFF1A;&#x7ED3;&#x675F;&#x8FD0;&#x52A8;<br>5&#xFF1A;&#x5207;&#x6362;&#x52A8;&#x4F5C;</td>
+<td>1:&#x589E; 2:&#x5220; 3:&#x67E5; 4:&#x6539;&#xFF08;&#x76EE;&#x524D;&#x53EA;&#x652F;&#x6301;&#x67E5;&#xFF09;</td>
 </tr>
 <tr>
-<td>type</td>
+<td>error_code</td>
 <td>int</td>
-<td>&#x8BA1;&#x5212;&#x7C7B;&#x578B;<br>1&#xFF1A;&#x8DD1;&#x6B65;&#x8BA1;&#x5212;3km<br>2&#xFF1A;&#x8DD1;&#x6B65;&#x8BA1;&#x5212;5km <br>3&#xFF1A;&#x8DD1;&#x6B65;&#x8BA1;&#x5212;10km <br>4&#xFF1A;&#x534A;&#x7A0B;&#x9A6C;&#x62C9;&#x677E;&#x8BAD;&#x7EC3;&#xFF08;&#x4E8C;&#x671F;&#xFF09;<br>5&#xFF1A;&#x9A6C;&#x62C9;&#x677E;&#x8BAD;&#x7EC3;&#xFF08;&#x4E8C;&#x671F;&#xFF09;</td>
+<td>&#x9519;&#x8BEF;&#x7801;<br>0&#x6210;&#x529F; &#x975E;0&#x5931;&#x8D25;</td>
 </tr>
 <tr>
-<td>action_type</td>
+<td>support_operate</td>
 <td>int</td>
-<td>&#x52A8;&#x4F5C;&#x7C7B;&#x578B;  <br>1&#xFF1A;&#x5FEB;&#x8D70;<br>2&#xFF1A;&#x6162;&#x8DD1;<br>3&#xFF1A;&#x4E2D;&#x901F;&#x8DD1;<br>4&#xFF1A;&#x5FEB;&#x8DD1;  <br>5&#xFF1A;&#x7ED3;&#x675F;&#x8BFE;&#x7A0B;&#x8FD0;&#x52A8; &#xFF08;&#x8FD8;&#x8981;&#x7B49;&#x5F85;&#x7528;&#x6237;&#x662F;&#x5426;&#x6709;&#x81EA;&#x7531;&#x8FD0;&#x52A8;&#xFF09;&#xFF1B;6&#x8BFE;&#x7A0B;&#x7ED3;&#x675F;&#x540E;&#x81EA;&#x7531;&#x8FD0;&#x52A8; &#xFF08;&#x6B64;&#x5B57;&#x6BB5;&#x5F53;operate&#x4E3A;5&#x8D77;&#x4F5C;&#x7528;&#xFF09;</td>
+<td>bit0:&#x589E; bit1:&#x5220; bit2:&#x67E5; bit3:&#x6539; 0&#x4E0D;&#x652F;&#x6301; 1&#x652F;&#x6301;</td>
 </tr>
 <tr>
-<td>year</td>
+<td>items_num</td>
 <td>int</td>
-<td>&#x8BAD;&#x7EC3;&#x7684;&#x8BFE;&#x7A0B;&#x65E5;&#x671F;(&#x8BAD;&#x7EC3;&#x65E5;&#x7684;&#x65E5;&#x671F;) &#x5E74;</td>
+<td>&#x8FD0;&#x52A8;&#x8BB0;&#x5F55;&#x663E;&#x793A;&#x9879;&#x4E2A;&#x6570; &#x64CD;&#x4F5C;<code>&#x67E5;&#x8BE2;</code>&#x6709;&#x6548;&#xFF0C;&#x6700;&#x591A;&#x4E0D;&#x8981;&#x8D85;&#x8FC7;30</td>
 </tr>
 <tr>
-<td>month</td>
-<td>int</td>
-<td>&#x8BAD;&#x7EC3;&#x7684;&#x8BFE;&#x7A0B;&#x65E5;&#x671F;(&#x8BAD;&#x7EC3;&#x65E5;&#x7684;&#x65E5;&#x671F;) &#x6708;</td>
+<td>default_items</td>
+<td>&#x96C6;&#x5408;</td>
+<td>&#x9ED8;&#x8BA4;&#x8FD0;&#x52A8;&#x8BB0;&#x5F55;&#x663E;&#x793A;&#x9879;&#x5185;&#x5BB9; &#x64CD;&#x4F5C;</td>
 </tr>
 <tr>
-<td>day</td>
+<td>record_show_num</td>
 <td>int</td>
-<td>&#x8BAD;&#x7EC3;&#x7684;&#x8BFE;&#x7A0B;&#x65E5;&#x671F;(&#x8BAD;&#x7EC3;&#x65E5;&#x7684;&#x65E5;&#x671F;) &#x65E5;</td>
+<td>&#x8FD0;&#x52A8;&#x8BB0;&#x5F55;&#x7C7B;&#x578B;&#x663E;&#x793A;&#x9879;&#x4E2A;&#x6570;&#xFF0C;&#x6700;&#x5927;&#x4E0D;&#x80FD;&#x8D85;&#x8FC7;25</td>
 </tr>
 <tr>
-<td>time</td>
-<td>int</td>
-<td>&#x52A8;&#x4F5C;&#x76EE;&#x6807;&#x65F6;&#x95F4;  &#x5355;&#x4F4D;&#x79D2;</td>
+<td>record_show_list</td>
+<td>int []</td>
+<td>&#x663E;&#x793A;&#x9879;&#x5185;&#x5BB9;</td>
 </tr>
 <tr>
-<td>low_heart</td>
-<td>int</td>
-<td>&#x5FC3;&#x7387;&#x8303;&#x56F4;&#x4F4E;&#x503C;</td>
+<td>items</td>
+<td>&#x96C6;&#x5408;</td>
+<td>&#x8FD0;&#x52A8;&#x8BB0;&#x5F55;&#x663E;&#x793A;&#x9879;&#x5185;&#x5BB9; &#x64CD;&#x4F5C;&#x67E5;&#x8BE2;&#x6709;&#x6548;</td>
 </tr>
 <tr>
-<td>height_heart</td>
+<td>type_num</td>
 <td>int</td>
-<td>&#x5FC3;&#x7387;&#x8303;&#x56F4;&#x9AD8;&#x503C;</td>
+<td>&#x8FD0;&#x52A8;&#x7C7B;&#x578B;&#x4E2A;&#x6570;&#xFF0C;&#x6700;&#x5927;5&#x4E2A;</td>
 </tr>
 <tr>
-<td>cur_day</td>
-<td>int</td>
-<td>&#x5F00;&#x59CB;/&#x6682;&#x505C;/&#x6062;&#x590D;/&#x7ED3;&#x675F;&#x65F6;&#x95F4;&#xFF0C;&#x7531;operate&#x51B3;&#x5B9A;&#x662F;&#x4EC0;&#x4E48;&#x65F6;&#x95F4;&#x7C7B;&#x578B;<br>&#x65F6;&#x95F4; &#x65E5;</td>
+<td>type_list</td>
+<td>int []</td>
+<td>&#x8FD0;&#x52A8;&#x7C7B;&#x578B;</td>
 </tr>
 <tr>
-<td>hour</td>
+<td>record_show_num</td>
 <td>int</td>
-<td>&#x65F6;&#x95F4; &#x65F6;</td>
+<td>&#x8FD0;&#x52A8;&#x8BB0;&#x5F55;&#x7C7B;&#x578B;&#x663E;&#x793A;&#x9879;&#x4E2A;&#x6570;&#xFF0C;&#x6700;&#x5927;&#x4E0D;&#x80FD;&#x8D85;&#x8FC7;25</td>
 </tr>
 <tr>
-<td>minute</td>
-<td>int</td>
-<td>&#x65F6;&#x95F4; &#x5206;</td>
-</tr>
-<tr>
-<td>second</td>
-<td>int</td>
-<td>&#x65F6;&#x95F4; &#x79D2;</td>
+<td>record_show_list</td>
+<td>int []</td>
+<td>&#x663E;&#x793A;&#x9879;&#x5185;&#x5BB9;</td>
 </tr>
 </tbody>
 </table>
-<p><code>&#x793A;&#x4F8B;&#xFF1A;</code></p>
+<p><code>&#x8BBE;&#x5907;&#x56DE;&#x590D;&#x793A;&#x4F8B;&#xFF1A;</code></p>
 <pre><code class="lang-c">{
-    <span class="hljs-string">&quot;operate&quot;</span>:<span class="hljs-number">1</span>,
-    <span class="hljs-string">&quot;type&quot;</span>:<span class="hljs-number">1</span>,
-    <span class="hljs-string">&quot;action_type&quot;</span>:<span class="hljs-number">1</span>,
-    <span class="hljs-string">&quot;year&quot;</span>:<span class="hljs-number">2022</span>,
-    <span class="hljs-string">&quot;month&quot;</span>:<span class="hljs-number">12</span>,
-    <span class="hljs-string">&quot;day&quot;</span>:<span class="hljs-number">26</span>,
-    <span class="hljs-string">&quot;time&quot;</span>:<span class="hljs-number">200</span>,
-    <span class="hljs-string">&quot;low_heart&quot;</span>:<span class="hljs-number">80</span>,
-    <span class="hljs-string">&quot;height_heart&quot;</span>:<span class="hljs-number">110</span>,
-    <span class="hljs-string">&quot;cur_day&quot;</span>:<span class="hljs-number">1</span>,
-    <span class="hljs-string">&quot;hour&quot;</span>:<span class="hljs-number">0</span>,
-    <span class="hljs-string">&quot;minute&quot;</span>:<span class="hljs-number">0</span>,
-    <span class="hljs-string">&quot;second&quot;</span>: <span class="hljs-number">0</span>
-}
+    <span class="hljs-string">&quot;default_items&quot;</span> :                                                                                             {                                                                                                <span class="hljs-string">&quot;record_show_list&quot;</span> :                                                                                                 [                                                                                                     <span class="hljs-number">2</span>,                                                                                                     <span class="hljs-number">1</span>,                                                                                           ],                                                                                                <span class="hljs-string">&quot;record_show_num&quot;</span> : <span class="hljs-number">2</span>                                                                                                                                                                                 <span class="hljs-string">&quot;error_code&quot;</span> : <span class="hljs-number">0</span>,
+    }
+  <span class="hljs-string">&quot;items&quot;</span> : 
+    [
+        {                                                                                                          <span class="hljs-string">&quot;record_show_list&quot;</span> : 
+            [
+                <span class="hljs-number">2</span>,
+      ],
+            <span class="hljs-string">&quot;record_show_num&quot;</span> : <span class="hljs-number">1</span>,
+            <span class="hljs-string">&quot;type_list&quot;</span> : 
+            [
+                <span class="hljs-number">48</span>
+            ],
+            <span class="hljs-string">&quot;type_num&quot;</span> : <span class="hljs-number">1</span>
+        }
+  ]
+    <span class="hljs-string">&quot;items_num&quot;</span> : <span class="hljs-number">1</span>,                                                                                          <span class="hljs-string">&quot;operate&quot;</span> : <span class="hljs-number">3</span>,
+    <span class="hljs-string">&quot;support_operate_add&quot;</span> : <span class="hljs-number">0</span>,
+    <span class="hljs-string">&quot;support_operate_change&quot;</span> : <span class="hljs-number">0</span>,
+    <span class="hljs-string">&quot;support_operate_delete&quot;</span> : <span class="hljs-number">0</span>,
+    <span class="hljs-string">&quot;support_operate_inquire&quot;</span> : <span class="hljs-number">1</span>,
+    <span class="hljs-string">&quot;version&quot;</span> : <span class="hljs-number">0</span>
+ }
 </code></pre>
 <footer class="page-footer"><span class="copyright">Copyright &#xA9; 2023-2024 IDO. All rights reserved. all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;:
-2024-07-03 16:10:58
+2024-08-21 12:00:39
 </span></footer>
 <script>console.log("plugin-popup....");document.onclick = function(e){ e.target.tagName === "IMG" && window.open(e.target.src,e.target.src)}</script><style>img{cursor:pointer}</style>
                                 
@@ -4426,12 +4411,12 @@
 
             
                 
-                <a href="IDOV3SetSmartCompetitorConfigInfo.html" class="navigation navigation-prev " aria-label="Previous page: V3智能陪跑信息配置(预留)">
+                <a href="IDOV3SetdefaultMegApplicationList.html" class="navigation navigation-prev " aria-label="Previous page: V3配置默认的消息应用列表">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="IDOV3NoticeDialChange.html" class="navigation navigation-next " aria-label="Next page: V3APP获取表盘颜色样式修改">
+                <a href="../../IDOAppendix/IDODeviceErrorCode.html" class="navigation navigation-next " aria-label="Next page: 固件标准化通用错误码">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -4442,7 +4427,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"V3设备通知app运动过程切换","level":"1.4.5.38","depth":3,"next":{"title":"V3APP获取表盘颜色样式修改","level":"1.4.5.39","depth":3,"path":"doc/BaseProtocolEvtExecDoc/IDOV3Evt/IDOV3NoticeDialChange.md","ref":"doc/BaseProtocolEvtExecDoc/IDOV3Evt/IDOV3NoticeDialChange.md","articles":[]},"previous":{"title":"V3智能陪跑信息配置(预留)","level":"1.4.5.37","depth":3,"path":"doc/BaseProtocolEvtExecDoc/IDOV3Evt/IDOV3SetSmartCompetitorConfigInfo.md","ref":"doc/BaseProtocolEvtExecDoc/IDOV3Evt/IDOV3SetSmartCompetitorConfigInfo.md","articles":[]},"dir":"ltr"},"config":{"plugins":["chapter-fold","back-to-top-button","code","github","tbfed-pagefooter","copy-code-button","pageview-count","-lunr","-search","search-pro","language-picker","popup","sidebar-style","splitter"],"root":".","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"sidebar-style":{"author":"idoosmart.com","title":"IDO接口说明文档"},"tbfed-pagefooter":{"copyright":"Copyright © 2023-2024 IDO. All rights reserved.","modify_label":"修订时间:","modify_format":"YYYY-MM-DD HH:mm:ss"},"language-picker":{"grid-columns":3},"github":{"url":"https://github.com/idoosmart/"},"splitter":{},"search-pro":{},"popup":{},"code":{"copyButtons":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"back-to-top-button":{},"pageview-count":{},"expandable-chapters-small":{},"copy-code-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"luoft","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"IDO FLUTTER 接口说明","language":"zh-hans","gitbook":"*","description":"IDO FLUTTER 接口说明"},"file":{"path":"doc/BaseProtocolEvtExecDoc/IDOV3Evt/IDOV3CutoverSportFromDevice.md","mtime":"2024-07-03T08:10:58.093Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2024-08-21T04:07:36.780Z"},"basePath":"../../..","book":{"language":"zh"}});
+            gitbook.page.hasChanged({"page":{"title":"V3获取运动记录的APP显示项配置","level":"1.4.5.48","depth":3,"next":{"title":"固件标准化通用错误码","level":"2.1","depth":1,"path":"doc/IDOAppendix/IDODeviceErrorCode.md","ref":"doc/IDOAppendix/IDODeviceErrorCode.md","articles":[]},"previous":{"title":"V3配置默认的消息应用列表","level":"1.4.5.47","depth":3,"path":"doc/BaseProtocolEvtExecDoc/IDOV3Evt/IDOV3SetdefaultMegApplicationList.md","ref":"doc/BaseProtocolEvtExecDoc/IDOV3Evt/IDOV3SetdefaultMegApplicationList.md","articles":[]},"dir":"ltr"},"config":{"plugins":["chapter-fold","back-to-top-button","code","github","tbfed-pagefooter","copy-code-button","pageview-count","-lunr","-search","search-pro","language-picker","popup","sidebar-style","splitter"],"root":".","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"sidebar-style":{"author":"idoosmart.com","title":"IDO接口说明文档"},"tbfed-pagefooter":{"copyright":"Copyright © 2023-2024 IDO. All rights reserved.","modify_label":"修订时间:","modify_format":"YYYY-MM-DD HH:mm:ss"},"language-picker":{"grid-columns":3},"github":{"url":"https://github.com/idoosmart/"},"splitter":{},"search-pro":{},"popup":{},"code":{"copyButtons":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"back-to-top-button":{},"pageview-count":{},"expandable-chapters-small":{},"copy-code-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"luoft","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"IDO FLUTTER 接口说明","language":"zh-hans","gitbook":"*","description":"IDO FLUTTER 接口说明"},"file":{"path":"doc/BaseProtocolEvtExecDoc/IDOV3Evt/IDOV3SportRecordShowConfig.md","mtime":"2024-08-21T04:00:39.941Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2024-08-21T04:07:36.780Z"},"basePath":"../../..","book":{"language":"zh"}});
         });
     </script>
 </div>
