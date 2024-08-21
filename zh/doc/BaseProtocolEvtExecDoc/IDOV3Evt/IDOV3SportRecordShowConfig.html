@@ -4215,6 +4215,19 @@
             
         </li>
     
+        <li class="chapter " data-level="2.2" data-path="../../IDOAppendix/IDODeviceDataDisplayItemEnumeration.md">
+            
+                <span>
+            
+                    
+                    数据展示项枚举
+            
+                </a>
+            
+
+            
+        </li>
+    
 
     
 
@@ -4318,6 +4331,17 @@
 <td>&#x96C6;&#x5408;</td>
 <td>&#x9ED8;&#x8BA4;&#x8FD0;&#x52A8;&#x8BB0;&#x5F55;&#x663E;&#x793A;&#x9879;&#x5185;&#x5BB9; &#x64CD;&#x4F5C;</td>
 </tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>&#x5B57;&#x6BB5;&#x540D;</th>
+<th>&#x5B57;&#x6BB5;&#x7C7B;&#x578B;</th>
+<th>&#x5B57;&#x6BB5;&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
 <tr>
 <td>record_show_num</td>
 <td>int</td>
@@ -4328,11 +4352,33 @@
 <td>int []</td>
 <td>&#x663E;&#x793A;&#x9879;&#x5185;&#x5BB9;</td>
 </tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>&#x5B57;&#x6BB5;&#x540D;</th>
+<th>&#x5B57;&#x6BB5;&#x7C7B;&#x578B;</th>
+<th>&#x5B57;&#x6BB5;&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
 <tr>
 <td>items</td>
 <td>&#x96C6;&#x5408;</td>
 <td>&#x8FD0;&#x52A8;&#x8BB0;&#x5F55;&#x663E;&#x793A;&#x9879;&#x5185;&#x5BB9; &#x64CD;&#x4F5C;&#x67E5;&#x8BE2;&#x6709;&#x6548;</td>
 </tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>&#x5B57;&#x6BB5;&#x540D;</th>
+<th>&#x5B57;&#x6BB5;&#x7C7B;&#x578B;</th>
+<th>&#x5B57;&#x6BB5;&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
 <tr>
 <td>type_num</td>
 <td>int</td>
@@ -4356,33 +4402,40 @@
 </tbody>
 </table>
 <p><code>&#x8BBE;&#x5907;&#x56DE;&#x590D;&#x793A;&#x4F8B;&#xFF1A;</code></p>
-<pre><code class="lang-c">{
-    <span class="hljs-string">&quot;default_items&quot;</span> :                                                                                             {                                                                                                <span class="hljs-string">&quot;record_show_list&quot;</span> :                                                                                                 [                                                                                                     <span class="hljs-number">2</span>,                                                                                                     <span class="hljs-number">1</span>,                                                                                           ],                                                                                                <span class="hljs-string">&quot;record_show_num&quot;</span> : <span class="hljs-number">2</span>                                                                                                                                                                                 <span class="hljs-string">&quot;error_code&quot;</span> : <span class="hljs-number">0</span>,
-    }
-  <span class="hljs-string">&quot;items&quot;</span> : 
-    [
-        {                                                                                                          <span class="hljs-string">&quot;record_show_list&quot;</span> : 
-            [
+<pre><code class="lang-json">{
+    <span class="hljs-string">&quot;default_items&quot;</span>: {
+        <span class="hljs-string">&quot;record_show_list&quot;</span>: [
+            <span class="hljs-number">2</span>,
+            <span class="hljs-number">1</span>
+        ],
+        <span class="hljs-string">&quot;record_show_num&quot;</span>: <span class="hljs-number">2</span>
+    },
+    <span class="hljs-string">&quot;error_code&quot;</span>: <span class="hljs-number">0</span>,
+    <span class="hljs-string">&quot;items&quot;</span>: [
+        {
+            <span class="hljs-string">&quot;record_show_list&quot;</span>: [
                 <span class="hljs-number">2</span>,
-      ],
-            <span class="hljs-string">&quot;record_show_num&quot;</span> : <span class="hljs-number">1</span>,
-            <span class="hljs-string">&quot;type_list&quot;</span> : 
-            [
-                <span class="hljs-number">48</span>
+                <span class="hljs-number">1</span>,
+                <span class="hljs-number">9</span>
             ],
-            <span class="hljs-string">&quot;type_num&quot;</span> : <span class="hljs-number">1</span>
+            <span class="hljs-string">&quot;record_show_num&quot;</span>: <span class="hljs-number">3</span>,
+            <span class="hljs-string">&quot;type_list&quot;</span>: [
+                <span class="hljs-number">178</span>
+            ],
+            <span class="hljs-string">&quot;type_num&quot;</span>: <span class="hljs-number">1</span>
         }
-  ]
-    <span class="hljs-string">&quot;items_num&quot;</span> : <span class="hljs-number">1</span>,                                                                                          <span class="hljs-string">&quot;operate&quot;</span> : <span class="hljs-number">3</span>,
-    <span class="hljs-string">&quot;support_operate_add&quot;</span> : <span class="hljs-number">0</span>,
-    <span class="hljs-string">&quot;support_operate_change&quot;</span> : <span class="hljs-number">0</span>,
-    <span class="hljs-string">&quot;support_operate_delete&quot;</span> : <span class="hljs-number">0</span>,
-    <span class="hljs-string">&quot;support_operate_inquire&quot;</span> : <span class="hljs-number">1</span>,
-    <span class="hljs-string">&quot;version&quot;</span> : <span class="hljs-number">0</span>
- }
+    ],
+    <span class="hljs-string">&quot;items_num&quot;</span>: <span class="hljs-number">1</span>,
+    <span class="hljs-string">&quot;operate&quot;</span>: <span class="hljs-number">3</span>,
+    <span class="hljs-string">&quot;support_operate_add&quot;</span>: <span class="hljs-number">0</span>,
+    <span class="hljs-string">&quot;support_operate_change&quot;</span>: <span class="hljs-number">0</span>,
+    <span class="hljs-string">&quot;support_operate_delete&quot;</span>: <span class="hljs-number">0</span>,
+    <span class="hljs-string">&quot;support_operate_inquire&quot;</span>: <span class="hljs-number">1</span>,
+    <span class="hljs-string">&quot;version&quot;</span>: <span class="hljs-number">0</span>
+}
 </code></pre>
 <footer class="page-footer"><span class="copyright">Copyright &#xA9; 2023-2024 IDO. All rights reserved. all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;:
-2024-08-21 12:00:39
+2024-08-21 16:07:34
 </span></footer>
 <script>console.log("plugin-popup....");document.onclick = function(e){ e.target.tagName === "IMG" && window.open(e.target.src,e.target.src)}</script><style>img{cursor:pointer}</style>
                                 
@@ -4427,7 +4480,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"V3获取运动记录的APP显示项配置","level":"1.4.5.48","depth":3,"next":{"title":"固件标准化通用错误码","level":"2.1","depth":1,"path":"doc/IDOAppendix/IDODeviceErrorCode.md","ref":"doc/IDOAppendix/IDODeviceErrorCode.md","articles":[]},"previous":{"title":"V3配置默认的消息应用列表","level":"1.4.5.47","depth":3,"path":"doc/BaseProtocolEvtExecDoc/IDOV3Evt/IDOV3SetdefaultMegApplicationList.md","ref":"doc/BaseProtocolEvtExecDoc/IDOV3Evt/IDOV3SetdefaultMegApplicationList.md","articles":[]},"dir":"ltr"},"config":{"plugins":["chapter-fold","back-to-top-button","code","github","tbfed-pagefooter","copy-code-button","pageview-count","-lunr","-search","search-pro","language-picker","popup","sidebar-style","splitter"],"root":".","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"sidebar-style":{"author":"idoosmart.com","title":"IDO接口说明文档"},"tbfed-pagefooter":{"copyright":"Copyright © 2023-2024 IDO. All rights reserved.","modify_label":"修订时间:","modify_format":"YYYY-MM-DD HH:mm:ss"},"language-picker":{"grid-columns":3},"github":{"url":"https://github.com/idoosmart/"},"splitter":{},"search-pro":{},"popup":{},"code":{"copyButtons":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"back-to-top-button":{},"pageview-count":{},"expandable-chapters-small":{},"copy-code-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"luoft","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"IDO FLUTTER 接口说明","language":"zh-hans","gitbook":"*","description":"IDO FLUTTER 接口说明"},"file":{"path":"doc/BaseProtocolEvtExecDoc/IDOV3Evt/IDOV3SportRecordShowConfig.md","mtime":"2024-08-21T04:00:39.941Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2024-08-21T04:07:36.780Z"},"basePath":"../../..","book":{"language":"zh"}});
+            gitbook.page.hasChanged({"page":{"title":"V3获取运动记录的APP显示项配置","level":"1.4.5.48","depth":3,"next":{"title":"固件标准化通用错误码","level":"2.1","depth":1,"path":"doc/IDOAppendix/IDODeviceErrorCode.md","ref":"doc/IDOAppendix/IDODeviceErrorCode.md","articles":[]},"previous":{"title":"V3配置默认的消息应用列表","level":"1.4.5.47","depth":3,"path":"doc/BaseProtocolEvtExecDoc/IDOV3Evt/IDOV3SetdefaultMegApplicationList.md","ref":"doc/BaseProtocolEvtExecDoc/IDOV3Evt/IDOV3SetdefaultMegApplicationList.md","articles":[]},"dir":"ltr"},"config":{"plugins":["chapter-fold","back-to-top-button","code","github","tbfed-pagefooter","copy-code-button","pageview-count","-lunr","-search","search-pro","language-picker","popup","sidebar-style","splitter"],"root":".","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"sidebar-style":{"author":"idoosmart.com","title":"IDO接口说明文档"},"tbfed-pagefooter":{"copyright":"Copyright © 2023-2024 IDO. All rights reserved.","modify_label":"修订时间:","modify_format":"YYYY-MM-DD HH:mm:ss"},"language-picker":{"grid-columns":3},"github":{"url":"https://github.com/idoosmart/"},"splitter":{},"search-pro":{},"popup":{},"code":{"copyButtons":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"back-to-top-button":{},"pageview-count":{},"expandable-chapters-small":{},"copy-code-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"luoft","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"IDO FLUTTER 接口说明","language":"zh-hans","gitbook":"*","description":"IDO FLUTTER 接口说明"},"file":{"path":"doc/BaseProtocolEvtExecDoc/IDOV3Evt/IDOV3SportRecordShowConfig.md","mtime":"2024-08-21T08:07:34.039Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2024-08-21T08:09:30.076Z"},"basePath":"../../..","book":{"language":"zh"}});
         });
     </script>
 </div>
