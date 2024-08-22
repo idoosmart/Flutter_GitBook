@@ -4375,9 +4375,9 @@ libManager.send(evt: CmdEvtType.setWeatherV3, json: jsonEncode(json));
 <td>&#x7D2B;&#x5916;&#x7EBF;&#x5F3A;&#x5EA6;<br>&#x6269;&#x5927;10&#x500D;&#x4F20;&#x8F93;</td>
 </tr>
 <tr>
-<td>wind_speed</td>
+<td>wind_force</td>
 <td>int</td>
-<td>&#x98CE;&#x901F;</td>
+<td>&#x98CE;&#x529B;</td>
 </tr>
 <tr>
 <td>sunrise_hour</td>
@@ -4398,6 +4398,11 @@ libManager.send(evt: CmdEvtType.setWeatherV3, json: jsonEncode(json));
 <td>sunset_min</td>
 <td>int</td>
 <td>&#x65E5;&#x51FA;&#x65F6;&#x95F4; &#x5206;<br>version&#x4E3A;1&#x6709;&#x6548;</td>
+</tr>
+<tr>
+<td>wind_speed</td>
+<td>int</td>
+<td>&#x98CE;&#x901F;</td>
 </tr>
 <tr>
 <td>sunrise_item_num</td>
@@ -4573,6 +4578,7 @@ libManager.send(evt: CmdEvtType.setWeatherV3, json: jsonEncode(json));
     <span class="hljs-string">&quot;humidity&quot;</span>:<span class="hljs-number">0</span>,
     <span class="hljs-string">&quot;today_uv_intensity&quot;</span>:<span class="hljs-number">0</span>,
     <span class="hljs-string">&quot;wind_speed&quot;</span>:<span class="hljs-number">0</span>,
+      <span class="hljs-string">&quot;wind_speed&quot;</span>:<span class="hljs-number">0</span>,
     <span class="hljs-string">&quot;sunrise_hour&quot;</span>:<span class="hljs-number">6</span>,
     <span class="hljs-string">&quot;sunrise_min&quot;</span>:<span class="hljs-number">20</span>,
     <span class="hljs-string">&quot;sunset_hour&quot;</span>:<span class="hljs-number">18</span>,
@@ -4624,7 +4630,7 @@ libManager.send(evt: CmdEvtType.setWeatherV3, json: jsonEncode(json));
 }
 </code></pre>
 <footer class="page-footer"><span class="copyright">Copyright &#xA9; 2023-2024 IDO. All rights reserved. all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;:
-2024-07-03 16:10:58
+2024-08-22 14:07:16
 </span></footer>
 <script>console.log("plugin-popup....");document.onclick = function(e){ e.target.tagName === "IMG" && window.open(e.target.src,e.target.src)}</script><style>img{cursor:pointer}</style>
                                 
@@ -4669,7 +4675,7 @@ libManager.send(evt: CmdEvtType.setWeatherV3, json: jsonEncode(json));
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"V3设置天气数据","level":"1.4.5.25","depth":3,"next":{"title":"V3下发世界时间","level":"1.4.5.26","depth":3,"path":"doc/BaseProtocolEvtExecDoc/IDOV3Evt/IDOV3SetWorldTime.md","ref":"doc/BaseProtocolEvtExecDoc/IDOV3Evt/IDOV3SetWorldTime.md","articles":[]},"previous":{"title":"V3同步协议蓝牙通话常用联系人","level":"1.4.5.24","depth":3,"path":"doc/BaseProtocolEvtExecDoc/IDOV3Evt/IDOV3SyncContact.md","ref":"doc/BaseProtocolEvtExecDoc/IDOV3Evt/IDOV3SyncContact.md","articles":[]},"dir":"ltr"},"config":{"plugins":["chapter-fold","back-to-top-button","code","github","tbfed-pagefooter","copy-code-button","pageview-count","-lunr","-search","search-pro","language-picker","popup","sidebar-style","splitter"],"root":".","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"sidebar-style":{"author":"idoosmart.com","title":"IDO接口说明文档"},"tbfed-pagefooter":{"copyright":"Copyright © 2023-2024 IDO. All rights reserved.","modify_label":"修订时间:","modify_format":"YYYY-MM-DD HH:mm:ss"},"language-picker":{"grid-columns":3},"github":{"url":"https://github.com/idoosmart/"},"splitter":{},"search-pro":{},"popup":{},"code":{"copyButtons":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"back-to-top-button":{},"pageview-count":{},"expandable-chapters-small":{},"copy-code-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"luoft","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"IDO FLUTTER 接口说明","language":"zh-hans","gitbook":"*","description":"IDO FLUTTER 接口说明"},"file":{"path":"doc/BaseProtocolEvtExecDoc/IDOV3Evt/IDOV3SetWeather.md","mtime":"2024-07-03T08:10:58.146Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2024-08-21T08:39:44.854Z"},"basePath":"../../..","book":{"language":"zh"}});
+            gitbook.page.hasChanged({"page":{"title":"V3设置天气数据","level":"1.4.5.25","depth":3,"next":{"title":"V3下发世界时间","level":"1.4.5.26","depth":3,"path":"doc/BaseProtocolEvtExecDoc/IDOV3Evt/IDOV3SetWorldTime.md","ref":"doc/BaseProtocolEvtExecDoc/IDOV3Evt/IDOV3SetWorldTime.md","articles":[]},"previous":{"title":"V3同步协议蓝牙通话常用联系人","level":"1.4.5.24","depth":3,"path":"doc/BaseProtocolEvtExecDoc/IDOV3Evt/IDOV3SyncContact.md","ref":"doc/BaseProtocolEvtExecDoc/IDOV3Evt/IDOV3SyncContact.md","articles":[]},"dir":"ltr"},"config":{"plugins":["chapter-fold","back-to-top-button","code","github","tbfed-pagefooter","copy-code-button","pageview-count","-lunr","-search","search-pro","language-picker","popup","sidebar-style","splitter"],"root":".","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"sidebar-style":{"author":"idoosmart.com","title":"IDO接口说明文档"},"tbfed-pagefooter":{"copyright":"Copyright © 2023-2024 IDO. All rights reserved.","modify_label":"修订时间:","modify_format":"YYYY-MM-DD HH:mm:ss"},"language-picker":{"grid-columns":3},"github":{"url":"https://github.com/idoosmart/"},"splitter":{},"search-pro":{},"popup":{},"code":{"copyButtons":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"back-to-top-button":{},"pageview-count":{},"expandable-chapters-small":{},"copy-code-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"luoft","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"IDO FLUTTER 接口说明","language":"zh-hans","gitbook":"*","description":"IDO FLUTTER 接口说明"},"file":{"path":"doc/BaseProtocolEvtExecDoc/IDOV3Evt/IDOV3SetWeather.md","mtime":"2024-08-22T06:07:16.903Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2024-08-22T06:08:36.145Z"},"basePath":"../../..","book":{"language":"zh"}});
         });
     </script>
 </div>
