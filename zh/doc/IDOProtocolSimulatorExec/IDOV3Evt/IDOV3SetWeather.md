@@ -52,7 +52,7 @@ libManager.send(evt: CmdEvtType.setWeatherV3, json: jsonEncode(json));
 | ------------ | -------- | --------------------------------- |
 | weather_type | int      | 天气类型                          |
 | temperature  | int      | 温度<br />适配负数，温度加100传输 |
-| probability  | int      | 温度出现的概率<br />0-100 百分比  |
+| probability  | int      | 降水出现的概率<br />0-100 百分比  |
 
 | 字段名       | 字段类型 | 字段说明                              |
 | ------------ | -------- | ------------------------------------- |
