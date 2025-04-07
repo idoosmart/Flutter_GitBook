@@ -4380,6 +4380,11 @@
 <td>&#x5E73;&#x5747;&#x5212;&#x6C34;&#x9891;&#x7387;<br>&#x5355;&#x4F4D;:&#x6B21;/&#x5206;<br>version=1&#x6709;&#x6548;,&#x5426;&#x5219;&#x5B57;&#x6BB5;&#x662F;0</td>
 </tr>
 <tr>
+<td>interval_train_item_count</td>
+<td>int</td>
+<td>&#x95F4;&#x6B47;&#x8BAD;&#x7EC3;&#x8BE6;&#x60C5;&#x4E2A;&#x6570;,&#x5F53;&#x524D;&#x9636;&#x6BB5;item&#x6700;&#x5927;&#x4E2A;&#x6570;110</td>
+</tr>
+<tr>
 <td>items</td>
 <td>&#x96C6;&#x5408;</td>
 <td>&#x6E38;&#x6CF3;&#x6570;&#x636E;&#x8BE6;&#x60C5;&#xFF0C;<code>swolf</code> &amp; <code>strokesNumber</code> &amp; <code>duration</code> &amp; <code>swimmingPosture</code> &amp; <code>distance</code> &amp; <code>frequency</code>&amp; <code>speed</code> &amp; <code>stop_time</code> &amp; <code>difference_time</code>&#x7684;&#x96C6;&#x5408;</td>
@@ -4387,7 +4392,7 @@
 <tr>
 <td>interval_item</td>
 <td>&#x96C6;&#x5408;</td>
-<td>&#x95F4;&#x6B47;&#x8BAD;&#x7EC3;&#x6570;&#x7EC4;&#xFF0C;<br><code>stage_type</code> &amp; <code>repeat_num</code> &amp; <code>stage_data_type_item</code>&#x7684;&#x96C6;&#x5408;</td>
+<td>&#x95F4;&#x6B47;&#x8BAD;&#x7EC3;&#x8BE6;&#x60C5;&#xFF0C;interval_train_item&#x7684;&#x96C6;&#x5408;&#xFF0C;<a href="#v3data59">&#x8DF3;&#x8F6C;&#x5230;&#x4F4D;&#x7F6E;</a></td>
 </tr>
 </tbody>
 </table>
@@ -4447,6 +4452,29 @@
 </tr>
 </tbody>
 </table>
+<p><span id="v3data60"><strong><code>&#x5F53;&#x524D;&#x8BAD;&#x7EC3;&#x6B65;&#x9AA4;&#x7684;&#x8BAD;&#x7EC3;&#x6570;&#x636E;</code></strong></span></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">&#x5B57;&#x6BB5;&#x540D;</th>
+<th>&#x5B57;&#x6BB5;&#x7C7B;&#x578B;</th>
+<th>&#x5B57;&#x6BB5;&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">stage_support_type</td>
+<td>int</td>
+<td>&#x5F53;&#x524D;&#x8BAD;&#x7EC3;&#x6B65;&#x9AA4;&#x7684;&#x8BAD;&#x7EC3;&#x6570;&#x636E;&#x7C7B;&#x578B;</td>
+</tr>
+<tr>
+<td style="text-align:left">stage_data_value</td>
+<td>int</td>
+<td>&#x65F6;&#x95F4;&#x503C;&#x5355;&#x4F4D;s&#xFF0C;&#x8DDD;&#x79BB;&#x5355;&#x4F4D;m, &#x5361;&#x8DEF;&#x91CC;&#x5355;&#x4F4D;&#x5927;&#x5361;, &#x914D;&#x901F;&#x5355;&#x4F4D;s/km&#xFF0C; &#x901F;&#x5EA6;&#x5355;&#x4F4D;km/h&#x4E58;&#x4EE5;100&#x500D;</td>
+</tr>
+</tbody>
+</table>
+<p><span id="v3data59"><strong><code>&#x95F4;&#x6B47;&#x8BAD;&#x7EC3;&#x8BE6;&#x60C5;</code></strong></span></p>
 <table>
 <thead>
 <tr>
@@ -4467,98 +4495,14 @@
 <td>&#x5F53;&#x524D;&#x91CD;&#x590D;&#x6B21;&#x6570;</td>
 </tr>
 <tr>
+<td>stage_data_num</td>
+<td>int</td>
+<td>&#x5F53;&#x524D;&#x9636;&#x6BB5;&#x6570;&#x636E;&#x9879;&#x4E2A;&#x6570;,&#x6700;&#x5927;10&#x4E2A;</td>
+</tr>
+<tr>
 <td>stage_data_type_item</td>
 <td>&#x96C6;&#x5408;</td>
-<td>&#x5F53;&#x524D;&#x8BAD;&#x7EC3;&#x6B65;&#x9AA4;&#x7684;&#x8BAD;&#x7EC3;&#x6570;&#x636E;,<br><code>stage_support_type</code> &amp; <code>stage_data_value</code>&#x7684;&#x96C6;&#x5408;</td>
-</tr>
-</tbody>
-</table>
-<table>
-<thead>
-<tr>
-<th>&#x5B57;&#x6BB5;&#x540D;</th>
-<th>&#x5B57;&#x6BB5;&#x7C7B;&#x578B;</th>
-<th>&#x5B57;&#x6BB5;&#x8BF4;&#x660E;</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>stage_support_type</td>
-<td>int</td>
-<td>&#x5F53;&#x524D;&#x8BAD;&#x7EC3;&#x6B65;&#x9AA4;&#x7684;&#x8BAD;&#x7EC3;&#x6570;&#x636E;&#x7C7B;&#x578B;</td>
-</tr>
-<tr>
-<td>stage_data_value</td>
-<td>int</td>
-<td>&#x65F6;&#x95F4;&#x503C;&#x5355;&#x4F4D;s&#xFF0C;&#x8DDD;&#x79BB;&#x5355;&#x4F4D;m, &#x5361;&#x8DEF;&#x91CC;&#x5355;&#x4F4D;&#x5927;&#x5361;, &#x914D;&#x901F;&#x5355;&#x4F4D;s/km&#xFF0C; &#x901F;&#x5EA6;&#x5355;&#x4F4D;km/h&#x4E58;&#x4EE5;100&#x500D;</td>
-</tr>
-</tbody>
-</table>
-<table>
-<thead>
-<tr>
-<th>stage_type</th>
-<th>value</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>&#x65E0;(&#x65E0;&#x6548;)</td>
-<td>0x00</td>
-</tr>
-<tr>
-<td>&#x70ED;&#x8EAB;</td>
-<td>0x01</td>
-</tr>
-<tr>
-<td>&#x8BAD;&#x7EC3;</td>
-<td>0x02</td>
-</tr>
-<tr>
-<td>&#x4F11;&#x606F;</td>
-<td>0x03</td>
-</tr>
-<tr>
-<td>&#x653E;&#x677E;</td>
-<td>0x04</td>
-</tr>
-</tbody>
-</table>
-<table>
-<thead>
-<tr>
-<th>stage_support_type</th>
-<th>value</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>&#x65E0;(&#x65E0;&#x6548;)</td>
-<td>0x00</td>
-</tr>
-<tr>
-<td>&#x6301;&#x7EED;&#x65F6;&#x95F4;</td>
-<td>0x01</td>
-</tr>
-<tr>
-<td>&#x5E73;&#x5747;&#x5FC3;&#x7387;</td>
-<td>0x02</td>
-</tr>
-<tr>
-<td>&#x8DDD;&#x79BB;</td>
-<td>0x03</td>
-</tr>
-<tr>
-<td>&#x5361;&#x8DEF;&#x91CC;</td>
-<td>0x04</td>
-</tr>
-<tr>
-<td>&#x5E73;&#x5747;&#x914D;&#x901F;</td>
-<td>0x05</td>
-</tr>
-<tr>
-<td>&#x5E73;&#x5747;&#x901F;&#x5EA6;</td>
-<td>0x06</td>
+<td>&#x5F53;&#x524D;&#x8BAD;&#x7EC3;&#x6B65;&#x9AA4;&#x7684;&#x8BAD;&#x7EC3;&#x6570;&#x636E;<a href="#v3data60">&#x8DF3;&#x8F6C;&#x5230;&#x4F4D;&#x7F6E;</a></td>
 </tr>
 </tbody>
 </table>
@@ -4603,7 +4547,7 @@
 }
 </code></pre>
 <footer class="page-footer"><span class="copyright">Copyright &#xA9; 2023-2024 IDO. All rights reserved. all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;:
-2025-03-12 16:13:05
+2025-04-07 17:20:25
 </span></footer>
 <script>console.log("plugin-popup....");document.onclick = function(e){ e.target.tagName === "IMG" && window.open(e.target.src,e.target.src)}</script><style>img{cursor:pointer}</style>
                                 
@@ -4648,7 +4592,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"同步游泳","level":"1.3.17.1.1.6","depth":5,"next":{"title":"同步睡眠","level":"1.3.17.1.1.7","depth":5,"path":"doc/BaseProtocolEvtExecDoc/IDOV3HealthSyncEvt/IDOV3HealthSyncSleep.md","ref":"doc/BaseProtocolEvtExecDoc/IDOV3HealthSyncEvt/IDOV3HealthSyncSleep.md","articles":[]},"previous":{"title":"同步GPS","level":"1.3.17.1.1.5","depth":5,"path":"doc/BaseProtocolEvtExecDoc/IDOV3HealthSyncEvt/IDOV3HealthSyncGPS.md","ref":"doc/BaseProtocolEvtExecDoc/IDOV3HealthSyncEvt/IDOV3HealthSyncGPS.md","articles":[]},"dir":"ltr"},"config":{"plugins":["chapter-fold","back-to-top-button","code","github","tbfed-pagefooter","copy-code-button","pageview-count","-lunr","-search","search-pro","language-picker","popup","sidebar-style","splitter"],"root":".","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"sidebar-style":{"author":"idoosmart.com","title":"IDO接口说明文档"},"tbfed-pagefooter":{"copyright":"Copyright © 2023-2024 IDO. All rights reserved.","modify_label":"修订时间:","modify_format":"YYYY-MM-DD HH:mm:ss"},"language-picker":{"grid-columns":3},"github":{"url":"https://github.com/idoosmart/"},"livereload":{},"splitter":{},"search-pro":{},"popup":{},"code":{"copyButtons":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"back-to-top-button":{},"pageview-count":{},"expandable-chapters-small":{},"copy-code-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"luoft","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"IDO FLUTTER 接口说明","language":"zh-hans","gitbook":"*","description":"IDO FLUTTER 接口说明"},"file":{"path":"doc/BaseProtocolEvtExecDoc/IDOV3HealthSyncEvt/IDOV3HealthSyncSwim.md","mtime":"2025-03-12T08:13:05.773Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2025-03-12T08:13:27.328Z"},"basePath":"../../..","book":{"language":"zh"}});
+            gitbook.page.hasChanged({"page":{"title":"同步游泳","level":"1.3.17.1.1.6","depth":5,"next":{"title":"同步睡眠","level":"1.3.17.1.1.7","depth":5,"path":"doc/BaseProtocolEvtExecDoc/IDOV3HealthSyncEvt/IDOV3HealthSyncSleep.md","ref":"doc/BaseProtocolEvtExecDoc/IDOV3HealthSyncEvt/IDOV3HealthSyncSleep.md","articles":[]},"previous":{"title":"同步GPS","level":"1.3.17.1.1.5","depth":5,"path":"doc/BaseProtocolEvtExecDoc/IDOV3HealthSyncEvt/IDOV3HealthSyncGPS.md","ref":"doc/BaseProtocolEvtExecDoc/IDOV3HealthSyncEvt/IDOV3HealthSyncGPS.md","articles":[]},"dir":"ltr"},"config":{"plugins":["chapter-fold","back-to-top-button","code","github","tbfed-pagefooter","copy-code-button","pageview-count","-lunr","-search","search-pro","language-picker","popup","sidebar-style","splitter"],"root":".","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"sidebar-style":{"author":"idoosmart.com","title":"IDO接口说明文档"},"tbfed-pagefooter":{"copyright":"Copyright © 2023-2024 IDO. All rights reserved.","modify_label":"修订时间:","modify_format":"YYYY-MM-DD HH:mm:ss"},"language-picker":{"grid-columns":3},"github":{"url":"https://github.com/idoosmart/"},"splitter":{},"search-pro":{},"popup":{},"code":{"copyButtons":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"back-to-top-button":{},"pageview-count":{},"expandable-chapters-small":{},"copy-code-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"luoft","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"IDO FLUTTER 接口说明","language":"zh-hans","gitbook":"*","description":"IDO FLUTTER 接口说明"},"file":{"path":"doc/BaseProtocolEvtExecDoc/IDOV3HealthSyncEvt/IDOV3HealthSyncSwim.md","mtime":"2025-04-07T09:20:25.575Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2025-04-07T09:23:08.766Z"},"basePath":"../../..","book":{"language":"zh"}});
         });
     </script>
 </div>
@@ -4699,10 +4643,6 @@
     
         
         <script src="../../../../gitbook/gitbook-plugin-splitter/splitter.js"></script>
-        
-    
-        
-        <script src="../../../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
         
     
         
