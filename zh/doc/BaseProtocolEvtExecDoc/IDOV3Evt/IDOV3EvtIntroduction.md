@@ -52,4 +52,4 @@
 | 5080     | [V3智能陪跑信息配置](./IDOV3SetSmartCompetitorConfigInfo.md) |
 | 5085     | [V3设备通知APP运动过程切换](./IDOV3CutoverSportFromDevice.md) |
 | 5800     | [V3APP获取表盘颜色样式修改](./IDOV3NoticeDialChange.md)      |
-
+| 5100     | [V3设置、查询情绪健康提醒](./IDOV3SetGetEmotionHealthReminder.md)      |
