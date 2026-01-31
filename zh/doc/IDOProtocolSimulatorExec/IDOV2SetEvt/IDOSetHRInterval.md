@@ -35,6 +35,8 @@ libManager.send(evt: CmdEvtType.setHeartRateInterval, json: jsonEncode(json));
 | remind_start_minute | int      | 提醒开始 分                          |
 | remind_stop_hour    | int      | 提醒结束 时                          |
 | remind_stop_minute  | int      | 提醒结束 分                          |
+| user_max_hr_value | Int | app上设置的最大心率值(默认220-年龄) ( 功能表`supportHeartRateZonesHrMaxSet`开启有效) |
+| heart_rate_zones_mode |  | 心率区间模式,0x00:最大心率模式,0x01:储备心率模式 (功能表`supportHeartRateZonesHrMaxSet`开启有效) |
 
 `示例：`
 
@@ -55,7 +57,9 @@ libManager.send(evt: CmdEvtType.setHeartRateInterval, json: jsonEncode(json));
   "remind_start_hour":0,
   "remind_start_minute":0,
   "remind_stop_hour":23,
-  "remind_stop_minute":59
+  "remind_stop_minute":59,
+  "heart_rate_zones_mode": 1,
+  "user_max_hr_value": 179
 }
 ```
 

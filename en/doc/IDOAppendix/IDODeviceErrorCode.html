@@ -661,7 +661,20 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3.17.1.1.16" data-path="../BaseProtocolEvtExecDoc/IDOV2HealthSyncEvt/IDOV2HealthSyncSport.html">
+        <li class="chapter " data-level="1.3.17.1.1.16" data-path="../BaseProtocolEvtExecDoc/IDOV3HealthSyncEvt/IDOV3HealthSyncActiviyMerge.html">
+            
+                <a href="../BaseProtocolEvtExecDoc/IDOV3HealthSyncEvt/IDOV3HealthSyncActiviyMerge.html">
+            
+                    
+                    Sync Multi-Sport Data (Multi-Sport/Swimming/Running Course/Running Plan/Post-Run Stretching Data)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.17.1.1.17" data-path="../BaseProtocolEvtExecDoc/IDOV2HealthSyncEvt/IDOV2HealthSyncSport.html">
             
                 <a href="../BaseProtocolEvtExecDoc/IDOV2HealthSyncEvt/IDOV2HealthSyncSport.html">
             
@@ -674,7 +687,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3.17.1.1.17" data-path="../BaseProtocolEvtExecDoc/IDOV2HealthSyncEvt/IDOV2HealthSyncSleep.html">
+        <li class="chapter " data-level="1.3.17.1.1.18" data-path="../BaseProtocolEvtExecDoc/IDOV2HealthSyncEvt/IDOV2HealthSyncSleep.html">
             
                 <a href="../BaseProtocolEvtExecDoc/IDOV2HealthSyncEvt/IDOV2HealthSyncSleep.html">
             
@@ -687,7 +700,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3.17.1.1.18" data-path="../BaseProtocolEvtExecDoc/IDOV2HealthSyncEvt/IDOV2HealthSyncHR.html">
+        <li class="chapter " data-level="1.3.17.1.1.19" data-path="../BaseProtocolEvtExecDoc/IDOV2HealthSyncEvt/IDOV2HealthSyncHR.html">
             
                 <a href="../BaseProtocolEvtExecDoc/IDOV2HealthSyncEvt/IDOV2HealthSyncHR.html">
             
@@ -700,7 +713,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3.17.1.1.19" data-path="../BaseProtocolEvtExecDoc/IDOV2HealthSyncEvt/IDOV2HealthSyncBP.html">
+        <li class="chapter " data-level="1.3.17.1.1.20" data-path="../BaseProtocolEvtExecDoc/IDOV2HealthSyncEvt/IDOV2HealthSyncBP.html">
             
                 <a href="../BaseProtocolEvtExecDoc/IDOV2HealthSyncEvt/IDOV2HealthSyncBP.html">
             
@@ -713,7 +726,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3.17.1.1.20" data-path="../BaseProtocolEvtExecDoc/IDOV2HealthSyncEvt/IDOV2HealthSyncGPS.html">
+        <li class="chapter " data-level="1.3.17.1.1.21" data-path="../BaseProtocolEvtExecDoc/IDOV2HealthSyncEvt/IDOV2HealthSyncGPS.html">
             
                 <a href="../BaseProtocolEvtExecDoc/IDOV2HealthSyncEvt/IDOV2HealthSyncGPS.html">
             
@@ -726,7 +739,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3.17.1.1.21" data-path="../BaseProtocolEvtExecDoc/IDOV2HealthSyncEvt/IDOV2HealthSyncActivity.html">
+        <li class="chapter " data-level="1.3.17.1.1.22" data-path="../BaseProtocolEvtExecDoc/IDOV2HealthSyncEvt/IDOV2HealthSyncActivity.html">
             
                 <a href="../BaseProtocolEvtExecDoc/IDOV2HealthSyncEvt/IDOV2HealthSyncActivity.html">
             
@@ -4303,151 +4316,180 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="firmware-generic-error-code">{Firmware Generic Error code}</h1>
-<p>Note: The following common error codes are from firmware development and are for reference only. Some firmware items may use different error codes. You need to locate error flags corresponding to different firmware items</p>
+                                <h1 id="error-code-description">Error Code Description</h1>
+<h2 id="functional-overview">Functional Overview</h2>
+<p>The <code>errorCode</code> represents the status of the entire SDK. When <code>errorCode</code> equals 0, it indicates success; other values indicate failure.</p>
+<p>Positive numbers: Firmware status codes (returned by the SDK to the application layer)</p>
+<p>Negative numbers: SDK status codes</p>
+<h3 id="corresponding-error-code-table">Corresponding Error Code Table</h3>
 <table>
 <thead>
 <tr>
-<th>index</th>
-<th>ID</th>
+<th>Error Code</th>
 <th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>0</td>
-<td>ERROR_CODE_SUCCESS</td>
-<td>Successful command</td>
+<td>Command executed successfully</td>
 </tr>
 <tr>
 <td>1</td>
-<td>ERROR_CODE_SVC_HANDLER_MISSING</td>
 <td>SVC handler is missing</td>
 </tr>
 <tr>
 <td>2</td>
-<td>ERROR_CODE_SOFTDEVICE_NOT_ENABLED</td>
 <td>SoftDevice has not been enabled</td>
 </tr>
 <tr>
 <td>3</td>
-<td>ERROR_CODE_INTERNAL</td>
 <td>Internal Error</td>
 </tr>
 <tr>
 <td>4</td>
-<td>ERROR_CODE_NO_MEM</td>
 <td>No Memory for operation</td>
 </tr>
 <tr>
 <td>5</td>
-<td>ERROR_CODE_NOT_FOUND</td>
 <td>Not found</td>
 </tr>
 <tr>
 <td>6</td>
-<td>ERROR_CODE_NOT_SUPPORTED</td>
 <td>Not supported</td>
 </tr>
 <tr>
 <td>7</td>
-<td>ERROR_CODE_INVALID_PARAM</td>
 <td>Invalid Parameter</td>
 </tr>
 <tr>
 <td>8</td>
-<td>ERROR_CODE_INVALID_STATE</td>
 <td>Invalid state, operation disallowed in this state</td>
 </tr>
 <tr>
 <td>9</td>
-<td>ERROR_CODE_INVALID_LENGTH</td>
 <td>Invalid Length</td>
 </tr>
 <tr>
 <td>10</td>
-<td>ERROR_CODE_INVALID_FLAGS</td>
 <td>Invalid Flags</td>
 </tr>
 <tr>
 <td>11</td>
-<td>ERROR_CODE_INVALID_DATA</td>
 <td>Invalid Data</td>
 </tr>
 <tr>
 <td>12</td>
-<td>ERROR_CODE_DATA_SIZE</td>
 <td>Invalid Data size</td>
 </tr>
 <tr>
 <td>13</td>
-<td>ERROR_CODE_TIMEOUT</td>
 <td>Operation timed out</td>
 </tr>
 <tr>
 <td>14</td>
-<td>ERROR_CODE_NULL</td>
 <td>Null Pointer</td>
 </tr>
 <tr>
 <td>15</td>
-<td>ERROR_CODE_FORBIDDEN</td>
 <td>Forbidden Operation</td>
 </tr>
 <tr>
 <td>16</td>
-<td>ERROR_CODE_INVALID_ADDR</td>
 <td>Bad Memory Address</td>
 </tr>
 <tr>
 <td>17</td>
-<td>ERROR_CODE_BUSY</td>
 <td>Busy</td>
 </tr>
 <tr>
 <td>18</td>
-<td>ERROR_CODE_CONN_COUNT</td>
-<td>Maximum connection count exceeded.</td>
+<td>Maximum connection count exceeded</td>
 </tr>
 <tr>
 <td>19</td>
-<td>ERROR_CODE_RESOURCES</td>
 <td>Not enough resources for operation</td>
 </tr>
 <tr>
 <td>20</td>
-<td>ERROR_CODE_BT_OTA</td>
 <td>Bt Bluetooth upgrade error</td>
 </tr>
 <tr>
 <td>21</td>
-<td>ERROR_CODE_NO_SPACE</td>
 <td>Not enough space for operation</td>
 </tr>
 <tr>
 <td>22</td>
-<td>ERROR_CODE_LOW_BATTERY</td>
 <td>Low Battery</td>
 </tr>
 <tr>
 <td>23</td>
-<td>ERROR_CODE_INVALID_FILE_NAME</td>
 <td>Invalid File Name/Format</td>
 </tr>
 <tr>
 <td>24</td>
-<td>ERROR_SPACE_ORGANIZATION</td>
 <td>Watch space needs to be organized</td>
 </tr>
 <tr>
 <td>25</td>
-<td>ERROR_SPACE_ORGANIZATION_ING</td>
 <td>Watch space is being organized</td>
+</tr>
+<tr>
+<td>26</td>
+<td>In power saving mode</td>
+</tr>
+<tr>
+<td>27</td>
+<td>In exercise</td>
+</tr>
+<tr>
+<td>28</td>
+<td>In call</td>
+</tr>
+<tr>
+<td>29</td>
+<td>In charging</td>
+</tr>
+<tr>
+<td>30</td>
+<td>Device full</td>
+</tr>
+<tr>
+<td>31</td>
+<td>Start continuous file transfer operation</td>
+</tr>
+<tr>
+<td>-1</td>
+<td>Cancel</td>
+</tr>
+<tr>
+<td>-2</td>
+<td>Fail</td>
+</tr>
+<tr>
+<td>-3</td>
+<td>Command already in queue (triggered when the same command with same parameters is queued more than 3 times)</td>
+</tr>
+<tr>
+<td>-4</td>
+<td>Performing fast configuration, command ignored</td>
+</tr>
+<tr>
+<td>-5</td>
+<td>Device in OTA mode</td>
+</tr>
+<tr>
+<td>-6</td>
+<td>Device not connected</td>
+</tr>
+<tr>
+<td>-7</td>
+<td>Executing command was interrupted</td>
 </tr>
 </tbody>
 </table>
 <footer class="page-footer"><span class="copyright">Copyright &#xA9; 2023-2024 IDO. All rights reserved. all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">Modify Date:
-2025-05-27 09:45:56
+2026-01-20 14:55:56
 </span></footer>
 <script>console.log("plugin-popup....");document.onclick = function(e){ e.target.tagName === "IMG" && window.open(e.target.src,e.target.src)}</script><style>img{cursor:pointer}</style>
                                 
@@ -4488,7 +4530,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Firmware Standardization General Error Codes","level":"1.5","depth":1,"previous":{"title":"V3 Set、query emotional health reminders","level":"1.4.5.43","depth":3,"path":"doc/BaseProtocolEvtExecDoc/IDOV3Evt/IDOV3SetGetEmotionHealthReminder.md","ref":"doc/BaseProtocolEvtExecDoc/IDOV3Evt/IDOV3SetGetEmotionHealthReminder.md","articles":[]},"dir":"ltr"},"config":{"plugins":["chapter-fold","back-to-top-button","code","github","tbfed-pagefooter","copy-code-button","pageview-count","-lunr","-search","search-pro","language-picker","popup","sidebar-style","splitter"],"root":".","styles":{"pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css","website":"styles/website.css"},"pluginsConfig":{"sidebar-style":{"author":"idoosmart.com","title":"IDO API DOCUMENT"},"tbfed-pagefooter":{"copyright":"Copyright © 2023-2024 IDO. All rights reserved.","modify_label":"Modify Date:","modify_format":"YYYY-MM-DD HH:mm:ss"},"language-picker":{"grid-columns":3},"github":{"url":"https://github.com/idoosmart/"},"livereload":{},"splitter":{},"search-pro":{},"popup":{},"code":{"copyButtons":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"back-to-top-button":{},"pageview-count":{},"expandable-chapters-small":{},"copy-code-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css","website":"styles/website.css"},"showLevel":false}},"theme":"default","author":"luoft","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"IDO FLUTTER API DOCUMENT","language":"zh-hans","gitbook":"*","description":"IDO FLUTTER API DOCUMENT"},"file":{"path":"doc/IDOAppendix/IDODeviceErrorCode.md","mtime":"2025-05-27T01:45:56.659Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2025-06-09T01:30:00.514Z"},"basePath":"../..","book":{"language":"en"}});
+            gitbook.page.hasChanged({"page":{"title":"Firmware Standardization General Error Codes","level":"1.5","depth":1,"previous":{"title":"V3 Set、query emotional health reminders","level":"1.4.5.43","depth":3,"path":"doc/BaseProtocolEvtExecDoc/IDOV3Evt/IDOV3SetGetEmotionHealthReminder.md","ref":"doc/BaseProtocolEvtExecDoc/IDOV3Evt/IDOV3SetGetEmotionHealthReminder.md","articles":[]},"dir":"ltr"},"config":{"plugins":["chapter-fold","back-to-top-button","code","github","tbfed-pagefooter","copy-code-button","pageview-count","-lunr","-search","search-pro","language-picker","popup","sidebar-style","splitter"],"root":".","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"sidebar-style":{"author":"idoosmart.com","title":"IDO API DOCUMENT"},"tbfed-pagefooter":{"copyright":"Copyright © 2023-2024 IDO. All rights reserved.","modify_label":"Modify Date:","modify_format":"YYYY-MM-DD HH:mm:ss"},"language-picker":{"grid-columns":3},"github":{"url":"https://github.com/idoosmart/"},"splitter":{},"search-pro":{},"popup":{},"code":{"copyButtons":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"back-to-top-button":{},"pageview-count":{},"expandable-chapters-small":{},"copy-code-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"luoft","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"IDO FLUTTER API DOCUMENT","language":"zh-hans","gitbook":"*","description":"IDO FLUTTER API DOCUMENT"},"file":{"path":"doc/IDOAppendix/IDODeviceErrorCode.md","mtime":"2026-01-20T06:55:56.162Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2026-01-31T08:26:24.464Z"},"basePath":"../..","book":{"language":"en"}});
         });
     </script>
 </div>
@@ -4539,10 +4581,6 @@
     
         
         <script src="../../../gitbook/gitbook-plugin-splitter/splitter.js"></script>
-        
-    
-        
-        <script src="../../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
         
     
         
