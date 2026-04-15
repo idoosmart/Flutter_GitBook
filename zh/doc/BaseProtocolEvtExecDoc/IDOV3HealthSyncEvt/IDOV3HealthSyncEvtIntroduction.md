@@ -19,6 +19,4 @@
 | 7012   | [同步呼吸率数据](./IDOV3HealthSyncRespirRate.md)     |
 | 7013   | [同步身体电量数据](./IDOV3HealthSyncBodyPower.md)    |
 | 7014   | [同步HRV数据](./IDOV3HealthSyncHRV.md)               |
-| 7018   | [同步情绪健康](./IDOV3HealthSyncEmotionHealth.md)               |
-| 7019   | [同步多运动(游泳/跑步课程/跑步计划/跑后拉伸)](./IDOV3HealthSyncActiviyMerge.md)            |
 
