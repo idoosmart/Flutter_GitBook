@@ -102,6 +102,7 @@
 | act_items | int [] | 动作详情<br />`setSupportSportPlan`功能表未开启的时候返回0 |
 | item_real_speed_temp | int [] | 实时速度详情<br />`setSupportSportPlan`功能表开启时返回0<br />`syncRealTimeV3`功能表未开启的时候返回0 |
 | altitude_item | int [] | 海拔高度数据 单位米 范围-500~9000<br />`getSupportSyncActivityDataAltitudeInfo`&`setSupportSportPlan` & `version`=0x30时有效 |
+| time_zone | int | 时区扩大 100 倍返回，如时区 8 对应 800，5.5 对应 550<br />仅当 `supportSyncHealthDataWithTimeZone` 功能表开启时有效 |
 | items | 集合 | 洪堡定制字段数据详情，`steps` & `calories` & `distance`的集合 |
 | items_km_speed | 集合 | 公里配速数据详情，`second`的集合 |
 

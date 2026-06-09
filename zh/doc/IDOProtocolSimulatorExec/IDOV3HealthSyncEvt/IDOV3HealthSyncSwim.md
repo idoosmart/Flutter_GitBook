@@ -24,6 +24,7 @@
 | pool_distance        | int      | 泳池距离<br />单位:米                                        |
 | avg_speed            | int      | 平均配速<br />秒/百米 一百米用了多少秒 <br />单位:秒<br />version=1有效,否则字段是0 |
 | avg_frequency        | Int      | 平均划水频率<br />单位:次/分<br />version=1有效,否则字段是0  |
+| time_zone         | int      | 时区扩大 100 倍返回，如时区 8 对应 800，5.5 对应 550<br />仅当 `supportSyncHealthDataWithTimeZone` 功能表开启时有效 |
 | items                | 集合     | 游泳数据详情，`swolf` & `strokesNumber` & `duration` & `swimmingPosture` & `distance` & `frequency `& `speed` & `stop_time` & `difference_time`的集合 |
 
 | 字段名           | 字段类型 | 字段说明                                                     |

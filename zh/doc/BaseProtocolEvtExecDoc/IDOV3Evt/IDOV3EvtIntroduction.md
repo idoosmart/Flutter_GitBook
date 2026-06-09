@@ -52,4 +52,7 @@
 | 5080     | [V3智能陪跑信息配置](./IDOV3SetSmartCompetitorConfigInfo.md) |
 | 5085     | [V3设备通知APP运动过程切换](./IDOV3CutoverSportFromDevice.md) |
 | 5800     | [V3APP获取表盘颜色样式修改](./IDOV3NoticeDialChange.md)      |
+| 360      | [V3查询需设置左右手佩戴类型的运动类型列表](./IDOV3GetSportTypesRequiringWristSideSetting.md) |
+| 358      | [V3设备振动与铃声查询/设置](./IDOV3GetDeviceVibrationRingtone.md) |
+| 5114     | [V3多运动运动中全量快照](./IDOV3GetActivityExchangeFullSnapshot.md) |
 

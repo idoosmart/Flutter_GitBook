@@ -11,6 +11,7 @@
 | start_time        | int      | 开始时间,单位秒,距离0点的偏移                                |
 | data_type         | int      | ~~0为无效,1为一个值,2为最大和最小值~~ (预留字段)             |
 | silent_hr         | int      | 静息心率                                                     |
+| time_zone         | int      | 时区扩大 100 倍返回，如时区 8 对应 800，5.5 对应 550<br />仅当 `supportSyncHealthDataWithTimeZone` 功能表开启时有效 |
 | five_min_max_data | int      | 五分钟心率最大值                                             |
 | five_min_min_data | int      | 五分钟心率最小值                                             |
 | five_min_avg_data | int      | 五分钟心率平均值                                             |

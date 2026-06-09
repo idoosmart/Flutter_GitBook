@@ -16,6 +16,7 @@
 | total_distances              | int      | 总距离  英里数据 = 固件距离（米）乘以0.00062                 |
 | total_active_time            | int      | 当天的活动时间 单位分钟                                      |
 | total_activity_calories      | int      | 总活动卡路里                                                 |
+| time_zone         | int      | 时区扩大 100 倍返回，如时区 8 对应 800，5.5 对应 550<br />仅当 `supportSyncHealthDataWithTimeZone` 功能表开启时有效 |
 | walk_goal_time | int | 固件实际走动时长 需要配置  单位小时 |
 | item_count                   | int      | 运动数据详情个数                                             |
 | wear_flag_array | int [] | 24小时的每个小时的佩戴分钟数，最大24个字节<br />`v3SupportSyncOverHighLowHeartData`功能表未开启的时候返回0 |

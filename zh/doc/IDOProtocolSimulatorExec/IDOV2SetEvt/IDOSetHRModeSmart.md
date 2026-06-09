@@ -31,6 +31,7 @@ libManager.send(evt: CmdEvtType.setHeartRateModeSmart, json: jsonEncode(json));
 | start_minute     | int      | 开始时间 分                                                  |
 | end_hour         | int      | 结束时间 时                                                  |
 | end_minute       | int      | 结束时间 分                                                  |
+| measurement_interval | int | 测量间隔，单位：秒<br />可选，省略时为 0（0 表示不支持） |
 
 `示例：`
 
@@ -45,7 +46,8 @@ libManager.send(evt: CmdEvtType.setHeartRateModeSmart, json: jsonEncode(json));
   "start_hour":9,
   "start_minute":0,
   "end_hour":12,
-  "end_minute":0
+  "end_minute":0,
+  "measurement_interval":300
 }
 ```
 
