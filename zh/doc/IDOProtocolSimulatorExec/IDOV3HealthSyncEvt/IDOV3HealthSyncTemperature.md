@@ -15,6 +15,7 @@
 | avg_temperature   | int      | 平均的温度 保留一位小数 扩大十倍传输         |
 | max_temperature   | int      | 最大的温度 保留一位小数 扩大十倍传输         |
 | min_temperature   | int      | 最少的温度 保留一位小数 扩大十倍传输         |
+| time_offset_unit  | int      | offset单位<br />0x00: 秒，0x01: 分钟         |
 | temperature_count | int      | 体温详情个数                                 |
 | items             | 集合     | 体温详情，`offset`&`value`的集合             |
 
@@ -38,6 +39,7 @@
     "month" : 0,
     "start_time" : 0,
     "temperature_count" : 0,
+    "time_offset_unit" : 0,
     "year" : 0
 }
 ```

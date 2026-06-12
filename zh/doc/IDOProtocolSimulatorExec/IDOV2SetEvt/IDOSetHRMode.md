@@ -27,7 +27,7 @@ libManager.send(evt: CmdEvtType.setHeartRateMode, json: jsonEncode(json));
 | start_minute         | int      | 开始时间分（0~59）                                           |
 | end_hour             | int      | 结束时间时                                                   |
 | end_minute           | int      | 结束时间分                                                   |
-| measurement_interval | int      | 测量间隔<br />单位分钟                                       |
+| measurement_interval | int      | 测量间隔<br />单位分钟 <br>可选择10min/20min/30min（默认30min）自动心率测量                                      |
 
 `示例：`
 

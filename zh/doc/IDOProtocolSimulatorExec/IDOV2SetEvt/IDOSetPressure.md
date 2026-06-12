@@ -32,7 +32,7 @@ libManager.send(evt: CmdEvtType.setStressSwitch, json: jsonEncode(json));
 | high_threshold   | int      | 压力过高阈值                                                 |
 | stress_threshold | int      | 压力校准阈值，默认是80 <br />需要固件开启功能表支持 v2_send_calibration_threshold |
 | notify_flag      | int      | 通知类型 <br />0：无效 <br />1：允许通知<br />2：静默通知<br />3：关闭通知 <br />需要固件开启功能表支持 V3_pressure_add_notify_flag_and_mode |
-| measurement_interval | int | 测量间隔，单位：分钟<br />可选，省略时为 0 |
+| measurement_interval | int | 测量间隔，单位：分钟<br />可选，省略时为 0 <br />可选择间隔10min/20min/30min（默认30min） |
 
 `示例：`
 
