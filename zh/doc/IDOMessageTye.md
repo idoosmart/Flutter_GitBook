@@ -94,3 +94,38 @@
 | 0x5E            | 饿了么(ele.me)         | -                         |
 | 0x5f            | 抖音(国内版)           | -                         |
 | 0x60            | 新浪微博(国内版)       | -                         |
+| 0x61            | Titan Smart World      | -                         |
+| 0x62            | Ryze Connect           | -                         |
+| 0x63            | LOOPS FIT              | -                         |
+| 0x64            | TAS Smart              | -                         |
+| 0x65            | Facebook Messenger     | -                         |
+| 0x66            | Nubank                 | -                         |
+| 0x67            | Bradesco               | -                         |
+| 0x68            | Itaú                   | -                         |
+| 0x69            | Banco do brasil        | -                         |
+| 0x6A            | Correios               | -                         |
+| 0x6B            | Banco inter            | -                         |
+| 0x6C            | Caixa economica        | -                         |
+| 0x6D            | Neon                   | -                         |
+| 0x6E            | Santander              | -                         |
+| 0x6F            | Next                   | -                         |
+| 0x70            | Shein                  | -                         |
+| 0x71            | Google task            | -                         |
+| 0x72            | Microsoft to do        | -                         |
+| 0x73            | TickTick               | -                         |
+| 0x74            | Todoist                | -                         |
+| 0x75            | Prime vídeo            | -                         |
+| 0x76            | Mormaii Smartwatches   | -                         |
+| 0x77            | Signal                 | -                         |
+| 0x78            | 小红书(rednote)        | -                         |
+| 0x79            | Ryze Fit               | -                         |
+| 0x7A            | Ryze Go                | -                         |
+| 0x7B            | Google Messages        | reminderGoogleMessages    |
+| 0x7C            | Apple Calendar         | reminderAppleCalendar     |
+| 0x7D            | Apple Mail             | reminderAppleMail         |
+| 0x7E            | Google Calendar        | reminderGoogleCalendar    |
+| 0x7F            | Health &U              | reminderHealthU           |
+| 0x80            | Zalo                   | reminderZalo              |
+| 0x81            | 滴滴打车(DiDi Taxi)    | reminderDidiTaxi          |
+| 0x82            | Zoom Workplace         | reminderZoomWorkplace     |
+| 0x83            | BUZUD                  | reminderBuzud             |

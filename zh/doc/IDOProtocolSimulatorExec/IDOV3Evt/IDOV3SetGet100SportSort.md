@@ -3,6 +3,8 @@
 
 功能表:getSportsTypeV3
 
+> 当功能表 `supportAppNotDisplaySportTypeSetting` 为 true 时，APP 应隐藏运动类型设置入口（与 15.28 100 种运动排序关联）。
+
 **Flutter示例：**
 
 ```dart

@@ -37,6 +37,10 @@ libManager.send(evt: CmdEvtType.setNotificationCenter, json: jsonEncode(json));
 | msg_all_switch | int      | 消息应用总开关 <br />1：开<br />0：关                        |
 | notify_item11  | int      | 子应用开关11 每个bit代表一个应用                             |
 | notify_item12  | int      | 子应用开关12 每个bit代表一个应用                             |
+| notify_item13  | int      | 子应用开关13 每个bit代表一个应用                             |
+| notify_item14  | int      | 子应用开关14 每个bit代表一个应用                             |
+| notify_item15  | int      | 子应用开关15 每个bit代表一个应用                             |
+| notify_item16  | int      | 子应用开关16 每个bit代表一个应用                             |
 
 `示例：`
 
@@ -57,7 +61,11 @@ libManager.send(evt: CmdEvtType.setNotificationCenter, json: jsonEncode(json));
   "notify_item10" : 0,
   "notify_switch" : 1,
   "notify_item11" : 0,
-  "notify_item12" : 0
+  "notify_item12" : 0,
+  "notify_item13" : 0,
+  "notify_item14" : 0,
+  "notify_item15" : 0,
+  "notify_item16" : 0
 }
 ```
 

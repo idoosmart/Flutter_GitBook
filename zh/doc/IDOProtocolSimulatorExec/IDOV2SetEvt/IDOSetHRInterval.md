@@ -23,11 +23,11 @@ libManager.send(evt: CmdEvtType.setHeartRateInterval, json: jsonEncode(json));
 | aerobic_threshold   | int      | 心肺训练心率区间 <br />计算规则:最大心率的70%-84%<br />单位:次/分钟 |
 | limit_threshold     | int      | 峰值训练心率区间 <br />计算规则:最大心率的85%-100%<br />单位:次/分钟 |
 | user_max_hr         | int      | 心率上限,最大心率提醒<br />单位:次/分钟 |
-| range1              | int      | 热身运动心率区间<br />计算规则：(200-年龄) * 50<br />单位:次/分钟 |
-| range2              | int      | 脂肪燃烧心率区间<br />计算规则：(200-年龄) * 60<br />单位:次/分钟 |
-| range3              | int      | 有氧运动心率区间<br />计算规则：(200-年龄) * 70<br />单位:次/分钟 |
-| range4              | int      | 无氧运动心率区间<br />计算规则：(200-年龄) * 80<br />单位:次/分钟 |
-| range5              | int      | 极限锻炼心率区间<br />计算规则：(200-年龄) * 90<br />单位:次/分钟 |
+| range1              | int      | 热身运动心率区间<br />计算规则：(220-年龄) * 50<br />单位:次/分钟 |
+| range2              | int      | 脂肪燃烧心率区间<br />计算规则：(220-年龄) * 60<br />单位:次/分钟 |
+| range3              | int      | 有氧运动心率区间<br />计算规则：(220-年龄) * 70<br />单位:次/分钟 |
+| range4              | int      | 无氧运动心率区间<br />计算规则：(220-年龄) * 80<br />单位:次/分钟 |
+| range5              | int      | 极限锻炼心率区间<br />计算规则：(220-年龄) * 90<br />单位:次/分钟 |
 | min_hr              | int      | 心率最小值<br />单位:次/分钟            |
 | max_hr_remind       | int      | 最大心率提醒<br />0 关闭,1 开启 |
 | min_hr_remind       | int      | 最小心率提醒<br />0 关闭,1 开启 |
