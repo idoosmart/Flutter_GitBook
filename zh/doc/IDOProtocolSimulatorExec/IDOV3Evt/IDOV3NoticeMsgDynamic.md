@@ -23,7 +23,7 @@ libManager.send(evt: CmdEvtType.setNoticeAppName, json: jsonEncode(json));
 | verison       | int      | 协议库版本号                                                 |
 | os_platform   | int      | 系统<br />0 ：无效 ，1：安卓 ，2：ios                        |
 | evt_type      | int      | 当前处于那种模式  <br />0：无效， 1：消息提醒                |
-| notify_type   | int      | 消息的枚举类型 <br />上限值：20000                           |
+| notify_type   | int      | 消息的枚举类型，详见 [IDO消息应用类型说明](../../IDOMessageTye.md) <br />上限值：20000 |
 | msg_ID        | int      | 消息的ID   <br />evt_type是消息提醒，起作用 mesg_ID 如果是0这个字段不起作用 |
 | app_items_len | int      | 国家及语言详情的个数                                         |
 | contact       | char []  | 联系人名称 最大63个字节                                      |

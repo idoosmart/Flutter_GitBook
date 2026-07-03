@@ -22,7 +22,7 @@ libManager.send(evt: CmdEvtType.noticeMessageV3, json: jsonEncode(json));
 | 字段名            | 字段类型 | 字段说明                                                     |
 | ----------------- | -------- | ------------------------------------------------------------ |
 | verison           | int      | 协议库版本号默认version=1<br />version=2是增加msg_id的发送格式 |
-| evt_type          | int      | 消息应用类型                                                 |
+| evt_type          | int      | 消息应用类型，详见 [IDO消息应用类型说明](../../IDOMessageTye.md) |
 | msg_id            | int      | 消息的ID   <br />evt_type是消息提醒，起作用 mesg_ID 如果是0这个字段不起作 |
 | support_answering | bool     | 支持接听 1 <br />不支持接听 0                                |
 | support_mute      | bool     | 支持静音 1<br />不支持静音 0                                 |
