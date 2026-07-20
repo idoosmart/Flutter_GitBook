@@ -19,3 +19,4 @@
 | 7012       | [Sync Respiratory Rate](./IDOV3HealthSyncRespirRate.md)  |
 | 7013       | [Sync Body Power Data](./IDOV3HealthSyncBodyPower.md)    |
 | 7014       | [Sync HRV Data](./IDOV3HealthSyncHRV.md)                 |
+| 7019       | [Sync Multi-Activity Merge](./IDOV3HealthSyncActivityMerge.md) |
