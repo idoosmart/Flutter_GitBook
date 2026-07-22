@@ -43,6 +43,38 @@
 
 ```c
 {
-
+  "average_swolf": 0,
+  "avg_frequency": 0,
+  "avg_speed": 0,
+  "calories": 0,
+  "confirm_distance": 0,
+  "day": 12,
+  "distance": 0,
+  "duration": 83,
+  "hour": 9,
+  "items": [
+    {
+      "swolf": 32,
+      "swimming_posture": 1,
+      "strokes_number": 111,
+      "duration": 100,
+      "distance": 35,
+      "frequency": 1,
+      "speed": 5,
+      "stop_time": 5,
+      "difference_time": 2
+    }
+  ],
+  "minute": 18,
+  "month": 1,
+  "pool_distance": 25,
+  "pool_distance_decimal": 0,
+  "second": 15,
+  "swimming_posture": 0,
+  "total_strokes_number": 0,
+  "trips": 0,
+  "type": 1,
+  "version": 1,
+  "year": 2026
 }
 ```

@@ -18,6 +18,9 @@
 | 562          | [Device Control: Answer Call](./IDODeviceControlPhoneAnswer.md) |
 | 563          | [Device Control: Reject Call](./IDODeviceControlPhoneReject.md) |
 | 565          | [Device Control: Set Music Volume Percentage](./IDODeviceControlVolumePercentage.md) |
+| 567          | [Device control opens the APP camera and enters the photo preview function](./IDODeviceControlCameraPreviewStart.md) |
+| 568          | [Device control pauses the photo preview and stops transmitting the photo stream](./IDODeviceControlCameraPreviewPause.md) |
+| 569          | [Device control closes the APP camera and exits the photo preview function](./IDODeviceControlCameraPreviewStop.md) |
 | 570          | [Device Control: Start Find Phone](./IDODeviceControlFindPhoneStart.md) |
 | 571          | [Device Control: Stop Find Phone](./IDODeviceControlFindPhoneStop.md) |
 | 572          | [Device Notification: Anti-lost Start](./IDODeviceControlAntiLostStart.md) |

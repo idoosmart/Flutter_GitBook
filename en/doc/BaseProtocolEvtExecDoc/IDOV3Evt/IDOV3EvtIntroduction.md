@@ -51,3 +51,4 @@
 | 5080         | [V3 Smart Competitor Information Configuration](./IDOV3SetSmartCompetitorConfigInfo.md) |
 | 5085         | [V3 Device Notify APP Sport Process Switch](./IDOV3CutoverSportFromDevice.md) |
 | 5800         | [V3 APP Get Dial Color Style Modification](./IDOV3NoticeDialChange.md) |
+| 5100         | [V3 Set and Query Emotional Health Reminder](./IDOV3SetGetEmotionHealthReminder.md) |

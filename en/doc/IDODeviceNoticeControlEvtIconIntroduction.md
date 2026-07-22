@@ -216,6 +216,9 @@ final int? controlEvt;
 | Control app answer phone call             | 562          |
 | Control app reject phone call             | 563          |
 | Control app music volume (percentage)     | 565          |
+| Device control opens the APP camera and enters the photo preview function | 567 |
+| Device control pauses the photo preview and stops transmitting the photo stream | 568 |
+| Device control closes the APP camera and exits the photo preview function | 569 |
 | Control app start find my phone           | 570          |
 | Control app stop find my phone            | 572          |
 | Notify app of anti-lost activation        | 574          |
