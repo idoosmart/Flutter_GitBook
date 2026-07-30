@@ -1771,9 +1771,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3.29.1.2" data-path="../IDODeviceControlEvt/IDODeviceControlOnekeySoSStart.html">
+        <li class="chapter " data-level="1.3.29.1.2" data-path="../IDODeviceControlEvt/IDODeviceControlOnekeySOSStart.html">
             
-                <a href="../IDODeviceControlEvt/IDODeviceControlOnekeySoSStart.html">
+                <a href="../IDODeviceControlEvt/IDODeviceControlOnekeySOSStart.html">
             
                     
                     Device notify app one key SOS start
@@ -4805,16 +4805,177 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h3 id="query-device-vibration-and-ringtone-v3-15106">Query device vibration and ringtone (V3 15.106)</h3>
-<p>Function table: <code>supportDeviceVibrationRingtone</code></p>
-<pre><code class="lang-dart">libManager.send(
+                                <h3 id="query-device-vibration-and-ringtone">Query device vibration and ringtone</h3>
+<p>Function table: <code>supportDeviceVibrationRingtone</code> (sub-items: <code>supportVibrationSetting</code>, <code>supportAlarmVolumeSetting</code>, <code>supportCallReminderVolumeSetting</code>)</p>
+<p><strong>Flutter example:</strong></p>
+<pre><code class="lang-dart"><span class="hljs-comment"><span class="markdown">/// Query device vibration and ringtone (operate=1)</span></span>
+libManager.send(
   evt: CmdEvtType.deviceVibrationRingtone,
   json: jsonEncode({<span class="hljs-string">&apos;operate&apos;</span>: <span class="hljs-number">1</span>}),
 );
+<span class="hljs-comment">// Vibration only: {&apos;operate&apos;: 1, &apos;type&apos;: 1}</span>
 </code></pre>
-<p>Event ID: <code>358</code> (shared with set). See <code>IDOV3SetDeviceVibrationRingtone.md</code> for operate=2.</p>
+<p><strong>Request JSON fields:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>operate</td>
+<td>int</td>
+<td><code>1</code> query</td>
+</tr>
+<tr>
+<td>type</td>
+<td>int</td>
+<td>Optional. Sub-item bitmask (see <strong>type bitmask</strong> below). If omitted, all supported sub-items are queried by function table</td>
+</tr>
+</tbody>
+</table>
+<p><strong>type bitmask (sub-item selection):</strong></p>
+<p><code>type</code> selects sub-items from low bit to high bit; bits may be OR-combined. Valid bits are bit0~bit2; legal values are <code>1</code>~<code>7</code>:</p>
+<table>
+<thead>
+<tr>
+<th>Bit</th>
+<th style="text-align:right">Value</th>
+<th>Meaning</th>
+<th>Function table</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>bit0</td>
+<td style="text-align:right"><code>1</code> (<code>0x01</code>)</td>
+<td>Vibration intensity</td>
+<td><code>supportVibrationSetting</code></td>
+</tr>
+<tr>
+<td>bit1</td>
+<td style="text-align:right"><code>2</code> (<code>0x02</code>)</td>
+<td>Alarm volume</td>
+<td><code>supportAlarmVolumeSetting</code></td>
+</tr>
+<tr>
+<td>bit2</td>
+<td style="text-align:right"><code>4</code> (<code>0x04</code>)</td>
+<td>Call reminder volume</td>
+<td><code>supportCallReminderVolumeSetting</code></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th style="text-align:right">type</th>
+<th>Sub-items</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right"><code>1</code></td>
+<td>Vibration intensity</td>
+</tr>
+<tr>
+<td style="text-align:right"><code>2</code></td>
+<td>Alarm volume</td>
+</tr>
+<tr>
+<td style="text-align:right"><code>3</code> (`1\</td>
+<td>2`)</td>
+<td>Vibration + alarm</td>
+</tr>
+<tr>
+<td style="text-align:right"><code>4</code></td>
+<td>Call reminder volume</td>
+</tr>
+<tr>
+<td style="text-align:right"><code>5</code> (`1\</td>
+<td>4`)</td>
+<td>Vibration + call reminder</td>
+</tr>
+<tr>
+<td style="text-align:right"><code>6</code> (`2\</td>
+<td>4`)</td>
+<td>Alarm + call reminder</td>
+</tr>
+<tr>
+<td style="text-align:right"><code>7</code> (`1\</td>
+<td>2\</td>
+<td>4`)</td>
+<td>All three</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Response JSON fields (excerpt):</strong></p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>operate</td>
+<td>int</td>
+<td>Echo <code>1</code></td>
+</tr>
+<tr>
+<td>err_code</td>
+<td>int</td>
+<td><code>0</code> success</td>
+</tr>
+<tr>
+<td>type</td>
+<td>int</td>
+<td>Actual returned sub-item bitmask (same meaning as above); use it to decide which fields below are valid</td>
+</tr>
+<tr>
+<td>vibration_intensity</td>
+<td>int</td>
+<td>Present when type bit0 is set: current vibration intensity</td>
+</tr>
+<tr>
+<td>supported_vibration_intensity</td>
+<td>array[int]</td>
+<td>Present when type bit0 is set: supported levels (<code>0</code> off / <code>1</code> weak / <code>2</code> medium / <code>3</code> strong)</td>
+</tr>
+<tr>
+<td>alarm_volume</td>
+<td>int</td>
+<td>Present when type bit1 is set: alarm volume</td>
+</tr>
+<tr>
+<td>call_reminder_volume</td>
+<td>int</td>
+<td>Present when type bit2 is set: call reminder volume</td>
+</tr>
+</tbody>
+</table>
+<p><code>Example:</code></p>
+<pre><code class="lang-json">{
+  <span class="hljs-string">&quot;operate&quot;</span>: <span class="hljs-number">1</span>,
+  <span class="hljs-string">&quot;err_code&quot;</span>: <span class="hljs-number">0</span>,
+  <span class="hljs-string">&quot;type&quot;</span>: <span class="hljs-number">3</span>,
+  <span class="hljs-string">&quot;vibration_intensity&quot;</span>: <span class="hljs-number">2</span>,
+  <span class="hljs-string">&quot;supported_vibration_intensity&quot;</span>: [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>],
+  <span class="hljs-string">&quot;alarm_volume&quot;</span>: <span class="hljs-number">5</span>
+}
+</code></pre>
+<p><strong>Notes:</strong></p>
+<ul>
+<li>Query and set share <code>CmdEvtType.deviceVibrationRingtone</code>. For set, see <a href="IDOV3SetDeviceVibrationRingtone.html">IDOV3SetDeviceVibrationRingtone</a>.</li>
+<li>Check <code>supportDeviceVibrationRingtone</code> before calling; also check the corresponding sub-item function table before querying that sub-item.</li>
+</ul>
 <footer class="page-footer"><span class="copyright">Copyright &#xA9; 2023-2024 IDO. All rights reserved. all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">Modify Date:
-2026-07-22 17:31:57
+2026-07-30 10:15:37
 </span></footer>
 <script>console.log("plugin-popup....");document.onclick = function(e){ e.target.tagName === "IMG" && window.open(e.target.src,e.target.src)}</script><style>img{cursor:pointer}</style>
                                 
@@ -4859,7 +5020,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"V3 Query Device Vibration and Ringtone","level":"1.4.5.49","depth":3,"next":{"title":"V3 Set Device Vibration and Ringtone","level":"1.4.5.50","depth":3,"path":"doc/BaseProtocolEvtExecDoc/IDOV3Evt/IDOV3SetDeviceVibrationRingtone.md","ref":"doc/BaseProtocolEvtExecDoc/IDOV3Evt/IDOV3SetDeviceVibrationRingtone.md","articles":[]},"previous":{"title":"V3 Get Sport Types Requiring Wrist-Side Setting","level":"1.4.5.48","depth":3,"path":"doc/BaseProtocolEvtExecDoc/IDOV3Evt/IDOV3GetSportTypesRequiringWristSideSetting.md","ref":"doc/BaseProtocolEvtExecDoc/IDOV3Evt/IDOV3GetSportTypesRequiringWristSideSetting.md","articles":[]},"dir":"ltr"},"config":{"plugins":["chapter-fold","back-to-top-button","code","github","tbfed-pagefooter","copy-code-button","pageview-count","-lunr","-search","search-pro","language-picker","popup","sidebar-style","splitter"],"root":".","styles":{"pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css","website":"styles/website.css"},"pluginsConfig":{"sidebar-style":{"author":"idoosmart.com","title":"IDO API DOCUMENT"},"tbfed-pagefooter":{"copyright":"Copyright © 2023-2024 IDO. All rights reserved.","modify_label":"Modify Date:","modify_format":"YYYY-MM-DD HH:mm:ss"},"language-picker":{"grid-columns":3},"github":{"url":"https://github.com/idoosmart/"},"livereload":{},"splitter":{},"search-pro":{},"popup":{},"code":{"copyButtons":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"back-to-top-button":{},"pageview-count":{},"expandable-chapters-small":{},"copy-code-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css","website":"styles/website.css"},"showLevel":false}},"theme":"default","author":"luoft","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"IDO FLUTTER API DOCUMENT","language":"zh-hans","gitbook":"*","description":"IDO FLUTTER API DOCUMENT"},"file":{"path":"doc/BaseProtocolEvtExecDoc/IDOV3Evt/IDOV3GetDeviceVibrationRingtone.md","mtime":"2026-07-22T09:31:57.441Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2026-07-27T06:30:09.801Z"},"basePath":"../../..","book":{"language":"en"}});
+            gitbook.page.hasChanged({"page":{"title":"V3 Query Device Vibration and Ringtone","level":"1.4.5.49","depth":3,"next":{"title":"V3 Set Device Vibration and Ringtone","level":"1.4.5.50","depth":3,"path":"doc/BaseProtocolEvtExecDoc/IDOV3Evt/IDOV3SetDeviceVibrationRingtone.md","ref":"doc/BaseProtocolEvtExecDoc/IDOV3Evt/IDOV3SetDeviceVibrationRingtone.md","articles":[]},"previous":{"title":"V3 Get Sport Types Requiring Wrist-Side Setting","level":"1.4.5.48","depth":3,"path":"doc/BaseProtocolEvtExecDoc/IDOV3Evt/IDOV3GetSportTypesRequiringWristSideSetting.md","ref":"doc/BaseProtocolEvtExecDoc/IDOV3Evt/IDOV3GetSportTypesRequiringWristSideSetting.md","articles":[]},"dir":"ltr"},"config":{"plugins":["chapter-fold","back-to-top-button","code","github","tbfed-pagefooter","copy-code-button","pageview-count","-lunr","-search","search-pro","language-picker","popup","sidebar-style","splitter"],"root":".","styles":{"pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css","website":"styles/website.css"},"pluginsConfig":{"sidebar-style":{"author":"idoosmart.com","title":"IDO API DOCUMENT"},"tbfed-pagefooter":{"copyright":"Copyright © 2023-2024 IDO. All rights reserved.","modify_label":"Modify Date:","modify_format":"YYYY-MM-DD HH:mm:ss"},"language-picker":{"grid-columns":3},"github":{"url":"https://github.com/idoosmart/"},"splitter":{},"search-pro":{},"popup":{},"code":{"copyButtons":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"back-to-top-button":{},"pageview-count":{},"expandable-chapters-small":{},"copy-code-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css","website":"styles/website.css"},"showLevel":false}},"theme":"default","author":"luoft","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"IDO FLUTTER API DOCUMENT","language":"zh-hans","gitbook":"*","description":"IDO FLUTTER API DOCUMENT"},"file":{"path":"doc/BaseProtocolEvtExecDoc/IDOV3Evt/IDOV3GetDeviceVibrationRingtone.md","mtime":"2026-07-30T10:15:37.171Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2026-07-30T10:15:38.877Z"},"basePath":"../../..","book":{"language":"en"}});
         });
     </script>
 </div>
@@ -4910,10 +5071,6 @@
     
         
         <script src="../../../../gitbook/gitbook-plugin-splitter/splitter.js"></script>
-        
-    
-        
-        <script src="../../../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
         
     
         
