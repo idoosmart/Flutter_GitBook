@@ -4805,75 +4805,233 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="set-gesture-control">Set Gesture Control</h1>
-<p>function table: supportOperateGestureControl</p>
-<h3 id="description">Description</h3>
-<p>Event ID: 5085</p>
-<p>Set gesture control related parameters, including the switch and sensitivity.</p>
-<h3 id="commands-to-be-executed">Commands to be executed</h3>
-<p><code>CmdEvtType.setGestureControl</code></p>
-<h3 id="flutter-example">Flutter Example</h3>
-<pre><code class="lang-dart"><span class="hljs-comment">// Sensitivity: 0-High, 1-Medium, 2-Low (refer to protocol_c for specific values)</span>
-<span class="hljs-keyword">final</span> sensitivity = <span class="hljs-number">1</span>;
-<span class="hljs-keyword">final</span> jsonStr = jsonEncode({
-  <span class="hljs-string">&quot;on_off&quot;</span>: <span class="hljs-number">1</span>, 
-  <span class="hljs-string">&quot;sensitivity&quot;</span>: sensitivity
-});
-IDOWaitEvt(CmdEvtType.setGestureControl).then((value) {
-  <span class="hljs-comment">// handle response</span>
-});
-IDOProtocolNative.instance.sendDataToBle(
-  jsonStr,
-  CmdEvtType.setGestureControl.index
-);
+                                <h3 id="v3-gesture-control">V3 Gesture Control</h3>
+<p>Function table: supportOperateGestureControl</p>
+<p><strong>Flutter Example:</strong></p>
+<pre><code class="lang-dart"><span class="hljs-comment"><span class="markdown">/// Gesture control event</span></span>
+setGestureControl(
+  evtBase: _VBusEvtBase.base_app_set,
+  evtType: _VBusEvtType.app_set_gesture_control),
+
+<span class="hljs-comment"><span class="markdown">/// Set gesture control</span></span>
+libManager.send(evt: CmdEvtType.setGestureControl, json: jsonEncode(json));
 </code></pre>
-<h3 id="json-structure-description-set-by-app">JSON Structure Description (Set by App)</h3>
+<p><strong>JSON fields sent by the App</strong>:</p>
 <table>
 <thead>
 <tr>
-<th style="text-align:left">Field Name</th>
+<th style="text-align:left">Field</th>
 <th style="text-align:left">Type</th>
-<th style="text-align:left">Unit</th>
-<th style="text-align:left">Range</th>
 <th style="text-align:left">Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align:left">on_off</td>
+<td style="text-align:left">operate</td>
 <td style="text-align:left">int</td>
-<td style="text-align:left">-</td>
-<td style="text-align:left">0/1</td>
-<td style="text-align:left">Gesture control switch, 0: Off, 1: On</td>
+<td style="text-align:left">Operation type:<br>0x01: Set <br>0x02: Get <br>0x03: Get supported configuration items</td>
 </tr>
 <tr>
-<td style="text-align:left">sensitivity</td>
+<td style="text-align:left">gesture_control_on_off</td>
 <td style="text-align:left">int</td>
-<td style="text-align:left">-</td>
-<td style="text-align:left">-</td>
-<td style="text-align:left">Gesture sensitivity (refer to C-struct definition)</td>
+<td style="text-align:left">Master switch: 1 on / 0 off; required only when operate is Set</td>
+</tr>
+<tr>
+<td style="text-align:left">gesture_function_item_count</td>
+<td style="text-align:left">int</td>
+<td style="text-align:left">Number of gesture function items; valid only when operate is Set</td>
+</tr>
+<tr>
+<td style="text-align:left">gesture_function_item</td>
+<td style="text-align:left">array</td>
+<td style="text-align:left">Gesture function list (<code>gesture_function_item_s</code>); valid only when operate is Set</td>
 </tr>
 </tbody>
 </table>
-<h3 id="c-struct-parameter-description">C-Struct Parameter Description</h3>
-<pre><code class="lang-c"><span class="hljs-comment">/**
- * @brief Set gesture control
- * @struct protocol_set_gesture_control
- */</span>
-<span class="hljs-keyword">struct</span> protocol_set_gesture_control
-{
-    <span class="hljs-keyword">uint8_t</span> on_off;      <span class="hljs-comment">// Gesture control switch: 0 off, 1 on</span>
-    <span class="hljs-keyword">uint8_t</span> sensitivity; <span class="hljs-comment">// Gesture sensitivity</span>
-};
-</code></pre>
-<h3 id="json-sample-set-by-app">JSON Sample (Set by App)</h3>
+<p><strong>gesture_function_item_s</strong>:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Field</th>
+<th style="text-align:left">Type</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">function_switch</td>
+<td style="text-align:left">int</td>
+<td style="text-align:left">Function switch: 1 on, 0 off</td>
+</tr>
+<tr>
+<td style="text-align:left">function_type</td>
+<td style="text-align:left">int</td>
+<td style="text-align:left">Function type</td>
+</tr>
+<tr>
+<td style="text-align:left">gesture_sub_function_count</td>
+<td style="text-align:left">int</td>
+<td style="text-align:left">Number of sub-function items</td>
+</tr>
+<tr>
+<td style="text-align:left">gesture_sub_function_item</td>
+<td style="text-align:left">array</td>
+<td style="text-align:left">Sub-function list (<code>gesture_sub_function_item_s</code>)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>gesture_sub_function_item_s</strong>:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Field</th>
+<th style="text-align:left">Type</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">sub_function_type</td>
+<td style="text-align:left">int</td>
+<td style="text-align:left">Sub-function type</td>
+</tr>
+<tr>
+<td style="text-align:left">gesture_item_count</td>
+<td style="text-align:left">int</td>
+<td style="text-align:left">Number of gesture items</td>
+</tr>
+<tr>
+<td style="text-align:left">gesture_type_item</td>
+<td style="text-align:left">array</td>
+<td style="text-align:left">Gesture item list (<code>gesture_type_item_s</code>)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>gesture_type_item_s</strong>:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Field</th>
+<th style="text-align:left">Type</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">gesture_type</td>
+<td style="text-align:left">int</td>
+<td style="text-align:left">Gesture type</td>
+</tr>
+</tbody>
+</table>
+<p><code>Example (Set):</code></p>
 <pre><code class="lang-json">{
-  <span class="hljs-string">&quot;on_off&quot;</span>: <span class="hljs-number">1</span>,
-  <span class="hljs-string">&quot;sensitivity&quot;</span>: <span class="hljs-number">1</span>
+    <span class="hljs-string">&quot;operate&quot;</span>: <span class="hljs-number">1</span>,
+    <span class="hljs-string">&quot;gesture_control_on_off&quot;</span>: <span class="hljs-number">1</span>,
+    <span class="hljs-string">&quot;gesture_function_item_count&quot;</span>: <span class="hljs-number">1</span>,
+    <span class="hljs-string">&quot;gesture_function_item&quot;</span>: [
+        {
+            <span class="hljs-string">&quot;function_switch&quot;</span>: <span class="hljs-number">1</span>,
+            <span class="hljs-string">&quot;function_type&quot;</span>: <span class="hljs-number">1</span>,
+            <span class="hljs-string">&quot;gesture_sub_function_count&quot;</span>: <span class="hljs-number">1</span>,
+            <span class="hljs-string">&quot;gesture_sub_function_item&quot;</span>: [
+                {
+                    <span class="hljs-string">&quot;sub_function_type&quot;</span>: <span class="hljs-number">1</span>,
+                    <span class="hljs-string">&quot;gesture_item_count&quot;</span>: <span class="hljs-number">2</span>,
+                    <span class="hljs-string">&quot;gesture_type_item&quot;</span>: [
+                        {<span class="hljs-string">&quot;gesture_type&quot;</span>: <span class="hljs-number">1</span>},
+                        {<span class="hljs-string">&quot;gesture_type&quot;</span>: <span class="hljs-number">2</span>}
+                    ]
+                }
+            ]
+        }
+    ]
+}
+</code></pre>
+<p><code>Example (Get):</code></p>
+<pre><code class="lang-json">{
+    <span class="hljs-string">&quot;operate&quot;</span>: <span class="hljs-number">2</span>
+}
+</code></pre>
+<p><code>Example (Get supported configuration items):</code></p>
+<pre><code class="lang-json">{
+    <span class="hljs-string">&quot;operate&quot;</span>: <span class="hljs-number">3</span>
+}
+</code></pre>
+<p><strong>JSON fields received by the App</strong>:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Field</th>
+<th style="text-align:left">Type</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">err_code</td>
+<td style="text-align:left">int</td>
+<td style="text-align:left">Error code: 0 success, non-zero failure</td>
+</tr>
+<tr>
+<td style="text-align:left">operate</td>
+<td style="text-align:left">int</td>
+<td style="text-align:left">Same as the request operate</td>
+</tr>
+<tr>
+<td style="text-align:left">gesture_control_on_off</td>
+<td style="text-align:left">int</td>
+<td style="text-align:left">Master switch: 1 on / 0 off; present when operate is Get or Get supported items</td>
+</tr>
+<tr>
+<td style="text-align:left">gesture_function_item_count</td>
+<td style="text-align:left">int</td>
+<td style="text-align:left">Number of gesture function items; present when operate is Get or Get supported items</td>
+</tr>
+<tr>
+<td style="text-align:left">need_tip_power_consumption</td>
+<td style="text-align:left">int</td>
+<td style="text-align:left">Whether to tip the user about power consumption after enabling: 0 no / 1 yes; present when operate is Get or Get supported items</td>
+</tr>
+<tr>
+<td style="text-align:left">gesture_function_item</td>
+<td style="text-align:left">array</td>
+<td style="text-align:left">Gesture function list; present when operate is Get or Get supported items; structure same as request</td>
+</tr>
+</tbody>
+</table>
+<p><code>Example (Set response):</code></p>
+<pre><code class="lang-json">{
+    <span class="hljs-string">&quot;err_code&quot;</span>: <span class="hljs-number">0</span>
+}
+</code></pre>
+<p><code>Example (Get / Get supported items response):</code></p>
+<pre><code class="lang-json">{
+    <span class="hljs-string">&quot;operate&quot;</span>: <span class="hljs-number">2</span>,
+    <span class="hljs-string">&quot;err_code&quot;</span>: <span class="hljs-number">0</span>,
+    <span class="hljs-string">&quot;gesture_control_on_off&quot;</span>: <span class="hljs-number">1</span>,
+    <span class="hljs-string">&quot;gesture_function_item_count&quot;</span>: <span class="hljs-number">1</span>,
+    <span class="hljs-string">&quot;need_tip_power_consumption&quot;</span>: <span class="hljs-number">1</span>,
+    <span class="hljs-string">&quot;gesture_function_item&quot;</span>: [
+        {
+            <span class="hljs-string">&quot;function_switch&quot;</span>: <span class="hljs-number">1</span>,
+            <span class="hljs-string">&quot;function_type&quot;</span>: <span class="hljs-number">1</span>,
+            <span class="hljs-string">&quot;gesture_sub_function_count&quot;</span>: <span class="hljs-number">1</span>,
+            <span class="hljs-string">&quot;gesture_sub_function_item&quot;</span>: [
+                {
+                    <span class="hljs-string">&quot;sub_function_type&quot;</span>: <span class="hljs-number">1</span>,
+                    <span class="hljs-string">&quot;gesture_item_count&quot;</span>: <span class="hljs-number">1</span>,
+                    <span class="hljs-string">&quot;gesture_type_item&quot;</span>: [
+                        {<span class="hljs-string">&quot;gesture_type&quot;</span>: <span class="hljs-number">1</span>}
+                    ]
+                }
+            ]
+        }
+    ]
 }
 </code></pre>
 <footer class="page-footer"><span class="copyright">Copyright &#xA9; 2023-2024 IDO. All rights reserved. all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">Modify Date:
-2026-07-27 09:24:25
+2026-08-04 08:17:26
 </span></footer>
 <script>console.log("plugin-popup....");document.onclick = function(e){ e.target.tagName === "IMG" && window.open(e.target.src,e.target.src)}</script><style>img{cursor:pointer}</style>
                                 
@@ -4918,7 +5076,7 @@ IDOProtocolNative.instance.sendDataToBle(
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Set Gesture Control","level":"1.4.1.67","depth":3,"next":{"title":"V2 Get Instruction Event","level":"1.4.2","depth":2,"path":"doc/IDOGetEvtIntroduction.md","ref":"doc/IDOGetEvtIntroduction.md","articles":[{"title":"Get Device MAC Address","level":"1.4.2.1","depth":3,"path":"doc/BaseProtocolEvtExecDoc/IDOV2GetEvt/IDOGetMac.md","ref":"doc/BaseProtocolEvtExecDoc/IDOV2GetEvt/IDOGetMac.md","articles":[]},{"title":"Get Device Information","level":"1.4.2.2","depth":3,"path":"doc/BaseProtocolEvtExecDoc/IDOV2GetEvt/IDOGetDeviceInfoOnly.md","ref":"doc/BaseProtocolEvtExecDoc/IDOV2GetEvt/IDOGetDeviceInfoOnly.md","articles":[]},{"title":"Get BT name","level":"1.4.2.3","depth":3,"path":"doc/BaseProtocolEvtExecDoc/IDOV2GetEvt/IDOGetDeviceInfoWithBTName.md","ref":"doc/BaseProtocolEvtExecDoc/IDOV2GetEvt/IDOGetDeviceInfoWithBTName.md","articles":[]},{"title":"Get Sn Info","level":"1.4.2.4","depth":3,"path":"doc/BaseProtocolEvtExecDoc/IDOV2GetEvt/IDOGetSnInfo.md","ref":"doc/BaseProtocolEvtExecDoc/IDOV2GetEvt/IDOGetSnInfo.md","articles":[]},{"title":"Get Function Table","level":"1.4.2.5","depth":3,"path":"doc/BaseProtocolEvtExecDoc/IDOV2GetEvt/IDOGetFuncTableUser.md","ref":"doc/BaseProtocolEvtExecDoc/IDOV2GetEvt/IDOGetFuncTableUser.md","articles":[]},{"title":"Get Notification Center Switch","level":"1.4.2.6","depth":3,"path":"doc/BaseProtocolEvtExecDoc/IDOV2GetEvt/IDOGetNoticeStatus.md","ref":"doc/BaseProtocolEvtExecDoc/IDOV2GetEvt/IDOGetNoticeStatus.md","articles":[]},{"title":"Get Real-time Data","level":"1.4.2.7","depth":3,"path":"doc/BaseProtocolEvtExecDoc/IDOV2GetEvt/IDOGetLiveData.md","ref":"doc/BaseProtocolEvtExecDoc/IDOV2GetEvt/IDOGetLiveData.md","articles":[]},{"title":"Get Error Records","level":"1.4.2.8","depth":3,"path":"doc/BaseProtocolEvtExecDoc/IDOV2GetEvt/IDOGetErrorRecord.md","ref":"doc/BaseProtocolEvtExecDoc/IDOV2GetEvt/IDOGetErrorRecord.md","articles":[]},{"title":"Get Data Transfer Configuration","level":"1.4.2.9","depth":3,"path":"doc/BaseProtocolEvtExecDoc/IDOV2GetEvt/IDOGetDataTranConfig.md","ref":"doc/BaseProtocolEvtExecDoc/IDOV2GetEvt/IDOGetDataTranConfig.md","articles":[]},{"title":"Get HID Information","level":"1.4.2.10","depth":3,"path":"doc/BaseProtocolEvtExecDoc/IDOV2GetEvt/IDOGetHIDInfo.md","ref":"doc/BaseProtocolEvtExecDoc/IDOV2GetEvt/IDOGetHIDInfo.md","articles":[]},{"title":"Get GPS Information","level":"1.4.2.11","depth":3,"path":"doc/BaseProtocolEvtExecDoc/IDOV2GetEvt/IDOGetGPSInfo.md","ref":"doc/BaseProtocolEvtExecDoc/IDOV2GetEvt/IDOGetGPSInfo.md","articles":[]},{"title":"Get GPS Status","level":"1.4.2.12","depth":3,"path":"doc/BaseProtocolEvtExecDoc/IDOV2GetEvt/IDOGetGPSStatus.md","ref":"doc/BaseProtocolEvtExecDoc/IDOV2GetEvt/IDOGetGPSStatus.md","articles":[]},{"title":"Get Version Information","level":"1.4.2.13","depth":3,"path":"doc/BaseProtocolEvtExecDoc/IDOV2GetEvt/IDOGetVersionInfo.md","ref":"doc/BaseProtocolEvtExecDoc/IDOV2GetEvt/IDOGetVersionInfo.md","articles":[]},{"title":"Get Do Not Disturb Mode Status","level":"1.4.2.14","depth":3,"path":"doc/BaseProtocolEvtExecDoc/IDOV2GetEvt/IDOGetDoNotDisturb.md","ref":"doc/BaseProtocolEvtExecDoc/IDOV2GetEvt/IDOGetDoNotDisturb.md","articles":[]},{"title":"Get MTU Information","level":"1.4.2.15","depth":3,"path":"doc/BaseProtocolEvtExecDoc/IDOV2GetEvt/IDOGetMtuInfo.md","ref":"doc/BaseProtocolEvtExecDoc/IDOV2GetEvt/IDOGetMtuInfo.md","articles":[]},{"title":"Get Default Sport Type","level":"1.4.2.16","depth":3,"path":"doc/BaseProtocolEvtExecDoc/IDOV2GetEvt/IDOGetDefaultSportType.md","ref":"doc/BaseProtocolEvtExecDoc/IDOV2GetEvt/IDOGetDefaultSportType.md","articles":[]},{"title":"Get Download Language Support","level":"1.4.2.17","depth":3,"path":"doc/BaseProtocolEvtExecDoc/IDOV2GetEvt/IDOGetDownloadLanguage.md","ref":"doc/BaseProtocolEvtExecDoc/IDOV2GetEvt/IDOGetDownloadLanguage.md","articles":[]},{"title":"Get Battery Information","level":"1.4.2.18","depth":3,"path":"doc/BaseProtocolEvtExecDoc/IDOV2GetEvt/IDOGetBattInfo.md","ref":"doc/BaseProtocolEvtExecDoc/IDOV2GetEvt/IDOGetBattInfo.md","articles":[]},{"title":"Get Font Library Information","level":"1.4.2.19","depth":3,"path":"doc/BaseProtocolEvtExecDoc/IDOV2GetEvt/IDOGetFlashBinInfo.md","ref":"doc/BaseProtocolEvtExecDoc/IDOV2GetEvt/IDOGetFlashBinInfo.md","articles":[]},{"title":"Get Device Supported Menu List","level":"1.4.2.20","depth":3,"path":"doc/BaseProtocolEvtExecDoc/IDOV2GetEvt/IDOGetMenuList.md","ref":"doc/BaseProtocolEvtExecDoc/IDOV2GetEvt/IDOGetMenuList.md","articles":[]},{"title":"Get Screen Brightness","level":"1.4.2.21","depth":3,"path":"doc/BaseProtocolEvtExecDoc/IDOV2GetEvt/IDOGetScreenBrightness.md","ref":"doc/BaseProtocolEvtExecDoc/IDOV2GetEvt/IDOGetScreenBrightness.md","articles":[]},{"title":"Get Up Hand Gesture","level":"1.4.2.22","depth":3,"path":"doc/BaseProtocolEvtExecDoc/IDOV2GetEvt/IDOGetUpHandGesture.md","ref":"doc/BaseProtocolEvtExecDoc/IDOV2GetEvt/IDOGetUpHandGesture.md","articles":[]},{"title":"Get Device Upgrade Status","level":"1.4.2.23","depth":3,"path":"doc/BaseProtocolEvtExecDoc/IDOV2GetEvt/IDOGetUpdateStatus.md","ref":"doc/BaseProtocolEvtExecDoc/IDOV2GetEvt/IDOGetUpdateStatus.md","articles":[]},{"title":"Get Device Log Status","level":"1.4.2.24","depth":3,"path":"doc/BaseProtocolEvtExecDoc/IDOV2GetEvt/IDOGetDevicesLogStatus.md","ref":"doc/BaseProtocolEvtExecDoc/IDOV2GetEvt/IDOGetDevicesLogStatus.md","articles":[]},{"title":"Get Calorie/Distance/Duration of Medium-high Intensity Exercise (Daily Three Rings)","level":"1.4.2.25","depth":3,"path":"doc/BaseProtocolEvtExecDoc/IDOV2GetEvt/IDOGetMainSportGoal.md","ref":"doc/BaseProtocolEvtExecDoc/IDOV2GetEvt/IDOGetMainSportGoal.md","articles":[]},{"title":"Get Walking Reminder","level":"1.4.2.26","depth":3,"path":"doc/BaseProtocolEvtExecDoc/IDOV2GetEvt/IDOGetWalkReminder.md","ref":"doc/BaseProtocolEvtExecDoc/IDOV2GetEvt/IDOGetWalkReminder.md","articles":[]},{"title":"Get All Health Monitoring Switches","level":"1.4.2.27","depth":3,"path":"doc/BaseProtocolEvtExecDoc/IDOV2GetEvt/IDOGetAllHealthSwitchState.md","ref":"doc/BaseProtocolEvtExecDoc/IDOV2GetEvt/IDOGetAllHealthSwitchState.md","articles":[]},{"title":"Get Activity Recognition Switch","level":"1.4.2.28","depth":3,"path":"doc/BaseProtocolEvtExecDoc/IDOV2GetEvt/IDOGetActivitySwitch.md","ref":"doc/BaseProtocolEvtExecDoc/IDOV2GetEvt/IDOGetActivitySwitch.md","articles":[]},{"title":"Get Firmware Version and BT Version","level":"1.4.2.29","depth":3,"path":"doc/BaseProtocolEvtExecDoc/IDOV2GetEvt/IDOGetFirmwareBtVersion.md","ref":"doc/BaseProtocolEvtExecDoc/IDOV2GetEvt/IDOGetFirmwareBtVersion.md","articles":[]},{"title":"Get Blood Pressure Algorithm Version","level":"1.4.2.30","depth":3,"path":"doc/BaseProtocolEvtExecDoc/IDOV2GetEvt/IDOGetBpAlgVersion.md","ref":"doc/BaseProtocolEvtExecDoc/IDOV2GetEvt/IDOGetBpAlgVersion.md","articles":[]},{"title":"Get Maximum Number of Details Supported by Firmware","level":"1.4.2.31","depth":3,"path":"doc/BaseProtocolEvtExecDoc/IDOV2GetEvt/IDOGetSupportMaxSetItemNum.md","ref":"doc/BaseProtocolEvtExecDoc/IDOV2GetEvt/IDOGetSupportMaxSetItemNum.md","articles":[]},{"title":"Get Undeletable Menu List in Firmware","level":"1.4.2.32","depth":3,"path":"doc/BaseProtocolEvtExecDoc/IDOV2GetEvt/IDOGetUndeletableMenuList.md","ref":"doc/BaseProtocolEvtExecDoc/IDOV2GetEvt/IDOGetUndeletableMenuList.md","articles":[]},{"title":"Get Firmware Red Dot Prompt Switch Status","level":"1.4.2.33","depth":3,"path":"doc/BaseProtocolEvtExecDoc/IDOV2GetEvt/IDOGetUnreadAppONOFF.md","ref":"doc/BaseProtocolEvtExecDoc/IDOV2GetEvt/IDOGetUnreadAppONOFF.md","articles":[]},{"title":"Query BT Pairing Switch, Connection, A2DP Connection, HFP Connection Status","level":"1.4.2.34","depth":3,"path":"doc/BaseProtocolEvtExecDoc/IDOV2GetEvt/IDOGetBtStatus.md","ref":"doc/BaseProtocolEvtExecDoc/IDOV2GetEvt/IDOGetBtStatus.md","articles":[]},{"title":"Get Modification Time of Locally Stored Contact File","level":"1.4.2.35","depth":3,"path":"doc/BaseProtocolEvtExecDoc/IDOV2GetEvt/IDOGetContactReviceTime.md","ref":"doc/BaseProtocolEvtExecDoc/IDOV2GetEvt/IDOGetContactReviceTime.md","articles":[]},{"title":"Get Heart Rate Monitoring Mode","level":"1.4.2.36","depth":3,"path":"doc/BaseProtocolEvtExecDoc/IDOV2GetEvt/IDOGetHRMode.md","ref":"doc/BaseProtocolEvtExecDoc/IDOV2GetEvt/IDOGetHRMode.md","articles":[]},{"title":"Get All-day Step Goal","level":"1.4.2.37","depth":3,"path":"doc/BaseProtocolEvtExecDoc/IDOV2GetEvt/IDOGetStepGoal.md","ref":"doc/BaseProtocolEvtExecDoc/IDOV2GetEvt/IDOGetStepGoal.md","articles":[]},{"title":"Get Unit","level":"1.4.2.38","depth":3,"path":"doc/BaseProtocolEvtExecDoc/IDOV2GetEvt/IDOGetUnit.md","ref":"doc/BaseProtocolEvtExecDoc/IDOV2GetEvt/IDOGetUnit.md","articles":[]},{"title":"Get Pressure","level":"1.4.2.39","depth":3,"path":"doc/BaseProtocolEvtExecDoc/IDOV2GetEvt/IDOGet Pressure.md","ref":"doc/BaseProtocolEvtExecDoc/IDOV2GetEvt/IDOGet Pressure.md","articles":[]},{"title":"Get Heart Rate Mode Smart","level":"1.4.2.40","depth":3,"path":"doc/BaseProtocolEvtExecDoc/IDOV2GetEvt/IDOGetHeartRateModeSmart.md","ref":"doc/BaseProtocolEvtExecDoc/IDOV2GetEvt/IDOGetHeartRateModeSmart.md","articles":[]},{"title":"Get Spo2","level":"1.4.2.41","depth":3,"path":"doc/BaseProtocolEvtExecDoc/IDOV2GetEvt/IDOGetSpo2.md","ref":"doc/BaseProtocolEvtExecDoc/IDOV2GetEvt/IDOGetSpo2.md","articles":[]},{"title":"Get reminder settings during exercise","level":"1.4.2.42","depth":3,"path":"doc/BaseProtocolEvtExecDoc/IDOV2GetEvt/IDOGetSettingsDuringExercise.md","ref":"doc/BaseProtocolEvtExecDoc/IDOV2GetEvt/IDOGetSettingsDuringExercise.md","articles":[]},{"title":"Get Simple heart rate zone setting","level":"1.4.2.43","depth":3,"path":"doc/BaseProtocolEvtExecDoc/IDOV2GetEvt/IDOGetSimpleHeartRateZone.md","ref":"doc/BaseProtocolEvtExecDoc/IDOV2GetEvt/IDOGetSimpleHeartRateZone.md","articles":[]},{"title":"Get left and right hand settings","level":"1.4.2.44","depth":3,"path":"doc/BaseProtocolEvtExecDoc/IDOV2GetEvt/IDOGetLeftRightWearSettings.md","ref":"doc/BaseProtocolEvtExecDoc/IDOV2GetEvt/IDOGetLeftRightWearSettings.md","articles":[]},{"title":"Get Battery Reminder Switch","level":"1.4.2.45","depth":3,"path":"doc/BaseProtocolEvtExecDoc/IDOV2GetEvt/IDOGetBatteryReminderSwitch.md","ref":"doc/BaseProtocolEvtExecDoc/IDOV2GetEvt/IDOGetBatteryReminderSwitch.md","articles":[]},{"title":"Get App Sleep Mode","level":"1.4.2.46","depth":3,"path":"doc/BaseProtocolEvtExecDoc/IDOV2GetEvt/IDOGetAppSleepMode.md","ref":"doc/BaseProtocolEvtExecDoc/IDOV2GetEvt/IDOGetAppSleepMode.md","articles":[]},{"title":"Get Find Phone Switch","level":"1.4.2.47","depth":3,"path":"doc/BaseProtocolEvtExecDoc/IDOV2GetEvt/IDOGetFindPhoneSwitch.md","ref":"doc/BaseProtocolEvtExecDoc/IDOV2GetEvt/IDOGetFindPhoneSwitch.md","articles":[]},{"title":"Get Device Status Info","level":"1.4.2.48","depth":3,"path":"doc/BaseProtocolEvtExecDoc/IDOV2GetEvt/IDOGetDeviceStatusInfo.md","ref":"doc/BaseProtocolEvtExecDoc/IDOV2GetEvt/IDOGetDeviceStatusInfo.md","articles":[]},{"title":"Get Firmware Display Version","level":"1.4.2.49","depth":3,"path":"doc/BaseProtocolEvtExecDoc/IDOV2GetEvt/IDOGetFirmwareDisplayVersion.md","ref":"doc/BaseProtocolEvtExecDoc/IDOV2GetEvt/IDOGetFirmwareDisplayVersion.md","articles":[]},{"title":"Get Pet Info","level":"1.4.2.50","depth":3,"path":"doc/BaseProtocolEvtExecDoc/IDOV2GetEvt/IDOGetPetInfo.md","ref":"doc/BaseProtocolEvtExecDoc/IDOV2GetEvt/IDOGetPetInfo.md","articles":[]}]},"previous":{"title":"Set Simple heart rate zone","level":"1.4.1.66","depth":3,"path":"doc/BaseProtocolEvtExecDoc/IDOV2SetEvt/IDOSetSimpleHeartRateZone.md","ref":"doc/BaseProtocolEvtExecDoc/IDOV2SetEvt/IDOSetSimpleHeartRateZone.md","articles":[]},"dir":"ltr"},"config":{"plugins":["chapter-fold","back-to-top-button","code","github","tbfed-pagefooter","copy-code-button","pageview-count","-lunr","-search","search-pro","language-picker","popup","sidebar-style","splitter"],"root":".","styles":{"pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css","website":"styles/website.css"},"pluginsConfig":{"sidebar-style":{"author":"idoosmart.com","title":"IDO API DOCUMENT"},"tbfed-pagefooter":{"copyright":"Copyright © 2023-2024 IDO. All rights reserved.","modify_label":"Modify Date:","modify_format":"YYYY-MM-DD HH:mm:ss"},"language-picker":{"grid-columns":3},"github":{"url":"https://github.com/idoosmart/"},"splitter":{},"search-pro":{},"popup":{},"code":{"copyButtons":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"back-to-top-button":{},"pageview-count":{},"expandable-chapters-small":{},"copy-code-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css","website":"styles/website.css"},"showLevel":false}},"theme":"default","author":"luoft","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"IDO FLUTTER API DOCUMENT","language":"zh-hans","gitbook":"*","description":"IDO FLUTTER API DOCUMENT"},"file":{"path":"doc/BaseProtocolEvtExecDoc/IDOV2SetEvt/IDOSetGestureControl.md","mtime":"2026-07-27T09:24:25.888Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2026-07-30T10:15:38.877Z"},"basePath":"../../..","book":{"language":"en"}});
+            gitbook.page.hasChanged({"page":{"title":"Set Gesture Control","level":"1.4.1.67","depth":3,"next":{"title":"V2 Get Instruction Event","level":"1.4.2","depth":2,"path":"doc/IDOGetEvtIntroduction.md","ref":"doc/IDOGetEvtIntroduction.md","articles":[{"title":"Get Device MAC Address","level":"1.4.2.1","depth":3,"path":"doc/BaseProtocolEvtExecDoc/IDOV2GetEvt/IDOGetMac.md","ref":"doc/BaseProtocolEvtExecDoc/IDOV2GetEvt/IDOGetMac.md","articles":[]},{"title":"Get Device Information","level":"1.4.2.2","depth":3,"path":"doc/BaseProtocolEvtExecDoc/IDOV2GetEvt/IDOGetDeviceInfoOnly.md","ref":"doc/BaseProtocolEvtExecDoc/IDOV2GetEvt/IDOGetDeviceInfoOnly.md","articles":[]},{"title":"Get BT name","level":"1.4.2.3","depth":3,"path":"doc/BaseProtocolEvtExecDoc/IDOV2GetEvt/IDOGetDeviceInfoWithBTName.md","ref":"doc/BaseProtocolEvtExecDoc/IDOV2GetEvt/IDOGetDeviceInfoWithBTName.md","articles":[]},{"title":"Get Sn Info","level":"1.4.2.4","depth":3,"path":"doc/BaseProtocolEvtExecDoc/IDOV2GetEvt/IDOGetSnInfo.md","ref":"doc/BaseProtocolEvtExecDoc/IDOV2GetEvt/IDOGetSnInfo.md","articles":[]},{"title":"Get Function Table","level":"1.4.2.5","depth":3,"path":"doc/BaseProtocolEvtExecDoc/IDOV2GetEvt/IDOGetFuncTableUser.md","ref":"doc/BaseProtocolEvtExecDoc/IDOV2GetEvt/IDOGetFuncTableUser.md","articles":[]},{"title":"Get Notification Center Switch","level":"1.4.2.6","depth":3,"path":"doc/BaseProtocolEvtExecDoc/IDOV2GetEvt/IDOGetNoticeStatus.md","ref":"doc/BaseProtocolEvtExecDoc/IDOV2GetEvt/IDOGetNoticeStatus.md","articles":[]},{"title":"Get Real-time Data","level":"1.4.2.7","depth":3,"path":"doc/BaseProtocolEvtExecDoc/IDOV2GetEvt/IDOGetLiveData.md","ref":"doc/BaseProtocolEvtExecDoc/IDOV2GetEvt/IDOGetLiveData.md","articles":[]},{"title":"Get Error Records","level":"1.4.2.8","depth":3,"path":"doc/BaseProtocolEvtExecDoc/IDOV2GetEvt/IDOGetErrorRecord.md","ref":"doc/BaseProtocolEvtExecDoc/IDOV2GetEvt/IDOGetErrorRecord.md","articles":[]},{"title":"Get Data Transfer Configuration","level":"1.4.2.9","depth":3,"path":"doc/BaseProtocolEvtExecDoc/IDOV2GetEvt/IDOGetDataTranConfig.md","ref":"doc/BaseProtocolEvtExecDoc/IDOV2GetEvt/IDOGetDataTranConfig.md","articles":[]},{"title":"Get HID Information","level":"1.4.2.10","depth":3,"path":"doc/BaseProtocolEvtExecDoc/IDOV2GetEvt/IDOGetHIDInfo.md","ref":"doc/BaseProtocolEvtExecDoc/IDOV2GetEvt/IDOGetHIDInfo.md","articles":[]},{"title":"Get GPS Information","level":"1.4.2.11","depth":3,"path":"doc/BaseProtocolEvtExecDoc/IDOV2GetEvt/IDOGetGPSInfo.md","ref":"doc/BaseProtocolEvtExecDoc/IDOV2GetEvt/IDOGetGPSInfo.md","articles":[]},{"title":"Get GPS Status","level":"1.4.2.12","depth":3,"path":"doc/BaseProtocolEvtExecDoc/IDOV2GetEvt/IDOGetGPSStatus.md","ref":"doc/BaseProtocolEvtExecDoc/IDOV2GetEvt/IDOGetGPSStatus.md","articles":[]},{"title":"Get Version Information","level":"1.4.2.13","depth":3,"path":"doc/BaseProtocolEvtExecDoc/IDOV2GetEvt/IDOGetVersionInfo.md","ref":"doc/BaseProtocolEvtExecDoc/IDOV2GetEvt/IDOGetVersionInfo.md","articles":[]},{"title":"Get Do Not Disturb Mode Status","level":"1.4.2.14","depth":3,"path":"doc/BaseProtocolEvtExecDoc/IDOV2GetEvt/IDOGetDoNotDisturb.md","ref":"doc/BaseProtocolEvtExecDoc/IDOV2GetEvt/IDOGetDoNotDisturb.md","articles":[]},{"title":"Get MTU Information","level":"1.4.2.15","depth":3,"path":"doc/BaseProtocolEvtExecDoc/IDOV2GetEvt/IDOGetMtuInfo.md","ref":"doc/BaseProtocolEvtExecDoc/IDOV2GetEvt/IDOGetMtuInfo.md","articles":[]},{"title":"Get Default Sport Type","level":"1.4.2.16","depth":3,"path":"doc/BaseProtocolEvtExecDoc/IDOV2GetEvt/IDOGetDefaultSportType.md","ref":"doc/BaseProtocolEvtExecDoc/IDOV2GetEvt/IDOGetDefaultSportType.md","articles":[]},{"title":"Get Download Language Support","level":"1.4.2.17","depth":3,"path":"doc/BaseProtocolEvtExecDoc/IDOV2GetEvt/IDOGetDownloadLanguage.md","ref":"doc/BaseProtocolEvtExecDoc/IDOV2GetEvt/IDOGetDownloadLanguage.md","articles":[]},{"title":"Get Battery Information","level":"1.4.2.18","depth":3,"path":"doc/BaseProtocolEvtExecDoc/IDOV2GetEvt/IDOGetBattInfo.md","ref":"doc/BaseProtocolEvtExecDoc/IDOV2GetEvt/IDOGetBattInfo.md","articles":[]},{"title":"Get Font Library Information","level":"1.4.2.19","depth":3,"path":"doc/BaseProtocolEvtExecDoc/IDOV2GetEvt/IDOGetFlashBinInfo.md","ref":"doc/BaseProtocolEvtExecDoc/IDOV2GetEvt/IDOGetFlashBinInfo.md","articles":[]},{"title":"Get Device Supported Menu List","level":"1.4.2.20","depth":3,"path":"doc/BaseProtocolEvtExecDoc/IDOV2GetEvt/IDOGetMenuList.md","ref":"doc/BaseProtocolEvtExecDoc/IDOV2GetEvt/IDOGetMenuList.md","articles":[]},{"title":"Get Screen Brightness","level":"1.4.2.21","depth":3,"path":"doc/BaseProtocolEvtExecDoc/IDOV2GetEvt/IDOGetScreenBrightness.md","ref":"doc/BaseProtocolEvtExecDoc/IDOV2GetEvt/IDOGetScreenBrightness.md","articles":[]},{"title":"Get Up Hand Gesture","level":"1.4.2.22","depth":3,"path":"doc/BaseProtocolEvtExecDoc/IDOV2GetEvt/IDOGetUpHandGesture.md","ref":"doc/BaseProtocolEvtExecDoc/IDOV2GetEvt/IDOGetUpHandGesture.md","articles":[]},{"title":"Get Device Upgrade Status","level":"1.4.2.23","depth":3,"path":"doc/BaseProtocolEvtExecDoc/IDOV2GetEvt/IDOGetUpdateStatus.md","ref":"doc/BaseProtocolEvtExecDoc/IDOV2GetEvt/IDOGetUpdateStatus.md","articles":[]},{"title":"Get Device Log Status","level":"1.4.2.24","depth":3,"path":"doc/BaseProtocolEvtExecDoc/IDOV2GetEvt/IDOGetDevicesLogStatus.md","ref":"doc/BaseProtocolEvtExecDoc/IDOV2GetEvt/IDOGetDevicesLogStatus.md","articles":[]},{"title":"Get Calorie/Distance/Duration of Medium-high Intensity Exercise (Daily Three Rings)","level":"1.4.2.25","depth":3,"path":"doc/BaseProtocolEvtExecDoc/IDOV2GetEvt/IDOGetMainSportGoal.md","ref":"doc/BaseProtocolEvtExecDoc/IDOV2GetEvt/IDOGetMainSportGoal.md","articles":[]},{"title":"Get Walking Reminder","level":"1.4.2.26","depth":3,"path":"doc/BaseProtocolEvtExecDoc/IDOV2GetEvt/IDOGetWalkReminder.md","ref":"doc/BaseProtocolEvtExecDoc/IDOV2GetEvt/IDOGetWalkReminder.md","articles":[]},{"title":"Get All Health Monitoring Switches","level":"1.4.2.27","depth":3,"path":"doc/BaseProtocolEvtExecDoc/IDOV2GetEvt/IDOGetAllHealthSwitchState.md","ref":"doc/BaseProtocolEvtExecDoc/IDOV2GetEvt/IDOGetAllHealthSwitchState.md","articles":[]},{"title":"Get Activity Recognition Switch","level":"1.4.2.28","depth":3,"path":"doc/BaseProtocolEvtExecDoc/IDOV2GetEvt/IDOGetActivitySwitch.md","ref":"doc/BaseProtocolEvtExecDoc/IDOV2GetEvt/IDOGetActivitySwitch.md","articles":[]},{"title":"Get Firmware Version and BT Version","level":"1.4.2.29","depth":3,"path":"doc/BaseProtocolEvtExecDoc/IDOV2GetEvt/IDOGetFirmwareBtVersion.md","ref":"doc/BaseProtocolEvtExecDoc/IDOV2GetEvt/IDOGetFirmwareBtVersion.md","articles":[]},{"title":"Get Blood Pressure Algorithm Version","level":"1.4.2.30","depth":3,"path":"doc/BaseProtocolEvtExecDoc/IDOV2GetEvt/IDOGetBpAlgVersion.md","ref":"doc/BaseProtocolEvtExecDoc/IDOV2GetEvt/IDOGetBpAlgVersion.md","articles":[]},{"title":"Get Maximum Number of Details Supported by Firmware","level":"1.4.2.31","depth":3,"path":"doc/BaseProtocolEvtExecDoc/IDOV2GetEvt/IDOGetSupportMaxSetItemNum.md","ref":"doc/BaseProtocolEvtExecDoc/IDOV2GetEvt/IDOGetSupportMaxSetItemNum.md","articles":[]},{"title":"Get Undeletable Menu List in Firmware","level":"1.4.2.32","depth":3,"path":"doc/BaseProtocolEvtExecDoc/IDOV2GetEvt/IDOGetUndeletableMenuList.md","ref":"doc/BaseProtocolEvtExecDoc/IDOV2GetEvt/IDOGetUndeletableMenuList.md","articles":[]},{"title":"Get Firmware Red Dot Prompt Switch Status","level":"1.4.2.33","depth":3,"path":"doc/BaseProtocolEvtExecDoc/IDOV2GetEvt/IDOGetUnreadAppONOFF.md","ref":"doc/BaseProtocolEvtExecDoc/IDOV2GetEvt/IDOGetUnreadAppONOFF.md","articles":[]},{"title":"Query BT Pairing Switch, Connection, A2DP Connection, HFP Connection Status","level":"1.4.2.34","depth":3,"path":"doc/BaseProtocolEvtExecDoc/IDOV2GetEvt/IDOGetBtStatus.md","ref":"doc/BaseProtocolEvtExecDoc/IDOV2GetEvt/IDOGetBtStatus.md","articles":[]},{"title":"Get Modification Time of Locally Stored Contact File","level":"1.4.2.35","depth":3,"path":"doc/BaseProtocolEvtExecDoc/IDOV2GetEvt/IDOGetContactReviceTime.md","ref":"doc/BaseProtocolEvtExecDoc/IDOV2GetEvt/IDOGetContactReviceTime.md","articles":[]},{"title":"Get Heart Rate Monitoring Mode","level":"1.4.2.36","depth":3,"path":"doc/BaseProtocolEvtExecDoc/IDOV2GetEvt/IDOGetHRMode.md","ref":"doc/BaseProtocolEvtExecDoc/IDOV2GetEvt/IDOGetHRMode.md","articles":[]},{"title":"Get All-day Step Goal","level":"1.4.2.37","depth":3,"path":"doc/BaseProtocolEvtExecDoc/IDOV2GetEvt/IDOGetStepGoal.md","ref":"doc/BaseProtocolEvtExecDoc/IDOV2GetEvt/IDOGetStepGoal.md","articles":[]},{"title":"Get Unit","level":"1.4.2.38","depth":3,"path":"doc/BaseProtocolEvtExecDoc/IDOV2GetEvt/IDOGetUnit.md","ref":"doc/BaseProtocolEvtExecDoc/IDOV2GetEvt/IDOGetUnit.md","articles":[]},{"title":"Get Pressure","level":"1.4.2.39","depth":3,"path":"doc/BaseProtocolEvtExecDoc/IDOV2GetEvt/IDOGet Pressure.md","ref":"doc/BaseProtocolEvtExecDoc/IDOV2GetEvt/IDOGet Pressure.md","articles":[]},{"title":"Get Heart Rate Mode Smart","level":"1.4.2.40","depth":3,"path":"doc/BaseProtocolEvtExecDoc/IDOV2GetEvt/IDOGetHeartRateModeSmart.md","ref":"doc/BaseProtocolEvtExecDoc/IDOV2GetEvt/IDOGetHeartRateModeSmart.md","articles":[]},{"title":"Get Spo2","level":"1.4.2.41","depth":3,"path":"doc/BaseProtocolEvtExecDoc/IDOV2GetEvt/IDOGetSpo2.md","ref":"doc/BaseProtocolEvtExecDoc/IDOV2GetEvt/IDOGetSpo2.md","articles":[]},{"title":"Get reminder settings during exercise","level":"1.4.2.42","depth":3,"path":"doc/BaseProtocolEvtExecDoc/IDOV2GetEvt/IDOGetSettingsDuringExercise.md","ref":"doc/BaseProtocolEvtExecDoc/IDOV2GetEvt/IDOGetSettingsDuringExercise.md","articles":[]},{"title":"Get Simple heart rate zone setting","level":"1.4.2.43","depth":3,"path":"doc/BaseProtocolEvtExecDoc/IDOV2GetEvt/IDOGetSimpleHeartRateZone.md","ref":"doc/BaseProtocolEvtExecDoc/IDOV2GetEvt/IDOGetSimpleHeartRateZone.md","articles":[]},{"title":"Get left and right hand settings","level":"1.4.2.44","depth":3,"path":"doc/BaseProtocolEvtExecDoc/IDOV2GetEvt/IDOGetLeftRightWearSettings.md","ref":"doc/BaseProtocolEvtExecDoc/IDOV2GetEvt/IDOGetLeftRightWearSettings.md","articles":[]},{"title":"Get Battery Reminder Switch","level":"1.4.2.45","depth":3,"path":"doc/BaseProtocolEvtExecDoc/IDOV2GetEvt/IDOGetBatteryReminderSwitch.md","ref":"doc/BaseProtocolEvtExecDoc/IDOV2GetEvt/IDOGetBatteryReminderSwitch.md","articles":[]},{"title":"Get App Sleep Mode","level":"1.4.2.46","depth":3,"path":"doc/BaseProtocolEvtExecDoc/IDOV2GetEvt/IDOGetAppSleepMode.md","ref":"doc/BaseProtocolEvtExecDoc/IDOV2GetEvt/IDOGetAppSleepMode.md","articles":[]},{"title":"Get Find Phone Switch","level":"1.4.2.47","depth":3,"path":"doc/BaseProtocolEvtExecDoc/IDOV2GetEvt/IDOGetFindPhoneSwitch.md","ref":"doc/BaseProtocolEvtExecDoc/IDOV2GetEvt/IDOGetFindPhoneSwitch.md","articles":[]},{"title":"Get Device Status Info","level":"1.4.2.48","depth":3,"path":"doc/BaseProtocolEvtExecDoc/IDOV2GetEvt/IDOGetDeviceStatusInfo.md","ref":"doc/BaseProtocolEvtExecDoc/IDOV2GetEvt/IDOGetDeviceStatusInfo.md","articles":[]},{"title":"Get Firmware Display Version","level":"1.4.2.49","depth":3,"path":"doc/BaseProtocolEvtExecDoc/IDOV2GetEvt/IDOGetFirmwareDisplayVersion.md","ref":"doc/BaseProtocolEvtExecDoc/IDOV2GetEvt/IDOGetFirmwareDisplayVersion.md","articles":[]},{"title":"Get Pet Info","level":"1.4.2.50","depth":3,"path":"doc/BaseProtocolEvtExecDoc/IDOV2GetEvt/IDOGetPetInfo.md","ref":"doc/BaseProtocolEvtExecDoc/IDOV2GetEvt/IDOGetPetInfo.md","articles":[]}]},"previous":{"title":"Set Simple heart rate zone","level":"1.4.1.66","depth":3,"path":"doc/BaseProtocolEvtExecDoc/IDOV2SetEvt/IDOSetSimpleHeartRateZone.md","ref":"doc/BaseProtocolEvtExecDoc/IDOV2SetEvt/IDOSetSimpleHeartRateZone.md","articles":[]},"dir":"ltr"},"config":{"plugins":["chapter-fold","back-to-top-button","code","github","tbfed-pagefooter","copy-code-button","pageview-count","-lunr","-search","search-pro","language-picker","popup","sidebar-style","splitter"],"root":".","styles":{"pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css","website":"styles/website.css"},"pluginsConfig":{"sidebar-style":{"author":"idoosmart.com","title":"IDO API DOCUMENT"},"tbfed-pagefooter":{"copyright":"Copyright © 2023-2024 IDO. All rights reserved.","modify_label":"Modify Date:","modify_format":"YYYY-MM-DD HH:mm:ss"},"language-picker":{"grid-columns":3},"github":{"url":"https://github.com/idoosmart/"},"splitter":{},"search-pro":{},"popup":{},"code":{"copyButtons":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"back-to-top-button":{},"pageview-count":{},"expandable-chapters-small":{},"copy-code-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css","website":"styles/website.css"},"showLevel":false}},"theme":"default","author":"luoft","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"IDO FLUTTER API DOCUMENT","language":"zh-hans","gitbook":"*","description":"IDO FLUTTER API DOCUMENT"},"file":{"path":"doc/BaseProtocolEvtExecDoc/IDOV2SetEvt/IDOSetGestureControl.md","mtime":"2026-08-04T08:17:26.043Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2026-08-04T08:17:27.957Z"},"basePath":"../../..","book":{"language":"en"}});
         });
     </script>
 </div>
