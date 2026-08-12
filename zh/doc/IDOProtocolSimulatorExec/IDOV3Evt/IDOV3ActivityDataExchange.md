@@ -26,7 +26,7 @@ libManager.send(evt: CmdEvtType.exchangeAppV3Ing, json: jsonEncode(json));
 | signal_flag     | int      | 0 ：表示信号弱  <br />1 ：表示信号强                         |
 | distance        | int      | app距离<br />单位米<br />app信号强的时候ble使用app的距离数据计算 <br />app信号弱的时候ble不使用app的数据，app显示使用手环的数据 |
 | real_time_speed | int      | app计算显示实时配速，预留<br />单位km/h，100倍               |
-| duration        | int      | 持续时间 预留<br />单位米                                    |
+| duration        | int      | 持续时间 预留<br />单位 秒                                    |
 | calories        | Int      | 卡路里  预留<br />单位Kcal                                   |
 
 `示例：`

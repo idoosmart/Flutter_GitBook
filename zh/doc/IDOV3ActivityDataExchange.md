@@ -26,7 +26,7 @@ libManager.send(evt: CmdEvtType.exchangeAppV3Ing, json: jsonEncode(json));
 | signal_flag     | int      | 0 ：表示信号弱  <br />1 ：表示信号强                         |
 | distance        | int      | app距离<br />单位米<br />app信号强的时候ble使用app的距离数据计算 <br />app信号弱的时候ble不使用app的数据，app显示使用手环的数据 |
 | real_time_speed | int      | app计算显示实时配速，预留<br />单位km/h，100倍               |
-| duration        | int      | 持续时间 预留<br />单位米                                    |
+| duration        | int      | 持续时间 预留<br />单位 秒                                    |
 | calories        | Int      | 卡路里  预留<br />单位Kcal                                   |
 
 `示例：`
@@ -69,6 +69,8 @@ libManager.send(evt: CmdEvtType.exchangeAppV3Ing, json: jsonEncode(json));
 | count_hour           | int      | action_type = 1—5时，该字段是运动倒计时时间（注：时间递减）<br />action_type = 6时，该字段是课程结束后计时（注：时间递增）<br />需要固件开启功能表`setSupportSportPlan` 功能表未开启返回0 |
 | count_minute         | int      | action_type = 1—5时，该字段是运动倒计时时间（注：时间递减）<br />action_type = 6时，该字段是课程结束后计时（注：时间递增）<br />需要固件开启功能表`setSupportSportPlan` 功能表未开启返回0 |
 | count_second         | int      | action_type = 1—5时，该字段是运动倒计时时间（注：时间递减）<br />action_type = 6时，该字段是课程结束后计时（注：时间递增）<br />需要固件开启功能表`setSupportSportPlan` 功能表未开启返回0 |
+| total_swings_num     | int      | 总挥拍次数；固件开启运动中交换 v21 能力时有效，否则为 0 |
+| total_sit_up_count   | int      | 总仰卧起坐次数；固件开启运动中交换 v21 能力时有效，否则为 0 |
 
 `示例：`
 
@@ -95,6 +97,8 @@ libManager.send(evt: CmdEvtType.exchangeAppV3Ing, json: jsonEncode(json));
     "action_type":0,
     "count_hour":0,
     "count_minute":0,
-    "count_second":0
+    "count_second":0,
+    "total_swings_num":0,
+    "total_sit_up_count":0
 }
 ```

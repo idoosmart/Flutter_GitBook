@@ -31,6 +31,7 @@ libManager.send(evt: CmdEvtType.getActivitySwitch, json: jsonEncode(json));
 | auto_identify_sport_rowing     | int      | 自动识别划船机开关 0 关闭,1 开,-1 无效(不支持) |
 | auto_identify_sport_swim       | int     | 自动识别游泳开关 0 关闭,1 开,-1 无效(不支持) |
 | auto_identify_sport_smart_rope | int | 自动识别智能跳绳开关 0 关闭,1 开,-1 无效(不支持) |
+| auto_identify_general_activity | int | 自动识别通用运动开关 0 关闭,1 开,-1 无效(不支持)；可选，未返回时为空；功能表 `getAutoActivitySetGetUseNewStructExchange` 开启时有效 |
 
 `示例：`
 
@@ -45,7 +46,8 @@ libManager.send(evt: CmdEvtType.getActivitySwitch, json: jsonEncode(json));
     "auto_identify_sport_elliptical":0,
     "auto_identify_sport_rowing":0,
     "auto_identify_sport_swim":-1,
-  	"auto_identify_sport_smart_rope":-1
+  	"auto_identify_sport_smart_rope":-1,
+    "auto_identify_general_activity":-1
 }
 ```
 

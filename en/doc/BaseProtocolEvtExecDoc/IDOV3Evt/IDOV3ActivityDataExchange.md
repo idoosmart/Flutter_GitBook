@@ -88,6 +88,8 @@ libManager.send(evt: CmdEvtType.exchangeAppV3Ing, json: jsonEncode(json));
 | count_hour           | int        | When action_type is 1-5, this field is the countdown time (note: time decreases)<br />When action_type is 6, this field is the time after the session ends (note: time increases)<br />Requires the firmware to enable `setSupportSportPlan`. Returns 0 if the feature is not enabled |
 | count_minute         | int        | When action_type is 1-5, this field is the countdown time (note: time decreases)<br />When action_type is 6, this field is the time after the session ends (note: time increases)<br />Requires the firmware to enable `setSupportSportPlan`. Returns 0 if the feature is not enabled |
 | count_second         | int        | When action_type is 1-5, this field is the countdown time (note: time decreases)<br />When action_type is 6, this field is the time after the session ends (note: time increases)<br />Requires the firmware to enable `setSupportSportPlan`. Returns 0 if the feature is not enabled |
+| total_swings_num     | int        | Total swing count; valid when mid-exercise exchange v21 is enabled, otherwise 0 |
+| total_sit_up_count   | int        | Total sit-up count; valid when mid-exercise exchange v21 is enabled, otherwise 0 |
 
 **Example:**
 
@@ -114,7 +116,9 @@ libManager.send(evt: CmdEvtType.exchangeAppV3Ing, json: jsonEncode(json));
   "action_type": 0,
   "count_hour": 0,
   "count_minute": 0,
-  "count_second": 0
+  "count_second": 0,
+  "total_swings_num": 0,
+  "total_sit_up_count": 0
 }
 ```
 
