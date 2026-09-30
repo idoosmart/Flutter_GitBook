@@ -150,6 +150,44 @@ final int? msgNotice;
 
 
 
+### 4.1 Task List Task ID:
+
+#### 4.1.1 Summary:
+
+Valid when `dataType == 133`.
+
+#### 4.1.2 API ID:
+
+````dart
+final int? taskId; // UInt32: 0…4294967295
+````
+
+#### 4.1.3 API Parameter Description:
+
+@param: Task ID for task-list status-change notification (protocol UInt32, 0…4294967295)
+
+
+### 4.2 Task List Completion Status:
+
+#### 4.2.1 Summary:
+
+Valid when `dataType == 133`.
+
+#### 4.2.2 API ID:
+
+````dart
+final int? taskCompletStatus;
+````
+
+#### 4.2.3 API Parameter Description:
+
+| Value | Description |
+| ----- | ----------- |
+| 0     | Incomplete  |
+| 1     | Completed   |
+
+
+
 ### 5. Firmware Error Code Notification:
 
 #### 5.1 Summary:
