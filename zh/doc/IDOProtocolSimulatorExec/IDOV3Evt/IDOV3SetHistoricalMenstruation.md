@@ -1,7 +1,7 @@
 ### V3经期的历史数据下发
 
 
-功能表:setHistoryMenstrual 【supportSetHistoricalMenstruationUseVersion2】
+功能表:setHistoryMenstrual 【supportSetHistoricalMenstruationUseVersion2】【supportSetHistoricalMenstruationExchangeVersion21】
 
 **Flutter示例：**
 
@@ -25,7 +25,7 @@ libManager.send(evt: CmdEvtType.getHistoricalMenstruation, json: jsonEncode(json
 | avg_menstrual_day | int      | 平均经期长度<br />单位天                                     |
 | avg_cycle_day     | int      | 平均周期长度<br />单位天                                     |
 | items_len         | int      | 经期历史数据详情`items`个数，最大5                           |
-| items             | 集合     | 经期历史数据详情<br />`year` & `mon` & `day & menstrual_day` & `cycle_day`的集合<br />`ovulation_interval_day` & `ovulation_before_day` & `ovulation_after_day`在功能表`supportSetHistoricalMenstruationUseVersion2`开启时有效 |
+| items             | 集合     | 经期历史数据详情<br />`year` & `mon` & `day & menstrual_day` & `cycle_day`的集合<br />`ovulation_interval_day` & `ovulation_before_day` & `ovulation_after_day`在功能表`supportSetHistoricalMenstruationUseVersion2`或`supportSetHistoricalMenstruationExchangeVersion21`开启时有效 |
 
 | 字段名                 | 字段类型 | 字段说明                                                     |
 | ---------------------- | -------- | ------------------------------------------------------------ |
@@ -34,9 +34,10 @@ libManager.send(evt: CmdEvtType.getHistoricalMenstruation, json: jsonEncode(json
 | day                    | int      | 经期开始的日                                                 |
 | menstrual_day          | int      | 经期长度 <br />单位天                                        |
 | cycle_day              | int      | 周期长度 <br />单位天                                        |
-| ovulation_interval_day | int      | 从下一个经期开始前到排卵日的间隔,一般为14天<br />功能表`supportSetHistoricalMenstruationUseVersion2`开启有效 |
-| ovulation_before_day   | int      | 排卵日之前易孕期的天数,一般为5<br />功能表`supportSetHistoricalMenstruationUseVersion2`开启有效 |
-| ovulation_after_day    | int      | 排卵日之后易孕期的天数,一般为5<br />功能表`supportSetHistoricalMenstruationUseVersion2`开启有效 |
+| ovulation_interval_day | int      | 从下一个经期开始前到排卵日的间隔,一般为14天<br />功能表`supportSetHistoricalMenstruationUseVersion2`或`supportSetHistoricalMenstruationExchangeVersion21`开启有效 |
+| ovulation_before_day   | int      | 排卵日之前易孕期的天数,一般为5<br />功能表`supportSetHistoricalMenstruationUseVersion2`或`supportSetHistoricalMenstruationExchangeVersion21`开启有效 |
+| ovulation_after_day    | int      | 排卵日之后易孕期的天数,一般为5<br />功能表`supportSetHistoricalMenstruationUseVersion2`或`supportSetHistoricalMenstruationExchangeVersion21`开启有效 |
+| is_menstrual_end       | int      | 经期是否结束。0：无效 1：结束 2：未结束<br />功能表`supportSetHistoricalMenstruationExchangeVersion21`或`supportHistoricalMenstruationExchangeVersion31`开启有效 |
 
 `示例：`
 
@@ -56,6 +57,7 @@ libManager.send(evt: CmdEvtType.getHistoricalMenstruation, json: jsonEncode(json
       "ovulation_interval_day":14,
       "ovulation_before_day":5,
       "ovulation_after_day":5,
+      "is_menstrual_end":1
     },
     {
       "year": 2023,
@@ -66,6 +68,7 @@ libManager.send(evt: CmdEvtType.getHistoricalMenstruation, json: jsonEncode(json
       "ovulation_interval_day":14,
       "ovulation_before_day":5,
       "ovulation_after_day":5,
+      "is_menstrual_end":2
     }
   ]
 }

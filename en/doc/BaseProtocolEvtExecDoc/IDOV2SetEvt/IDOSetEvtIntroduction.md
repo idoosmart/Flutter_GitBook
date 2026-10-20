@@ -4,7 +4,6 @@
 
 | Event Number | Function                                                     |
 | ------------ | ------------------------------------------------------------ |
-| 101          | [Set Sedentary Reminder](./IDOSetLongSitReminder.md)         |
 | 108          | [Set Display Mode](./IDOSetDisplayMode.md)                   |
 | 116          | [Set Do Not Disturb Mode](./IDOSetDoNotDisturb.md)           |
 | 103          | [Set Find Phone](./IDOSetFindPhone.md)                       |

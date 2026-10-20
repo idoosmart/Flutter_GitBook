@@ -73,6 +73,13 @@
 | 0x40 | Fitness Racing |
 | 0x41 | Athletics |
 | 0x42 | Strength training |
+| 0x43 | Water aerobics |
+| 0x44 | Yard work |
+| 0x45 | Line dance |
+| 0x46 | Seated fitness |
+| 0x47 | Housework |
+| 0x48 | Water walking |
+| 0x49 | Nordic walking |
 | 0x4B | Cricket |
 | 0x63 | Activity (General) |
 | 0x64 | Free training |

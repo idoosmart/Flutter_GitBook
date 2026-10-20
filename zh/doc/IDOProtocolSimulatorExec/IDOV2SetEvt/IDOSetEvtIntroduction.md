@@ -5,7 +5,6 @@
 
 | 事件号   | 功能                                                         |
 | -------- | ------------------------------------------------------------ |
-| 101      | [设置久坐提醒](./IDOSetLongSitReminder.md)                   |
 | 108      | [设置显示模式](./IDOSetDisplayMode.md)                       |
 | 116      | [设置勿扰模式](./IDOSetDoNotDisturb.md)                      |
 | 103      | [设置寻找手机](./IDOSetFindPhone.md)                         |

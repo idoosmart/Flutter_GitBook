@@ -1,5 +1,7 @@
 ### 设置久坐提醒
 
+> 已废弃。请使用走动提醒：[`设置走动提醒`](IDOSetWalkReminder.md) / [`获取走动提醒`](../IDOV2GetEvt/IDOGetWalkReminder.md)。
+
 #### 事件号:101
 
 #### APP端发送：
