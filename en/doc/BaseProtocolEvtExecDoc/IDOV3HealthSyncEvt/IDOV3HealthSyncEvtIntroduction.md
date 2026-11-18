@@ -22,3 +22,5 @@
 | 7018       | [Sync Emotion Health](./IDOV3HealthSyncEmotionHealth.md) |
 | 7019   | [Sync Multi-Sport Data (Multi-Sport/Swimming/Running Course/Running Plan/Post-Run Stretching Data)](./IDOV3HealthSyncActiviyMerge.md)            |
 | 7019       | [Sync Multi-Activity Merge](./IDOV3HealthSyncActivityMerge.md) |
+| 7020       | [Sync SpO2 Track](./IDOV3HealthSyncSpo2Track.md)               |
+| 7021       | [Sync HRV Track](./IDOV3HealthSyncHrvTrack.md)                 |

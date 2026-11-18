@@ -22,4 +22,6 @@
 | 7018   | [同步情绪健康](./IDOV3HealthSyncEmotionHealth.md)               |
 | 7019   | [同步多运动(游泳/跑步课程/跑步计划/跑后拉伸)](./IDOV3HealthSyncActiviyMerge.md)            |
 | 7019   | [同步多运动合集](./IDOV3HealthSyncActivityMerge.md)   |
+| 7020   | [同步血氧埋点](./IDOV3HealthSyncSpo2Track.md)         |
+| 7021   | [同步HRV埋点](./IDOV3HealthSyncHrvTrack.md)           |
 

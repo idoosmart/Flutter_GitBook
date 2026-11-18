@@ -5,7 +5,7 @@
 
 | 字段名                       | 字段类型 | 字段说明                                                     |
 | ---------------------------- | -------- | ------------------------------------------------------------ |
-| version                      | int      | 协议版本号 <br />0：没有佩戴标识数据<br />16：有佩戴标识数据,需要固件配置`v3SupportWearFlag`功能表 |
+| version                      | int      | 协议版本号 <br />0：没有佩戴标识数据<br />16：有佩戴标识数据,需要固件配置`v3SupportWearFlag`功能表<br />32：含中等、高等活动时长，需要固件配置 `syncV3SportUseVersion20` |
 | year                         | int      | 数据日期 年                                                  |
 | month                        | int      | 数据日期 月                                                  |
 | day                          | int      | 数据日期 日                                                  |
@@ -15,6 +15,8 @@
 | total_rest_activity_calories | int      | 总活动+静息卡路里                                            |
 | total_distances              | int      | 总距离  英里数据 = 固件距离（米）乘以0.00062                 |
 | total_active_time            | int      | 当天的活动时间 单位分钟                                      |
+| total_medium_active_time     | int      | 当天中等活跃总时长，单位分钟。仅 `version` 为 32 时返回      |
+| total_high_active_time       | int      | 当天高等活跃总时长，单位分钟。仅 `version` 为 32 时返回      |
 | total_activity_calories      | int      | 总活动卡路里                                                 |
 | time_zone         | int      | 时区扩大 100 倍返回，如时区 8 对应 800，5.5 对应 550<br />仅当 `supportSyncHealthDataWithTimeZone` 功能表开启时有效 |
 | walk_goal_time | int | 固件实际走动时长 需要配置  单位小时 |
@@ -27,6 +29,8 @@
 | mode                   | int      | 模式 00：安静， 01：轻微，10：中等活跃， 11：激烈         |
 | step_count             | int      | 步数个数                                                  |
 | active_time            | int      | 活跃时长 单位分钟， 最大`per_minute`参数决定 目前是15分钟 |
+| medium_active_time     | int      | 中等活跃时长，单位分钟。仅 `version` 为 32 时返回        |
+| high_active_time       | int      | 高等活跃时长，单位分钟。仅 `version` 为 32 时返回        |
 | activity_calories      | int      | 活动卡路里                                                |
 | distance               | int      | 距离，单位米                                              |
 | rest_activity_calories | int      | 活动+静息卡路里                                           |

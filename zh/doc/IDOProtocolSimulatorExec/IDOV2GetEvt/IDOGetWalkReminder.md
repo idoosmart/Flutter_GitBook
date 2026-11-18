@@ -22,7 +22,7 @@ libManager.send(evt: CmdEvtType.getWalkRemind, json: jsonEncode(json));
 | 字段名                  | 字段类型 | 字段说明                                                     |
 | ----------------------- | -------- | ------------------------------------------------------------ |
 | on_off                  | int      | 0 关<br />1 开                                               |
-| goal_step               | int      | 目标步数     <br />废弃                                      |
+| goal_step               | int      | 每小时目标步数                                               |
 | start_hour              | int      | 开始时间 时                                                  |
 | start_minute            | int      | 开始时间 分                                                  |
 | end_hour                | int      | 结束时间 时                                                  |
